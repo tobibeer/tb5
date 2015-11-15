@@ -1,0 +1,18 @@
+title: $:/.tb/config/redirected-tb5
+type: application/json
+
+{
+"$:/.tb/ui/EditTemplate/color": "$:/.tb/ui/EditTemplate/paint",
+"$:/.tb/ui/MoreSideBar/Stories": "$:/.tb/ui/SideBar/Stories",
+"$:/config/tbRedirected": "$:/.tb/config/Redirected-tb5",
+"$:/core/ui/MoreSideBar/Stories": "$:/.tb/ui/MoreSideBar/Stories",
+"$:/macros/linkimg":"$:/.tb/macros/linkimg",
+"$:/.tb/template/tb-redirected": "$:/.tb/ui/ViewTemplate/redirected-tb5",
+"ColumnsAndPopups":"http://tbdemo.tiddlyspot.com/#ColumnsAndPopups",
+"fiddle":"[[enable-js]]",
+"Redirecting Dead Links": "[[Aliases And Redirecting Dead Links]]",
+"Searching Lists, The Easy Way": "[[list-search]]",
+"TaskGraph":"TiddlyMap",
+"tb-cook":"[[me/cook]]",
+"tiddlywiki.com/dev": "[[TW5 Dev]]"
+}

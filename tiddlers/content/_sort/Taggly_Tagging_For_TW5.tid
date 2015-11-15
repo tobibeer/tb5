@@ -1,0 +1,34 @@
+created: 20141201183713999
+creator: Tobias Beer
+modified: 20141220114724216
+modifier: Tobias Beer
+tags: Solutions Tags Lists Macros Templates
+title: Taggly Tagging For TW5
+type: text/vnd.tiddlywiki
+
+Ever wanted [[those MPTW tag hierarchies|http://mptw.tiddlyspot.com/#TagglyTagging]] back? Yes, we have an awesome [[table of contents|http://tiddlywiki.com/#TableOfContentsMacro]] now, but what if you just wanted a simple tagging tree, e.g. displayed for all tags that are used as such but which are still missing tiddlers?
+
+Inspired from a first draft of [[MPTW for Tiddlywiki 5|http://mptw.tiddlyspot.com/mptw5wip.html]] and using [[conditional view-template voodoo|Conditional ViewTemplate Section]], here's how you can show a basic taggly-tagging-style tagging tree for all missing tiddlers ...and also also existing tiddlers with a tiny modification to [[the source|$:/.tb/ui/ViewTemplate/tagging]].
+
+Import the following tiddlers into your Tiddlywiki (source code shown at the bottom):
+
+
+; [[$:/.tb/macros/taggly]]
+: {{$:/.tb/macros/taggly!!summary}}
+: use the `<<taggly>>` macro in a tiddler to get its tagging tree, e.g. [[Developer]]
+: `<<taggly "[Foo Bar]">>` for the tagging tree of ''Foo Bar'' — single brackets!
+; [[$:/.tb/ui/ViewTemplate/tagging-sublist]]
+: {{$:/.tb/ui/ViewTemplate/tagging-sublist!!summary}}
+; [[$:/.tb/ui/ViewTemplate/tagging]]
+: optional, {{$:/.tb/ui/ViewTemplate/tagging!!summary}}
+: renders an automagically generated tagging tree for missing tiddlers, e.g. [[Macros|$:/tags/Macro]]
+
+!! Customization
+
+Edit the template to either change the styles (which you can also override using your own [[Custom Stylesheets]] or show the tagging tree at the bottom of all tiddlers and not just missing ones, removing the `subfilter` parameter from the taggly macro call in:
+
+<<source [[$:/.tb/ui/ViewTemplate/tagging]]>>
+
+Here's the recursion template <<source [[$:/.tb/ui/ViewTemplate/tagging-sublist]]>>
+
+And the macro <<source [[$:/.tb/macros/taggly]]>>

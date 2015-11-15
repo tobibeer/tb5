@@ -1,0 +1,16 @@
+created: 20141117080920457
+creator: Tobias Beer
+modified: 20141119145331415
+modifier: Tobias Beer
+tags: Solutions UI Macros Lists Sidebar ToC
+title: Table Of Contents In Sidebar
+type: text/vnd.tiddlywiki
+
+To create a custom table of contents with an expandable menu...
+
+# create the toc using [[TableOfContentsMacro|http://tiddlywiki.com/#TableOfContentsMacro]]
+# tag your toc tiddler `$:/tags/SideBar`
+# give it a `caption` field if you want the tab to display a different title than that of the toc tiddler ([[example|http://tiddlywiki.com/#TableOfContents]])
+
+<<ximg toc.jpg tooltip:"example toc from tiddlywiki.com" class:"pretty">>
+example toc from [[tiddlywiki.com|http://tiddlywiki.com/#TableOfContents]]

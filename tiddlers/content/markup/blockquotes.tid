@@ -1,0 +1,37 @@
+tags: Markup
+title: blockquotes
+type: text/vnd.tiddlywiki
+
+<dt>
+
+```
+> block
+>> quotes
+>>> are </dd>easy
+```
+</dt>
+
+<dd>
+
+> block
+>> quotes
+>>> are <br>easy
+</dd>
+
+<dt>
+
+```
+<<<
+real
+easy
+<<<
+```
+</dt>
+
+<dd>
+
+<<<
+real
+easy
+<<<
+</dd>

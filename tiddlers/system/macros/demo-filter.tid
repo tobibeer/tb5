@@ -1,0 +1,18 @@
+created: 20150203174632088
+creator: Tobias Beer
+modified: 20150203175144390
+modifier: Tobias Beer
+tags: $:/tags/Macro
+title: $:/.tb/macros/demo-filter
+type: text/vnd.tiddlywiki
+
+\define f(filter,describe)
+<dl>
+<dt>$describe$</dt>
+<dd>`$filter$`<blockquote>
+<$list filter="$filter$">
+<$link><$view field="title"/></$link><br>
+</$list>
+</blockquote></dd>
+</dl>
+\end

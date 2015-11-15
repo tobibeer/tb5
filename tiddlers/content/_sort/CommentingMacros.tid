@@ -1,0 +1,17 @@
+created: 20141122215606919
+creator: Tobias Beer
+modified: 20141125025529741
+modifier: Tobias Beer
+tags: Macros Developer
+title: Commenting Macros
+type: text/vnd.tiddlywiki
+
+For code comments in macros use general purpose html comments but pay attention that any white space or line-breaks before or after them do matter...
+
+```
+<!-- param is ... -->
+\define foo(param:default)
+<!-- we're outputting the title of this tiddler
+-->{{!!title}}
+\end
+```

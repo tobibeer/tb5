@@ -1,0 +1,25 @@
+created: 20150113131225483
+creator: Tobias Beer
+modified: 20150207092932695
+modifier: Tobias Beer
+summary: the ''xlist'' macro shows crosslists of tiddlers tagging to categories grouped by another category
+tags: [[Tobias Beer]]
+title: xlist
+type: text/vnd.tiddlywiki
+url: https://tobibeer.github.io/tw/xlist
+
+Developed as a [[reply to James|https://groups.google.com/d/msg/tiddlywiki/EzypDKdUOFE/ML_q1pSSvCIJ]], the [[xlist|http://xlist.tiddlyspot.com]] macro ([[$:/.tb/macros/xlist]]) allows you to list items grouped by category whereas an item needs to be tagged both with the current tiddler title as well as one of the categories listed in the `catlist` field.
+
+!! Example
+
+```
+''proof:'' {{Solutions!!catlist}}
+<$tiddler tiddler=Solutions><<xlist field:"!!catlist">></$tiddler>
+```
+
+<<<
+''proof:'' {{Solutions!!catlist}}
+<$tiddler tiddler=Solutions><<xlist field:"!!catlist">></$tiddler>
+<<<
+
+For more information on working with the macro, e.g. avalable parameters such as ''template'', ''sort'', ''categories'' or on using the ''catlist'' macro with tabs or in a [[Conditional ViewTemplate Section]], see {{xlist!!url}}.

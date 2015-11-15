@@ -1,0 +1,34 @@
+created: 20141116163605040
+creator: Tobias Beer
+modified: 20141125165048808
+modifier: Tobias Beer
+summary: allows to use regular expressions to search and replace in wikitext before parsing
+tags: Text Parser [[Stephan Hradek]] Plugin
+title: Replace Pragma
+type: text/vnd.tiddlywiki
+url: http://tiddlystuff.tiddlyspot.com#ReplacePragma
+
+\replace /#\n[ \t]*/<br>/
+
+Code: [[$:/parsers/skeeve/rules/replace.js]]
+
+!!Example
+```
+\replace /#\n[ \t]*/<br>/
+
+* line
+* line# 
+  continuation# 
+  continuation
+* line
+```
+
+''renders as:''
+
+* line
+* line#
+  continuation#
+  continuation
+* line
+
+''Note:'' this particular example can be achieved via [[Multiline Content In Lists]] without a need for using this plugin.

@@ -1,0 +1,20 @@
+created: 20141121222335988
+creator: Tobias Beer
+modified: 20150213200713079
+modifier: Tobias Beer
+summary: {{$:/.tb/wizards/replace-tag!!summary}}
+tags: Solutions Tags Renaming Batch
+title: Search And Replace Tag
+type: text/vnd.tiddlywiki
+
+<<<
+
+{{$:/.tb/wizards/replace-tag}}
+<<<
+
+Inspired by [[Jed Carty|https://groups.google.com/d/msg/tiddlywiki/eGvsXFm8zAk/2d05mC6bwQwJ]].
+
+
+!! Installation
+
+Drag to your wiki: [[$:/.tb/wizards/replace-tag]]

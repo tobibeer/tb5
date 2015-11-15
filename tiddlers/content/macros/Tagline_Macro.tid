@@ -1,0 +1,40 @@
+created: 20150107155334852
+creator: Tobias Beer
+modified: 20150107184548330
+modifier: Tobias Beer
+tags: Solutions Macros DataTiddlers Filters Random
+title: Tagline Macro
+type: text/vnd.tiddlywiki
+
+The ''tagline'' macro allows you to render a random tagline for TiddlyWiki. 
+
+!! Examples
+
+{{$:/.tb/macros/tagline}}
+
+!! Installation
+Drag and drop the following tiddlers to your wiki...
+
+; [[$:/.tb/macros/tagline]]
+: the macro
+; [[$:/.tb/macros/tagline/data]]
+: the taglines and configuration fields `prefix` & `suffix`
+; [[$:/plugins/tobibeer/letfilter/let.js]]
+: the [[let]] filter implementing `[let:RANDOM[]]`
+
+!! Currently Defined Taglines
+
+<$tiddler tiddler="$:/.tb/macros/tagline/data">
+
+<pre><$view text/></pre>
+
+''prefix''<br>
+<pre><$view field=prefix/></pre>
+
+''suffix''<br>
+<pre><$view field=suffix/></pre>
+</$tiddler>
+
+!!Macro Source
+
+<<source [[$:/.tb/macros/tagline]]>>

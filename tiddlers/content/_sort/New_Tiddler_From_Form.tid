@@ -1,0 +1,15 @@
+created: 20141114122929335
+creator: Tobias Beer
+modified: 20141121235927095
+modifier: Tobias Beer
+tags: Forms Solutions [[Stephan Hradek]]
+title: New Tiddler From Form
+type: text/vnd.tiddlywiki
+
+A powerful form solution developed by [[Stephan Hradek]] published [[here|https://groups.google.com/d/msg/tiddlywiki/GHrWuZAQIN8/79cfSqJOtg4J]] allowing to create and modify tiddlers along with fields and tags on the fly using a form.
+
+{{$:/forms/user}}
+
+!!Code
+[[$:/forms/user]]
+<<wikitext-source "$:/forms/user">>

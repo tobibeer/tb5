@@ -1,0 +1,22 @@
+caption: new recipe
+created: 20150128123128853
+creator: Tobias Beer
+description: Add a new recipe...
+modified: 20150209210608598
+modifier: Tobias Beer
+tags: $:/tags/PageControls
+title: $:/.tb/demo/Buttons/new-recipe
+type: text/vnd.tiddlywiki
+
+<$button
+param="$:/.tb/demo/Template/new-recipe"
+message="tm-new-tiddler"
+tooltip={{$:/.tb/demo/Buttons/new-recipe!!description}}
+class=<<tv-config-toolbar-class>>>
+<$list filter="[<tv-config-toolbar-icons>prefix[yes]]">
+{{$:/core/images/new-button}}
+</$list>
+<$list filter="[<tv-config-toolbar-text>prefix[yes]]">
+<span class="tc-btn-text"><$text text={{$:/.tb/demo/Buttons/new-recipe!!caption}}/></span>
+</$list>
+</$button>

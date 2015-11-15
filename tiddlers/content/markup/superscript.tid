@@ -1,0 +1,10 @@
+tags: Markup
+title: superscript
+
+<dt>
+
+```
+super^^script^^
+```
+</dt>
+<dd>super^^script^^</dd>

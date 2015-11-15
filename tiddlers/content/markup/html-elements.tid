@@ -1,0 +1,20 @@
+tags: Markup
+title: html-elements
+
+<dt>
+
+```
+<article class="hello">
+HTML tags work like that.
+<!-- even comments -->
+</article>
+```
+</dt>
+
+<dd>
+
+<article class="hello">
+HTML tags work like that.
+<!-- even comments -->
+</article>
+</dd>

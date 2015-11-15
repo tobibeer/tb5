@@ -1,0 +1,15 @@
+created: 20150209205658599
+creator: Tobias Beer
+modified: 20150926091028357
+modifier: Tobias Beer
+tags: Journal Solutions Lists
+title: Related Journal Entries
+type: text/vnd.tiddlywiki
+
+In a [[response to RickL|https://groups.google.com/d/msg/tiddlywiki/DO_ZEh4TEuY/kWwxIOq46_kJ]], here's how you can show related journal entries to any tiddler using a [[Conditional ViewTemplate Section]]...
+
+!! Install
+
+Drag to you wiki: [[$:/.tb/ui/ViewTemplate/journal-entries]]
+
+@@color:#f0f;The below section is rendered for any tiddler with Journal tiddlers tagging to it:@@

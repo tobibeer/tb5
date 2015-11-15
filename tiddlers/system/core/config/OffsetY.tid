@@ -1,0 +1,9 @@
+created: 20141120133228389
+creator: Tobias Beer
+modified: 20141123105230659
+modifier: Tobias Beer
+summary: configures offset for [[$:/hack-142-scroll.js]] for a fixed topbar tagged [[$:/tags/TopLeftBar]]
+title: $:/config/OffsetY
+type: text/vnd.tiddlywiki
+
+42

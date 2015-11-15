@@ -1,0 +1,22 @@
+created: 20150915130536418
+creator: Tobias Beer
+modified: 20150915131314744
+modifier: Tobias Beer
+tags: [[Highlight Plugin]] [[Jeremy Ruston]] Solutions Code
+title: Custom Brush for highlight.js
+type: text/vnd.tiddlywiki
+
+As [[Jeremy|Jeremy Ruston]] explains [[here|https://groups.google.com/d/msg/tiddlywiki/wvVaFVd8mLU/8u6Mmz-TAgAJ]], you can hack support for a custom brush into [[Highlight Plugin]].
+
+For this, you need to modify one of its shadow tiddlers, which can cause problems with future upgrades. If that happens, remove your overwitten shadow tiddler and re-apply the following technique:
+
+# locate the desired brush in `src/languages` of the ''highlight.js'' GitHub repo
+#* https://github.com/isagalaev/highlight.js/archive/8.8.0.zip
+# copy the text of the language you want
+# open the tiddler [[$:/plugins/tiddlywiki/highlight/highlightblock.js]]
+# paste the following after the line `hljs.configure(...)`:
+```
+hljs.registerLanguage("<name_of_language>",<text_of_language_file>);
+```
+
+Save the tiddler and restart.

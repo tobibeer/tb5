@@ -1,0 +1,85 @@
+caption: Stories
+created: 20141205111949068
+modified: 20150919090350734
+modifier: Tobias Beer
+tags: $:/tags/SideBar
+title: $:/.tb/ui/SideBar/Stories
+list-before: $:/core/ui/SideBar/More
+type: text/vnd.tiddlywiki
+
+\define getLink(title) [[$title$]]
+
+\define saveSnapshot()
+<$button
+set="$:/_snapshots##$(snapText)$"
+setTo={{$:/StoryList!!list}}>
+{{$:/core/images/done-button}}
+Save</$button>
+\end
+
+\define loadSnapshot()
+<$button
+set="$:/StoryList!!list"
+setTo={{$:/_snapshots##$(snapSelect)$}}>
+{{$:/core/images/right-arrow}}
+Load</$button>
+\end
+
+\define deleteSnapshot()
+<$button
+style="margin:4px 0 0 153px;"
+set="$:/_snapshots##$(snapSelect)$">
+<$action-sendmessage $message="tm-delete-tiddler" $param="$(snapSelect)$"/>
+{{$:/core/images/delete-button}}
+Delete</$button>
+\end
+
+\define showNotes()
+<$reveal type="nomatch" text="" default={{$:/_snapshots##$(snapSelect)$}}>
+<$button
+style="margin:4px 0 0 153px;">
+<$action-navigate $to={{$:/_snapshots!!story-name}}/>
+{{$:/core/images/edit-button}}
+Notes</$button>
+</$reveal>
+\end
+
+<style>
+.story-manager button,
+.story-manager input,
+.story-manager select{
+width:150px;
+display:inline-block;
+text-align:left;
+}
+
+.story-manager div {
+margin-top:10px;
+}
+</style>
+
+<div class="story-manager">
+
+<$edit-text
+tiddler="$:/_snapshots"
+field="story-name"
+placeholder="story name"/>
+<$set name="snapText" value={{$:/_snapshots!!story-name}}>
+<<saveSnapshot >>
+</$set>
+
+<div>
+<$select
+tiddler="$:/_snapshots"
+field="story-name">
+<$list filter="[[$:/_snapshots]indexes[]]" variable="currentIndex">
+<option value=<<currentIndex>>><<currentIndex>></option>
+</$list>
+</$select>
+<$set name="snapSelect" value={{$:/_snapshots!!story-name}}>
+<<loadSnapshot>><br>
+<<deleteSnapshot>><br>
+<<showNotes>>
+</$set>
+
+</div>

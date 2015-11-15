@@ -1,0 +1,16 @@
+created: 20141116144017266
+creator: Tobias Beer
+modified: 20141126020401479
+modifier: Tobias Beer
+summary: easily render images from an external source
+tags: $:/tags/Macro
+title: $:/macros/ximg
+type: text/vnd.tiddlywiki
+
+\define imageAtPath(i, t, p, c, w)
+[img width="$w$" class="$c$" [$t$|$p$$i$]]
+\end
+
+\define ximg(image, tooltip:"image", path:"$:/macros/ximg/path", class, width)
+<$macrocall $name="imageAtPath" p={{$path$}} i="$image$" t="$tooltip$" c="ximg $class$" w="$width$"/>
+\end

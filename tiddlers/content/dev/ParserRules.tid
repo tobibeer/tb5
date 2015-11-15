@@ -1,0 +1,18 @@
+tags: Developer
+title: Parser Rules
+
+!!Parser Rule Configuration
+```
+\rules except bold 
+\rules only bold 
+```
+
+!!Core Parser Rules
+https://github.com/Jermolene/TiddlyWiki5/tree/master/core/modules/parsers/wikiparser/rules
+
+!!List Rules In Console
+```
+Object.keys($tw.Wiki.parsers["text/vnd.tiddlywiki"].prototype.pragmaRuleClasses);
+Object.keys($tw.Wiki.parsers["text/vnd.tiddlywiki"].prototype.blockRuleClasses);
+Object.keys($tw.Wiki.parsers["text/vnd.tiddlywiki"].prototype.inlineRuleClasses);
+```

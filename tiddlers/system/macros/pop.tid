@@ -1,0 +1,15 @@
+created: 20150930072145911
+creator: Tobias Beer
+modified: 20151001070130400
+tags: $:/tags/Macro
+title: $:/.tb/macros/pop
+type: text/vnd.tiddlywiki
+
+\define pop(label, content, pop-class, animate, position, tooltip, btn-class, btn-tag:"button", btn-selectedClass, state-id)
+<$set name="state" value=<<qualify """$:/state/pop-$content$-$state-id$""">>>
+<$button popup=<<state>> class="pop-btn $btn-class$" tooltip="$tooltip$" tag="$btn-tag$" selectedClass="pop-btn-selected $btn-selectedClass$">$label$</$button><$reveal type="popup" state=<<state>> animate="$animate$" position="$position$" class="tc-popup pop-popup $pop-class$" style="$pop-style$">
+
+{{$content$}}
+</$reveal>
+</$set>
+\end

@@ -1,0 +1,15 @@
+created: 20141123203607033
+creator: Tobias Beer
+modified: 20141123205432461
+modifier: Tobias Beer
+tags: Core Presentation Rendering Lists Solutions
+title: All Tiddlers In One Static File
+type: text/vnd.tiddlywiki
+
+Build via node.js, TiddlyWiki.com provides a way to display all tiddlers in one flat file as linked via: [[$:/core/templates/static.content|http://tiddlywiki.com/#%24%3A%2Fcore%2Ftemplates%2Fstatic.content]] which is displayed when a visitor's browser doesn't support ~JavaScript.
+
+The link: http://tiddlywiki.com/alltiddlers.html#HelloThere
+
+<div class="static pretty" style="overflow-x:hidden;">
+<iframe src="http://tiddlywiki.com/alltiddlers.html#HelloThere" style="height:600px;width:100%;border:none;overflow-x:hidden:overflow-y:auto;"/>
+</div>

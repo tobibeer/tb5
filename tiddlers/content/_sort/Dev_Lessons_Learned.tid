@@ -1,0 +1,15 @@
+created: 20141124001242332
+creator: Tobias Beer
+modified: 20141125025529968
+modifier: Tobias Beer
+tags: Core Mechanisms [[Lessons Learned]] Developer
+title: Dev Lessons Learned
+type: text/vnd.tiddlywiki
+
+;[[Jeremy|https://groups.google.com/d/msg/tiddlywikidev/8sDwiZUHzzw/jWEvI43jfjcJ]]
+: much more difficult is figuring out the correct place to do a modification
+: you should not modify the tiddler store during...
+:* filter processing
+:* refresh processing
+: the tiddler store should only be modified in DOM event handlers
+:* albeit the chain is often quite indirect

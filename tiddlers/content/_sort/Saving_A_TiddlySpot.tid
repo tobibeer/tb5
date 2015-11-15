@@ -1,0 +1,28 @@
+created: 20150119104101153
+creator: Tobias Beer
+modified: 20150119104900882
+modifier: Tobias Beer
+tags: TiddlySpot Solutions Saving
+title: Saving A TiddlySpot
+type: text/vnd.tiddlywiki
+
+As ''Daniel Baird'' explains [[here|https://groups.google.com/d/msg/tiddlywiki/9G-t9m6N0XM/9ImE9JgYTx4J]], saving a TiddlySpot is easy.
+You can use either of these methods...
+
+;Download Link
+:.no-before <div>
+
+# create a link to your TiddlySpot
+#* e.g. http://tb5.tiddlyspot.com
+# right click
+# save as
+</div>
+
+; Download URL
+:.no-before <div>
+
+# create a link to the ''download'' url
+#* e.g. http://tb5.tiddlyspot.com/download
+# click => opens new tab
+#* the server's response tells your browser to save instead of opening it
+</div>

@@ -1,0 +1,13 @@
+created: 20150116174338032
+creator: Tobias Beer
+modified: 20150116174455051
+modifier: Tobias Beer
+tags: $:/tags/ViewTemplate
+title: $:/core/ui/ViewTemplate/tags
+type: text/vnd.tiddlywiki
+
+<div class="tc-tags-wrapper">
+<$list filter="[all[current]tags[]]-[list[$:/config/Hide/TagButtons!!text]]+[sort[title]]"
+template="$:/core/ui/TagTemplate"
+storyview="pop"/>
+</div>

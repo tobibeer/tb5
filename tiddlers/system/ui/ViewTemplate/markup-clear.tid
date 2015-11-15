@@ -1,0 +1,12 @@
+created: 20141220114229633
+creator: Tobias Beer
+list-after: $:/core/ui/ViewTemplate/body
+modified: 20141220114348508
+modifier: Tobias Beer
+tags: $:/tags/ViewTemplate
+title: $:/.tb/ui/ViewTemplate/markup-clear
+type: text/vnd.tiddlywiki
+
+<$list filter="[all[current]tag[Markup]limit[1]]">
+<div style="clear:left"/>
+</$list>

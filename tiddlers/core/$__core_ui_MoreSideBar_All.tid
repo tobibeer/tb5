@@ -1,0 +1,14 @@
+caption: {{$:/language/SideBar/All/Caption}}
+created: 20141203181017483
+creator: Tobias Beer
+modified: 20141203181058891
+modifier: Tobias Beer
+tags: $:/tags/MoreSideBar
+title: $:/core/ui/MoreSideBar/All
+type: text/vnd.tiddlywiki
+
+<<list-search
+"[!is[system]sort[title]]"
+"search:title"
+"$:/temp/list-search-sidebar-all"
+"$:/core/ui/ListItemTemplate">>

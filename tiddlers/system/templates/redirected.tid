@@ -1,0 +1,7 @@
+list-before: $:/core/ui/ViewTemplate/body
+tags: $:/tags/ViewTemplate
+title: $:/.tb/template/redirected
+
+<div class="redirected">
+<$transclude tiddler="$:/config/Redirected" index=<<currentTiddler>>/>
+</div>

@@ -1,0 +1,16 @@
+created: 20141114203626843
+creator: Tobias Beer
+modified: 20141204134556861
+modifier: Tobias Beer
+tags: Developer
+title: Translate TW5
+type: text/vnd.tiddlywiki
+
+;Interactive Tool
+:http://tiddlywiki.com/prerelease/editions/translators/index.html
+;GitHub Repository
+:https://github.com/Jermolene/TiddlyWiki5/tree/master/languages
+;Using GitHub
+:<<git5 pull/1033>>
+;Workflow Details
+:<<git5 issues/1193#issuecomment-65497083>>

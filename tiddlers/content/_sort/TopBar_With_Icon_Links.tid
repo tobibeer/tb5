@@ -1,0 +1,48 @@
+created: 20141125094447118
+creator: Tobias Beer
+modified: 20150206124848360
+modifier: Tobias Beer
+tags: Solutions UI Images Links Menus TopBar Lists Fields
+title: TopBar With Icon Links
+type: text/vnd.tiddlywiki
+
+This wiki implements a top-menu which renders the main topics as icon-links. Below the steps I took to achieve it.
+
+!! Step 1 — menu tiddler
+Create a tiddler tagged [[$:/tags/TopLeftBar]] which will render it into the predefined placeholder.
+
+Here it is [[$:/.tb/ui/TopLeftBar]], which also holds the logic to auto-generate the menu, so import that or copy its contents into your new menu-tiddler.
+
+!! Step 2 — menu items
+
+This wiki uses the tiddler [[$:/.tb/ui/TopLeftBar/config]] to manually enter all tiddlers displayed in the menu using the `list` field in the desired order.
+
+''Note:'' Any tiddler could be used to hold the list, even the menu tiddler. However, if the code were updated in the future and you'd like to simply import the new version, your configuration would be overwritten. Therefore, the configuration was put somewhere else.
+
+!! Step 3 — eye candy
+
+To display icons and custom captions, define these fields at your menu tiddlers...
+
+; menu-icon
+: `{{$:/core/icon}}` — used at [[Core]]
+:: transcludes the desired menu icon, in this case an [[svg shipped with the core|Core Images And Inline Stylesheets]]
+:: unfortunately, the `icon` field is unavailable as it currently cannot be transcluded
+; caption
+: `Start` — used at [[Welcome]]
+:: defines the title used for the menu link
+:: no caption = not text
+
+!! Scrolling
+
+@@color:red; ''Caution'': This may make edit mode jumpy!@@
+
+To fix the problem of a tiddler scrolling underneath the top bar when opening, this wiki currently uses a hack to override a core function: [[$:/hack-142-scroll-pagescroller.js]]
+
+!! Styles
+The default styles are provided using [[an inline <style> tag|Core Images And Inline Stylesheets]] at the bottom of [[$:/.tb/ui/TopLeftBar]]. To override these styles, [[create a custom stylesheet tiddler|Custom Stylesheets]].
+
+The defined styles here...
+
+* fix the positioning, width and coloring of the default topbar
+* define icon size and box properties
+* set link text properties

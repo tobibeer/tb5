@@ -1,0 +1,89 @@
+tags: Markup
+title: typed-blocks
+
+<dt>
+
+```
+$$$text/unknown
+plain text, not //formatted//
+$$$
+```
+</dt>
+<dd>
+
+$$$text/unknown
+plain text, not //formatted//
+$$$
+
+<br>
+These are [[Typed Blocks|http://tiddlywiki.com/#Typed%20Blocks%20in%20WikiText]]
+</dd>
+
+
+<dt>
+
+```
+$$$image/svg+xml
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="100">
+  <circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="green" />
+</svg>
+$$$
+```
+</dt>
+<dd>
+
+$$$image/svg+xml
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="100">
+  <circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="green" />
+</svg>
+$$$
+</dd>
+
+<dt>
+
+```
+$$$.svg
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="100">
+  <circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red" />
+</svg>
+$$$
+```
+</dt>
+<dd>
+
+$$$.svg
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="100">
+  <circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red" />
+</svg>
+$$$
+</dd>
+
+<dt>
+
+```
+$$$text/vnd.tiddlywiki>text/html
+This is ''some'' wikitext
+$$$
+```
+</dt>
+<dd>
+
+$$$text/vnd.tiddlywiki>text/html
+This is ''some'' wikitext
+$$$
+</dd>
+
+<dt>
+
+```
+$$$text/vnd.tiddlywiki>text/plain
+This is ''some'' wikitext
+$$$
+```
+</dt>
+<dd>
+
+$$$text/vnd.tiddlywiki>text/plain
+This is ''some'' wikitext
+$$$
+</dd>

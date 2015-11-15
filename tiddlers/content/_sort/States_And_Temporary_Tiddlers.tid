@@ -1,0 +1,26 @@
+created: 20141206120612706
+creator: Tobias Beer
+modified: 20141209163131326
+modifier: Tobias Beer
+tags: Solutions Filters Startup Saving Config [[Jeremy Ruston]]
+title: States And Temporary Tiddlers
+type: text/vnd.tiddlywiki
+
+Do you prefer for tabs, sliders, inputs fields to be loaded with their defaults on startup rather than their current state be persisted upon saving?
+
+[[In this comment|https://github.com/Jermolene/TiddlyWiki5/issues/1199#issuecomment-65830444]] [[Jeremy|Jeremy Ruston]] explains how to not have [[states|http://tiddlywiki.com/#StateMechanism]] or other temporary tiddlers put under `$:/temp/` persisted when saving Tiddlywiki.
+
+To override which tiddlers are saved when you hit the save button {{$:/core/ui/Buttons/save-wiki}}, you can specify a template to be used in...
+
+;[[$:/config/SaveWikiButton/Template]]
+:{{$:/config/SaveWikiButton/Template}}
+
+@@.warn ''Caution:'' Defining the wrong save-filter may have you unknowingly lose data!@@
+
+Here is the template I am using to discard any states or temporary tiddlers:
+
+<<source $:/.tb/templates/tw-save>>
+
+The core default save template is...
+
+<<source $:/core/save/all>>

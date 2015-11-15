@@ -1,0 +1,16 @@
+created: 20141220132127832
+creator: Tobias Beer
+modified: 20141220133925204
+modifier: Tobias Beer
+tags: Solutions Presentation Website [[Mario Pietsch]] Animation
+title: Single Page Mode
+type: text/vnd.tiddlywiki
+
+As [[Mario|Mario Pietsch]] explains [[here|https://github.com/Jermolene/TiddlyWiki5/issues/1081#issuecomment-67733908]], you can easily change your configuration to have TiddlyWiki work in a one-tiddler-at-a-time-mode.
+
+Simply go to the [[control panel|$:/ControlPanel]] {{$:/core/ui/Buttons/control-panel}} and...
+
+# set ''Appearance'' / ''Story View'' to `zoomin`
+# set ''Info'' / ''Animation Duration'' to `0`
+
+Now, tiddlers will open one by one as if you were on a more classic website. Once you close a tiddler, the previously viewed tiddler opens.

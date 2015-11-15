@@ -1,0 +1,13 @@
+courses: English
+created: 20141121113719082
+creator: Tobias Beer
+levels: B1 B2
+modified: 20141122002311473
+modifier: Tobias Beer
+title: $:/books/EnglishToday
+type: text/vnd.tiddlywiki
+
+;courses
+:<$view field="courses"/>
+;levels
+:<$view field="levels"/>

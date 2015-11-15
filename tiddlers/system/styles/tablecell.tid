@@ -1,0 +1,17 @@
+created: 20141117160400027
+creator: Tobias Beer
+modified: 20141117160957630
+modifier: Tobias Beer
+tags: $:/tags/Stylesheet
+title: $:/styles/tablecell
+type: text/plain
+
+.cell{
+/* compensating the cell padding */
+margin:-1px -7px;
+padding:1px 7px;
+}
+
+.pink{
+background-color:#fef;
+}

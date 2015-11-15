@@ -1,0 +1,21 @@
+tags: Markup
+title: css-class-wrappers
+type: text/vnd.tiddlywiki
+
+<dt>
+
+```
+@@.myStyleClass.red
+;term
+:definition
+@@
+```
+</dt>
+
+<dd>
+
+@@.myStyleClass.red
+;term
+:definition
+@@
+</dd>

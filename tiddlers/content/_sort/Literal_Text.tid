@@ -1,0 +1,32 @@
+created: 20150923055804614
+creator: Tobias Beer
+modified: 20150923061332009
+modifier: Tobias Beer
+tags: Text Solutions [[Eric Shulman]] Formatting
+title: Literal Text
+type: text/vnd.tiddlywiki
+
+As [[Eric Shulman]] explains [[here|https://groups.google.com/d/msg/tiddlywiki/6Z7lcMoQ99s/Lqqaw-L8AgAJ]], you can use the <<tw EditTextWidget>> to output any chunk of text without wiki formating and without escaping characters like so:
+
+<<` '<$text text="//literal //slashes"/>'>>
+
+Compared to:
+
+```
+italic, not //literal //slashes
+```
+> italic, not //literal //slashes
+
+To use single quotes inside your text, enclose with `"""triple quotes"""`:
+
+```
+<$text text="""Apple "Pear" //Peach""" />
+```
+> <$text text="""Apple "Pear" //Peach""" />
+
+With [[#1473 New wikitext syntax for representing literal text|https://github.com/Jermolene/TiddlyWiki5/issues/1473]], there may eventually be simplified wikitext markup, e.g.:
+
+```
+===//literal `text===
+```
+> <$text text="//literal `text" />

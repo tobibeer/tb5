@@ -1,0 +1,30 @@
+caption: References
+icon: $:/core/images/globe
+menu: main
+menu-icon: {{$:/core/images/globe}}
+order: 4
+summary: tw5 resources to achieve greateness
+tags: Welcome
+title: References
+
+!!@@float:right;text-align:right;color:blue; [[Customizations]] «@@
+!!Main Resources
+<dl>
+<$list filter="[tag[Main]] +[sort[title]]">
+<dt><$link>{{!!title}}</$link></dt>
+<dd>{{!!url}}</dd>
+<dd>{{!!summary}}</dd>
+</$list>
+</dl>
+
+!! Community References
+
+{{{ [tag[Reference]]}}}
+
+<dl>
+<<list-search
+"[tag[Community]][tag[References]][tag[Tobias Beer]]-[tag[Personal]]+[sort[title]]"
+"search:summary"
+"$:/temp/tb/list-refernces"
+"$:/.tb/templates/list-link-summary">>
+</dl>

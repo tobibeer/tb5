@@ -1,0 +1,16 @@
+created: 20150207172925634
+creator: Tobias Beer
+modified: 20150207180231033
+modifier: Tobias Beer
+tags: Macros Widgets Templates Automation Utilities
+title: Reusing Macros
+type: text/vnd.tiddlywiki
+
+As [[Jeremy Ruston]] [[points out here|https://groups.google.com/d/msg/tiddlywiki/KGPqvYpJVH0/EPwmqzqfpAkJ]], to reuse macros you have at least two options...
+
+# tag your macro tiddler [[$:/tags/Macro]]
+# wrap your content using the <<tw ImportVariablesWidget>> and have it fetch the variables imported into your tiddler via its filter expression
+#* this is precisely how global macros work as well, see [[$:/core/ui/PageTemplate]]
+#* this is also helpful if you want to [[avail macros|https://github.com/Jermolene/TiddlyWiki5/issues/1472#issuecomment-73370791]] to <<tw WidgetMessage%3A%20tm-modal modals>>
+
+<<static ImportVariablesWidget 800px yes>>

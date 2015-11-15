@@ -1,0 +1,12 @@
+caption: {{$:/language/SideBar/Recent/Caption}}
+created: 20141120114449917
+creator: Tobias Beer
+modified: 20141120114506483
+modifier: Tobias Beer
+tags: $:/tags/SideBar
+title: $:/core/ui/SideBar/Recent
+type: text/vnd.tiddlywiki
+
+<$macrocall $name="timeline" limit="10" format={{$:/language/RecentChanges/DateFormat}}/>
+
+!!!&nbsp; [[Full Timeline|Timeline]]

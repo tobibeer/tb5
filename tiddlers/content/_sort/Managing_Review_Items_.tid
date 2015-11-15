@@ -1,0 +1,25 @@
+created: 20141115083636558
+creator: Tobias Beer
+modified: 20150203235221494
+modifier: Tobias Beer
+tags: Workflows Solutions Lists Filters
+title: Managing Review Items?
+type: text/vnd.tiddlywiki
+
+A worklflow [[proposed by Alex Hough|https://groups.google.com/forum/#!topic/tiddlywiki/Xz2lSXXy0iU]]...
+
+* something in the text raises an unanswered question?
+* write that question into the text as a link
+** [[Managing Review Items?]]
+* use the sufix filters to extract questions
+
+!Review Lists
+;links to existing and missing tids
+:`<<list-links filter:"[all[tiddlers+missing]]suffix[?]]">>` <<list-links filter:"[all[tiddlers+missing]suffix[?]]">>
+;links to existing tids only
+:`<<list-links filter:"[suffix[?]]">>` <<list-links filter:"[suffix[?]]">>
+;links to missing tids only
+:`<<list-links filter:"[all[missing]suffix[?]]">>` <<list-links filter:"[all[missing]suffix[?]]">>
+;links to existing and missing tids with backlinks
+:`<<linkreferences "[all[tiddlers+missing]suffix[?]]">>` <<linkreferences "[all[tiddlers+missing]suffix[?]]">>
+:rendered via custom macro: <<source $:/macros/linkreferences>>

@@ -1,0 +1,20 @@
+created: 20150929145958666
+creator: Tobias Beer
+modified: 20150930111239902
+tags: Lists Presentation Solutions
+title: Show Content For Empty Lists
+type: text/vnd.tiddlywiki
+
+Ever so often it happens that a list returns no results. If you don't want to leave yourself or your visitors hanging, you can use the ''emptyValue'' of the <<tw ListWidget>> to declare content that is to be wikified when the list contains no items.
+
+For example:
+
+<<` """<$list filter="[[DoesntExist]is[tiddler]]" emptyMessage="//I'm sorry, but the tiddler [[DoesntExist]], well, doesn't exists.//"/>""">>
+
+!! Empty Story
+
+As the main story river is also generated from a <<tw ListWidget>>, hence you can define an ''emptyMessage'' for it. For this purpose, the template rendering the story provides you with a placeholder. To use it, create the tiddler $:/config/EmptyStoryMessage and enter the desired contents that will be transcluded when the story is empty.
+
+To show [[Welcome]] when all others are closed, use <<source $:/config/EmptyStoryMessage>>
+
+Also see: <<tw HistoryMechanism>>.

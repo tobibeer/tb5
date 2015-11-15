@@ -1,0 +1,23 @@
+created: 20150120152258631
+creator: Tobias Beer
+modified: 20150120152316578
+modifier: Tobias Beer
+tags: 
+title: $:/.tb/demo/variable-parameters
+type: text/vnd.tiddlywiki
+
+\define ref(foo:{{$:/core/Filters/Orphans!!filter}})
+$foo$
+\end
+
+\define var(foo:<<currentTiddler>>)
+$foo$
+\end
+
+\define data(foo:{{$:/palettes/Vanilla##background}})
+$foo$
+\end
+
+* <<ref>>
+* <<var>>
+* <<data>>

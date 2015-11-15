@@ -1,0 +1,12 @@
+created: 20150122005653970
+creator: Tobias Beer
+modified: 20150122010934070
+modifier: Tobias Beer
+tags: $:/tags/Macro
+title: $:/.tb/macros/inc
+type: text/vnd.tiddlywiki
+where: .tb
+
+\define inc(template,where:".tb",which:"View")
+{{||$:/$where$/ui/$which$Template/$template$}}
+\end

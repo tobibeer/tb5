@@ -1,0 +1,19 @@
+created: 20150128131136881
+creator: Tobias Beer
+modified: 20150211091345427
+modifier: Tobias Beer
+ribbon: Hello, everyone!
+tags: ribbon
+title: Tiddler Ribbon
+type: text/vnd.tiddlywiki
+
+Following [[these instructions|http://codepen.io/eode9/pen/twkKm]], here's how you can show a ribbon at each tiddler using a [[Conditional ViewTemplate Section]] and some css.
+
+; the ribbon
+: [[$:/.tb/ui/ViewTemplate/ribbon]]
+; the styles
+: [[$:/.tb/styles/ribbon]]
+
+For the ribbon to not show as an overlay, but cut-off, this tiddler is also tagged {{ribbon||$:/core/ui/TagTemplate}}. This tag is hidden in view-mode via [[Hide Tag Buttons]]. However, this brings the problem that popups will be cut-off (<<git5 issues/1102>>). Try clicking the above tag button.
+
+''Note'': For small screen widths the ribbon is shown as a bottom bar.

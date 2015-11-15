@@ -1,0 +1,14 @@
+created: 20141117101317328
+creator: Tobias Beer
+modified: 20141210171935453
+modifier: Tobias Beer
+summary: renders an iframe with the static content from tiddlywiki.com
+tags: $:/tags/Macro
+title: $:/.tb/macros/static
+type: text/vnd.tiddlywiki
+
+\define static(tiddler:"HelloThere",height:"400px",scrolling:"no")
+<div class="static pretty">
+<iframe src="http://tiddlywiki.com/static/$tiddler$" style="height:$height$;" scrolling="$scrolling$"/>
+</div>
+\end

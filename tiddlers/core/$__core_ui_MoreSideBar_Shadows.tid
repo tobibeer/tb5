@@ -1,0 +1,14 @@
+caption: {{$:/language/SideBar/Shadows/Caption}}
+created: 20141203180849628
+creator: Tobias Beer
+modified: 20141207093021764
+modifier: Tobias Beer
+tags: $:/tags/MoreSideBar
+title: $:/core/ui/MoreSideBar/Shadows
+type: text/vnd.tiddlywiki
+
+<<list-search
+"[all[shadows]sort[title]]"
+"search:title"
+"$:/temp/list-search-sidebar-system-and-shadows"
+"$:/core/ui/ListItemTemplate">>

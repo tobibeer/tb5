@@ -1,0 +1,50 @@
+created: 20141128132936832
+creator: Tobias Beer
+modified: 20141128161040364
+modifier: Tobias Beer
+tags: Search RegExp Filters Lists
+title: Search Via Regular Expressions
+type: text/vnd.tiddlywiki
+
+As [[Jeremy Ruston]] explains [[here|https://groups.google.com/d/msg/tiddlywiki/MoS3fZxSl_w/MqtZMqftxQIJ]], you can query based on regular expressions fetching the term to be searched from the contents of a tiddler...
+
+`<$list filter="[!is[system]tags[]regexp{$:/temp/search}]">`
+
+You can also use variables:
+
+```
+\define search-string()
+(?i)($(search-term)$)
+\end
+
+<$set name="search-term" value="searchme">
+<$list filter="[!is[system]tags[]regexp<search-string>]"/>
+</$set>
+```
+
+''Note:'' Be aware that any special regexp characters are used with their regexp meaning, so you need to escape `\!` them to use them literally.
+
+!!Filter By Title Match
+
+As [[steve point's out|https://groups.google.com/d/msg/tiddlywiki/2-N-MvE1aTA/jLvo87Ro5CwJ]], listing tiddlers containing a given string to be matched can be tricky.
+
+The regexp filter — allowing you to search via regular expressions — comes to the rescue. Here some useful example filters, whereas `(?i)` asks for case-insensitivity...
+
+<div class="tb-links">
+
+;`[!is[system]regexp[(?i)^R]]`
+:starts with R (<$count filter="[!is[system]regexp[(?i)^R]]"/> matches)
+:<$list filter="[!is[system]regexp[(?i)^R]]"/>
+
+;`[!is[system]regexp[(?i)R$]]`
+:ends with R (<$count filter="[!is[system]regexp[(?i)R$]]"/> matches)
+:<$list filter="[!is[system]regexp[(?i)R$]]"/>
+
+;`[!is[system]regexp[(?i)R]limit[10]]`
+:contains R — (<$count filter="[!is[system]regexp[(?i)R]limit[10]]"/> matches)
+:<$list filter="[!is[system]regexp[(?i)R]limit[10]]"/>
+
+;`[!is[system]regexp[(?i)R]] -[regexp[(?i)^R]] -[regexp[(?i)R$]]`
+:contains R but does not start or end with R — (<$count filter="[!is[system]regexp[(?i)R]] -[regexp[(?i)^R]] -[regexp[(?i)R$]]"/> Matches)
+:<$list filter="[!is[system]regexp[(?i)R]] -[regexp[(?i)^R]] -[regexp[(?i)R$]]"/>
+</div>

@@ -1,0 +1,9 @@
+created: 20141116141105240
+creator: Tobias Beer
+modified: 20150206230107784
+modifier: Tobias Beer
+tags: Macros Solutions Images
+title: External Image Path
+type: text/vnd.tiddlywiki
+
+{{ximg}}

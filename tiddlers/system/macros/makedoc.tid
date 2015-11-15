@@ -1,0 +1,56 @@
+created: 20150119232335701
+creator: Tobias Beer
+modified: 20150120010828934
+modifier: Tobias Beer
+tags: $:/tags/Macro
+title: $:/.tb/macros/makedoc
+type: text/vnd.tiddlywiki
+
+\define makedoc(filter,template,sub1,sub2)
+<$list filter="$filter$">
+<div class="doc-1">
+<div class="doc-1-main">
+<$reveal type="match" default="" text="$template$">
+
+<h1 class="doc-h"><$link to=<<currentTiddler>>><$view field=title/></$link></h1>
+
+{{!!text}}
+</$reveal>
+<$reveal type="nomatch" default="" text="$template$">
+
+{{||$template$}}
+</$reveal>
+</div>
+<$reveal type="match" default="$sub1$" text="true" class="doc-2">
+<$list filter="[all[current]tagging[]]">
+<div class="doc-2-main">
+<$reveal type="match" default="" text="$template$">
+
+<h2 class="doc-h"><$link to=<<currentTiddler>>><$view field=title/></$link></h2>
+
+{{!!text}}
+</$reveal>
+<$reveal type="nomatch" default="" text="$template$">
+
+{{||$template$}}
+</$reveal>
+</div>
+<$reveal type="match" default="$sub2$" text="true" class="doc-3">
+<$list filter="[all[current]tagging[]]">
+<$reveal type="match" default="" text="$template$">
+
+<h3 class="doc-h"><$link to=<<currentTiddler>>><$view field=title/></$link></h3>
+
+{{!!text}}
+</$reveal>
+<$reveal type="nomatch" default="" text="$template$">
+
+{{||$template$}}
+</$reveal>
+</$list>
+</$reveal>
+</$list>
+</$reveal>
+</div>
+</$list>
+\end

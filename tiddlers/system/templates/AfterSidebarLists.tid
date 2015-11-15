@@ -1,0 +1,9 @@
+created: 20141113164314372
+creator: Tobias Beer
+list-after: ?!?
+modified: 20141113172731474
+modifier: Tobias Beer
+title: $:/.tb/template/AfterSidebarLists
+type: text/vnd.tiddlywiki
+
+[[this template|$:/.tb/template/AfterSidebarLists]] @@color:red; is intended to@@ define what is displayed right after the [[SidebarLists|$:/core/ui/SideBarLists]], but how?

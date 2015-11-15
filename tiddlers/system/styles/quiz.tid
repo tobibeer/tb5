@@ -1,0 +1,30 @@
+created: 20141116155123067
+creator: Tobias Beer
+modified: 20141116161045780
+modifier: Tobias Beer
+tags: $:/tags/Stylesheet
+title: $:/styles/quiz
+type: text/plain
+
+p.Q:before {
+    content: "?";
+    color: #eee;
+    font-size: 2em;
+    padding: 10px;
+}
+p.A:before {
+    content: "!";
+    color: white;
+    font-size: 2em;
+    padding: 10px 15px 10px 5px;
+}
+p.A {
+    padding: 10px;
+    background-color: #eee;
+    color: #eee;
+}
+p.A:hover {
+    padding: 10px;
+    background-color: inherit;
+    color: inherit;
+}

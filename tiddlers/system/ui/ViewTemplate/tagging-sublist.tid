@@ -1,0 +1,14 @@
+created: 20141128230000000
+creator: Tobias Beer
+modified: 20141210163032318
+modifier: Tobias Beer
+summary: a template to recursively list the children of a tag for [[$:/.tb/macros/taggly]]
+title: $:/.tb/ui/ViewTemplate/tagging-sublist
+type: text/vnd.tiddlywiki
+
+<div class="tb-tagging-sub">
+<$transclude tiddler="$:/core/ui/ListItemTemplate"/>
+<$list filter="[is[current]tagging[]]">
+    <$transclude tiddler=<<recursive-template>>/>
+</$list>
+</div>

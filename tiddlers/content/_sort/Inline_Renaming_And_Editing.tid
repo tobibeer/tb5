@@ -1,0 +1,37 @@
+created: 20150918185744314
+creator: Tobias Beer
+foo: bar
+modified: 20150918231326349
+modifier: Tobias Beer
+tags: Solutions Tiddlers Actions
+title: Inline Renaming And Editing
+type: text/vnd.tiddlywiki
+
+With a little [[help from Andreas Hahn|https://groups.google.com/d/msg/tiddlywiki/-yqMeKtTsMk/x_Nvls62AQAJ]], here's a prototype for a little wizard that allows to inline edit tiddler titles or other fields.
+
+''Note:'' Unfortunately it is not possible to use the enter key to save changes.
+
+!! Usage
+
+The following example creates a list and calls the macro ''tb-rename inline'' specifying the tiddler to be renamed as the current list item. Without the second parameter, the macro assumes we're editing tiddler titles.
+
+<$macrocall $name="`" text="""<$list filter="[tag[Actions]]">
+<div>
+<$macrocall $name="tb-edit-inline"
+tiddler=<<currentTiddler>>/>
+</div>
+</$list>"""/>
+
+The next example uses the second macro parameter to edit a tiddlers field called ''foo'' rather than the title...
+
+<$macrocall $name="`" text="""<$list filter="[tag[Actions]]">
+<div>
+<$link><$view field="title"/></$link>:<br>
+<$macrocall $name="tb-edit-inline"
+tiddler=<<currentTiddler>> field="foo"/>
+</div>
+</$list>"""/>
+
+!! Installation
+
+Drag to your wiki: <<source [[$:/.tb/macros/edit-inline]]>>

@@ -1,0 +1,10 @@
+icon: $:/core/images/plugin-generic-plugin
+title: Plugin
+
+<$set name="remove" value="Plugin">
+<<list-search
+filter:"[tag[Plugin]sort[title]]"
+search:search
+state:"$:/temp/tb/list-plugins"
+template:"$:/.tb/template/tagged-summary">>
+</$set>

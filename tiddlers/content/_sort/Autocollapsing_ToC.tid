@@ -1,0 +1,26 @@
+created: 20150312163852543
+creator: Tobias Beer
+modified: 20150312165328747
+modifier: Tobias Beer
+tags: ToC Solutions Menus
+title: Autocollapsing ToC
+type: text/vnd.tiddlywiki
+
+The following solution [[proposed by Andreas Hahn|https://groups.google.com/d/msg/tiddlywiki/DNNRxc94MJM/e2pzQVjNABAJ]] provides additional toc macros that allow you to render an autocollapsing table of content.
+
+!!Installation
+
+Drag to your wiki: [[$:/.tb/macros/toc-auto-collapse]]
+
+!!Example
+
+<$macrocall $name=` text=
+"""<div class="tc-table-of-contents">
+<<toc-selective-single-expandable 'Welcome'>>
+</div>"""/>
+
+To additionally sort entries by a custom field, use the second macro parameter:
+
+```
+<<toc-selective-single-expandable "TableOfContents" "sort[caption]">>
+```

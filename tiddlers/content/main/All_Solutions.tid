@@ -1,0 +1,18 @@
+created: 20141220144245668
+creator: Tobias Beer
+modified: 20141220144933435
+modifier: Tobias Beer
+tags: 
+title: All Solutions
+type: text/vnd.tiddlywiki
+
+<<list-search
+"[tag[Solutions]!sort[created]]"
+search
+"$:/temp/tb/solutions"
+"$:/.tb/template/tagged-timeline"
+"Filter solutions...">><style>
+.solutions input {
+display:none;
+}
+</style>

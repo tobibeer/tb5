@@ -1,0 +1,17 @@
+caption: Start
+icon: $:/core/images/home-button
+img: Jack.jpg
+list: Latest Solutions Plugins Developer Core References Markup [[Tobias Beer]]
+list-before: Solutions
+menu: main
+menu-icon: {{$:/core/images/home-button}}
+summary: A collection of references and sandbox for testing concepts around TiddlyWiki:<br><<tagline>>
+title: Welcome
+
+<div class="tb5-home">
+<$list filter="[list[]]">
+<div class="tb5-home-title"><$link><$transclude field=caption><$view field="title"/></$transclude></$link></div>
+<div class="tb5-home-summary">{{!!summary}}</div>
+</$list>
+</div>
+<div class="tb5-fish">{{$:/.img/fish.svg}}</div>

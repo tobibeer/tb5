@@ -1,0 +1,28 @@
+created: 20141207090313732
+creator: Tobias Beer
+modified: 20150206130456911
+modifier: Tobias Beer
+title: taggly
+type: text/vnd.tiddlywiki
+
+This tiddler documents the [[<<taggly>> macro|Taggly Tagging For TW5]].
+
+; `<<taggly>>`
+: get the tagging tree for the current tiddler, e.g. Developer
+; `<<taggly "[Foo Bar]">>`
+: get tagging tree for ''Foo Bar'' (single brackets!)
+; `<<taggly "tag[Bar]">>`
+: get tagging tree for all tiddlers tagged ''Bar''
+
+!! Parameters
+
+The taggly macro allows you to specify the following parameters...
+
+|!# |!Parameter |!Description |!Default |
+|1 |''subfilter'' |a subfilter working as a selector defining the tag(s) from which to build the tree|`all[current]`|
+|2 |''template'' |the recursive template used to traverse the tagging tree and render the items|[[$:/.tb/ui/ViewTemplate/tagging-sublist]]|
+
+!! Example
+
+<$macrocall $name=` 
+text="""<<taggly "list[GettingStarted]">>"""/>

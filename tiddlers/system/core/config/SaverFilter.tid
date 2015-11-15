@@ -1,0 +1,16 @@
+created: 20141208222905240
+creator: Tobias Beer
+modified: 20151007151730515
+modifier: Tobias Beer
+title: $:/config/SaverFilter
+type: text/vnd.tiddlywiki
+
+[all[]]
+-[[$:/HistoryList]]
+-[[$:/StoryList]]
+-[[$:/Import]]
+-[[$:/isEncrypted]]
+-[[$:/UploadName]]
+-[prefix[$:/state/]]
+-[prefix[$:/temp/]]
+-[prefix[$://]]

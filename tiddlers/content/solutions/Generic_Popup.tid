@@ -1,0 +1,9 @@
+created: 20150930080515193
+creator: Tobias Beer
+modified: 20150930112326308
+summary: provides a macro to render a popup
+tags: Popup Macros Solutions Presentation Images
+title: Generic Popup
+type: text/vnd.tiddlywiki
+
+{{pop}}

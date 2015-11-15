@@ -1,0 +1,19 @@
+created: 20141118220324722
+creator: Tobias Beer
+modified: 20150131125056066
+modifier: Tobias Beer
+tags: Filters [[Stephan Hradek]]
+title: FilterOperator: join
+type: text/vnd.tiddlywiki
+
+An experimental [[filteroperator|http://tiddlywiki.com/#FilterOperators]] by [[Stephan Hradek]] [[proposed here|https://groups.google.com/d/msg/tiddlywiki/_x9CDAFtwQc/JOjUNfoxqF4J]] to concatenate filter strings...
+
+<<`
+'<dl>
+<$list filter="[[$:/language/Docs/Fields]] [[title]] +[join[/]]">
+<dt><$link><$view field="title"/></$link></dt>
+<dd><$transclude tiddler={{!!title}}/></dd>
+</$list>
+</dl>'>>
+
+see source: <<source $:/core/modules/filters/join.js>>

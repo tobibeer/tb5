@@ -1,0 +1,29 @@
+created: 20141206102231376
+creator: Tobias Beer
+modified: 20150206125351546
+modifier: Tobias Beer
+tags: 
+title: Render A Tag Button
+type: text/vnd.tiddlywiki
+
+Before I show you the macro solution, know that — although easier to read and write — it is not actually needed, except maybe owed to the issue shown at the bottom.
+
+To render a tag button, simply transclude the core template for tag-buttons...
+
+<<` '{{||$:/core/ui/TagTemplate}} {{Welcome||$:/core/ui/TagTemplate}}'>>
+
+Here's a little macro that gives you back the classic tag macro, which will also ship with 5.1.5, so at that point you could remove this version.
+
+<$macrocall $name=` 
+text="""<<tag>> <<tag Welcome>>"""/>
+
+Simply drag and drop these two into your wiki, the latter being a [[global macro|http://tiddlywiki.com/#Macros%20in%20WikiText]]:
+
+<<source $:/.tb/templates/tag>>
+<<source $:/.tb/macros/tag>>
+
+!! Why the template?
+
+The above template is needed to avoid this behaviour (see <<git5 issues/1086>>):
+
+{{Click me!||$:/core/ui/TagTemplate}} {{Click me!||$:/core/ui/TagTemplate}}

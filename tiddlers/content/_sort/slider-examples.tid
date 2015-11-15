@@ -1,0 +1,113 @@
+created: 20150110175949706
+creator: Tobias Beer
+modified: 20150206125440939
+modifier: Tobias Beer
+tags: 
+title: slider-examples
+type: text/vnd.tiddlywiki
+
+\define slider-label(prefix,suffix)
+$prefix$$(currentTiddler)$$suffix$
+\end
+
+\define slide-tiddler-tooltip()
+show/hide tiddler $(currentTiddler)$
+\end
+
+\define slide-tiddler-qualify(example)
+$:/state/slide-tiddler-$example$$(qualified)$
+\end
+
+\define slide-tiddler(label,content,tooltip,state,label-hide)
+
+<<slider
+label:"$label$"
+content:"""$content$"""
+tooltip:"$tooltip$"
+state:"$state$"
+label-hide:"$label-hide$"
+>>
+\end
+
+; implements...
+: [[$:/.tb/macros/slider]]
+
+!! Plain Sliders
+
+<$list filter="[list[Welcome]]">
+
+<$set name=qualified value=<<qualify $(currentTiddler)$>>>
+<$macrocall
+$name=slide-tiddler
+label=<<slider-label>>
+content="!!text"
+tooltip=<<slide-tiddler-tooltip>>
+state=<<slide-tiddler-qualify PS>>
+/>
+</$set>
+
+</$list>
+
+!! Sliders With Prefix
+
+<$list filter="[list[Welcome]]">
+
+<$set name= qualified value=<<qualify $(currentTiddler)$>>>
+<$macrocall
+$name=slide-tiddler
+label=<<slider-label "+ ">>
+content="!!text"
+tooltip=<<slide-tiddler-tooltip>>
+state=<<slide-tiddler-qualify SWP>>
+label-hide=<<slider-label "- ">>
+/>
+</$set>
+</$list>
+
+!! Sliders With Suffix
+
+<$list filter="[list[Welcome]]">
+
+<$set name= qualified value=<<qualify $(currentTiddler)$>>>
+<$macrocall
+$name=slide-tiddler
+label=<<slider-label "" " &gt;">>
+content="!!text"
+tooltip=<<slide-tiddler-tooltip>>
+state=<<slide-tiddler-qualify SWS>>
+label-hide=<<slider-label "" " &lt;">>
+/>
+</$set>
+</$list>
+
+!! Sliders With Prefix And Suffix
+
+<$list filter="[list[Welcome]]">
+
+<$set name= qualified value=<<qualify $(currentTiddler)$>>>
+<$macrocall
+$name=slide-tiddler
+label=<<slider-label "" " &gt;">>
+content="!!text"
+tooltip=<<slide-tiddler-tooltip>>
+state=<<slide-tiddler-qualify SWPAS>>
+label-hide=<<slider-label "&lt; ">>
+/>
+</$set>
+</$list>
+
+!! Sliders With Images
+
+<$list filter="[list[Welcome]]">
+
+<$set name= qualified value=<<qualify $(currentTiddler)$>>>
+<$macrocall
+$name=slide-tiddler
+label=<<slider-label "" " {{$:/core/images/chevron-right}}">>
+content="!!text"
+tooltip=<<slide-tiddler-tooltip>>
+state=<<slide-tiddler-qualify SWI>>
+label-hide=<<slider-label "" " {{$:/core/images/chevron-down}}">>
+/>
+</$set>
+</$list>

@@ -1,0 +1,27 @@
+created: 20150114102951794
+creator: Tobias Beer
+modified: 20150916060835110
+modifier: Tobias Beer
+tags: Embed Text Files
+title: Embedding A Text File
+type: text/vnd.tiddlywiki
+
+You can use the html object element to embed a text file. For a local text file in the same directory as your TiddlyWiki, use...
+
+`data="./example.txt"`
+
+''Note:'' Local file references won't work when using [[TiddlyWiki on node.js|http://tiddlywiki.com/#TiddlyWiki%20on%20Node.js]] as currently there are [[no configurable routes for the server to deliver static resources|https://groups.google.com/d/msg/tiddlywiki/oU4YGp41mdc/vMBteEZvAQAJ]].
+
+!!Example
+
+<<`
+'<object data="http://bit.ly/1DXYIZ5" type="text/plain" style="width:100%;height:400px;" scrolling:yes>
+<a href="http://bit.ly/1DXYIZ5" target="_blank">lorem.txt</a> (missing or not supported)
+</object>'>>
+
+!! Missing
+
+<<`
+'<object data="doesntexist" type="text/plain" style="width:100%;height:400px;" scrolling:yes>
+<a href="doesntexist"  target="_blank">lorem.txt</a> (missing or not supported)
+</object>'>>

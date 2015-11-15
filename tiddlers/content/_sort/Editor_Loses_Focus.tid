@@ -1,0 +1,23 @@
+bar: 
+created: 20150107191039296
+creator: Tobias Beer
+foo: 
+modified: 20150131124055719
+modifier: Tobias Beer
+tags: Editing Fields Solutions [[Stephan Hradek]]
+title: Editor Loses Focus
+type: text/vnd.tiddlywiki
+
+When trying to edit a field of the current tiddler in view-mode the input field will lose focus with every letter you type, since TiddlyWiki instantly stores the new value and thus refreshes the tiddler.
+
+Below is an extension to a [[solution|https://groups.google.com/d/msg/tiddlywiki/qtlNxMkmfPs/Z6Kz446WePUJ]] proposed by [[Stephan Hradek]] to work around this limitation...
+
+''create (or install) [[$:/.tb/macros/lazyedit]], tag it [[$:/tags/Macro]] containing...''
+
+<pre><$view tiddler="$:/.tb/macros/lazyedit"/></pre>
+
+''demo''
+
+<$macrocall $name=`
+text="""<<lazyedit foo>> {{!!foo}}<br>
+<<lazyedit bar>> {{!!bar}}"""/>

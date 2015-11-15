@@ -1,0 +1,21 @@
+tags: Markup
+title: combined-style-wrappers
+type: text/vnd.tiddlywiki
+
+<dt>
+
+```
+@@.tc-tiddler-frame
+@@width:200px;height:50px;
+or combine both
+@@
+```
+</dt>
+
+<dd>
+
+@@.tc-tiddler-frame
+@@width:200px;height:50px;
+or combine both
+@@
+</dd>

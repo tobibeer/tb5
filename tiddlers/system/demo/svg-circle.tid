@@ -1,0 +1,12 @@
+created: 20150211163458762
+creator: Tobias Beer
+modified: 20150926092634585
+modifier: Tobias Beer
+tags: $:/tags/Image
+title: $:/.tb/demo/svg-circle
+type: text/vnd.tiddlywiki
+
+<svg xmlns="http://www.w3.org/2000/svg" width="22pt" height="22pt" viewBox="0 0 128 128" class="tc-image-button my-image-circle">
+  <circle cx="64" cy="64" r="60" />
+</svg>
+<style>.my-image-circle {fill:deepskyblue;}</style>

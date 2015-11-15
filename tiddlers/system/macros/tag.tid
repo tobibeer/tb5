@@ -1,0 +1,12 @@
+created: 20141206101052351
+creator: Tobias Beer
+modified: 20141209152041624
+modifier: Tobias Beer
+summary: the classic [[tag|Render A Tag Button]] macro
+tags: $:/tags/Macro
+title: $:/.tb/macros/tag
+type: text/vnd.tiddlywiki
+
+\define tag(tag)
+{{$tag$||$:/.tb/templates/tag}}
+\end

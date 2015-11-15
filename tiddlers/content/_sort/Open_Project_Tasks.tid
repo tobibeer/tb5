@@ -1,0 +1,18 @@
+created: 20141119181309058
+creator: Tobias Beer
+due: 2014-11-19
+modified: 20141120002349344
+modifier: Tobias Beer
+tags: Solutions GTD Lists Buttons
+title: Open Project Tasks
+type: text/vnd.tiddlywiki
+
+This example shows how to list all tiddlers tagged ''Task'' that are not tagged ''Done'', thus open for any tiddler tagged ''Project''.
+
+!!Example
+Open the project [[GTD]] and take a look at the ''Open Project Tasks'' section at the bottom.
+
+!!The Solution
+This solution was implemented as explained in [[Conditional ViewTemplate Section]] using the following conditional template:
+
+ <<source $:/.tb/template/gtd-project-tasks>>

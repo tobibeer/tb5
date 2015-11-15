@@ -1,0 +1,15 @@
+tags: Markup
+title: internal-links
+
+<dt>
+
+```
+[[The Tiddler]]
+[[pretty title|The Tiddler]]
+```
+</dt>
+<dd>
+
+[[The Tiddler]]<br>
+[[pretty title|The Tiddler]]
+</dd>

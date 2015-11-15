@@ -1,0 +1,25 @@
+created: 20141206105011663
+creator: Tobias Beer
+modified: 20141210172855703
+modifier: Tobias Beer
+summary: allows to render the timeline also showing system tiddlers by setting `system:"all[system+tiddlers]"`
+tags: $:/tags/Macro
+title: $:/.tb/macros/timeline-full
+type: text/vnd.tiddlywiki
+
+\define timeline(limit:"100",format:"DDth MMM YYYY",subfilter:"",dateField:"modified",system:"!is[system]")
+<div class="tc-timeline">
+<$list filter="[$system$$subfilter$has[$dateField$]!sort[$dateField$]limit[$limit$]eachday[$dateField$]]">
+<div class="tc-menu-list-item">
+<$view field="$dateField$" format="date" template="$format$"/>
+<$list filter="[sameday{!!$dateField$}$system$$subfilter$!sort[$dateField$]]">
+<div class="tc-menu-list-subitem">
+<$link to={{!!title}}>
+<$view field="title"/>
+</$link>
+</div>
+</$list>
+</div>
+</$list>
+</div>
+\end

@@ -1,0 +1,27 @@
+created: 20141210161101815
+creator: Tobias Beer
+list-after: 
+modified: 20150113180827562
+modifier: Tobias Beer
+tags: $:/tags/ViewTemplate
+title: $:/.tb/ui/ViewTemplate/tiddler-link
+type: text/vnd.tiddlywiki
+
+<$list filter="[all[current]!title[GettingStarted]]">
+<div class="tiddler-link">
+<$link to=<<currentTiddler>>><$view field=title/></$link>
+</div>
+</$list>
+<style>
+.tiddler-link{
+float:right;
+clear:both;
+}
+
+.tiddler-link a {
+color:#eee;
+}
+.tiddler-link a:hover {
+color:#bbb;
+}
+</style

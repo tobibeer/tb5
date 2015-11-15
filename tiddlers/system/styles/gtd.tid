@@ -1,0 +1,15 @@
+created: 20141120112555675
+creator: Tobias Beer
+modified: 20141120112951460
+modifier: Tobias Beer
+tags: $:/tags/Stylesheet
+title: $:/styles/gtd
+type: text/css
+
+.gtd-project-tasks-tags{
+margin-left:20px;
+}
+
+.gtd-project-tasks-tags a{
+margin:0 2px;
+}

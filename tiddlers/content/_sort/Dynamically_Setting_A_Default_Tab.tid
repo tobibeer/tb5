@@ -1,0 +1,24 @@
+created: 20150128100800070
+creator: Tobias Beer
+modified: 20150128101524989
+modifier: Tobias Beer
+tags: [[Felix Küppers]] Lists Tabs Variables
+title: Dynamically Setting A Default Tab
+type: text/vnd.tiddlywiki
+
+As [[Felix Küppers]] shows in <<git5 pull/1382>>, here is how you can dynamically declare a default tab via filters, e.g. the most recent release.
+
+Below, the outer list widget first fetches the latest release from all tiddlers tagged ''~ReleaseNotes''. The inner ''macrocall'' then builds the tabs while setting the ''default'' tab to the title returned by the outer list:
+
+```
+<$list filter="[tag[ReleaseNotes]!sort[created]limit[1]]">
+<$macrocall
+$name="tabs"
+tabsList="[tag[ReleaseNotes]!sort[created]]"
+default={{!!title}}
+class="tc-vertical"
+template="ReleaseTemplate"/>
+</$list>
+```
+
+See it working at [[ReleaseNotes|http://tiddlywiki.com/prerelease/#Releases]].

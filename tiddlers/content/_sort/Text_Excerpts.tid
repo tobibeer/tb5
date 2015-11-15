@@ -1,0 +1,31 @@
+created: 20150918064818701
+creator: Tobias Beer
+modified: 20150918075109594
+modifier: Tobias Beer
+tags: Text Solutions [[Matias Goldman]]
+title: Text Excerpts
+type: text/vnd.tiddlywiki
+
+As <<excerpt "I was wondering">> how to do simple text excerpts, <<excerpt "I stumbled upon">> [[this post|https://groups.google.com/d/msg/tiddlywiki/8rXt-qVqTb0/gbgWItz0CgAJ]] by [[Mat|Matias Goldman]] and was inspired to create the following macros.
+
+!! Usage
+
+Using the `<<excerpt>>` macro, provided by $:/.tb/macros/excerpt, define the text you wish to use as an excerpt as its first parameter, e.g.:
+
+`<<excerpt "this is an excerpt">>`
+
+> <<excerpt "this is an excerpt">>
+
+At the point where you wish to output a list of excerpts, use the `<<excerpts>>` macro. For performance reasons consider specifying a filter as the first parameter.
+
+`<<excerpts>>`
+
+> <<excerpts>>
+
+`<<excerpts [tag[Solutions]]>>`
+
+> <<excerpts [tag[Solutions]]>>
+
+!!Installation
+
+Drag to your wiki: <<source [[$:/.tb/macros/excerpt]]>>

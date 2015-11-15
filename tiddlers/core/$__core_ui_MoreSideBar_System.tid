@@ -1,0 +1,14 @@
+caption: {{$:/language/SideBar/System/Caption}}
+created: 20141203181155084
+creator: Tobias Beer
+modified: 20141207093014375
+modifier: Tobias Beer
+tags: $:/tags/MoreSideBar
+title: $:/core/ui/MoreSideBar/System
+type: text/vnd.tiddlywiki
+
+<<list-search
+"[is[system]sort[title]]"
+"search:title"
+"$:/temp/list-search-sidebar-system-and-shadows"
+"$:/core/ui/ListItemTemplate">>

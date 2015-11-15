@@ -1,0 +1,36 @@
+alink: |alink|alias|aliases|
+created: 20150109160713594
+creator: Tobias Beer
+modified: 20150915095502945
+modifier: Tobias Beer
+title: alink
+type: text/vnd.tiddlywiki
+
+The [[alink]] macro or its shorthand `a:` simplify pretty-linking tiddlers in a case-insensitive manner, rendering a link to a target tiddler. To use it, define a `|piped|list|` field called `alink` at the target, encapsulating each `alias` in lowercase letters only with pipes `|`, e.g. `|alias|aliases|`.
+
+!! Parameters
+
+The `alink` or `a:` macro takes one parameter, the alias you wish to lookup and link.
+
+!!Example
+
+<$macrocall $name=`
+text="""; test
+: <<alink alias>>
+: <<a: aliases>>
+; proof
+: <code>{{alink!!alink}}</code>"""/>
+
+!!Installation
+
+Install [[$:/.tb/macros/alink]].
+
+!! Source
+
+<<source [[$:/.tb/macros/alink]]>>
+
+!! Inspired by
+
+; ''Aliases''
+: http://tw5magick.tiddlyspot.com by [[Stephan Hradek]]
+: https://groups.google.com/d/msg/tiddlywiki/eEaxLQtC7sU/4a6z0bCTQ_AJ

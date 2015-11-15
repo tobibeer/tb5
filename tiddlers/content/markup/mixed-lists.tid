@@ -1,0 +1,22 @@
+tags: Markup
+title: mixed-lists
+
+<dt>
+
+```
+# mixed
+#* lists
+#;you
+#:know
+#>like so
+```
+</dt>
+
+<dd>
+
+# mixed
+#* lists
+#;you
+#:know
+#>like so
+</dd>

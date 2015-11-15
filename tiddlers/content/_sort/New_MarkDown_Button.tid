@@ -1,0 +1,30 @@
+created: 20141211105934240
+creator: Tobias Beer
+modified: 20141231101054537
+modifier: Tobias Beer
+tags: Buttons MarkDown Solutions [[Jeremy Ruston]]
+title: New MarkDown Button
+type: text/vnd.tiddlywiki
+
+In [[this post|https://groups.google.com/d/msg/tiddlywiki/H_1eJrt0rYY/v-6edns7CtwJ]] [[Jeremy Ruston]] details how to create a button in the page-controls that allows you to create a new tiddler with a ~MarkDown content-type. Here are the steps...
+
+# create: [[$:/.tb/ui/Buttons/new-markdown]] (or any name you want)
+# tag: [[$:/tags/PageControls]]
+# field ''caption'': `{{$:/core/images/new-button}} new markdown`
+# field ''description'': `Create a new markdown tiddler`
+# text:<div>
+
+```
+<$button tooltip="Create a new markdown tiddler" aria-label="new markdown tiddler" class=<<tv-config-toolbar-class>>>
+<$action-sendmessage $message="tm-new-tiddler" type="text/x-markdown"/>
+<$list filter="[<tv-config-toolbar-icons>prefix[yes]]">
+{{$:/core/images/new-button}}
+</$list>
+<$list filter="[<tv-config-toolbar-text>prefix[yes]]">
+<span class="tc-btn-text">new markdown tiddler</span>
+</$list>
+</$button>
+```
+</div>
+
+You can toggle the button visibility in ''Sidebar'' / ''Tools''...

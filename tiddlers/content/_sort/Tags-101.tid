@@ -1,0 +1,57 @@
+created: 20150117130107131
+creator: Tobias Beer
+modified: 20150118143502462
+modifier: Tobias Beer
+tags: Tags Solutions [[Best Practice]]
+title: Tags-101
+type: text/vnd.tiddlywiki
+
+The concept of ''tags'' is fundamental to working with TiddlyWiki, like the title of a tiddler being its unique identifier.
+
+Tags provide a means to categorize and structure tiddlers. Sometimes they even have functional implications, like <<tw SystemTags>>. The [[TagManager|$:/TagManager]] gives you a list of all current tags and allows you to set colors and icons for them.
+
+The most important aspect about tags is that they establish a ''parent-child-relation''. Semantically speaking, each tiddler having a tag is a child to the tag, like a book to an author, a car to an owner, or a property to an object, etc...
+
+For answering //"How to tag this tiddler?"//, consider the answer to //"How do I relate this tiddler to other tiddlers?"//. Be clear about what's a parent, what's a child, what's content, and what's a property (field)...
+
+; apply a tag
+: for everything that is a worthy parent category
+:: with likely more than one other tiddler tagging to it
+:: the tag itself at some point serving as an index to quickly navigate to its children
+; use links in the text
+: for everything in need of mentioning and cross referencing contextually
+:: not in the sense of a categorization, but as a textual reference
+; make it a tag
+: when too much content explodes this tiddler and begs you to extract sections into their own little tiddlers...
+:: either use the {{$:/core/ui/Buttons/new-here}} ''new-here'' button to create a child tiddler, tagging to this one
+:: or use internal links to refer back and forth between the tiddlers as appropriate
+
+!! Conclusion
+
+Use a tags to refer to a category or parent. Use ''new here'' to make it a tag, when you wish to relate to a child. Otherwise use internal links to create references.
+
+~
+
+!! Tag Filters
+
+Some important filters for using tags...
+
+; <<tw "FilterOperator: tag" tag>>
+: `[tag[SomeTag]]`
+: returns all tiddlers from the current list that have the tag specified in the operand
+; <<tw "FilterOperator: tags" tags>>
+: `[[SomeTiddler]tags[]]`
+: returns all the tags present on the tiddlers in the current list
+; <<tw "FilterOperator: tagging" tagging>>
+: `[[SomeTiddler]tagging[]]`
+: returns all tiddlers tagged by the tiddlers in the current list
+; <<tw "FilterOperator: untagged" untagged>>
+: `[untagged[]]`
+: selects from the current list any tiddlers without any tags
+; <a href={{filters!!url}} target="_blank">filters</a>
+: {{filters!!summary}}
+
+~
+
+!! Documentation On TiddlyWiki.com
+<<static Tagging height:600px scrolling:yes>>

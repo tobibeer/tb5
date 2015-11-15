@@ -1,0 +1,3 @@
+title: $:/.tb/templates/tag
+
+<$transclude tiddler="$:/core/ui/TagTemplate">

@@ -1,0 +1,48 @@
+content: Some content in a field called ''content''...
+created: 20141207212411959
+creator: Tobias Beer
+in-field: Here, the toggle state is actually stored in a "toggle" field at this very tiddler.<br>However, this will make your TiddlyWiki dirty: {{$:/core/ui/Buttons/save-wiki}}
+modified: 20150118175149764
+modifier: Tobias Beer
+tags: Solutions Macros Sliders Presentation Toggle
+title: Toggle Contents
+toggle: show
+type: text/vnd.tiddlywiki
+
+Based on [[a solution posted|https://groups.google.com/d/msg/tiddlywiki/zB40PBIDkBE/d-OOeImmzk0J]] by [[Stephan Hradek]], here's a way to have a link to toggle contents rendered someplace else using two macros...
+
+; toggle
+: toggles a state via clicking a button
+; show
+: displays content from any [[text-reference|http://tiddlywiki.com/#TextReference]] based on a state
+
+```
+This <<toggle toggle-example link>> reveals contents at some other place. Some more text and now the hidden content...
+
+<<show toggle-example "{{!!content}}">>
+
+<<toggle toggle-example Link>> clicked?
+```
+
+<<<
+This <<toggle toggle-example link>> reveals contents at some other place. Some more text and now the hidden content...
+
+<<show toggle-example "{{!!content}}">>
+
+<<toggle toggle-example Link>> clicked?
+<<<
+
+!! Macro Parameters
+
+|!#|!Parameter|!Description|!Default|
+|>|>|>|!toggle|
+|1|state|a text-reference for storing the toggle state|your value will be prefixed `$:/state/`|
+|2|label|a label for the link||
+|3|class|css classes for the button|`tc-btn-invisible tc-btn-link`<br>and when shown:<br>`tc-btn-link-show`<br>when hidden:<br>`tc-btn-link-hide`|
+|>|>|>|!show|
+|1|state|the text-reference where clicking the link stored the state|your value will be prefixed `$:/state/`|
+|2|text|the transcluded text<br>displayed when state is non-empty||
+
+Here's the global macro tagged [[$:/tags/Macro]] used to produce the effect...
+
+<<source $:/.tb/macros/toggle-content>>

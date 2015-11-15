@@ -1,0 +1,12 @@
+created: 20150207114438266
+creator: Tobias Beer
+modified: 20150207115351671
+modifier: Tobias Beer
+summary: allows to link urls without a protocol `http://` or `http://www`
+tags: $:/tags/Macro
+title: $:/.tb/macros/www
+type: text/vnd.tiddlywiki
+
+\define www(url,title)
+<a href="http://$url$" target="_blank"><$list filter="$title$">$title$</$list><$reveal type="match" default="" text="$title$">$url$</$reveal>
+\end

@@ -1,0 +1,17 @@
+tags: Markup
+title: definition-lists
+type: text/vnd.tiddlywiki
+
+<dt>
+
+```
+;definition
+:term
+```
+</dt>
+
+<dd>
+
+;definition
+:term
+</dd>

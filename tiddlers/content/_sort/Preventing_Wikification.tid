@@ -1,0 +1,50 @@
+created: 20141124103945234
+creator: Tobias Beer
+modified: 20141210083525477
+modifier: Tobias Beer
+tags: [[Stephan Hradek]] Solutions Rendering Formatting Text
+title: Preventing Wikification
+type: text/vnd.tiddlywiki
+
+A solution [[proposed|https://groups.google.com/d/msg/tiddlywiki/JLJ2weN08Ho/pFae2_hvukYJ]] by [[Stephan Hradek]] to prevent wikification of problematic content and render plain text instead.
+
+''Note:'' In TWc this was achieved using `<nowiki>//foo</nowiki>` or `"""//foo"""`.
+
+!!Problem
+
+Imagine you wanted to display the literal text `//foo` without the code highlight as I just did, because we know that it would otherwise trigger everything to be italic.
+
+!!Solution
+
+Use a template like: <<source plain>>
+
+!!Example
+
+```
+{{//foo/bar||plain}}
+```
+
+<<<
+{{//foo/bar||plain}}
+<<<
+
+!! Alternative
+
+Encode one of the offending charachters using the [[appropriate html entity|http://www.cheatography.com/davechild/cheat-sheets/html-character-entities/]], e.g.:
+
+```
+&#92;\foo\bar
+```
+
+<<<
+&#92;\foo\bar
+<<<
+
+; &#92;
+: `&#92;`
+; &#96;
+: `&#96;`
+; &#39;
+: `&#39;`
+
+Also see [[Hidden Templates]].

@@ -1,0 +1,197 @@
+created: 20141119102634212
+creator: Tobias Beer
+list-after: $:/themes/tiddlywiki/vanilla/base
+modified: 20151011062154444
+modifier: Tobias Beer
+tags: $:/tags/Stylesheet
+title: $:/.tb/styles
+type: text/css
+
+a.tc-tiddlylink-shadow {
+color:#567;
+font-weight:normal;
+}
+
+a.tc-tiddlylink-resolves.tc-tiddlylink-shadow {
+font-weight:bold;
+}
+
+.tc-tiddler-body {
+	clear: both;
+}
+
+.tc-tiddler-body .tc-tag-list-item,
+.tc-tiddler-body .tc-tag-label{
+margin:0;
+}
+
+.tc-tiddler-title-icon > svg{
+fill:#bbb;
+}
+
+.tb-taglist-columns{
+column-count: 4;
+-moz-column-count: 4;
+-webkit-column-count: 4;
+}
+
+.tb-taglist .tb-taglist-item{
+width:145px;
+}
+
+.tb-taglist-columns .tb-taglist-item{
+width:auto;
+display:block;
+}
+
+.tb-taglist .tc-menu-list-count,
+.tb-taglist-columns .tc-menu-list-count{
+margin-left:-10px;
+display:inline-block;
+width:25px;
+text-align:right;
+}
+
+.tb-taglist-item{
+display:inline-block;
+padding-top:5px;
+}
+
+.tb-timeline-item{
+margin:2px -5px 5px -5px;
+padding:2px 5px 5px 5px;
+}
+
+.tb-timeline-item:hover{
+background: #f3f3f3;
+}
+
+.tb-timeline-date{
+float:right;
+color:#ccf;
+font-size:0.8em;
+}
+
+.tb-timeline-tags {
+color:#ccc;
+}
+
+.tb-timeline-tags button {
+font-size:0.8em;
+}
+
+.tb-timeline-tags .tc-tag-list-item {
+margin-right: 3px;
+}
+
+.tb-thumbs{
+width: 160px;
+margin: 0 10px 10px 0;
+}
+
+.redirected {
+color:#dd1144;
+}
+
+.tb-links dd span:not(:last-child):after{
+content:", ";
+}
+
+tr, td, th {
+vertical-align:top;
+}
+
+.no-border,
+.no-border th,
+.no-border tr,
+.no-border td {
+border:0;
+}
+
+.warn,
+.warn a {
+color: #dd1144;
+}
+
+dl:not(.tb5-markup){
+margin:0;
+}
+
+dd{
+margin-left:14px;
+}
+
+dd:before{
+content: "» ";
+}
+
+.no-before:before{
+content:none;
+}
+
+div.slider-contents{
+padding: 5px;
+border: 1px solid #eee;
+background: #fcfcfc;
+border-radius:3px;
+}
+
+ol ol {
+list-style-type: lower-alpha;
+}
+
+ol ol ol{
+list-style-type: decimal;
+}
+
+.tc-search-results {
+padding-top: 0;
+}
+
+form.contact {
+width:100%;
+}
+
+form.contact input,
+form.contact button,
+form.contact textarea {
+color:#333 !important;
+display:block;
+width:100%;
+margin:5px 0;
+padding:3px;
+border:1px solid #ddd;
+-webkit-box-shadow: 1px 1px 5px 0 rgba(204,204,204,1);
+-moz-box-shadow: 1px 1px 5px 0 rgba(204,204,204,1);
+box-shadow: 1px 1px 5px 0 rgba(204,204,204,1);
+}
+
+form.contact textarea {
+height:150px;
+}
+
+form.contact .gotcha {
+display:none;
+}
+
+.contact-response {
+width: 100%;
+overflow: hidden;
+height: 120px;
+display:none;
+}
+
+.contact-response iframe {
+overflow: hidden;
+margin: -155px 0px 0 0px;
+border: 0;
+width: 600px;
+height: 1000px;
+}
+
+.note {
+padding: 10px;
+background: #fcfcfc;
+border-radius: 15px;
+border: 1px solid #ccc;
+}

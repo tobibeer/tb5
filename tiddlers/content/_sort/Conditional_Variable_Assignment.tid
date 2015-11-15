@@ -1,0 +1,27 @@
+created: 20150918144721849
+creator: Tobias Beer
+magic: abracadabr
+modified: 20150918150238100
+modifier: Tobias Beer
+tags: Solutions Variables Widgets
+title: Conditional Variable Assignment
+type: text/vnd.tiddlywiki
+
+As posted by ''Spangenheim'' in [[this post|https://groups.google.com/d/msg/tiddlywiki/uNeLW76wmWM/3Jbthw2ZAwAJ]] you can use the [[$set widget|http://tiddlywiki.com/static/SetWidget.html]] to conditionally assign content to a variable by evaluating a filter and then using the ''emptyValue'' parameter as a fallback when the filter returns an empty string.
+
+!! Example
+
+Try changing the content of the field ''magic'' below.
+
+<$macrocall $name="`" text="""<$set name="OpenSesame"
+filter="[all[current]field:magic[abracadabra]]"
+value="Look, Sir, the Sesame is open."
+emptyValue="Nope, Sir, no entry for you.">
+<$text text=<<OpenSesame>>/>
+</$set>
+
+; magic
+: {{!!magic}}
+; <$edit-text field="magic"/>"""/>
+
+''Note:'' At the moment, there is a [[limitation|https://github.com/Jermolene/TiddlyWiki5/issues/1937]] in TiddlyWiki whereby the set widget won't reflect updates should the result of the underlying filter condition change.

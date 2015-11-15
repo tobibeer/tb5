@@ -1,0 +1,32 @@
+created: 20150109171138176
+creator: Tobias Beer
+modified: 20150109180720115
+modifier: Tobias Beer
+title: text
+
+The ''text'' macro provides a most simple macro to output colored text...
+
+```
+<<text red "Warning!">>
+```
+> <<text red "Warning!">>
+
+...as a more readable variant compared to standard [[styled-wrappers]]...
+
+```
+@@color:red;Warning!@@
+```
+> @@color:red;Warning!@@
+
+''Drawback:'' You can't call other macros like so...
+
+```
+@@color:green;float:right;''<<version>>''@@
+```
+@@color:green;float:right;''<<version>>''@@
+
+So, learning a bit of [[wikitext markup|Markup]] may be that better choice.
+
+!! Installation
+
+Drag to your wiki: <<source [[$:/.tb/macros/text]]>>

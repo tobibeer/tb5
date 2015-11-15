@@ -1,0 +1,165 @@
+counter: 1
+created: 20150126150739422
+creator: Tobias Beer
+foo: foo value
+modified: 20151113090249926
+modifier: Tobias Beer
+order: 1
+tags: Macros Calculation Solutions
+title: calc
+type: text/vnd.tiddlywiki
+
+Inspired by [[mathmacros @ tiddlyspot|http://mathmacros.tiddlyspot.com]] from [[Danielo Rodríguez]], the ''calc'' macro allows you to do simple calculations based on tiddler fields.
+
+```
+<$button set="!!counter" setTo=<<calc !!counter +1>>>+</$button>
+<$button set="!!counter" setTo=<<calc !!counter -1>>>-</$button>
+{{!!counter}} - 1 = <<calc !!counter -1>> <hr> <<calc 2 -1>> = 1
+```
+<<<
+<$button set="!!counter" setTo=<<calc !!counter +1>>>+</$button>
+<$button set="!!counter" setTo=<<calc !!counter -1>>>-</$button>
+{{!!counter}} - 1 = <<calc !!counter -1>> <hr> <<calc 2 -1>> = 1
+<<<
+
+Calculated values can be used as widget attributes so as to assign them to tiddler fields. In the above example, the counter field is incremented / decremented.
+
+!! Parameters
+
+|!#|!Parameter|!Description|!Default|
+|1|''value'' |a numeric value as a basis for the calculation or a <<tw TextReference>> to a field from which to fetch the value<br>&raquo; returns `NaN` when undefined or ''~NaN''||
+|2|''operation'' |the operator (and optionally the operand) of the mathematical operation, e.g. `*2`, or `-1`, when no operator is defined, defaults to `+`, so `1` is the same as `+1`; use ''by'' to explicitly state an operand||
+|3|''until'' |defines a value until which to calculate<br>&raquo; an upper boundary for `+` and `*`<br>&raquo; a lower boundary for `-` and `/`<br>returns the boundary when surpassed||
+|4|''beyond'' |instead of a calculated value returns `true` or `false` depending on whether or not we are beyond the boundaries defined in ''until''<br>&raquo; useful for <<tw RevealWidget>>||
+|5|''decimals''|the maximum number of decimals to output|`2`|
+|6|''tiddler''|the tiddler from which to retrieve the field value| ''currentTiddler''|
+|7|''by''|a value serving as the operand if the ''operation'' does not define any||
+
+!! Installation
+
+Drag to your wiki, save, reload: [[$:/.tb/macros/calc]] (version: <<date-version "$:/.tb/macros/calc">>)
+
+!! Examples 
+
+Here's a rudimentary example to reorder lists using the ''calc'' macro...
+
+{{$:/.tb/demo/reorder}}
+
+''Rendered via:''
+
+<<source $:/.tb/demo/reorder>>
+
+!!! More Examples
+
+`{{!!order}}`
+
+> {{!!order}}
+
+`<<calc !!order>>`
+
+><<calc !!order>>
+
+`{{!!foo}} = <<calc !!foo>>`
+
+>{{!!foo}} = <<calc !!foo>>
+
+`<<calc !!order 1>>`
+
+><<calc !!order 1>>
+
+`<<calc !!order +1>>`
+
+><<calc !!order +1>>
+
+`<<calc calc!!order +1>>`
+
+><<calc calc!!order +1>>
+
+`<<calc !!order / by:10>>`
+
+><<calc !!order / by:10>>
+
+`<<calc !!order * by:!!order>>`
+
+><<calc !!order * by:!!order>>
+
+`<<calc !!order -2>>`
+
+><<calc !!order -2>>
+
+`<<calc !!order *2>>`
+
+><<calc !!order *2>>
+
+`<<calc !!order /2>>`
+
+><<calc !!order /2>>
+
+`<<calc !!order /7>>`
+
+><<calc !!order /7>>
+
+`<<calc !!order /7 decimals:5>>`
+
+><<calc !!order /7 decimals:5>>
+
+`<<calc !!order /0>>`
+
+> <<calc !!order /0>>
+
+`<<calc 0 /0>>`
+
+> <<calc 0 /0>>
+
+`<<calc !!order until:"0.5" beyond:true>>`
+
+> <<calc !!order until:"0.5" beyond:true>>
+
+`<<calc !!order until:1 beyond:true>>`
+
+> <<calc !!order until:1 beyond:true>>
+
+`<<calc !!order *2 1>>`
+
+><<calc !!order *2 1>>
+
+`<<calc !!order *2 1 true>>`
+
+><<calc !!order *2 1 true>>
+
+`<<calc !!order *2 4>>`
+
+><<calc !!order *2 4>>
+
+`<<calc !!order *2 4 true>>`
+
+><<calc !!order *2 4 true>>
+
+`<<calc !!order -2 0>>`
+
+><<calc !!order -2 0>>
+
+`<<calc !!order -2 0 true>>`
+
+><<calc !!order -2 0 true>>
+
+`<<calc !!order -1 0>>`
+
+><<calc !!order -1 0>>
+
+`<<calc !!order -1 0 true>>`
+
+><<calc !!order -1 0 true>>
+
+!! Release Notes
+
+; 2015-11-13
+: [[fixed minor bug|http://bit.ly/1Ldi79B]]
+; 2015-10-27
+: added ''by''
+
+!! Alternatives
+
+; $action-increment
+: increments a value by another for use in things like the button widget
+: http://inmysocks.tiddlyspot.com/#ActionIncrementWidget

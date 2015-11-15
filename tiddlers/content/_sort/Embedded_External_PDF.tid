@@ -1,0 +1,31 @@
+created: 20150312165716885
+creator: Tobias Beer
+modified: 20150312183839538
+modifier: Tobias Beer
+tags: Files Solutions Embed
+title: Embedded External PDF
+type: text/vnd.tiddlywiki
+
+Here are two ways of embedding external pdf files as [[explained by Måns Mårtensson|https://groups.google.com/d/msg/tiddlywiki/5BL5_g6OmZ4/7jZ3mujbUwgJ]]:
+
+!! Method 1
+
+# create a tiddler and manually set the type to "application/pdf"
+# create the custom field "_canonical_uri" and paste the URL to your pdf
+# as needed, embed in another tiddler via `[[PDF Tiddler Title]]`
+
+!! Method 2
+
+# import / create a helper macro tagged ''$:/tags/Macro''
+#* [[$:/.tb/macros/pdf]]
+# this creates an iframe to your pdf
+
+<$macrocall $name=` text=
+"""<<pdf "http://bit.ly/18mukKq">>"""/>
+
+To reference a number of pdfs at the same location, you can modify the macro macro like this: `src="http://MyWebAddress/$url$.pdf"``. This reduces the macrocall to:
+
+<$macrocall $name=` text=
+"""<<iframe "filename">>"""/>
+
+Here, location and filetype are set by the macro.

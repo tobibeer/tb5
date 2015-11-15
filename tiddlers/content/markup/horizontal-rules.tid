@@ -1,0 +1,17 @@
+tags: Markup
+title: horizontal-rules
+
+<dt>
+
+```
+---
+horizontal rules
+<hr>
+```
+</dt>
+<dd>
+
+---
+horizontal rules
+<hr>
+</dd>

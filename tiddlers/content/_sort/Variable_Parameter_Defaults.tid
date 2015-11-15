@@ -1,0 +1,38 @@
+created: 20150120152223576
+creator: Tobias Beer
+modified: 20151010193506934
+modifier: Tobias Beer
+tags: Macros Variables TextReference
+title: Variable Parameter Defaults
+type: text/vnd.tiddlywiki
+
+\define concat(1 2 3 4 5) $1$$2$$3$$4$$5$
+
+You can initialize macro parameters using either a <<tw Variables Variable>> or a <<tw TextReference>>.
+
+''Important:'' In the macro, such parameters will be replaced as either variables or text-references, not as the values thereof, see <<git5 issues/1958>>.
+
+!! Example
+
+<<source "$:/.tb/demo/variable-parameters">>
+
+{{$:/.tb/demo/variable-parameters}}
+
+!! Parameter Substitution And Macro Evaluation
+
+The next example demonstrates how variable substitution is taking place in a macro. First, the parameters get replaced and then the macro is being evaluated.
+
+The macro simply interprets all it is given as individual paramets, e.g. the first one being `{{` and the 5th and last  `}`.
+
+```
+\define concat(1 2 3 4 5) $1$$2$$3$$4$$5$
+
+<<concat {{ Getting Started } }>>
+```
+
+''Renders as...''
+
+<<<
+
+<<concat {{ Getting Started } }>>
+<<<

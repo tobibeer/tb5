@@ -1,0 +1,21 @@
+created: 20141130154200186
+creator: Tobias Beer
+modified: 20150213194129989
+modifier: Tobias Beer
+tags: Solutions Presentation Fonts
+title: Using  A Custom Font
+type: text/vnd.tiddlywiki
+
+As [[Albert points out|https://groups.google.com/forum/#!topic/tiddlywiki/utsLmgHZAhM]], there's a very interesting method used by [[TheDiveO|http://thediveo.github.io/TW5FontAwesome/]] on how to embeded a custom font, e.g. [[FontAwesome|http://fortawesome.github.io/Font-Awesome/]]:
+
+# check for a font you like
+#* @@.warn make sure its license allows you to embed, modify, publish on the web or redistribute the font as you intent to ([[links about licenses|https://groups.google.com/d/msg/tiddlywiki/KFU3XX-raQE/g7flcZBaGusJ]])@@
+# visit http://www.fontsquirrel.com/tools/webfont-generator
+# upload your font file (".ttf", ".eot", ".woff", etc) and select "Expert" option
+# check the option case at CSS >> Base64 Encode
+# generate your webkit: the output file is a ".zip" file containing a text file with the CSS code (stylesheet.css)
+# copy all text from that file into a tiddler
+# make sure the field font-family is what you want
+# tag the tiddler [[$:/tags/Stylesheet]] and change the tiddler type to "Plain text (text/plain)"
+
+Done! Your font is available :)

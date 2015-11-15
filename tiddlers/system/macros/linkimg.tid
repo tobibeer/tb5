@@ -1,0 +1,12 @@
+created: 20141124094838009
+creator: Tobias Beer
+modified: 20150104012028607
+modifier: Tobias Beer
+summary: allows to create an image linking to a tiddler
+tags: $:/tags/Macro
+title: $:/.tb/macros/linkimg
+type: text/vnd.tiddlywiki
+
+\define linkimg(tiddler, image, tooltip, class, width, svg)
+<$list filter="[[$tiddler$]!prefix[http://]]"><$link to="$tiddler$"><$reveal type=match text="yes" default=$svg$><span class="linksvg $class$">{{$image$}}</span></$reveal><$reveal type=nomatch text="yes" default=$svg$>[img width="$width$" class="linkimg $class$" [$tooltip$|$image$]]</$reveal></$link></$list><$list filter="[[$tiddler$]prefix[http://]]"><a href="$tiddler$" target="_blank"><$reveal type=match text=yes default=$svg$><span class="linksvg $class$">{{$image$}}</span></$reveal><$reveal type=nomatch text="yes" default=$svg$>[img width="$width$" class="linkimg $class$" [$tooltip$|$image$]]</$reveal></a></$list>
+\end

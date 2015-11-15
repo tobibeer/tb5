@@ -1,0 +1,19 @@
+caption: standard
+created: 20141118194055549
+creator: Tobias Beer
+modified: 20150131124906616
+modifier: Tobias Beer
+tags: Fields Core
+title: Fields: Standard
+type: text/vnd.tiddlywiki
+
+all [[standard fields|http://tiddlywiki.com/#TiddlerFields]] of a tiddler:
+
+<$macrocall $name=via
+text="""<dl>
+<$list filter="[[title]][[text]][[tags]][[modified]][[modifier]][[created]][[creator]][[list]]">
+<$macrocall $name="describe-element" path="$:/language/Docs/Fields/" element=<<currentTiddler>>/>
+</$list>
+</dl>"""/>
+
+see also: <<source $:/macros/describe-element>>

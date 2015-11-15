@@ -1,0 +1,54 @@
+created: 20150918220410471
+creator: Tobias Beer
+modified: 20150918230218796
+modifier: Tobias Beer
+summary: allows inline editing for renaming a tiddler title
+tags: $:/tags/Macro $:/tags/Stylesheet
+title: $:/.tb/macros/edit-inline
+type: text/vnd.tiddlywiki
+
+\define tb-edit-save(tiddler,field:"title")
+<$set name="currentTiddler" value="""$(state)$""">
+<$button set="""$(state)$""" setTo="" tooltip="apply">
+<$action-setfield $tiddler="""$tiddler$""" $field$={{!!new-value}}/>
+<$reveal  type="match" default="$field$" text="title">
+<$action-deletetiddler $tiddler="""$tiddler$"""/>
+</$reveal>
+Ok
+</$button>
+</$set>
+\end
+
+\define tb-edit-inline(tiddler,field:"title")
+<$set name="state" value=<<qualify "$:/state/edit-title/$tiddler$-$field$">>>
+<$reveal type="match" state=<<state>> text="">
+<$button
+set=<<state>>
+setTo="editing"
+class="tc-btn-invisible tc-btn-edit-inline"
+tooltip="edit tiddler field">
+<$action-setfield $tiddler=<<state>> new-value={{!!$field$}}/>
+<$view tiddler="$tiddler$" field="$field$"/>
+</$button>
+</$reveal>
+<$reveal type="match" state=<<state>> text="editing">
+<div>
+<$edit tiddler=<<state>> field="new-value"/>
+<<tb-edit-save """$tiddler$""" "$field$">>
+<$button set=<<state>> setTo="" tooltip="cancel edit">
+Cancel
+</$button></div>
+</$reveal>
+</$set>
+\end
+
+.tc-btn-invisible.tc-btn-edit-inline {
+display:block;
+padding:2px 0 2px 1px;
+background:#fbfbfb;
+border: 1px solid #fbfbfb;
+text-align:left;
+height:1.6em;
+display:inline-block;
+min-width:1.6em;
+}

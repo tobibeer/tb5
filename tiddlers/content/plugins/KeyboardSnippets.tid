@@ -1,0 +1,23 @@
+summary: allows to use keyboard shortcuts for the common wikitext markup
+tags: [[Danielo Rodríguez]] Editing Developer Plugin Solutions
+title: KeyboardSnippets
+url: http://braintest.tiddlyspot.com/#keyboard-snippets
+
+While you can customize the key bindings, here are the defaults defined by this plugin...
+
+|!Combination|!snippet|!renders as|
+|`ctrl+b`| `'' ''` | ''bold'' |
+|`ctrl+i`| `// //` | //italics// |
+|`ctrl+u`| ` __ __` | __underline__ |
+|`ctrl+s`| `,, ,, ` | ,,subscript,, |
+|`ctrl+l`| `*` | non ordered list |
+|`ctrl+o`| `#` | ordered list |
+|`ctrl+k`| | code |
+|`alt+t`| `|| ` | table cell |
+|`alt+h`| `|!|` | table head |
+|`alt+s`| ` ~~ ~~` | ~~strikeout~~ |
+|`alt+w` | `<$>` | widget call |
+|`alt+z` | `{{!!}}` | variable transclusion |
+|`ctrl+m` |  `<<>>` | macro call |
+|`ctrl+alt+t` | `{{}}` | transclusion |
+|`ctrl+alt+l` | `[[]]`| link |

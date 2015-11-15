@@ -1,0 +1,48 @@
+created: 20141114133500853
+creator: Tobias Beer
+modified: 20141119005605783
+modifier: Tobias Beer
+summary: wikitext-example, wikitext-nohtml, wikitext-source, wikitext-preview
+tags: $:/tags/Macro
+title: $:/macros/wikitext
+type: text/vnd.tiddlywiki
+
+\define wikitext-example(src)
+```
+$src$
+```
+
+Renders as:
+
+$src$
+
+In HTML:
+
+$$$text/vnd.tiddlywiki>text/html
+$src$
+$$$
+
+\end
+
+\define wikitext-nohtml(src)
+```
+$src$
+```
+
+Renders as:
+
+$src$
+
+\end
+
+\define wikitext-source(src)
+<pre><$view tiddler="$src$" format="text"/></pre>
+\end
+
+\define wikitext-preview(src)
+<pre><$view tiddler="$src$" format="text"/></pre>
+
+Renders as:
+
+{{$src$}}
+\end

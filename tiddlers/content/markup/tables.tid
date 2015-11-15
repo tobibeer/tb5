@@ -1,0 +1,25 @@
+tags: Markup
+title: tables
+
+<dt style="font-size:80%;">
+
+```
+| !Header | !Header | Mhhh ?!? |
+|^NE |^ N |^ NW|
+|W | ✦ | E|
+|,SW |, S |, SE|
+|merge|left|<|
+|and|now| vertical |
+|>| right|~|
+```
+</dt>
+<dd style="font-size:80%;">
+
+| !Header | !Header | Mhhh ?!? |
+|^NW |^ @@padding:0 7px 14px 7px;display:block; N@@ |^ NE|
+|W | ✦ | @@padding:7px 0;display:block; E@@|
+|,SW |, @@padding:14px 7px 0 7px;display:block; S@@ |, SE|
+|merge|left|<|
+|and|now| vertical |
+|>| right|~|
+</dd>

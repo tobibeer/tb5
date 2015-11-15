@@ -1,0 +1,18 @@
+tags: Markup
+title: filesystem-links
+
+<dt>
+
+```
+file://///windows/network<br>
+file:///c:/Windows/foo<br>
+file:///linux/local<br>
+```
+</dt>
+<dd>
+
+file://///windows/network<br>
+file:///c:/Windows/foo<br>
+file:///linux/local<br>
+`file:///` only via local tw!
+</dd>

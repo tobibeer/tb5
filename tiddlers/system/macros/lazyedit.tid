@@ -1,0 +1,23 @@
+created: 20150107192001810
+creator: Tobias Beer
+modified: 20150116205710032
+modifier: Tobias Beer
+summary: the ''lazyedit'' macro allows updating a field at the current tiddler, see [[Editor Loses Focus]]
+tags: $:/tags/Macro
+title: $:/.tb/macros/lazyedit
+type: text/vnd.tiddlywiki
+
+\define lazyedit-filter()
+[[$(temp)$]get[text]]
+\end
+
+\define lazyedit(field)
+<$set name=field value="$field$">
+<$set name=temp value=<<qualify "$:/temp/lazy/$field$">>>
+<$edit-text tag="input" type="text" default="" tiddler=<<temp>>
+placeholder="enter text for field $field$"/>
+<$set name=value filter=<<lazyedit-filter>>>
+<$button set="!!$field$" setTo=<<value>>>Save</$button>
+</$set>
+</$set>
+\end

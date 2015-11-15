@@ -1,0 +1,59 @@
+created: 20151008073052220
+creator: Tobias Beer
+modified: 20151008200438271
+summary: {{$:/.tb/modules/macros/cycletags.js!!summary}}
+title: cycletags
+type: text/vnd.tiddlywiki
+
+The [[cycletags|$:/.tb/modules/macros/cycletags.js]] macro provides functionality similar to [[its counterpart for TW2|http://lastfm.tiddlyspot.com/#cycleTagsInfo]], allowing you to cycle through a set of tags for the current tiddler, removing any tag of the cycle currently applied while adding the next one in the cycle.
+
+!! Examples
+
+<$macrocall $name="`" text="""<<cycletags "foo bar baz">>"""/>
+
+<$macrocall $name="`" text="""<<cycletags "1 2 3" prio reset:"yes">>"""/>
+
+<$macrocall $name="`" text="""<$list filter="1 2 3" variable="prio">
+<$list filter="[is[current]tag<prio>]">
+<$link to=<<prio>>><$view tiddler=<<prio>> field="title"/></$link>
+</$list>
+</$list>
+<<cycletags "1 2 3" prio label:">" class="tc-btn-invisible next-prio">>
+<style>.next-prio {color:grey}</style>"""/>
+
+<$macrocall $name="`" text="""<<cycletags "foo bar baz" reset:"yes" class:"tc-btn-invisible my-cycle-styles">>
+<style>.my-cycle-styles {background:pink;padding:2px 5px;border-radius:3px;margin-right:3px;}</style>"""/>
+
+To apply it to a different tiddler, wrap it using the <<tw TiddlerWidget>>...
+
+<$macrocall $name="`" text="""<$tiddler tiddler="Welcome">
+<$link><$view field="title"/>:</$link>
+<<cycletags "foo bar baz">>
+</$tiddler>"""/>
+
+!! Parameters
+
+|!#|!Parameter|!Description|!Default|
+|1|''tags''|a list of tags to be cycled||
+|2|''group''|a title for the cycle group used in tooltips||
+|3|''label''|a label for the tag button|`<nextTag>`|
+|4|''tooltip''|a tooltip for the tag button|see beliw|
+|5|''class'' |a class assigned to both the cycle button and reset button, these classes always being applied:<br>`btn-cycle-tags` — cycle button<br>`btn-cycle-tags-reset` — reset button||
+|6|''reset'' |`after` — shows a reset button after the cycle button<br>`before` (or any other string) — shows a reset button before the cycle button||
+|7|''resetLabel'' |the label used for the reset button|`-`|
+|8|''resetTooltip''|a tooltip for the reset button|see below|
+
+; default button tooltip
+: `click to add [<group>-]tag <nextTag>[ while removing tag <currentTag>]`
+; default reset button tooltip
+: `click to remove current [<group>-]tag <currentTag>`
+
+!! Installation
+
+Drag these two to your wiki, save, reload:
+
+; locale
+: for simple localization, modify this <<tw DictionaryTiddlers "dictionary tiddler">>...
+: <<source "$:/.tb/modules/macros/cycletags/lingo">> 
+; macro
+: <<source "$:/.tb/modules/macros/cycletags.js" yes js>>

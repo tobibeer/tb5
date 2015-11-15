@@ -1,0 +1,41 @@
+created: 20150203115849394
+creator: Tobias Beer
+modified: 20150203120717500
+modifier: Tobias Beer
+tags: Filters Solutions ToC
+title: filter: toc
+type: text/vnd.tiddlywiki
+
+The ''toc'' filter returns a flat list for a <<tw TableOfContentsMacro "table of contents">>, e.g. for [[paging|http://pagr.tiddlyspace.com]], down to a given level, level 1 meaning directly tagging to operand.
+
+!! Example
+
+<table>
+<tr><th>actual structure</th><th>filter output</th></tr>
+<tr>
+<td>
+
+* foo
+** bar
+** baz
+* mumble
+** frotz
+** gronk
+</td>
+<td>
+
+* foo
+* bar
+* baz
+* mumble
+* frotz
+* gronk
+</td>
+</tr>
+</table>
+
+''Note:'' The ''toc'' filter operator is published here as it has not been considered important enough for the core, see <<git5 issues/1404>>.
+
+!!Installation
+
+drag to your wiki: <<source [[$:/.tb/modules/filters/toc.js]] yes>>

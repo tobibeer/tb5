@@ -1,0 +1,27 @@
+created: 20151014151545865
+creator: Tobias Beer
+modified: 20151014170313866
+summary: Need a  quick-create dashboard displayed when a tiddler you just linked to doesn't yet exist? Here's how you do...
+tags: Solutions Presentation Tiddlers Tags
+title: Better Missing
+type: text/vnd.tiddlywiki
+
+As of version 5.1.9, when you navigate to a missing tiddler this message is shown:
+
+> Missing tiddler "foo" - click {{$:/core/images/edit-button}} to create.
+
+While this can be useful for editing a wiki, it is not so much for visiting a published wiki. To modify this message, you can edit the following tiddler, as is done here:
+
+ <<source [[$:/language/MissingTiddler/Hint]]>>
+
+On tb5, [[another template|$:/.tb/ui/ViewTemplate/redirected-tb5]] already shows links for [[redirected tiddlers|Aliases And Redirecting Dead Links]], so in the above:
+
+* the reveal widget only shows its content when no redirects are defined
+** see [[Aliases And Redirecting Dead Links]]
+* only then a note is displayed with a button that looks like a link which...
+** closes the current tiddler
+** navigates to the [[Welcome]] tiddler
+
+> {{this missing tiddler||$:/.tb/ui/ViewTemplate/missing}}
+
+Try it out at: [[this missing tiddler]]

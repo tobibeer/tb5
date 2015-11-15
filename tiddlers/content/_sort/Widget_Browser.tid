@@ -1,0 +1,37 @@
+category: Developer
+created: 20141122101124750
+creator: Tobias Beer
+modified: 20141125033251034
+modifier: Tobias Beer
+summary: with [[a little help|https://groups.google.com/d/msg/tiddlywiki/KwOcmtm7Z4s/X4FvzNnZAmwJ]] from [[Jeremy Ruston]] this example demonstrates how to make use of DataTiddlers for a select widget in order to display static content from TiddlyWiki.com
+tags: Widgets Solutions DataTiddlers Lists Presentation [[Jeremy Ruston]] Developer
+title: Widget Browser
+type: text/vnd.tiddlywiki
+
+\define getValue(data,index) <$view tiddler="$(data)$" index="$(currentTiddler)$" format="text"/>
+\define iframe(tiddler)
+<$macrocall $name="static" tiddler={{$:/data/core/widgets##$tiddler$}} height="600px" scrolling="yes"/>
+\end
+
+Select a widget:
+<$select tiddler="$:/temp/widget-browser" default="action-navigate">
+<$list filter='[[$:/data/core/widgets]indexes[]sort[title]]'>
+<option value=<<currentTiddler>> >
+<$text text=<<currentTiddler>>/>
+</option>
+</$list>
+</$select>
+
+Documentation on ~TiddlyWiki.com...
+
+<$macrocall $name="iframe" tiddler={{$:/temp/widget-browser}}/>
+
+<br>
+
+!!Components
+;data
+:[[$:/data/core/widgets]]
+;state
+:<<source [[$:/temp/widget-browser]]>>
+;source
+:<<source "Widget Browser">>

@@ -1,0 +1,7 @@
+created: 20150927193306354
+creator: Tobias Beer
+modified: 20150929115615521
+title: $:/core/wiki/title
+type: text/vnd.tiddlywiki
+
+{{$:/SiteTitle}} — {{$:/HistoryList!!current-tiddler}}

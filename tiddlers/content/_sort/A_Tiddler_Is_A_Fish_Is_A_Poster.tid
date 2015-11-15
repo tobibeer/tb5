@@ -1,0 +1,11 @@
+created: 20150113182000480
+creator: Tobias Beer
+modified: 20150113182552628
+modifier: Tobias Beer
+summary: <<tagline>>
+tags: Images
+title: A Tiddler Is A Fish Is A Poster
+type: text/vnd.tiddlywiki
+url: {{$:/.img/fish.svg!!url}}
+
+<div style="margin:0 -45px 0 -43px">{{$:/.img/fish.svg}}</div>

@@ -1,0 +1,49 @@
+created: 20141202200515983
+creator: Tobias Beer
+modified: 20150106211815800
+modifier: Tobias Beer
+tags: Solutions Lists Filters Macros Sidebar
+title: list-search
+type: text/vnd.tiddlywiki
+
+Working on this [[wiki to show off FontAwesome|http://fontawesome.tiddlyspot.com]], I was wondering how to simplify filtering lists the way I used to with [[ListFiltr|http://listfiltr.tiddlyspace.com]] in [[TWc|http://classic.tiddlywiki.com]].
+
+You will find list-search throughout this wiki, e.g. to filter the [[markup reference|Markup]].<br>
+An example:
+
+```
+Type something into the filter box...
+<<list-search
+"[tags[]sort[title]limit[7]]"
+"search"
+"$:/temp/list-search-example"
+"$:/core/ui/ListItemTemplate"
+placeholder:"Filter by tags..." >>
+```
+
+<<<
+Type something into the filter box...
+<<list-search
+"[tags[]sort[title]limit[7]]"
+"search"
+"$:/temp/list-search-example"
+"$:/core/ui/ListItemTemplate"
+placeholder:"Filter by tags...">>
+<<<
+
+!!Installation
+
+To use list-search in your tw5, drag this over: [[$:/.tb/macros/list-search]]
+
+!! Parameters
+
+The following parameters can be specified for the list-search macro:
+
+|!#|!Parameter|!Description|!Default|
+|1|''filter'' |the list filter |`[tags[]]`|
+|2|''search'' |the way to search, e.g.<br>» [[search|http://tiddlywiki.com/#FilterOperator%3A%20search]]<br>» [[search:title|http://tiddlywiki.com/#FilterOperator%3A%20search]]<br>» [[regexp|http://tiddlywiki.com/#FilterOperator%3A%20regexp]]<br>» etc...|`search:title`|
+|3|''state'' |the [[state tiddler|http://tiddlywiki.com/#StateMechanism]] in which to store the search term |[[$:/temp/list-search]]|
+|4|''template'' |a template tiddler for the list items |[[$:/core/ui/ListItemTemplate]]|
+|5|''placeholder''|placeholder text shown in the empty filter input|`Filter`|
+
+Here's the source of the global ''list-search'' macro <<source $:/.tb/macros/list-search>>

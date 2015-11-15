@@ -1,0 +1,38 @@
+created: 20141119132924619
+creator: Tobias Beer
+modified: 20150119180850958
+modifier: Tobias Beer
+summary: a conditional view template tagged [[$:/tags/ViewTemplate]] rendering a tagging tree
+tags: $:/tags/ViewTemplate
+title: $:/.tb/ui/ViewTemplate/tagging
+type: text/vnd.tiddlywiki
+
+\define lingo-base() $:/language/TiddlerInfo/
+<div class="tb-tagging">
+<div class="tb-tagging-label">
+    <$list filter="[all[current]is[missing]] [all[current]text[]] [all[current]tag[$:/tags/Tagging]] +[tagging[]limit[1]]">
+        <<lingo Tagging/Caption>>:
+    </$list>
+</div>
+
+<<taggly subfilter:"all[current]is[missing]] [all[current]text[]] [all[current]tag[$:/tags/Tagging]] +[">>
+</div><style>
+.tb-tagging{
+font-size:0.8em;
+}
+
+.tb-tagging-label{
+color:grey;
+}
+
+.tb-tagging-sub{
+margin-left: 10px;
+}
+
+.tb-tagging-sub:before{
+content:"&#187;";
+color:grey;
+float:left;
+margin-right:5px;
+}
+</style>

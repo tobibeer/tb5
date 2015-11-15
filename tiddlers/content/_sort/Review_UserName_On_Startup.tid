@@ -1,0 +1,39 @@
+created: 20150128140535447
+creator: Tobias Beer
+modified: 20150128235817442
+modifier: Tobias Beer
+tags: [[Stephan Hradek]] Config Workflows Startup [[Danielo Rodríguez]]
+title: Review UserName On Startup
+type: text/vnd.tiddlywiki
+
+With multiple users editing a wiki, it may be good practice to always force users to review and set their username first. As [[Stephan Hradek]] points out [[here|https://groups.google.com/d/msg/tiddlywiki/mip6gql_VVU/PCo1AxUEmU8J]], you can add a tiddler that allows editing the username in [[$:/ControlPanel]] / ''Info'' as the first default tiddler.
+
+<<source UserName>>
+
+<<<
+{{UserName}}
+<<<
+
+!! Subtitle Message
+
+On TiddlyDrive, [[Danielo Rodríguez]] implemented a message in [[$:/SiteSubtitle]] to show a more permanent reminder:
+
+```
+Signing as <$view tiddler="$:/status/UserName">
+@@color:red;
+''Anonymous''
+@@
+</$view>
+```
+
+<<<
+Signing as <$view tiddler="$:/status/UserName">
+@@color:red;
+''Anonymous''
+@@
+</$view>
+<<<
+
+Which shows the following when no username is given...
+
+> Signing as @@color:red;''Anonymous''@@

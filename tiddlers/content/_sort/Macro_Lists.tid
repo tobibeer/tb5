@@ -1,0 +1,30 @@
+created: 20141114130548430
+creator: Tobias Beer
+modified: 20141120135921553
+modifier: Tobias Beer
+tags: Macros Solutions Lists
+title: Macro Lists
+
+!Inline Macro References
+`filter="[all[tiddlers]regexp:text[(?m)^\\define\s+\w+\s*\(]]`
+<$list filter="[all[tiddlers]regexp:text[(?m)^\\define\s+\w+\s*\(]]">
+
+</$list>
+
+!User Defined Global Macros
+`filter="[tag[$:/tags/Macro]]"`
+<$list filter="[tag[$:/tags/Macro]]">
+
+</$list>
+
+!Core Macros
+`filter="[all[shadows]module-type[macro]]"`
+<$list filter="[all[shadows]module-type[macro]]">
+
+</$list>
+
+!Core Wikitext Macros
+`filter="[all[shadows]tag[$:/tags/Macro]]"`
+<$list filter="[all[shadows]tag[$:/tags/Macro]]">
+
+</$list>

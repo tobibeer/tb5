@@ -1,0 +1,13 @@
+created: 20141125235314245
+creator: Tobias Beer
+modified: 20141125235838661
+modifier: Tobias Beer
+tags: Solutions Buttons Dates
+title: Journal From Tiddler Title
+type: text/vnd.tiddlywiki
+
+A trick [[suggested|https://groups.google.com/forum/#!topic/tiddlywiki/Rkv4qT1pgGU]] by [[Alberto Molina]]:
+
+To have the "new journal here" button add the current tiddler's title to the new journal title, open your [[controlpanel|$:/ControlPanel]] and add $(currentTiddler)$ at the beginning or end of the datestring.
+
+!! Try it out here!

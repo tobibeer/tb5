@@ -1,0 +1,12 @@
+created: 20141210082224189
+creator: Tobias Beer
+modified: 20141210082451178
+modifier: Tobias Beer
+summary: an example macro to simplify using [[$:/.tb/templates/plain]]
+tags: $:/tags/Macro
+title: $:/.tb/macros/plain
+type: text/vnd.tiddlywiki
+
+\define plain(text)
+{{$text$||$:/.tb/templates/plain}}
+\end

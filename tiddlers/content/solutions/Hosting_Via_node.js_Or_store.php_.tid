@@ -1,0 +1,60 @@
+created: 20151011055343242
+creator: Tobias Beer
+modified: 20151011062337560
+tags: Solutions Hosting Node.js store.php GitHub
+title: Hosting Via node.js Or store.php?
+type: text/vnd.tiddlywiki
+summary: hosting options for TiddlyWiki
+
+As explained [[here|https://groups.google.com/d/msg/tiddlywiki/Q-U87Gol31c/KUNAqN_ADQAJ]], those are two radically different modes to operate. Between the two, right now, there's really just one option I would recommend to use.
+
+!! [[store.php|Your own TiddlySpot-like upload server]]
+
+# ''server'' => simple
+#* requires "just" php
+#* very common, plenty of affordable or free options
+#* nothing more to set up in terms of TiddlyWiki, at all
+# ''store''
+#* operates on a per wiki basis
+# ''authentication''
+#* simple autentication, tried and tested even with TW2 since 2008
+# ''backups''
+#* backs up wiki files
+
+!! [[node.js|http://tiddlywiki.com/#ServerCommand]]
+
+# ''server'' => pro
+#* requires a node capable server
+#* not so common, commercially more pricey
+#* requires to manage TiddlyWiki and possibly other npm packages
+# ''store''
+#* operates on a per-tiddler basis
+# ''authentication''
+#* none? => should possibly be called "experimental"
+#*use with mucho-care-o (whatever that means, must be Spanglish ;-)
+# ''backups''
+#* none out of the box
+#* you need to figure out how to take care of that for your server
+
+! The Third Way
+
+What I actually do right now for [[tb5|Welcome]] is...
+
+!! [[node.js|http://tiddlywiki.com/#TiddlyWiki%20on%20Node.js]] + standalone wiki
+
+# ''server'' => dead-simple
+#* requires just the basic, cheapest of hosting, plenty-o-free
+#* [[github pages|http://pages.github.com]] is just fine for me atm
+#* node and TiddlyWiki are installed on your local machine => full control
+# ''store''
+#* organize and edit on a per tiddler basis, but node bakes full standalone wikis
+# ''authentication''
+#* none needed other than basic [[FTP|https://filezilla-project.org/]], GitHub, cloud storage
+#* fool-proof, most secure, never writing to any server-store via TiddlyWiki
+# ''backups''
+#* manage however you want, local, via GitHub, or any cloud service like [[DropBox|http://dropbox.com]], [[OneDrive|https://onedrive.live.com]], [[Google Drive|https://www.google.com/drive]], etc...
+
+@@.note
+
+''Note:'' Unlike the other two above, this does not allow any editing over the web.<br><br>You can always edit your contents, preview changes and temporarily store them, say, in a [[trello|https://trello.com]], email yourself the entire wiki, or edit tiddlers in GitHub as we already do with documentation for TiddlyWiki (having to merge things at some point).
+@@

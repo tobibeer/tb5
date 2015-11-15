@@ -1,0 +1,32 @@
+created: 20141117084727358
+creator: Tobias Beer
+modified: 20151001064523013
+modifier: Tobias Beer
+tags: $:/tags/Stylesheet
+title: $:/styles/pretty
+type: text/plain
+
+.pretty-pop,
+.pretty img,
+.pretty svg,
+img.pretty,
+.static{
+box-shadow: 2px 2px 15px 1px rgba(119, 119, 119, 0.5);
+-moz-box-shadow: 2px 2px 15px 1px rgba(119, 119, 119, 0.5);
+-webkit-box-shadow: 2px 2px 15px 1px rgba(119, 119, 119, 0.5);
+}
+
+.linksvg.pretty.thumbs svg {
+width:66px;
+height:66px;
+padding:6px; margin: 0 12px 12px 0;
+border-radius: 7px 7px 7px 7px;
+-moz-border-radius: 7px 7px 7px 7px;
+-webkit-border-radius: 7px 7px 7px 7px;
+<<transition "fill 150ms ease-in-out">>
+}
+
+.linksvg.pretty.thumbs-120 svg {
+width:120px;
+height:120px;
+}

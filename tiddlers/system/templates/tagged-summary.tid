@@ -1,0 +1,18 @@
+title: $:/.tb/template/tagged-summary
+
+<div class="tb-timeline-item">
+<dt>
+<$link to={{!!title}}><$view field="title"/></$link>
+</dt>
+<dd class="tb-tagged-summary">
+<$transclude field="summary"/>
+</dd>
+<$list filter="[all[current]tag[Plugins]]">
+<dd class="tb-tagged-plugin-url">
+{{!!url}}
+</dd>
+</$list>
+<dd class="tb-timeline-tags">
+<$list filter="[all[current]tags[]sort[title]]-[[$remove$]]" template="$:/core/ui/TagTemplate"/>
+</dd>
+</div>

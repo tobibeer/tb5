@@ -1,0 +1,36 @@
+created: 20150121121317298
+creator: Tobias Beer
+modified: 20150122021331885
+modifier: Tobias Beer
+tags: Developer Code
+title: Code-101
+type: text/vnd.tiddlywiki
+
+If you're new to TiddlyWiki, if not anything that looks like code, [[this discussion with Mat|https://groups.google.com/d/msg/tiddlywiki/l1Tu5uxSHSk/k8N9rvAm2OEJ]] may give you some pointers on how to approach all things programatic.
+
+!! That Conclusion
+
+<<<
+What matters is that you find a goal and then take on that challenge and adventure of figuring out how to make it work.
+
+It will be a slow process, it will require lots of learning, you will make abundant mistakes — coding always comes with nasty bugs and stumbling blocks — you will discard mountains of superfluous and redundant, if not false stuff, go ahead a step and back two.
+
+I sure encourage anyone to join the dancers... but the most important thing is to swing those limbs, not to read "swinging for dummies" ...unless that actually helps you do just that. ^////^
+<<<
+
+!! Getting Started
+
+; Basics
+: http://www.w3schools.com/html
+: http://www.w3schools.com/css
+: http://www.w3schools.com/js
+; node.js
+: http://nodeschool.io
+; TiddlyWiki
+: [[tiddlywiki.com|http://tiddlywiki.com]]
+: [[tiddlywiki.com/dev|http://tiddlywiki.com/dev]]
+: [[github.com/TiddlyWiki5|http://github.com/Jermolene/TiddlyWiki5]]
+: [[Basic Javascript Macro]]
+; JavaScript
+: [[What makes JavaScript weird ...and awesome|https://www.youtube.com/watch?v=JEq7Ehw-qk8&list=PLoYCgNOIyGACnrXwo5HMCfOH9VT05znGv&index=13]]
+:: first class functions, event driven, closures, scope (''variables'', "use strict"), context (''this'', ''self'', call, apply, bind)

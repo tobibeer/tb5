@@ -1,0 +1,14 @@
+caption: Plugins
+icon: $:/core/images/plugin-generic-plugin
+menu: main
+menu-icon: {{$:/core/images/plugin-generic-plugin}}
+summary: interesting plugins for tw5
+tags: Welcome
+title: Plugins
+
+{{Plugin}}
+
+<br>
+Some [[information on plugins|http://tiddlywiki.com/#Plugins]] not included in the core but contained in the TiddlyWiki repository...
+
+<<static Plugins 800px yes>>

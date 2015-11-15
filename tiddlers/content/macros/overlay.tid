@@ -1,0 +1,75 @@
+created: 20150118164553583
+creator: Tobias Beer
+modified: 20150119102132150
+modifier: Tobias Beer
+tags: Solutions Presentation Toggle Macros Styles
+title: overlay
+
+The ''overlay'' macro allows you to overlay or toggle content. As an example...
+
+```
+<<overlay
+{{$:/.tb/demo/overlay!!what}}
+{{$:/.tb/demo/overlay!!with}}
+400px 40px overlay-example>>
+```
+
+<<<
+<<overlay
+{{$:/.tb/demo/overlay!!what}}
+{{$:/.tb/demo/overlay!!with}}
+400px 40px overlay-example>>
+<<<
+
+
+```
+<<overlay
+{{$:/core/images/storyview-classic}}
+{{$$:/core/images/storyview-pop}}
+32px 32px>>
+```
+
+<<<
+<<overlay
+{{$:/core/images/storyview-classic}}
+{{$$:/core/images/storyview-pop}}
+32px 32px>>
+<<<
+
+!!Installation
+
+To use the ''ovleray'' macro in your tw5, drag this over: [[$:/.tb/macros/overlay]]
+
+!! Parameters
+
+The following parameters can be specified for the ''overlay'' macro:
+
+|!#|!Parameter|!Description|!Required|
+|1|''what'' |the initial content | X |
+|2|''with'' |the content shown on-hover| X |
+|3|''width'' |the width of the overlay box| X |
+|4|''height'' |the height of the overlay box| X |
+|5|''class''|an additional class assigned to the overlay box||
+
+These css classes are defined by the overlay macro...
+
+; `overlay`
+: the class for the wrapper
+; `overlay-what`
+: the class for the initial content
+; `overlay-with`
+: the class for the overlayed content
+
+!!The Macro
+<<source [[$:/.tb/macros/overlay]]>>
+
+!! The Example Tiddler
+
+[[$:/.tb/demo/overlay]]:
+
+; what
+: {{$:/.tb/demo/overlay!!what}}
+; with
+: {{$:/.tb/demo/overlay!!with}}
+; text
+: abused for styles ;-){{$:/.tb/demo/overlay}}

@@ -1,0 +1,24 @@
+tags: Markup
+title: styled-wrappers
+
+<dt>
+
+```
+@@color:red;
+;css styles
+:apply directly like this
+@@
+
+@@color:red;or this@@
+```
+</dt>
+
+<dd>
+
+@@color:red;
+;css styles
+:apply directly like this
+@@
+
+@@color:red;or this@@
+</dd>

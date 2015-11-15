@@ -1,0 +1,30 @@
+created: 20150207112811130
+creator: Tobias Beer
+modified: 20150207115422197
+modifier: Tobias Beer
+summary: {{$:/.tb/macros/www!!summary}}
+tags: Macros Solutions Links
+title: www
+type: text/vnd.tiddlywiki
+
+''simple''
+
+<$macrocall $name=` text="""<<www tiddlywiki.com>>"""/>
+
+''pretty-linked''
+
+<$macrocall $name=` text="""<<www tiddlywiki.com TiddlyWiki>>"""/>
+
+Compare to the core syntax for external links:
+
+<<` "[ext[tiddlywiki.com|http://tiddlywiki.com]]">>
+
+!! Installation
+
+Drag to your wiki: [[$:/.tb/macros/www]]
+
+!! Parameters
+
+|!#|!Name|!Description|
+|1|url|the url without the protocol specified, so the browser does its thing|
+|2|title|a pretty title to be displayed instead of the ''url''|

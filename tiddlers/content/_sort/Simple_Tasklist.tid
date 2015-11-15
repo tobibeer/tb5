@@ -1,0 +1,16 @@
+created: 20141119170921630
+creator: Tobias Beer
+due: 2013-09-03
+modified: 20150113132542960
+modifier: Tobias Beer
+tags: GTD Dates Lists Task Done Solutions
+title: Simple Tasklist
+type: text/vnd.tiddlywiki
+
+Here is a simple tasklist:
+
+{{$:/.tb/template/tasklist-simple}}
+
+<br><br>
+Also see [[Tiddlers By Due Date]], the above lists were rendered by transcluding:
+<<source $:/.tb/template/tasklist-simple>>

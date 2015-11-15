@@ -1,0 +1,11 @@
+caption: Created
+created: 20150917111209336
+creator: Tobias Beer
+list-after: $:/core/ui/MoreSideBar/Recent
+modified: 20150919090952469
+modifier: Tobias Beer
+tags: $:/tags/MoreSideBar
+title: $:/.tb/ui/SideBar/Created
+type: text/vnd.tiddlywiki
+
+<$macrocall $name="timeline" format={{$:/language/RecentChanges/DateFormat}} dateField="created" limit="10"/>

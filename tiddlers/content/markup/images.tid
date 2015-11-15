@@ -1,0 +1,20 @@
+tags: Markup
+title: images
+
+<dt>
+
+```
+[img[example.jpg]]
+[img[tooltip|example.jpg]]
+[img width=16 [example.jpg]]
+[img class="tc-image" [example.jpg]]
+```
+</dt>
+
+<dd>
+
+[img[http://www.tiddlywiki.com/favicon.ico]]<br>
+[img[tooltip|http://www.tiddlywiki.com/favicon.ico]]<br>
+[img width=16 [http://www.tiddlywiki.com/favicon.ico]]<br>
+[img class="tc-image" [http://www.tiddlywiki.com/favicon.ico]]
+</dd>

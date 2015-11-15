@@ -1,0 +1,42 @@
+created: 20150918130245123
+creator: Tobias Beer
+modified: 20150918132527113
+modifier: Tobias Beer
+tags: Widgets Presentation Tables
+title: Conditional Table Rows
+type: text/vnd.tiddlywiki
+
+As [[discussed here|https://groups.google.com/d/msg/tiddlywiki/Z9xgAOUD0v4/omc3RXeLAwAJ]], you can make table rows display conditionally using the [[reveal widget|http://tiddlywiki.com/static/RevealWidget.html]] like so...
+
+<<` '<$reveal type="match" state="$:/state/example-rows" text="">
+<$button set="$:/state/example-rows" setTo="show">Expand Rows</$button>
+</$reveal>
+<$reveal type="nomatch" state="$:/state/example-rows" text="">
+<$button set="$:/state/example-rows" setTo="">Collapse Rows</$button>
+</$reveal>
+<table>
+<tr><th>foo</th><th>bar</th></tr>
+<$reveal type="nomatch" state="$:/state/example-rows" text="" tag="tr">
+<td>baz</td><td>mumble</td>
+</$reveal>
+<$reveal type="nomatch" state="$:/state/example-rows" text="" tag="tr">
+<td>frotz</td><td>gronk</td>
+</$reveal>
+</table>'>>
+
+An alternative way to using a reveal widget for every row would be to assign a css class to a wrapper and then use some css to hide all rows at once...
+
+<<` '<style>
+.hide-rows tr td{display:none}
+</style>
+<$reveal type="match" state="$:/state/example-rows" text="hide-rows">
+<$button set="$:/state/example-rows" setTo="show-rows">Expand Rows</$button>
+</$reveal>
+<$reveal type="nomatch" state="$:/state/example-rows" text="hide-rows">
+<$button set="$:/state/example-rows" setTo="hide-rows">Collapse Rows</$button>
+</$reveal>
+<table class={{$:/state/example-rows}}>
+<tr><th>foo</th><th>bar</th></tr>
+<tr><td>baz</td><td>mumble</td></tr>
+<tr><td>frotz</td><td>gronk</td></tr>
+</table>'>>

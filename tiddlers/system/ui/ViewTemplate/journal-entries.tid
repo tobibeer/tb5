@@ -1,0 +1,19 @@
+created: 20150209205259313
+creator: Tobias Beer
+list-after: $:/core/ui/ViewTemplate/body
+modified: 20150209205911966
+modifier: Tobias Beer
+tags: $:/tags/ViewTemplate
+title: $:/.tb/ui/ViewTemplate/journal-entries
+type: text/vnd.tiddlywiki
+
+<$list filter="[all[current]tagging[]tag[Journal]sort[created]limit[1]]" variable="none">
+<h2>Journal Entries</h2>
+<$list filter="[all[current]tagging[]tag[Journal]sort[created]]">
+@@color:grey;
+<$view field="created" format="date" template="YYYY-0MM-0DD"/>
+<$link><$view field=title/></$link>
+@@
+<br>
+</$list>
+</$list>

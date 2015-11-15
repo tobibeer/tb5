@@ -1,0 +1,32 @@
+created: 20150211134352642
+creator: Tobias Beer
+modified: 20150211152434655
+modifier: Tobias Beer
+tags: 
+title: HiddenTiddlers
+type: text/vnd.tiddlywiki
+
+TiddlyWiki entirely works on [[tiddlers|Tiddlers]]. This is not only true for the content you wish to give it but also for all the bells and whistles that actually make it work.
+
+!! System Tiddlers
+
+To not have you overwhelmed with the abundant components that provide TiddlyWiki's features, a special <<tw "Naming%20of%20System%20Tiddlers" NameSpace>> was defined in order to hide these so-called <<tw SystemTiddlers>>, prefixed `$:/`.
+
+; hidden from
+: search results
+: most sidebar tabs, except ''More / System'' and ''More / Shadows''
+
+!! Shadow tiddlers
+
+<<tw ShadowTiddlers>> are unpacked by TiddlyWiki on startup as components of plugins. They can come as <<tw SystemTiddlers>> but can also be tiddlers that are not under the `$:` namespace.
+
+; hidden from
+: search results
+: most sidebar tabs, except ''More / Shadows''
+
+!! Embedded Media
+
+Whenever you drag an <<tw "Images%20in%20WikiText image>> or <<tw Audio audio>> file to TiddlyWiki, it will be embedded as a tiddler with a special <<tw ContentType>>.
+
+; hidden from
+: ''Sidebar / Recent'' — only after you edit those tiddlers they are given a modification time-stamp and are listed here

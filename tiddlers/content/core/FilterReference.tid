@@ -1,0 +1,35 @@
+created: 20150929053836826
+creator: Tobias Beer
+modified: 20150929113952604
+title: Filter Reference
+type: text/vnd.tiddlywiki
+
+\define linkToTW() [ext[$(op)$|http://tiddlywiki.com/#$(op)$%20Operator]]
+
+\define getValue(data,index) <$view tiddler="$(data)$" index="$(currentTiddler)$" format="text"/>
+
+\define iframe(tiddler,more)
+<$macrocall $name="static" tiddler="$tiddler$%2520Operator$more$.html" height="600px" scrolling="yes"/>
+\end
+
+Check out the [[filters]] wiki for a reference of commonly used filter expressions.
+
+Here is a quick reference to all core filters...
+
+<$select tiddler="$:/temp/filter-examples" default="action-navigate" default="Select filter...">
+<$list filter='addprefix addsuffix addsuffix after all backlinks before bf butfirst butlast commands each eachday editiondescription editions field fields first get getindex has haschanged indexes is last limit links list listed modules moduletypes Most steps process the selection of titles that are supplied as their input, but a few next nsort nsortcs nth plugintiddlers prefix previous regexp removeprefix removesuffix rest reverse sameday search shadowsource sort sortcs splitbefore storyviews suffix tag tagging tags title'>
+<option value=<<currentTiddler>> >
+<$text text=<<currentTiddler>>/>
+</option>
+</$list>
+</$select>
+<$reveal type="nomatch" state="$:/temp/filter-examples" text="">
+
+<$set name="op" value={{$:/temp/filter-examples}}>
+Documentation and examples [[on tiddlywiki.com|http://tiddlywiki.com/#Introduction%20to%20filter%20notation]] for the <<linkToTW>> [[filter operator|http://tiddlywiki.com/#Filter%20Operators]]...
+</$set>
+
+<$macrocall $name="iframe" tiddler={{$:/temp/filter-examples}}/>
+
+<$macrocall $name="iframe" tiddler={{$:/temp/filter-examples}} more="%2520(Examples)"/>
+</$reveal>

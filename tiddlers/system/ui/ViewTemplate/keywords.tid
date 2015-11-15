@@ -1,0 +1,14 @@
+created: 20150116165843966
+creator: Tobias Beer
+list-after: $:/core/ui/ViewTemplate/body
+modified: 20150116171818472
+modifier: Tobias Beer
+summary: shows keywords of a tiddler at the bottom
+tags: $:/tags/ViewTemplate
+title: $:/.tb/ui/ViewTemplate/keywords
+type: text/vnd.tiddlywiki
+
+<$list filter="[all[current]has[keywords]]-[list[$:/config/Hide/Keywords!!text]]">
+
+''keywords'': <$view field="keywords"/>
+</$list>

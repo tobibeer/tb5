@@ -1,0 +1,20 @@
+follow: yes
+summary: a filter to compare and calculate with field values for basic arithmetic or boolean computations
+tags: [[Tobias Beer]]
+title: let
+url: http://let.tiddlyspot.com
+created: 20141203003326406
+modified: 20150108114144123
+creator: Tobias Beer
+modifier: Tobias Beer
+
+~LetFilter allows to compare and calculate fields of tiddlers in a filter list, e.g.:
+
+* compare a given date field against a specified date
+** by default, both dates are compared with day accuracy
+* compare a boolean field against a specified boolean
+* compare a number / integer field against a specified number / integer
+* calculate a number / integer field using basic arithmetics
+* calculate a boolean field using basic boolean operations
+* define whether to consider blank field values in its operations or not
+* return a random number of items from a result list

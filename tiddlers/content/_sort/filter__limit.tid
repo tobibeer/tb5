@@ -1,0 +1,57 @@
+created: 20150203170035422
+creator: Tobias Beer
+modified: 20150204110239388
+modifier: Tobias Beer
+tags: Solutions Filters Lists Paging CoreFix
+title: filter: limit
+type: text/vnd.tiddlywiki
+
+This wiki implements a different ''limit'' filter than the core. In fact, this version effectively overrides the core which implements a negation for ''limit'' that is not only wrong in terms of set theory but also constrains its applicability for that reason.
+
+The limit filter provided here both corrects the faulty negation and extends the core limit filter with an ability to define an ''offset'' in the suffix.
+
+!! Documentation
+
+| !purpose|returns the first (or last) ''N'' input titles, optionally with an offset ''O''|
+| !input|a list of titles|
+| !suffix|optionally, an offset ''O'', defaulting to `0`|
+| !parameter|an integer limit ''N'', defaulting to `0`|
+| !output|the first ''N'' titles from the input list|
+
+The `limit[n]` filter outputs the first ''N'' titles from the input list. If ''N'' is negative, the last ''N'' titles are output instead. If the input list contains less than ''N'' titles, the output is the same as the input.
+
+Using the optional suffix you can specify an offset ''O'', i.e. a number of titles removed from the start of the input. When ''O'' is negative, titles are removed from the end of the list instead. The offset ''O'' is applied before the limit ''N''.
+
+!! Installation
+
+Drag to your wiki: [[$:/core/modules/filters/limit.js]]
+
+!! Examples
+
+<<f "[!sort[modified]limit[2]]"
+"the 2 most recently modified tiddlers">>
+
+<<f "[has[created]sort[created]limit[2]]"
+"the 2 oldest tiddlers by creation date">>
+
+<<f "[sort[modified]limit[-2]]"
+"the 2 most recently modified tiddlers,<br>
+the most recent being last in the list">>
+
+<<f "[has[created]sort[created]limit[-2]]"
+"the 2 newest tiddlers by creation date,<br>
+the newest being last in the list">>
+
+<<f "[!sort[modified]limit:10[1]]"
+"the 11th most recently modified tiddler, first 10 skipped">>
+
+<<f "[has[created]sort[created]limit:10[1]]"
+"the 11th oldest tiddler by creation date, first 10 skipped">>
+
+<<f "[has[created]sort[created]limit:10[2]]"
+"the 11th and 12th oldest tiddlers by creation date,<br>
+the 11th being topmost, first 10 skipped">>
+
+<<f "[sort[modified]limit:-10[-2]]"
+"the 11th and 12th most recently modified tiddlers,<br>
+the 11th most recent being last in the list, last 10 skipped">>

@@ -1,0 +1,30 @@
+created: 20141126235720797
+creator: Tobias Beer
+modified: 20141127150658287
+modifier: Tobias Beer
+tags: Solutions Tables Popups
+title: Popups In Tables
+type: text/vnd.tiddlywiki
+
+As [[Danielo Rodríguez]] [[pointed out|https://groups.google.com/d/msg/tiddlywiki/zsXxL4t29HI/gBuDKIpItWMJ]], you may run into a problem where — when you render a table containing popups — the popups would open at the wrong position, so you may not even see them!
+
+<table>
+<tr><td>Click that button!</td><th>{{$:/.tb/demo/template/test/more}}</th></tr>
+</table>
+
+To remedy this, apply use a custom stylesheet to apply `position:relative` to the table elements containing the popups, e.g.:
+
+```
+<style>.fix-popups th, .fix-popup td {position:relative;}</style>
+
+<table class="fix-popups">
+<tr><td>Click that button!</td><th>{{$:/core/ui/Buttons/more-tiddler-actions}}</th></tr>
+<tr><td>{{$:/core/ui/Buttons/more-tiddler-actions}}</td><td>Clicked?</td></tr>
+</table>
+```
+
+<style>.fix-popups th, .fix-popup td {position:relative;}</style>
+
+<table class="fix-popups">
+<tr><td>Click that button!</td><th>{{$:/core/ui/Buttons/more-tiddler-actions}}</th></tr>
+</table>

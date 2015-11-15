@@ -1,0 +1,40 @@
+created: 20141120014714384
+creator: Tobias Beer
+modified: 20141125025527723
+modifier: Tobias Beer
+tags: Variables Lists Solutions [[Danielo Rodríguez]] Developer
+title: Variables In Nested Lists
+type: text/vnd.tiddlywiki
+
+An [[overview|https://groups.google.com/forum/#!topic/tiddlywiki/1BjhyWKpTgg]] from [[Danielo Rodríguez]] on working with variables in nested list widgets.
+
+The list widget has a powerful feature, the variable parameter. It helps you in not losing the reference to the parent while providing meaningful variables names within lists:
+
+```
+<$list filter="[tag[sometag]]" variable="item">
+both still reference the parent: {{!!title}}, <<currentTiddler>>
+the more obvious list item now is: <<item>>
+
+Go as deep as you want...
+<$list filter="[tag<item>]" variable="subitem">
+still the outermost parent: {{!!title}}, <<currentTiddler>>
+1st level items: <<item>>
+2nd level items: <<subitem>>
+</$list>
+
+</$list>
+```
+
+Notice the single angle brackets with `<item>` in the filter expression of the inner list.
+
+You can even use list variables in macro calls like so...
+
+```
+\define myItem() item name is $(item)$
+
+<$list filter="[tag[Plugins]]" variable="item" >
+<<myItem>>
+</$list>
+```
+
+also see: [[Passing Parameters To A Transclusion]]

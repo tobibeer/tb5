@@ -1,0 +1,17 @@
+created: 20141215155356882
+creator: Tobias Beer
+modified: 20141215161445041
+modifier: Tobias Beer
+summary: in a local TiddlyWiki, uses the browser's folder view to show the contents of a local folder
+tags: $:/tags/Macro
+title: $:/.tb/macros/localfolder
+type: text/vnd.tiddlywiki
+
+\define local(path:"./", height:"600px")
+<iframe src="$path$" class="local-folder" style="height:$height$"/><style>
+.local-folder {
+width:100%;
+height:$height$;
+border:0;
+</style>
+\end

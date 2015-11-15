@@ -1,0 +1,38 @@
+title: Customizations
+
+@@float:right;text-align:right;color:#ccc; running version:<br><<version>>@@
+
+!!Custom Macros
+<$list filter="[all[]prefix[$:/macro]] [all[]prefix[$:/.tb/macro]] +[sort[title]]">
+<$link><$view field="title"/></$link><br>
+@@color:#999;margin-left:20px; {{!!summary}}@@<br>
+</$list>
+
+!!Custom UI
+<<list-links filter:"[all[]sort[title]prefix[$:/ui]]">>
+
+!!Custom Templates
+<<list-links filter:"[all[]prefix[$:/template]] [tag[$:/template]] +[sort[title]]">>
+
+!!Custom Styles
+<<list-links filter:"[tag[$:/tags/Stylesheet]sort[title]]">>
+
+!!Custom Configuration
+<<list-links filter:"[all[]sort[title]prefix[$:/config]]">>
+
+!!Overwritten Shadows
+<<list-links filter:"[is[shadow]]">>
+
+!!My Core Hacks
+<dl>
+<$list filter="[prefix[$:/hack]sort[title]]">
+<dt><$link><$view field="title"/></$link></dt>
+<dd>@@color:#999;{{!!summary}}@@</dd>
+</$list>
+</dl>
+
+!!Cleanup
+
+<$list filter="[tag[Cleanup]]">
+
+</$list>

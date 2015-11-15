@@ -1,0 +1,22 @@
+created: 20150106001959713
+creator: Tobias Beer
+modified: 20150106002844913
+modifier: Tobias Beer
+tags: Solutions Macros
+title: Working With Macros
+type: text/vnd.tiddlywiki
+
+As [[Jeremy|Jeremy Ruston]] [[clarifies here|https://groups.google.com/d/msg/tiddlywiki/QXaD2i6tWeo/VeGHTKM-RdEJ]], consider the following pitfalls when using macros...
+
+* invoking a macro with double angle brackets...
+** causes the result of the macro to be __wikified__
+** ...after parameter and variable substitutions
+* using a macro as an attribute to a widget or html-element...
+** e.g. `<div class=<<myMacro>>>`
+** doesn't wikify the result of the macro
+** the plain result of the macro is assigned to the attribute
+* invoking a macro with double angle brackets...
+** you __cannot__ specify parameters as transclusions or macro invocations
+** you can only use plain strings
+* macros can also be invoked with the `<$macrocall> widget`
+** allows attributes to be specified as transclusions or macro invocations

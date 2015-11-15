@@ -1,0 +1,47 @@
+created: 20141119163515940
+creator: Tobias Beer
+due: 2014-01-01
+modified: 20150113132516935
+modifier: Tobias Beer
+tags: Dates Workflows Lists GTD Task Solutions
+title: Tiddlers By Due Date
+type: text/vnd.tiddlywiki
+
+Here's a basic workflow as [[proposed by Jeffrey Kishner|http://blog.jeffreykishner.com/2014/01/17/a-tiddlywiki-filter-to-list-due-dates.html]] to assign due dates to tiddlers and list them accordingly.
+
+!!Setting Due Dates
+
+Add the field ''due'' to any desired tiddler and set the value using `YYYY-0MM-0DD` format, e.g. `2014-01-01`.
+
+!! Listing Due Tiddlers
+<table>
+<tr><th>Due</th><th>Tiddler</th></tr>
+<$list filter="[has[due]!tag[Done]sort[due]]">
+<tr>
+<td><$view field="due"/></td>
+<td>
+<$checkbox tag="Done">
+<$link to={{!!title}}><$view field="title"/></$link>
+</$checkbox>
+</td>
+</tr>
+</$list>
+</table>
+
+rendered via :
+
+```
+<table>
+<tr><th>Due</th><th>Tiddler</th></tr>
+<$list filter="[has[due]!tag[done]sort[due]]">
+<tr>
+<td><$view field="due"/></td>
+<td>
+<$checkbox tag="done">
+<$link to={{!!title}}><$view field="title"/></$link>
+</$checkbox>
+</td>
+</tr>
+</$list>
+</table>
+```

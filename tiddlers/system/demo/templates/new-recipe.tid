@@ -1,0 +1,21 @@
+created: 20150128123232800
+creator: Tobias Beer
+modified: 20150206162005879
+modifier: Tobias Beer
+tags: Recipe
+title: $:/.tb/demo/Template/new-recipe
+type: text/vnd.tiddlywiki
+
+@@float:right;[img width="200px"[http://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/En_hemgjord_appletini.jpg/640px-En_hemgjord_appletini.jpg]]@@
+introduction...
+
+; add category tags, then remove
+: Starters, Desserts, Soups, Meat, Asian, Italian
+
+!! Ingredients
+* foo
+* bar
+
+!! Preparation
+# step 1
+# step 2

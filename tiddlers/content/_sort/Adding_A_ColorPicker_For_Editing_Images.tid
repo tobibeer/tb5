@@ -1,0 +1,17 @@
+created: 20141201173414078
+creator: Tobias Beer
+modified: 20141202083907022
+modifier: Tobias Beer
+tags: Solutions Images Editing Templates
+title: Adding A ColorPicker For Editing Images
+type: text/vnd.tiddlywiki
+
+A trick inspired by [[Jeremy's comment|https://github.com/Jermolene/TiddlyWiki5/issues/911#issuecomment-56985742]]: Always wanted to change that default @@color:#ffff00;background:#bbb;padding:3px 5px;border-radius:7px;yellow@@ used for painting over images?
+
+Just as you can add a [[Conditional ViewTemplate Section]], you can add a custom edit template component by tagging it [[$:/tags/EditTemplate]].
+
+Simply drag this template to your TiddlyWiki and for all your image tiddlers a color-picker and a setting for the line-width will be displayed right below the image dimensions: <<source $:/.tb/ui/EditTemplate/paint>>
+
+Try it out editing and see if you can manage to play with opacity, as well...
+
+<<linkimg Jack.jpg Jack.jpg>>

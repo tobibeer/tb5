@@ -1,0 +1,4 @@
+list-after: $:/core/ui/MoreSideBar/Tags
+title: $:/.tb/template/sidebar-calendar
+
+<iframe id="iframe-preview" style=" border-width:0 " width="230" height="240" frameborder="0" scrolling="no" src="http://bit.ly/1vpBKt5"></iframe>

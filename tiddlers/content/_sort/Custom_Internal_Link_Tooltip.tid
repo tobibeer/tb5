@@ -1,0 +1,11 @@
+created: 20141116234738039
+creator: Tobias Beer
+modified: 20141124095354985
+modifier: Tobias Beer
+tags: Solutions UI Links
+title: Custom Internal Link Tooltip
+type: text/vnd.tiddlywiki
+
+As described [[here|http://tiddlywiki.com/#LinkWidget]] it is possible to override the tooltip displayed for internal links by overriding the `<<tv-wikilink-tooltip>>` macro...
+
+<<source $:/macros/default-tooltip>>

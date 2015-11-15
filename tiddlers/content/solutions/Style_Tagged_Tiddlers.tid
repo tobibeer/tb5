@@ -1,0 +1,15 @@
+created: 20150929153628393
+creator: Tobias Beer
+modified: 20150929155920329
+modifier: Tobias Beer
+tags: Styles CSS Tags Presentation Solutions Test
+title: Style Tagged Tiddlers
+type: application/x-tiddler
+
+To give tiddlers having a certain tag their very own looks, you can use [[this method|http://tobibeer.github.io/tw/style/#Style%20Tagged%20Tiddlers]].
+
+Also see [[How to apply custom styles by tag|http://tiddlywiki.com/#How%20to%20apply%20custom%20styles%20by%20tag]].
+
+!!Example
+
+<<` "<style>.tc-tagged-Test {border: 1px solid hotpink;}</style>">>

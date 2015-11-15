@@ -1,0 +1,15 @@
+created: 20141119012117517
+creator: Tobias Beer
+modified: 20141119101655608
+modifier: Tobias Beer
+tags: UI Lists Solutions Sidebar
+title: Shorter Timeline
+type: text/vnd.tiddlywiki
+
+If you find your timeline, i.e. the ''recent'' tab, to become too long for your tastes...
+
+# open [[$:/core/ui/SideBar/Recent]]
+# copy the contents
+# add a `limit="20"` parameter to the timeline `$macrocall`
+# add a link to a [[full timeline|Timeline]] at the bottom to access the full list
+# paste the original contents from [[$:/core/ui/SideBar/Recent]]

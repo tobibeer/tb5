@@ -1,0 +1,17 @@
+created: 20141120005653223
+creator: Tobias Beer
+modified: 20150131124726808
+modifier: Tobias Beer
+tags: Embed Solutions Media
+title: Embed A Video
+type: text/vnd.tiddlywiki
+
+Is as easy as pie...
+
+# go to your video site
+# find the embed code
+# paste into a tiddler
+# adjust as necessary and remove what you don't need besides the ''iframe''
+
+<<`
+'<iframe src="http://www.youtube.com/embed/Cj6ho1-G6tw?vq=hd720" frameborder="0" allowfullscreen style="width:100%;height:420px;"/>'>>

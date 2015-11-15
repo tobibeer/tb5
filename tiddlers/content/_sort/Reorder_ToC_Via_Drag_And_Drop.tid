@@ -1,0 +1,11 @@
+created: 20150116182707683
+creator: Tobias Beer
+modified: 20150118175301010
+modifier: Tobias Beer
+tags: BuggyJ Solutions ToC Sorting Lists
+title: Reorder ToC Via Drag And Drop
+type: text/vnd.tiddlywiki
+
+As [[BuggyJ]] points out [[here|https://groups.google.com/d/msg/tiddlywiki/nxd-Z4UzsJs/GtLiBV6nBl8J]], in [[TiddlyClip]] there is a tab in the sidebar called [[ControlToc|http://tiddlyclip.tiddlyspot.com/#ControlToc]] which implements [[$:/plugins/bj/taglist|http://tiddlyclip.tiddlyspot.com/#%24%3A%2Fplugins%2Fbj%2Ftaglist]].
+
+It allows to reorder list items via drag and drop, even nested lists such as a [[table of contents|http://tiddlywiki.com/#TableOfContentsMacro]].

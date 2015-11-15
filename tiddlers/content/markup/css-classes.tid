@@ -1,0 +1,25 @@
+tags: Markup
+title: css-classes
+type: text/vnd.tiddlywiki
+
+<dt>
+
+```
+!.h1-class.red CSS
+#.li-class.red classes
+*.li-class.red can be
+;.dt-class.red assigned
+:.dd-class.red like
+>.blockquote-class.red this
+```
+</dt>
+
+<dd>
+
+!.h1-class.red CSS
+#.li-class.red classes
+*.li-class.red can be
+;.dt-class.red assigned
+:.dd-class.red like
+>.blockquote-class.red this
+</dd>

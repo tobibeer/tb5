@@ -1,0 +1,31 @@
+created: 20141124005512521
+creator: Tobias Beer
+modified: 20141125025530236
+modifier: Tobias Beer
+tags: Lists Filters Developer
+title: Grouped List
+type: text/vnd.tiddlywiki
+
+```
+<$list filter="[all[shadows]has[group]sort[group]each[group]]">
+
+!! <$view field="group"/>
+<$list filter="[all[shadows]field:group{!!group}sort[title]]">
+
+;{{!!name}}
+:{{!!description}}
+</$list>
+</$list>
+```
+
+
+<$list filter="[all[shadows]has[group]sort[group]each[group]]">
+
+!! <$view field="group"/>
+
+<$list filter="[all[shadows]field:group{!!group}sort[title]]">
+
+;{{!!name}}
+:{{!!description}}
+</$list>
+</$list>

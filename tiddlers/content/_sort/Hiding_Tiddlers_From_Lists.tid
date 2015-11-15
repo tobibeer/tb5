@@ -1,0 +1,47 @@
+created: 20141118083746121
+creator: Tobias Beer
+modified: 20141125025526432
+modifier: Tobias Beer
+tags: Solutions Config Macros Templates Styles Developer
+title: Hiding Tiddlers From Lists
+type: text/vnd.tiddlywiki
+
+If you find yourself wanting to not see one of your tiddlers listed next to your content tiddlers, chances are it is a custom...
+
+* macro
+* template
+* stylesheet
+* configuration tiddler
+
+!!Using System Tiddlers
+A simple trick to hide them from most content-oriented views and lists is to put them under an appropriate path in the [[system tiddlers|http://tiddlywiki.com/#SystemTiddlers]] namespace with the prefix `$:/`:
+
+;custom macro
+:`$:/macros/<my-macro>`
+;custom macro styles
+:`$:/macros/<my-macro>/styles`
+;custom macro config tiddlers
+:`$:/macros/<my-macro>/config/<myConfigTiddler>`
+;custom config tiddler
+:`$:/macros/<my-macro>/<myConfigTiddler>`
+;custom macro templates
+:`$:/macros/<my-macro>/templates/<myTemplate>`
+;custom macro template
+:`$:/macros/<my-macro>/<myTemplate>`
+;custom transclusion templates
+:`$:/templates/*`
+;custom stylesheets
+:`$:/styles/*`
+;user defined config tiddlers (not core)
+:`$:/user/config/*`
+
+You can then find them under @@color:blue; ''[[Sidebar|$:/core/ui/SideBarLists]] > [[More|$:/core/ui/SideBar/More]] > [[System|$:/core/ui/MoreSideBar/System]]''@@ or using [[Advanced Search|$:/AdvancedSearch]].
+
+!! User Prefix
+A possible way to reduce the risk of your customizations interfering with any of those you might later import from somewhere else, you can use a user shorthand in any of the system namespace components, e.g.:
+
+* `$:/tbr/...`
+* `$:/tobibeer/...`
+* `$:/macros/tobibeer/...`
+
+''Note:'' This way, however, chances might be greater that — when competing macro or style definitions of different origins coexist — one out of two with the same name will win over the other and you may find it hard to identify the problem. Therefore, know your wiki and carefully review imported system tiddlers from other sources.

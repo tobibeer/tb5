@@ -1,0 +1,22 @@
+created: 20151010155952224
+creator: Tobias Beer
+modified: 20151010160027529
+tags: Widgets Macros Solutions [[Jeremy Ruston]]
+title: Invoking Macros As Widget Parameters
+type: text/vnd.tiddlywiki
+summary: using macros as attributes; for evaluated parameters see [[Dynamic Contents In Macros]]
+
+As Jeremy explains [[here|https://groups.google.com/d/msg/tiddlywiki/8IhXmNewLjs/9Jj4b42ECwAJ]]...
+
+>  Macro invocations used as widget attributes may have parameters. However, there are a couple of points to watch:
+> 
+>* the output of the macro is not wikified; it is used directly as the value of the attribute
+>* the double angle brackets widget call syntax only allows parameters to be specified as strings
+
+!! Example
+
+The example below creates a link to a tiddler with the current date as the title...
+
+<$macrocall $name="`" text="""<$tiddler tiddler=<<now "YYYY-0MM-0DD">>>
+<$link><$view field=title/></$link>
+</$tiddler>"""/>

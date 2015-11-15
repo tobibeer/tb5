@@ -1,0 +1,9 @@
+tags: Docs
+title: Module Types
+
+\define renderfield(title)
+<tr class="tc-view-field"><td class="tc-view-field-name">''$title$'':</td><td class="tc-view-field-value">//{{$:/language/Docs/ModuleTypes/$title$}}//</td></tr>
+\end
+<table class="tc-view-field-table"><tbody><$list filter="[moduletypes[]]"
+ variable="listItem"><$macrocall $name="renderfield" title=<<listItem>>/></$list>
+</tbody></table>

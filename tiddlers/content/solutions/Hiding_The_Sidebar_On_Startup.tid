@@ -1,0 +1,23 @@
+created: 20151007170453626
+creator: Tobias Beer
+modified: 20151010152020134
+modifier: Tobias Beer
+summary: using a startup module to set a tiddler when TiddlyWiki opens
+tags: Solutions Presentation Sidebar
+title: Hiding The Sidebar On Startup
+type: text/vnd.tiddlywiki
+
+In [[this discussion|https://groups.google.com/d/msg/tiddlywiki/dQbt-JFdRR8/P0zR0njIAQAJ]], Evan asks how to hide the sidebar on startup. Motivated by just having helped out ~FrD over [[setting some fields at startup|https://groups.google.com/d/msg/tiddlywiki/l8fhn6EJB88/2KwbNbSrDAAJ]] a few minutes earlier, I realized that this can quickly be achieved via a javascript module of type startup.
+
+!!Installation
+
+To hide the sidebar on startup, drag these two over to your wiki
+
+; [[$:/.tb/modules/startup/hide-sidebar.js]] <<date-version [[$:/.tb/modules/startup/hide-sidebar.js]]>>
+: a startup module setting the sidebar state according to the below configuration tiddler
+; [[$:/config/HideSidebarOnStartup]]
+: in order to actually have the sidebar hidden on startup, set its content to `yes`
+
+!! Source
+
+<<source [[$:/.tb/modules/startup/hide-sidebar.js]]>>

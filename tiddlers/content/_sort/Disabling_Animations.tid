@@ -1,0 +1,11 @@
+created: 20141119151322693
+creator: Tobias Beer
+modified: 20141119151812208
+modifier: Tobias Beer
+tags: Animation Settings Solutions
+title: Disabling Animations
+type: text/vnd.tiddlywiki
+
+To entirely disable animations, open the ''Info'' tab in your {{$:/core/ui/Buttons/control-panel}} [[control panel|$:/ControlPanel]] and set...
+
+''Animation Duration:'' 0

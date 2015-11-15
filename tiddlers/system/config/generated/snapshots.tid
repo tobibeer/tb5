@@ -1,0 +1,10 @@
+created: 20141130192623391
+modified: 20150118144005840
+modifier: Tobias Beer
+story-name: 
+title: $:/_snapshots
+type: application/json
+
+{
+    "On Stories": "[[Saving And Loading A History Snapshot]] $:/.tb/ui/SideBar/Stories"
+}

@@ -1,0 +1,30 @@
+created: 20141221103432978
+creator: Tobias Beer
+modified: 20141221105452247
+modifier: Tobias Beer
+tags: Batch Import Solutions Editing Export
+title: Batch Importing Tiddlers
+type: text/vnd.tiddlywiki
+
+Do you have a lot of data you wish to import as tiddlers into TiddlyWiki? Here are a few simple steps to create the required import file.
+
+To first understand how to create a valid import file, take a look at the export feature...
+
+#open ''Advanced Search'' {{$:/core/ui/Buttons/advanced-search}} / ''Filter''
+#*enter a filter like `[tag[Markup]]`
+#*this lists all tiddlers tagging to [[Markup]]
+#click the export button to the right of the search / filter input
+#export the listed tiddlers in a format you're able to construct yourself
+#*e.g. json or csv
+
+Now, have a look at that file in either some text editor or that spreadsheet application that allows you to create such a file via text-concatenation.
+
+Now, in order to create an importable file...
+
+# construct your import file using a format that suits your needs
+#* add the desired entries
+# save it
+# drag it from your desktop onto your TiddlyWiki
+# hit ''import''
+
+Now you should have imported a bunch of tiddlers from your desktop into TiddlyWiki without creating them manually within TiddlyWiki itself.

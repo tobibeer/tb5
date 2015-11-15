@@ -1,0 +1,32 @@
+created: 20141125121637448
+creator: Tobias Beer
+icon: $:/core/images/globe
+modified: 20150118223351764
+modifier: Tobias Beer
+summary: host your tw5 online, [[simple|http://tiddlywiki.com/#Saving%20on%20TiddlySpot]]<!--Simon Baird-->
+tags: References
+title: TiddlySpot
+type: text/vnd.tiddlywiki
+url: http://tiddlyspot.com
+
+The workflow to host any tw5 on TiddlySpot couldn't be much simpler:
+
+In fact, you can upload ''__any__'' tw5 to your TiddlySpot Site ID, simply by entering the correct Site ID and password into [[ControlPanel|$:/ControlPanel]]: ''Done!''
+
+If you neither have a TiddlyWiki or TiddlySpot yet, here's a simple process to do to get both up and running (only works in Chrome or Safari, not Firefox or IE).
+
+# create [[new TiddlySpot|http://tiddlyspot.com]]
+#* flavour doesn't matter, just remember the ''Site ID''
+#* keep that window open
+# [[download|http://tiddlywiki.com/#GettingStarted]] or simply [[open an empty TiddlyWiki|http://tiddlywiki.com/empty.html]]
+# set your basics in [[ControlPanel|$:/ControlPanel]] to your liking ...I most always do:
+#*''Info:'' Title, Subtitle, Username, animation = 0
+#* ''Settings:'' autosave "off", "include target URL", "update history"
+# under [[ControlPanel / Saving|$:/ControlPanel]] enter TiddlySpot credentials
+#* simply enter TiddlySpot password and ''Wiki Name'' as TiddlySpot site ID
+# click save {{$:/core/ui/Buttons/save-wiki}}
+#* open or reload that TiddlySpot window
+# Enjoy!
+
+!!Related articles
+<<taggly>>

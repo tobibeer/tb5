@@ -1,0 +1,15 @@
+created: 20150106172354665
+creator: Tobias Beer
+icon: $:/core/images/plugin-generic-language
+modified: 20150915083303601
+modifier: Tobias Beer
+summary: an aggregator allowing to search indexed TiddlyWiki community wikis
+tags: References Search Solutions Community
+title: Community Search
+type: text/vnd.tiddlywiki
+url: http://erwanm.github.io/tw-community-search
+
+; GitHub
+: https://github.com/erwanm/tw-aggregator
+; discussion
+: https://groups.google.com/d/msg/tiddlywiki/tJjhzDDvk4k/4QuoXDoNqw8J

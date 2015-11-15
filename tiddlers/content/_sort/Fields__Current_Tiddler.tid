@@ -1,0 +1,20 @@
+awesome: indeed
+caption: current tiddler
+created: 20141118194904902
+creator: Tobias Beer
+modified: 20150131124515052
+modifier: Tobias Beer
+tags: Fields Lists Filters
+title: Fields: Current Tiddler
+type: text/vnd.tiddlywiki
+
+all custom [[fields|Fields: Current Tiddler]] of the current tiddler:
+
+<<via
+'<ul>
+<$list filter="[all[current]fields[]sort[title]]-[all[shadows]removeprefix[$:/language/Docs/Fields/]]" mode="block">
+<li>{{!!title}}</li>
+</$list>
+</ul>'>>
+
+''Note:'' The current tiddler here is not the transcluded one but the one transcluded into!

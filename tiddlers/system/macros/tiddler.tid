@@ -1,0 +1,29 @@
+created: 20150918102839634
+creator: Tobias Beer
+modified: 20150918102931732
+modifier: Tobias Beer
+tags: $:/tags/Macro
+title: $:/.tb/macros/tiddler
+type: text/vnd.tiddlywiki
+
+\define tiddler(title,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9)
+<$set name="$1" value="$arg1$">
+<$set name="$2" value="$arg2$">
+<$set name="$3" value="$arg3$">
+<$set name="$4" value="$arg4$">
+<$set name="$5" value="$arg5$">
+<$set name="$6" value="$arg6$">
+<$set name="$7" value="$arg7$">
+<$set name="$8" value="$arg8$">
+<$set name="$9" value="$arg9$">
+{{||$title$}}
+</$set>
+</$set>
+</$set>
+</$set>
+</$set>
+</$set>
+</$set>
+</$set>
+</$set>
+\end

@@ -1,0 +1,12 @@
+tags: Markup
+title: dashes
+type: text/vnd.tiddlywiki
+
+<dt>
+
+```
+foo -- bar
+foo --- bar
+```
+</dt>
+<dd>foo -- bar (En dash)<br>foo --- bar (Em dash)<br></dd>

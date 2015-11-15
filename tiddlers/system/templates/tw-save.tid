@@ -1,0 +1,21 @@
+created: 20141206115206017
+creator: Tobias Beer
+modified: 20150206170907873
+modifier: Tobias Beer
+summary: override for core save handling of `$:/temp/...` see <<git5 issues/1199#issuecomment-65830444>>
+title: $:/.tb/templates/tw-save
+
+\define saveTiddlerFilter()
+[is[tiddler]]
+-[prefix[$:/state/]]
+-[prefix[$:/temp/]]
+-[prefix[$://]]
+-[[$:/HistoryList]]
+-[[$:/StoryList]]
+-[[$:/boot/boot.js]]
+-[[$:/boot/boot.css]]
+-[[$:/boot/bootprefix.js]]
+-[type[application/javascript]library[yes]]
++[sort[title]]
+\end
+{{$:/core/templates/tiddlywiki5.html}}

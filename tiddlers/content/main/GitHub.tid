@@ -1,0 +1,12 @@
+icon: $:/core/images/permalink-button
+tags: Developer
+title: GitHub
+
+The place where the [[TW5 code|https://github.com/Jermolene/TiddlyWiki5]] resides.
+
+<<tagging>>
+
+!!Github Documentation
+* [[Forking A Repo|https://help.github.com/articles/fork-a-repo/]]
+* [[Syncing A Fork|https://help.github.com/articles/syncing-a-fork/]]
+* [[Basic Branching And Merging|http://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging]]

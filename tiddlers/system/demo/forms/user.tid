@@ -1,0 +1,41 @@
+created: 20141114133550237
+creator: Tobias Beer
+modified: 20141221101331205
+modifier: Tobias Beer
+title: $:/forms/user
+type: text/vnd.tiddlywiki
+
+\define theTiddler() $(the_tiddler)$!!title
+
+<!--
+by Stephan Hradek
+https://groups.google.com/d/msg/tiddlywiki/GHrWuZAQIN8/79cfSqJOtg4J
+-->
+
+|!Username |<$edit-text tiddler="$:/temp/newuser" placeholder="username" tag="input" type="text"/> |
+|!First Name |<$edit-text tiddler="$:/temp/newuser" field="firstname" placeholder="first name" tag="input" type="text"/> |
+|!Last Name |<$edit-text tiddler="$:/temp/newuser" field="lastname" placeholder="last name" tag="input" type="text"/> |
+|!E-Mail |<$edit-text tiddler="$:/temp/newuser" field="email" placeholder="e-mail address" tag="input" type="text"/> |
+|!sometags |<$checkbox tiddler="$:/temp/newuser" tag="Admin"> Admin</$checkbox><br/><$checkbox tiddler="$:/temp/newuser" tag="cron"> cron</$checkbox><br/><$checkbox tiddler="$:/temp/newuser" tag="www"> www</$checkbox> |
+
+<$reveal type="nomatch" text="" state="$:/temp/newuser">
+  <$reveal type="match" text={{$:/temp/newuser}} state={{$:/temp/newuser}}>
+    <$button set="$:/temp/newuser!!title" setTo={{$:/temp/newuser}}>Modify</$button>
+    <$set name="the_tiddler" value={{$:/temp/newuser}}>
+      <$button setTo="$:/temp/newuser" set=<<theTiddler>>>Fetch</$button>
+    </$set>
+  </$reveal>
+  <$reveal type="match" text="" state={{$:/temp/newuser}}>
+    <$button set="$:/temp/newuser!!title" setTo={{$:/temp/newuser}}>Create</$button>
+  </$reveal>
+</$reveal>
+<$reveal type="nomatch" text="" state={{$:/temp/newuser}}>
+<$button message="tm-delete-tiddler" param="$:/temp/newuser">
+Clear
+</$button>
+</$reveal>
+
+<$list filter="[tag[Admin]limit[1]]">
+
+!!Admins
+</$list><<list-links filter:"[tag[Admin]sort[title]]">>

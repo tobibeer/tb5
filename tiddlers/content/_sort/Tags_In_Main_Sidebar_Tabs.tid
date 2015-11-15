@@ -1,0 +1,16 @@
+created: 20141119100746521
+creator: Tobias Beer
+modified: 20141119113318209
+modifier: Tobias Beer
+tags: UI Tags Sidebar
+title: Tags In Main Sidebar Tabs
+type: text/vnd.tiddlywiki
+
+Tags are one of the most important features in tw. At the moment they are already somewhat hidden under the more tab. If you want them to be more prominent, here's one way to make tags a main tab in the sidebar...
+
+# open [[$:/core/ui/MoreSideBar/Tags]]
+# remove tag [[$:/tags/MoreSideBar]]
+# add tag [[$:/tags/SideBar]] 
+# add field `list-after`, e.g. with `$:/core/ui/SideBar/Recent`
+# optionally remove this code to remove the [[$:/TagManager]]
+#* add to a tiddler of your liking: <<source $:/config/TagManager>>

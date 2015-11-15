@@ -1,0 +1,49 @@
+created: 20141128171117479
+creator: Tobias Beer
+modified: 20141128172546273
+modifier: Tobias Beer
+tags: Tables Presentation Solutions UI [[Danielo Rodríguez]]
+title: Overflowing Tables — Help!
+type: text/vnd.tiddlywiki
+
+!! The Problem
+
+It can happen that the contents you put into a table are simply [[too wide for your tiddler|https://github.com/Jermolene/TiddlyWiki5/issues/1095#issuecomment-64700373]].
+
+|looks|like|it's|way|too|http://tooooooooooooooooooooooooooooooooooooooooooooooooong.com|
+
+What to do now? Here are two approaches to tackling that problem...
+
+!! Horizontal Scrolling
+
+Wrap your table in a div and set it's overflow-x property to auto.
+
+<div style="overflow-x:auto;">
+
+|looks|like|it's|way|too|http://tooooooooooooooooooooooooooooooooooooooooooooooooong.com|
+</div>
+
+```
+<div style="overflow-x:auto;">
+
+|looks|like|it's|way|too|http://tooooooooooooooooooooooooooooooooooooooooooooooooong.com|
+</div>
+```
+
+!! Fixed Width
+
+[[Danielo Rodríguez]] [[suggests|https://github.com/Jermolene/TiddlyWiki5/issues/1095#issuecomment-63561722]] to use some more elaborated css and a fixed table layout which — with the current wikitext markup for tables — will always put columns at equal width, no matter what the content:
+
+@@.fix-table
+|looks|like|it's|way|too|http://tooooooooooooooooooooooooooooooooooooooooooooooooong.com|
+@@
+
+```
+@@.fix-table
+|looks|like|it's|way|too|http://tooooooooooooooooooooooooooooooooooooooooooooooooong.com|
+@@
+```
+
+!!Styles
+
+For the fixed width solution [[put the required css directly wrapped in < style> tag|Core Images And Inline Stylesheets]] into the problematic tiddler or, better, make use of [[Custom Stylesheets]], e.g. <<source $:/styles/fixed-table>>

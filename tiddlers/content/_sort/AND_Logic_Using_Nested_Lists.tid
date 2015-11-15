@@ -1,0 +1,40 @@
+created: 20141121102550597
+creator: Tobias Beer
+modified: 20150926103258733
+modifier: Tobias Beer
+tags: Lists Filters Solutions Fields [[Stephan Hradek]]
+title: AND Logic Using Nested Lists
+type: text/vnd.tiddlywiki
+
+\define getBooks() <$list filter="[tag[Resource]field:courses<course> +tag[Resource]field:level<level>]" />
+
+''Update:'' A more versatile solution to the below approach is the [[xlist]] macro.
+
+As [[proposed|https://groups.google.com/forum/#!topic/tiddlywiki/CwDOwfQju0E]] by [[Stephan Hradek]], the following example shows you how you can use nested lists to query for two different tag-like fields using AND logic, meaning where the field ''courses'' contains ''French'' out of a number of courses AND the field ''levels'' contains ''A1'' out of a number of levels:
+
+<<`
+'<$list filter="[[French]listed[courses]]" variable="course">
+<$list filter="[[A1]listed[levels]field:title<course>]">
+
+</$list>
+</$list>'>>
+
+The books being queried are listed at the bottom in detail.
+
+Notice the use of the `course` variable within the filter expression of the inner list so as to reference the item, i.e. the course, iterated in the outer list.
+
+You can easily wrap it all in ''$set'' widgets so as to dynamically fill the course and level via variables obtained through the ''$radio'', ''$select'' or even the ''$edit-text'' widget.
+
+!!Alternative
+
+An alternative approach [[suggesed by Evolena|https://groups.google.com/d/msg/tiddlywiki/CwDOwfQju0E/aUiCJvTHDYoJ]] would be to make a filter run using regular expressions on fields looking up the corresponding values stored at [[a student|Tobias Beer]]:
+
+<<` '<$list filter="[regexp:courses{Tobias Beer!!course}regexp:levels{Tobias Beer!!level}]"/>'>>
+
+!!All Books
+<$list filter="[prefix[$:/books/]]">
+<h2><$link><$view field="title"/></$link><br></h2><div>
+
+{{!!text}}
+</div>
+</$list>

@@ -1,0 +1,32 @@
+created: 20141118220005847
+creator: Tobias Beer
+module-type: filteroperator
+title: $:/core/modules/filters/join.js
+type: application/javascript
+
+/*\
+title: $:/core/modules/filters/join.js
+type: application/javascript
+module-type: filteroperator
+
+Filter operator that concatenates all tiddlers from the current list, using the operator as the seperator
+
+\*/
+(function(){
+
+/*jslint node: true, browser: true */
+/*global $tw: false */
+"use strict";
+
+/*
+Export our filter function
+*/
+exports.join = function(source,operator,options) {
+        var result = '';
+        source(function(tiddler,title) {
+                result+=operator.operand + title;
+        });
+        return [ result.substr(operator.operand.length) ];
+};
+
+})();

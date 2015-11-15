@@ -1,0 +1,23 @@
+created: 20141215155103031
+creator: Tobias Beer
+modified: 20141215161544355
+modifier: Tobias Beer
+tags: Solutions Files Macros
+title: Local Folder Contents
+type: text/vnd.tiddlywiki
+
+When in a local TiddlyWiki, the following simple macro will allow you to list the contents of a local directory within an iframe.
+
+```
+<<local path height>>
+```
+
+!!Parameters
+
+|!#|!Parameter|!Description|!Default|
+|1|''path'' |the folder path to be rendered in an iframe| |
+|2|''height'' |a height applied to the iframe|600px |
+
+The rendered iframe is wrapped in a div of a class "local-folder".
+
+To use, simply install <<source $:/.tb/macros/localfolder>>

@@ -1,0 +1,106 @@
+created: 20141209100358696
+creator: Tobias Beer
+modified: 20150104012332859
+modifier: Tobias Beer
+title: linkimg
+
+\define getImg()
+$(currentTiddler)$!!menu-icon
+\end
+
+The following macro lets you link an image to an internal tiddler or to an external site...
+
+!!The linkimg macro
+
+`<<linkimg tiddler image tooltip class width svg=yes>>`
+
+|!#|!Parameter|!Description|!Default|
+|1|''tiddler'' |the tiddler to link to<br>» alternatively, an external url (starting with `http://`!)| |
+|2|''image'' |the image to be displayed<br>» an [[image tiddler|Jack.jpg]] of content type `image/...`<br>» or [[an svg|$:/core/images/globe]] with or without content-type||
+|3|''tooltip'' |a tooltip to be displayed|`open tiddler "foo"`|
+|4|''class'' |a class assigned to the image<br>» for svg the class is assigned to a wrapper<br>these classes are always applied:<br>»  `linkimg` for images<br>»  `linksvg` for svg||
+|5|''width'' |the width of your image||
+|6|''svg'' |when set to `svg=yes`, interprets the image as given by a [[standard html svg tags|http://tiddlywiki.com/#UsingSVG]] ([[example|$:/core/images/globe]]) so as to transclude it||
+
+!!Examples
+
+```
+<<linkimg Jack.jpg Jack.jpg "a kitten" pretty 100px>>
+```
+
+<<linkimg Jack.jpg Jack.jpg "a kitten" pretty 100px>>
+
+For the macro to render meaningful output, at least the first two parameters are required.
+
+Alternatively you could qualify parameters by their name:
+
+```
+<<linkimg Jack.jpg Jack.jpg class:"pretty">>
+```
+
+<<linkimg Jack.jpg Jack.jpg class:"pretty">>
+
+!! Link Image To An External Site
+
+```
+<<linkimg "http://tiddlywiki.com/#Motovun%20Jack.jpg" Jack.jpg "a kitten" pretty 100px>>
+```
+
+<<linkimg "http://tiddlywiki.com/#Motovun%20Jack.jpg" Jack.jpg "a kitten" pretty 100px>>
+
+!!Installation
+
+Drag to your wiki: [[$:/.tb/macros/linkimg]]
+
+!! Gallery Thumbnails
+
+Using the <<tw ListWidget>>, you can easily generate a thumbnails gallery linking to your images...
+
+<$list filter="[[$:/tags/Image]tagging[]!sort[title]limit[8]]">
+<$macrocall $name="linkimg" tiddler=<<currentTiddler>> image=<<currentTiddler>> tooltip=<<currentTiddler>> class="pretty thumbs thumbs-120" svg=yes/>
+</$list>
+
+```
+<$list filter="[[$:/tags/Image]tagging[]limit[8]]">
+<$macrocall $name="linkimg" tiddler=<<currentTiddler>> image=<<currentTiddler>> tooltip=<<currentTiddler>> class="pretty thumbs thumbs-120" svg=yes/>
+</$list>
+```
+
+If you have actual thumbnail images in addition to the full-size version, use a helper macro like so...
+
+```
+\define thumb()
+$(currentTiddler)$_th.jpg
+\end
+
+<$list filter="[[$:/tags/Image]tagging[]limit[8]]">
+<$macrocall $name="linkimg" tiddler=<<currentTiddler>> image=<<thumb>> tooltip=<<currentTiddler>> class="pretty thumbs thumbs-120" svg=yes/>
+</$list>
+```
+
+
+!! Image Navigation
+This could be your main navigation with clickable image links. Try and click any thumb and go to that target tiddler instead of the image tiddler.
+
+<$list filter="[list[$:/.tb/ui/TopLeftBar/config]]">
+<$macrocall $name="linkimg" tiddler=<<currentTiddler>>  image=<<getImg>> tooltip=<<currentTiddler>> class="pretty thumbs" svg=yes/>
+</$list>
+
+```
+\define getImg()
+$(currentTiddler)$!!menu-icon
+\end
+
+<$list filter="[list[$:/.tb/ui/TopLeftBar/config]]">
+<$macrocall $name="linkimg" tiddler=<<currentTiddler>>  image=<<getImg>> tooltip=<<currentTiddler>> class="pretty thumbs" svg=yes/>
+</$list>
+```
+
+;list field at...
+:[[$:/.tb/ui/TopLeftBar/config]]
+;styles defined in...
+:[[$:/styles/pretty]]
+
+!! Macro Source
+
+<<source $:/.tb/macros/linkimg>>

@@ -1,0 +1,30 @@
+created: 20141117175131302
+creator: Tobias Beer
+modified: 20141119005154600
+modifier: Tobias Beer
+summary: lists internal links and references to them
+tags: $:/tags/Macro
+title: $:/macros/linkreferences
+type: text/vnd.tiddlywiki
+
+\define linkreferences(filter)
+<dl class="linkreferences"><$list filter="$filter$">
+<dt>
+<$link to={{!!title}}>
+<$transclude field="caption">
+<$view field="title"/>
+</$transclude>
+</$link>
+</dt>
+<$list filter="[all[current]backlinks[]]">
+<dd>
+<$link to={{!!title}}>
+<$transclude field="caption">
+<$view field="title"/>
+</$transclude>
+</$link>
+</dd>
+</$list>
+
+</$list></dl>
+\end

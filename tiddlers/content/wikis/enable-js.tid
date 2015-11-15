@@ -1,0 +1,10 @@
+summary: @@color:red; ''caution:'' know the consequences of enabling inline `<script>` tags
+tags: [[Tobias Beer]] Solutions JavaScript
+title: enable-js
+url: http://tobibeer.github.io/tw/enable-js
+created: 20150206170249924
+modified: 20150207100748821
+creator: Tobias Beer
+modifier: Tobias Beer
+
+The `<<script>>` macro allows you to run JavaScript directly from within tiddlers.

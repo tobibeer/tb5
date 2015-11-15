@@ -1,0 +1,18 @@
+created: 20141120093416686
+creator: Tobias Beer
+modified: 20141123203942199
+modifier: Tobias Beer
+title: Core Distro Plugins
+type: text/vnd.tiddlywiki
+
+Although not packaged into a default TiddlyWiki, the following plugins are [[contained in the core distribution repository|http://tiddlywiki.com/#Plugins]]...
+
+<$list filter="[tag[Plugins]]+[tag[Core]]">
+
+<$link><$view field="title"/></$link><br>
+@@color:#999;margin-left:20px; {{!!summary}}@@<br>
+</$list>
+
+Here's the documentation on plugins from tw.com...
+
+<<static Plugins.html 800px yes>>

@@ -1,0 +1,36 @@
+tags: Markup
+title: html-element-attributes
+
+<dt>
+
+```
+<a href={{TiddlerWithURL}}>link</a>
+<b class=<<getClass>>>bold</b>
+```
+</dt>
+
+<dd>
+
+<a href={{TiddlerWithURL}}>link</a>
+<b class=<<version>>>bold</b>
+
+set attributes via transclusion or macro
+</dd>
+
+<dt>
+
+```
+<div address="""attribute,
+"quoted",
+with,
+linebreaks.""">inspect me!</div>
+```
+</dt>
+
+<dd>
+
+<div address="""attribute,
+"quoted",
+with,
+linebreaks.""">inspect me!</div>
+</dd>

@@ -1,0 +1,25 @@
+created: 20141202082846907
+creator: Tobias Beer
+modified: 20150131122631939
+modifier: Tobias Beer
+tags: Solutions Images Editing Buttons
+title: Adding A Sketch
+type: text/vnd.tiddlywiki
+
+Yesterday I showed you how you can more easily [[chose the color and line-width|Adding A ColorPicker For Editing Images]] for TiddlyWiki's ability to [[draw on images|http://tiddlywiki.com/#EditBitmapWidget]].
+
+As [[PMario points out|https://groups.google.com/d/msg/tiddlywiki/qkGGkAli1zw/oTyuvVglem0J]], to create a blank canvas to draw on, simply create a new tiddler and set it's type to one of the editable image types, e.g. `image/png`,  `image/jpg`,  `image/gif`.
+
+To round things up, here's some button code [[suggested by Birthe|https://groups.google.com/d/msg/tiddlywiki/qkGGkAli1zw/2nQmzn5eENkJ]] that allows you to create a blank canvas to paint on to your heart's content:
+
+<$macrocall $name=`
+text="""<$button tooltip="Create new sketch">
+<$action-sendmessage
+$message="tm-new-tiddler"
+title=""
+text=""
+tags="Image"
+type= "image/jpg"
+/>New sketch</$button>"""/>
+
+''Note:'' I could not find out how to initialize the canvas with a different width and height yet.

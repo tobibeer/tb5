@@ -1,0 +1,18 @@
+created: 20141201170820900
+creator: Tobias Beer
+list-after: $:/core/ui/EditTemplate/body
+modified: 20141202083747676
+modifier: Tobias Beer
+tags: $:/tags/EditTemplate
+title: $:/.tb/ui/EditTemplate/paint
+type: text/vnd.tiddlywiki
+
+<$list filter="[all[current]regexp:type[^image]limit[1]]">
+''Sketch Settings:''<br>
+<$edit-text tiddler="$:/config/BitmapEditor/Colour" tag="input" type="text"/>
+<$edit-text tiddler="$:/config/BitmapEditor/Colour" tag="input" type="color"/>
+opacity: `rgba(256,256,0,0.3)`
+<$edit-text tiddler="$:/config/BitmapEditor/LineWidth" tag="input" type="text"/> px line-width
+
+<br><br>
+</$list>

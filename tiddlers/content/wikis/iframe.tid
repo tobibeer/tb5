@@ -1,0 +1,12 @@
+follow: no
+summary: testing how two ~TiddlyWikis behave which mutually iframe their contents
+tags: [[Tobias Beer]]
+title: iframe-1
+url: http://iframe-1.tiddlyspot.com
+created: 20150105231913568
+modified: 20150108114142058
+creator: Tobias Beer
+modifier: Tobias Beer
+
+; discussion
+: https://groups.google.com/d/msg/tiddlywiki/mr0niBeCZcI/HrcXhyAgWqQJ

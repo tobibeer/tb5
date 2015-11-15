@@ -1,0 +1,24 @@
+created: 20141119152915795
+creator: Tobias Beer
+modified: 20141119160052370
+modifier: Tobias Beer
+tags: Editing Buttons UI Solutions
+title: Edit Buttons As Traffic Lights
+type: text/vnd.tiddlywiki
+
+Proposed and developed by Giffmex at [[tw5mall|http://www.giffmex.org/tw5mall.htm]], traffic-light-style buttons in edit mode yield a more visual indication of what you're about to do...
+<div class="tc-tiddler-controls tc-titlebar" style="float:none">
+<$list filter="[all[shadows+tiddlers]tag[$:/tags/EditToolbar]!has[draft.of]]" variable="listItem">
+<$transclude tiddler=<<listItem>>/>
+</$list>
+</div>
+
+!!Installation
+Drag this link: [[$:/styles/traffic-light-buttons]] into your tw5 and import.
+
+!!Brighter Please
+For even more vibrant colors...
+
+[img[traffic-light-buttons.gif]]
+
+Edit the css and use the colors provided via comments: <<source $:/styles/traffic-light-buttons>>

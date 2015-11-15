@@ -1,0 +1,32 @@
+created: 20150120001550371
+creator: Tobias Beer
+modified: 20150120003947873
+modifier: Tobias Beer
+tags: $:/tags/Stylesheet
+title: $:/.tb/styles/makedoc
+type: text/css
+
+.doc-1 h1 a,
+.doc-1 h2 a,
+.doc-1 h3 a{
+display:block;
+background:#fcfcfc;
+border:2px solid #fcfcfc;
+padding:8px;
+border-radius:5px;
+}
+
+.doc-2 .doc-h{
+font-size:1.5em;
+}
+
+.doc-3 .doc-h{
+font-size:1.3em;
+}
+
+.doc-1 h1 a:hover,
+.doc-1 h2 a:hover,
+.doc-1 h3 a:hover{
+text-decoration:none;
+border-color:#f6f6ff;
+}

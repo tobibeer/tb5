@@ -1,0 +1,49 @@
+created: 20150108215428811
+creator: Tobias Beer
+icon: $:/core/images/globe
+modified: 20150213205654030
+modifier: Tobias Beer
+tags: 
+title: store.php
+type: text/vnd.tiddlywiki
+
+As [[decribed on tiddlywiki.com|http://tiddlywiki.com/#Saving%20on%20a%20PHP%20Server]] it is easy to run TiddlyWiki as your own website while editing and saving entirely online without a need for [[an offline ftp client|https://filezilla-project.org]], using a script that enabled users for a long time to upload [[TiddlyWiki classic|http://classic.tiddlywiki.com/]] to any php-powered server.
+
+All you need to do is...
+
+# download [[store.php|https://code.google.com/p/bidix/source/browse/trunk/TiddlyWiki/contributors/BidiX/serversides/UploadService/store.php?r=140]]
+# edit the file in a text editor, adding the desired usernames and passwords
+# upload it via an [[some ftp client|https://filezilla-project.org]] or your hoster's web interface to your php-server
+# open the ''Saving'' tab of TiddlyWiki's [[control panel|$:/ControlPanel]] and enter:
+#; Server URL
+#: http://your.domain.com/folder/store.php
+#; Wiki Name
+#: a valid username as specified in 2.
+#; Password
+#: the password for that user
+
+Optionally, you can specify further upload settings differing from the defaults:
+
+; Upload Filename
+: the filename used to save the TiddlyWiki, default: ''index.html''
+; Upload Directory
+: the relative path from ''store.php'' to the directory used for saving the file
+; Backup Directory
+: the relative path from ''store.php'' to the directory used for backups
+
+To provide this capability for a number of folders, simply repeat the above steps.
+
+''Note:'' With passwords stored in plain-text, be sure to be the only one with access to it.
+
+!! Access Rights
+
+Adequate access rights for store.php are `744`...
+
+<<ximg storephp-permissions.gif "744 for store.php">>
+
+!! [[Raspberry Pi|http://www.raspberrypi.org/]]
+
+[[Here are some Instructables|http://www.instructables.com/id/TiddlyWiki-5-on-Raspberry-Pi-Server-in-15-minutes]] on how to get all of this running on this micro-multi-talent.
+
+!!GitHub Pages
+If you want to use TiddlyWiki alongside your TiddlyWiki related GitHub Projects or any other project, you can use [[GitHub Pages|https://pages.github.com]].

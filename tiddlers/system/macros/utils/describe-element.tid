@@ -1,0 +1,13 @@
+created: 20141118205357930
+creator: Tobias Beer
+modified: 20141119010114251
+modifier: Tobias Beer
+summary: transcludes element contents under a system path
+tags: $:/tags/Macro
+title: $:/macros/describe-element
+type: text/vnd.tiddlywiki
+
+\define describe-element(path, element)
+<dt>$element$</dt>
+<dd>{{$path$$element$}}</dd>
+\end

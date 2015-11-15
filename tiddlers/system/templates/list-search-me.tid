@@ -1,0 +1,17 @@
+title: $:/.tb/templates/list-search-me
+
+\define ext() [ext[$(title)$|$(url)$]]
+
+<dt>
+<$list filter="[all[current]!has[url]]">
+<$link><$transclude field=caption><$view field=title/></$transclude></$link>
+</$list>
+<$list filter="[all[current]has[url]]">
+<$set name="title" value ={{!!title}}>
+<$set name="url" value ={{!!url}}>
+<<ext>><$link to=<<currentTiddler>>>...</$link>
+</$set>
+</$set>
+</$list>
+</dt>
+<dd>{{!!summary}}</dd>

@@ -1,0 +1,19 @@
+tags: Markup
+title: external-links-forced
+
+<dt>
+
+```
+[ext[http://forced.link.com]]
+[ext[tw|http://tiddlywiki.com]]
+[ext[foo|file:///c:/foo]]
+[ext[relative/path]]
+```
+</dt>
+<dd>
+
+[ext[http://forced.link.com]]<br>
+[ext[tw|http://tiddlywiki.com]]<br>
+[ext[foo|file:///c:/foo]]<br>
+[ext[relative/path]]
+</dd>

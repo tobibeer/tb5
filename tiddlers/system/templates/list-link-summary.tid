@@ -1,0 +1,5 @@
+title: $:/.tb/templates/list-link-summary
+
+<dt><$link><$view field=title/></$link></dt>
+<dd>{{!!url}}</dd>
+<dd>{{!!summary}}</dd>

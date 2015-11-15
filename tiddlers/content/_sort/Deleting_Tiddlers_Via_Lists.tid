@@ -1,0 +1,20 @@
+created: 20141209102613120
+creator: Tobias Beer
+modified: 20141211161047184
+modifier: Tobias Beer
+tags: Lists Solutions [[Stephan Hradek]] Metabele Tiddlers Batch
+title: Deleting Tiddlers Via Lists
+type: text/vnd.tiddlywiki
+
+A solution inspired [[by posts|https://groups.google.com/d/msg/tiddlywiki/U9GYlwVXp6M/hAtthrlikgUJ]] from [[Stephan Hradek]] and [[Metabele]] to delete tiddlers using a filtered list...
+
+{{$:/.tb/templates/delete-filter}}
+
+;all tiddlers
+:`[is[tiddler]!is[system]]`
+;tagged "Macros"
+:`[tag[Macros]]`
+;tagged "Macros" containing "sidebar"
+:`[tag[Macros]search[sidebar]]`
+
+The source code to drag and drop to your wiki <<source $:/.tb/templates/delete-filter>>

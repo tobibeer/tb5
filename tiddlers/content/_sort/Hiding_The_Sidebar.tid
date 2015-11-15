@@ -1,0 +1,11 @@
+created: 20141203112122662
+creator: Tobias Beer
+modified: 20141203114021729
+modifier: Tobias Beer
+tags: Solutions Sidebar Presentation [[Jeremy Ruston]]
+title: Hiding The Sidebar
+type: text/vnd.tiddlywiki
+
+As [[explained by Jeremy here|https://groups.google.com/d/msg/tiddlywiki/WRHmF8d_AyI/_tlZTnRvzTsJ]], you can hide the sidebar without even clicking the [[chevron|$:/core/ui/TopBar/menu]] {{$:/core/ui/TopBar/menu}} by creating a tiddler called [[$:/state/sidebar]] and giving it the text `no`.
+
+In this thread, [[Jeremy Ruston]] also outlines the basics of [[creating left MainMenu|https://groups.google.com/d/msg/tiddlywiki/WRHmF8d_AyI/ckzBYElx8sQJ]].

@@ -1,0 +1,25 @@
+caption: Contact
+created: 20151005054358855
+creator: Tobias Beer
+icon: $:/core/images/edit-button
+menu: main
+menu-icon: {{$:/core/images/edit-button}}
+modified: 20151005151849178
+summary: write [[me|Tobias Beer]] an email
+tags: 
+title: Contact
+type: text/vnd.tiddlywiki
+
+<form method="POST" action="http://formspree.io/beertobias+tb5@gmail.com"
+class="contact" target="contact-response" id="contact">
+  <input type="email" name="_replyto" placeholder="Your email address..."/>
+  <textarea name="body" placeholder="Your message..."/>
+  <input type="text" name="_gotcha" class="gotcha">
+  <input type="hidden" name="_subject" value="tb5 contact" />
+  <input type="text" name="answer" placeholder="To submit, answer me this: Are you a robot?" />
+  <button type="submit">Send email</button>
+</form><<validate contact>>
+
+<div class="contact-response">
+<iframe name="contact-response" id="contact-response"/>
+</div>

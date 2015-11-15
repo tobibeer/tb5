@@ -1,0 +1,12 @@
+created: 20150206161204933
+creator: Tobias Beer
+foo: field
+modified: 20150206162014531
+modifier: Tobias Beer
+tags: Foo
+title: $:/.tb/demo/Template/new-foo
+type: text/vnd.tiddlywiki
+
+!! My Template Heading
+
+My predfined contents...

@@ -1,0 +1,34 @@
+created: 20141113121650583
+creator: Tobias Beer
+modified: 20150302121548369
+modifier: Tobias Beer
+tags: UI Solutions Lists Templates
+title: Conditional ViewTemplate Section
+type: text/vnd.tiddlywiki
+
+I [[asked|https://groups.google.com/d/msg/tiddlywiki/YEgHhQ0ZcFo/bi3JWu2dUq0J]] [[Jeremy|Jeremy Ruston]] how to conditionally generate a summary section (or other related information) at the top of all tiddlers tagged `X`, so that one doesn't have to click twice, skim the fields until one finds there to be a summary field.
+
+!!Step 1
+Create a [[tiddler|$:/.tb/ui/ViewTemplate/summary-link]] tagged [[$:/tags/ViewTemplate]] containing:
+
+```
+<$list filter="[all[current]tag[X]]">
+<$transclude field="summary" mode="block"/>
+</$list>
+```
+
+!!Step 2
+Create a `list-after` field with the value "[[$:/core/ui/ViewTemplate/tags]]" to make the summary segment appear immediately after the tags.
+
+!Example
+
+The [[$:/.tb/ui/ViewTemplate/summary-link]] serves as a template for a conditional ~ViewTemplate section that displays the value of the ''summary'' field for all tiddlers having a `summary` field defined, see [[Conditional Summary]] and / or a link referenced in a ''url'' field for any tiddlers having this field defined, see [[Tobias Beer]].
+
+!Tagging List
+For all tiddlers tagged ''Project'', lists tiddlers tagging to them.
+
+```
+<$list filter="[all[current]tag[Project]]">
+<$list filter="[all[current]tagging[]]"/>
+</$list>
+```

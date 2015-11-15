@@ -1,0 +1,20 @@
+created: 20141120163022804
+creator: Tobias Beer
+modified: 20141125025528193
+modifier: Tobias Beer
+tags: Console Scripts Developer
+title: Delete All Tiddlers By Filter
+type: text/vnd.tiddlywiki
+
+A browser console script to remove all tiddlers that match a given subfilter, e.g. have a given tag:
+
+```
+var filter = "tag[FOO]";
+filter = "[all[tiddlers]!prefix[$]" + subfilter + "]";
+var tids = $tw.wiki.filterTiddlers(filter, null);
+if(confirm('Delete all ' + tids.length + '?\n\n' + tids)){
+    for(var t=0; t<tids.length; t++) {
+        $tw.wiki.deleteTiddler(tids[t]);
+    }
+}
+```

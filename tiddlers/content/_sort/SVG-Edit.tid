@@ -1,0 +1,20 @@
+created: 20150121123004098
+creator: Tobias Beer
+modified: 20150206130041955
+modifier: Tobias Beer
+summary: a web-enabled editor for svg files — or go with a much more powerful desktop app: [[inkscape|https://inkscape.org]]
+tags: Editing SVG Images
+title: SVG-Edit
+type: text/vnd.tiddlywiki
+url: http://svg-edit.googlecode.com
+
+Here's an easy way [[by Jon|https://groups.google.com/d/msg/tiddlywiki/xMpBnEPRZKU/j2mXWkkEYzQJ]] to create clickable links in svg images within SVG-Edit:
+
+* create and select an element
+* click the toolbar button ''make hyperlink''
+* enter an anchor link to a tiddler, e.g. `#Welcome`
+* click the toolbar button to show the svg source
+* copy and paste the svg code into a tiddler 
+* click on the element for which you set the link and [[Welcome]] will open
+
+<iframe src="http://svg-edit.googlecode.com/svn/branches/stable/editor/svg-editor.html" style="width:100%;height:550px;border:0"/>

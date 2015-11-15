@@ -1,0 +1,3 @@
+title: $:/.tb/demo/template/test/more
+
+{{$:/core/ui/Buttons/more-tiddler-actions}}

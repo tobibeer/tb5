@@ -1,0 +1,15 @@
+created: 20150104193843499
+creator: Tobias Beer
+follow: no
+modified: 20150108112355771
+modifier: Tobias Beer
+summary: a wiki experimenting with a storyview to always open tiddlers on top
+tags: [[Tobias Beer]]
+title: StoryViewTop
+type: text/vnd.tiddlywiki
+url: http://storyviewtop.tiddlyspot.com
+
+;GitHub
+:<<git5 issues/1290>>
+;classic
+:http://opentopplugin.tiddlyspace.com

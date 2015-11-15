@@ -1,0 +1,23 @@
+created: 20150916080902132
+creator: Tobias Beer
+modified: 20150917113522849
+modifier: Tobias Beer
+tags: Solutions Dates
+title: Adding a Date Picker
+type: text/vnd.tiddlywiki
+
+As indicated [[in this discussion|https://groups.google.com/d/msg/tiddlywiki/SZ5Rl5rZZqA/LU6f1aFpAQAJ]], [[GSD5|GSD5 — Getting Stuff Done]] features a reusable date picker.
+
+To use it for modifying any of your fields, install the following plugin in your TiddlyWiki:
+
+* [[$:/plugins/gsd5/ticklers|http://gsd5.tiddlyspot.com/#%24%3A%2Fplugins%2Fgsd5%2Fticklers]]
+
+!! Usage
+
+To use a date picker for a field called ''due'' in an [[edit template|http://tobibeer.github.io/tb5/#Conditional%20ViewTemplate%20Section]], use...
+
+```
+<$date field="due"/>
+```
+
+For an example, see [[here|http://gsd5.tiddlyspot.com/#%24%3A%2Fplugins%2Fgsd5%2Fcore%2Fui%2Faddins%2FViewTickler]].

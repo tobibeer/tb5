@@ -1,0 +1,12 @@
+created: 20141125123500173
+creator: Tobias Beer
+modified: 20141125124104650
+modifier: Tobias Beer
+summary: shortcut to link to the [[tw5 repo|https://github.com/Jermolene/TiddlyWiki5]] on GitHub
+tags: $:/tags/Macro
+title: $:/macros/git5
+type: text/vnd.tiddlywiki
+
+\define git5(slug)
+[ext[$slug$|https://github.com/Jermolene/TiddlyWiki5/$slug$]]
+\end

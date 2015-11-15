@@ -1,0 +1,9 @@
+tags: Markup
+title: code
+type: text/vnd.tiddlywiki
+
+<dt><pre>&#96;code&#96;</pre></dt>
+<dd>`code` ...via backticks</dd>
+
+<dt><pre>&#96;&#96;with &#96;backticks&#96; &#96;&#96;</pre></dt>
+<dd>``with `backticks` ``</dd>

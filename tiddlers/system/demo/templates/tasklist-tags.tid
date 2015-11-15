@@ -1,0 +1,14 @@
+title: $:/.tb/template/tasklist-tags
+
+<table>
+<tr>
+<th colspan=2 style="text-align:left;">Open Tasks</th>
+</tr>
+<$list filter="[!is[system]tag[Task]!tag[Done]sort[created]]" template="$:/.tb/template/tasklist-tags/open">
+</$list>
+<tr>
+<th colspan=2 style="text-align:left;">Done Tasks</th>
+</tr>
+<$list filter="[!is[system]tag[Task]tag[Done]sort[created]]" template="$:/.tb/template/tasklist-tags/closed">
+</$list>
+</table>

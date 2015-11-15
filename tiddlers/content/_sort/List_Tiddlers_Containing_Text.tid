@@ -1,0 +1,15 @@
+created: 20141117185319747
+creator: Tobias Beer
+modified: 20141117190139086
+modifier: Tobias Beer
+tags: Solutions Search Lists
+title: List Tiddlers Containing Text
+type: text/vnd.tiddlywiki
+
+Use the [[regexp|http://tiddlywiki.com/#FilterOperator%3A%20regexp]] filter instead of [[search|http://tiddlywiki.com/#FilterOperator%3A%20search]] filter...
+
+;regexp filter
+:`<$list filter="[regexp:text[some string]]"/>`
+:<$list filter="[regexp:text[some string]]"/>
+
+See [[discussion|https://groups.google.com/d/msg/tiddlywiki/FC2KOtlyaYo/KqRIUjNbEbcJ]]...

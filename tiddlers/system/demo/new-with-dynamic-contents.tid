@@ -1,0 +1,24 @@
+created: 20151010123510353
+creator: Tobias Beer
+modified: 20151010130841145
+tags: 
+title: $:/.tb/demo/new-with-dynamic-contents
+type: text/vnd.tiddlywiki
+
+\define timeStampTitle() $(timeStamp)$ $(inputTitle)$
+\define createNew()
+<$edit-text tiddler="$:/temp/timestamp-title" tag="input" default="" placeholder="enter new title"/>
+<$vars timeStamp=<<now YYYY-0MM-0DD>> inputTitle={{$:/temp/timestamp-title}}>
+<$button>
+<$action-sendmessage
+  $message="tm-new-tiddler"
+  title=<<timeStampTitle>>
+  created-at=<<currentTiddler>>
+  tags="foo bar baz"/>
+<$action-setfield
+  $tiddler="$:/temp/timestamp-title"
+  $value=""/>create</$button>
+</$vars>
+\end
+
+<<createNew>>

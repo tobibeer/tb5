@@ -1,0 +1,46 @@
+created: 20141115122739281
+creator: Tobias Beer
+modified: 20150211163359238
+modifier: Tobias Beer
+tags: Formatting
+title: Typed Blocks
+type: text/vnd.tiddlywiki
+
+See [[typed blocks|http://tiddlywiki.com/#Typed%20Blocks%20in%20WikiText]], e.g.
+
+```
+$$$image/svg+xml
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="2" fill="green" />
+</svg>
+$$$
+```
+
+<<<
+$$$image/svg+xml
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="2" fill="green" />
+</svg>
+$$$
+<<<
+
+!!Declarations
+;explicit content type
+:`$$$image/svg+xml`
+;filetype
+:`$$$.svg`
+;unknown renders as plain text
+:`$$$text/unknown`
+;using render types
+:`$$$text/vnd.tiddlywiki>text/html`
+
+!!See also...
+
+[[styled blocks|http://tiddlywiki.com/#Styles%20and%20Classes%20in%20WikiText]]
+
+```
+@@.tc-tiddler-frame
+@@width:400px;
+Some text
+@@
+```

@@ -1,0 +1,94 @@
+created: 20141205115916677
+creator: Tobias Beer
+modified: 20150206125206054
+modifier: Tobias Beer
+tags: Lists Styles Solutions Rendering Markup
+title: How to style lists
+type: text/vnd.tiddlywiki
+
+You may have noticed, a [[filter|http://tiddlywiki.com/#Filters]] by itself does not render anything, widgets do, and consequently macros.
+
+So, to get a basic list, put your desired item-format inside the [[list widget|http://tiddlywiki.com/#ListWidget]] that renders it:
+
+```
+<$list filter="[tag[TableOfContents]]">
+<$link to=<<currentTiddler>>><$view field=title/></$link>
+</$list>
+```
+
+''Tip:'' Try any of this creating a test tiddler directly on http://tiddlywiki.com.
+
+This renders a link to each iterated item on the list showing its title. Notice the `&nbsp;` at the end to provide for simple spacing.
+
+When the inner text of a list widget starts with an empty line, TiddlyWiki understands your code as wanting to have block-level paragraph elements, rather than an inline list.
+
+```
+<$list filter="[tag[TableOfContents]]">
+
+<$link to=<<currentTiddler>>><$view field=title/></$link>&nbsp;
+</$list>
+```
+
+However, I sometimes prefer using a nice &raquo; `&raquo;` and a trailing newline via `<br>`...
+
+```
+<$list filter="[tag[TableOfContents]]">
+&raquo; <$link to=<<currentTiddler>>><$view field=title/></$link><br>
+</$list>
+```
+
+Alternatively you can use a template tiddler defining the item template, i.e.
+
+```
+<$list filter="[tag[Welcome]]" template="$:/.tb/templates/my-list"/>
+```
+
+With a [[standard template|http://tiddlywiki.com/#%24%3A%2Fcore%2Fui%2FListItemTemplate]] ...
+
+```
+<$list filter="[tag[TableOfContents]]" template="$:/core/ui/ListItemTemplate"/>
+```
+
+This is perhaps the cleanest approach as it allows you to reuse that template elsewhere.
+
+Alternatively, use the [[list-links|http://tiddlywiki.com/#ListMacro]] macro to output simple link lists, e.g.:
+
+```
+<<list-links filter:"[tag[TableOfContents]]">>
+```
+
+''Note:'' Notice the syntax differences between a [[macro call|http://tiddlywiki.com/#Macros%20in%20WikiText]] and a [[widget call|http://tiddlywiki.com/#Widgets%20in%20WikiText]], i.e. double angle brakets and colons for (optionally named) parameters, rather than `attribute="value"`.
+
+You can easily wrap this in your [[custom css class|http://tiddlywiki.com/#Using%20Stylesheets]], e.g.
+
+```
+@@.my-class
+<<list-links filter:"[tag[TableOfContents]]">>
+@@
+```
+
+To properly render tables or definition lists, use html tags outside and inside...
+
+```
+<dl>
+<$list filter="[has[url]]">
+<dt><$link to=<<currentTiddler>>><$view field=title/></$link></dt>
+<dd>{{!!url}}</dd>
+</$list>
+</dl>
+```
+
+Here's an a bit more elaborate table syntax using a macro to generate a link...
+
+```
+\define link(url) [ext[>>|$url$]]
+<table>
+<tr><th>Title</th><th>Link</th></tr>
+<$list filter="[has[url]]">
+<tr>
+<td><$link to=<<currentTiddler>>><$view field=title/></$link></td>
+<td><$macrocall $name=link url={{!!url}}></td>
+</tr>
+</$list>
+</table>
+```

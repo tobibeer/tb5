@@ -1,0 +1,75 @@
+created: 20141203171538382
+creator: Tobias Beer
+modified: 20150205150308060
+modifier: Tobias Beer
+tags: $:/tags/Stylesheet
+title: $:/.tb/styles/markup
+type: text/css
+
+dl.tb5-markup,
+.tc-tagged-Markup dl {
+overflow:hidden;
+}
+
+dl.tb5-markup .red,
+.tc-tagged-Markup dl .red {
+color:red;
+}
+
+.tb5-markup > dt,
+.tc-tagged-Markup .tc-tiddler-body > dt{
+display:block;
+float:left;
+clear:left;
+margin:1em 1em 0 0;
+padding;
+font-weight:normal;
+width:48%;
+}
+
+.tb5-markup > dt > pre,
+.tc-tagged-Markup  .tc-tiddler-body > dt > pre{
+margin:0;
+}
+
+.tb5-markup > dd,
+.tc-tagged-Markup .tc-tiddler-body > p > dd,
+.tc-tagged-Markup .tc-tiddler-body > dd{
+display:block;
+float:left;
+width:48%;
+margin:1em 0 0 0;
+padding:0;
+}
+
+.tb5-markup dd:before,
+.tc-tagged-Markup  .tc-tiddler-body > dd:before{
+content:"";
+padding:0;
+}
+
+.tb5-markup > dd > p,
+.tb5-markup > dd > h1,
+.tb5-markup > dd > pre,
+.tb5-markup > dd > ul,
+.tb5-markup > dd > ol,
+.tb5-markup > dd > dl,
+.tb5-markup > dd > table,
+.tb5-markup > dd > blockquote,
+.tb5-markup > dd > blockquote >p,
+.tc-tagged-Markup dd > p,
+.tc-tagged-Markup dd > h1,
+.tc-tagged-Markup dd > pre,
+.tc-tagged-Markup dd > ul,
+.tc-tagged-Markup dd > ol,
+.tc-tagged-Markup dd > dl,
+.tc-tagged-Markup dd > table,
+.tc-tagged-Markup dd > blockquote,
+.tc-tagged-Markup dd > blockquote >p{
+margin:0;
+}
+
+.tb5-markup .tc-image,
+.tc-tagged-Markup  .tc-image{
+width:16px;
+}

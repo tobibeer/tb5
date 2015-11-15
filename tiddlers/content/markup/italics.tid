@@ -1,0 +1,10 @@
+tags: Markup
+title: italics
+
+<dt>
+
+```
+//italics//
+```
+</dt>
+<dd>//italics//</dd>

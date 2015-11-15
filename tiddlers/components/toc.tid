@@ -1,0 +1,62 @@
+created: 20141125232200140
+creator: Tobias Beer
+modified: 20141125232258995
+modifier: Tobias Beer
+title: toc
+type: text/vnd.tiddlywiki
+
+\define regexp-headings() (^!+.*)(?gmi)
+<div class="tidtoc tc-tiddler-frame">
+<$list filter="[all[current]match:text<regexp-headings>]">
+
+{{!!title}}
+</$list>
+<style>
+.tidtoc {
+display:inline-block;
+width:auto;
+padding:10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+padding:10px;
+}
+
+.tidtoc h1,
+.tidtoc h2,
+.tidtoc h3,
+.tidtoc h4,
+.tidtoc h5,
+.tidtoc h6 {
+font-size:100%;
+margin:0;
+}
+
+.tidtoc h1 {
+font-weight: bold;
+}
+
+.tidtoc h2 {
+text-indent: 15px;
+}
+
+.tidtoc h3 {
+text-indent: 30px;
+}
+
+.tidtoc h4 {
+text-indent: 45px;
+}
+
+.tidtoc h5 {
+text-indent: 60px;
+}
+
+.tidtoc h6 {
+text-indent: 75px;
+}
+
+.float-right{
+float:right;
+text-align:right;
+}
+</style>

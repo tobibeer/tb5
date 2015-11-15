@@ -1,0 +1,57 @@
+caption: In Fields
+created: 20141231095518178
+creator: Tobias Beer
+list-before: $:/core/ui/AdvancedSearch/Filter
+modified: 20150104020700345
+modifier: Tobias Beer
+tags: $:/tags/AdvancedSearch
+title: $:/.tb/ui/AdvancedSearch/Field
+type: text/vnd.tiddlywiki
+
+\define searchInField(field, for, ci)
+<$list filter="[!is[shadow]!is[system]regexp:$field$[$for$$ci$]limit[1]]">
+<dt>$field$</dt>
+</$list>
+
+<$list filter="[!is[shadow]!is[system]regexp:$field$[$for$$ci$]]">
+<dd><$link><$view field="title"/></$link></dd>
+</$list>
+\end
+
+<style>.tc-advanced-search-check imput {width:auto !important;}</style>
+
+Search in fields... &nbsp; <span class="tc-advanced-search-check"><$checkbox field="case-insensitive" tiddler="$:/temp/advancedsearch" checked="(?i)"> case insensitive</$checkbox></span>
+
+<div class="tc-search">
+<$edit-text tiddler="$:/temp/advancedsearch" type="search" tag="input"/> <$select field="field" tiddler="$:/temp/advancedsearch" default="">
+<option value="">*any</option>
+<$list filter="[!is[shadow]!is[system]fields[]sort[]]" variable="field">
+<option value=<<field>>><<field>></option>
+</$list>
+</$select>
+<$reveal state="$:/temp/advancedsearch" type="nomatch" text="">
+<$button class="tc-btn-invisible">
+<$action-setfield $tiddler="$:/temp/advancedsearch" $field="text" $value=""/>
+{{$:/core/images/close-button}}
+</$button>
+</$reveal>
+</div>
+
+<$reveal state="$:/temp/advancedsearch" type="nomatch" text="">
+<$reveal state="$:/temp/advancedsearch!!field" type="match" text="">
+<dl>
+<$list filter="[!is[shadow]!is[system]fields[]]" variable="field">
+
+<$reveal type=nomatch text=text default=<<field>>>
+<$macrocall $name="searchInField" field=<<field>> for={{$:/temp/advancedsearch}} ci={{$:/temp/advancedsearch!!case-insensitive}}/>
+</$reveal>
+</$list>
+</dl>
+</$reveal>
+<$reveal state="$:/temp/advancedsearch!!field" type="nomatch" text="">
+
+<dl>
+<$macrocall $name="searchInField" field={{$:/temp/advancedsearch!!field}} for={{$:/temp/advancedsearch}} ci={{$:/temp/advancedsearch!!case-insensitive}}/>
+</dl>
+</$reveal>
+</$reveal>

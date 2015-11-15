@@ -1,0 +1,11 @@
+tags: Markup
+title: bold-italics
+type: text/vnd.tiddlywiki
+
+<dt>
+
+```
+''//bold italics//''
+```
+</dt>
+<dd>''//bold italics//''</dd>

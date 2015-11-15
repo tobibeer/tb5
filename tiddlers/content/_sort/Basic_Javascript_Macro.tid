@@ -1,0 +1,13 @@
+created: 20141118125909409
+creator: Tobias Beer
+modified: 20141125025526905
+modifier: Tobias Beer
+tags: Macros JavaScript Developer
+title: Basic Javascript Macro
+type: text/vnd.tiddlywiki
+
+To create a basic javascript macro take a look at the example below, most importantly setting its `type` field to `application/javascript`.
+
+`<<examplemacro "foo bar">>` renders as: <<examplemacro "foo bar">>
+
+<<source $:/.tb/demo/example.js>>

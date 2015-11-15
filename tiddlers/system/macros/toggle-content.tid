@@ -1,0 +1,30 @@
+created: 20141207212428123
+creator: Tobias Beer
+modified: 20141209152123264
+modifier: Tobias Beer
+summary: macros to [[toggle remote contents|Toggle Contents]] via links
+tags: $:/tags/Macro
+title: $:/.tb/macros/toggle-content
+type: text/vnd.tiddlywiki
+
+\define show(state, text) <$reveal type="match" state="$:/state/$state$" text="show" animate="yes">$text$</$reveal>
+
+\define toggle(state, label, class:"tc-btn-invisible tc-btn-link")
+<$set name=s value="$:/state/$state$">
+<$reveal
+type="match"
+state=<<s>>
+text=""><$button
+set=<<s>>
+setTo="show"
+class="$class$ slider-link-show">$label$</$button></$reveal><$reveal
+type="nomatch"
+state=<<s>>
+text=""><$button
+set=<<s>>
+setTo=""
+class="$class$ slider-link-hide">$label$</$button></$reveal><style>
+.tc-btn-link {color:#5778d8;}
+</style>
+</$set>
+\end

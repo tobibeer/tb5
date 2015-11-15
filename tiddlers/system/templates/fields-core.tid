@@ -1,0 +1,19 @@
+created: 20150926093749885
+modified: 20150926093749885
+title: $:/.tb/templates/fields-core
+type: text/vnd.tiddlywiki
+
+<table>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+<$list filter="[all[shadows]sort[title]prefix[$:/language/Docs/Fields/]]" variable=info>
+<$list filter="[<info>removeprefix[$:/language/Docs/Fields/]]" variable=field>
+<tr>
+<td><$link to=<<info>>><<field>></$link></td>
+<td><$transclude tiddler=<<info>>/></td>
+</tr>
+</$list>
+</$list>
+</table>

@@ -1,0 +1,40 @@
+created: 20150201145130864
+creator: Tobias Beer
+folder: bar
+modified: 20150201152922416
+modifier: Tobias Beer
+tags: Macros Variables Text Links [[Jed Carty]] Files Folders Solutions
+title: Variable Substitution In Folder Path
+type: text/vnd.tiddlywiki
+
+\define linkFolder()
+[[related folder|file:///D:/Project-Foo/$(currentTiddler)$]]
+\end
+
+As [[Jed Carty]] explains in [[this port|https://groups.google.com/d/msg/tiddlywiki/UWtxdIMTf9w/tHt7V-olXJ0J]], here's an answer to an often asked question: How to you insert variable text in wiki markup? The answer is: with a macro.
+
+The below creates a link to a local folder depending on a folder name stored at a tiddler field called ''folder''.
+
+```
+\define linkFolder()
+[[related folder|file:///D:/Project-Foo/$(folder)$]]
+\end
+
+<$set name=folder value={{!!folder}}>
+<<linkFolder>>
+</$set>
+```
+
+''Note:'' The above only works in TiddlyWiki loaded from your local filesystem.
+
+The next example simply takes the tiddler title as the folder name...
+
+```
+\define linkFolder()
+[[related folder|file:///D:/Project-Foo/$(currentTiddler)$]]
+\end
+
+<<linkFolder>>
+```
+
+> <<linkFolder>>

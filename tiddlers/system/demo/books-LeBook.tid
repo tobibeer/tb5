@@ -1,0 +1,13 @@
+courses: French Spanish Italian
+created: 20141121102506137
+creator: Tobias Beer
+levels: A1 A2
+modified: 20141122002328761
+modifier: Tobias Beer
+title: $:/books/LeBook
+type: text/vnd.tiddlywiki
+
+;courses
+:<$view field="courses"/>
+;levels
+:<$view field="levels"/>

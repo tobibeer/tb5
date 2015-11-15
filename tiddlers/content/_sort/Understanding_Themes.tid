@@ -1,0 +1,20 @@
+created: 20141209162912977
+creator: Tobias Beer
+modified: 20141209164040877
+modifier: Tobias Beer
+tags: Solutions Themes [[Jeremy Ruston]]
+title: Understanding Themes
+type: text/vnd.tiddlywiki
+
+From a very [[informative post|https://groups.google.com/d/msg/tiddlywikidev/DHzU_kYhkl4/o4BgMTwF_f0J]] by [[Jeremy|Jeremy Ruston]] on how theme switching actually works...
+
+# themes are <<tw Plugins>>
+#* thus bundles of packaged tiddlers loaded as <<tw ShadowTiddlers>>
+# when the theme is switched
+#* the old theme and its shadows is entirely unloaded
+#* the new theme and its containing shadow tiddlers are loaded
+# when you edit a shadow tiddler of a theme
+#* you make it into an ordinary tiddler
+#* at that point, it is no longer unloaded when switching themes!
+# do you want to access the content of a theme that is not switched?
+#* use the subtiddler attribute of the <<tw ViewWidget>> or <<tw TranscludeWidget>>

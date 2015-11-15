@@ -1,0 +1,21 @@
+created: 20150108122803565
+creator: Tobias Beer
+modified: 20150201183720734
+modifier: Tobias Beer
+summary: provides a slider macro
+tags: $:/tags/Macro
+title: $:/.tb/macros/slider
+type: text/vnd.tiddlywiki
+
+\define slider(label, content, state, tooltip, label-hide, animate: "yes", class, btn-class:"tc-btn-invisible tc-tiddlylink", element:"div", plain)
+<$reveal type="match" state="$state$" text="">
+<$button set="$state$" setTo="show" class="slider-btn slider-btn-show $btn-class$" tooltip="$tooltip$">$label$</$button>
+</$reveal>
+<$reveal type="match" state="$state$" text="show" animate="$animate$">
+<$button set="$state$" setTo="" class="slider-btn slider-btn-hide $btn-class$" tooltip="$tooltip$"><$reveal type="match" text="" default="$label-hide$">$label$</$reveal><$reveal type="nomatch" text="" default="$label-hide$">$label-hide$</$reveal></$button>
+<$element$ class="slider-contents $class$"><$reveal type="nomatch" text="" default="$plain$">$content$</$reveal><$reveal type="match" text="" default="$plain$">
+
+{{$content$}}
+
+</$reveal></$element$></$reveal>
+\end

@@ -1,0 +1,9 @@
+created: 20150128131146030
+creator: Tobias Beer
+modified: 20150211085445339
+modifier: Tobias Beer
+tags: $:/tags/ViewTemplate
+title: $:/.tb/ui/ViewTemplate/ribbon
+type: text/vnd.tiddlywiki
+
+<$list filter="[all[current]has[ribbon]]"><div class="corner-ribbon bottom-right sticky blue shadow">{{!!ribbon}}</div></$list>

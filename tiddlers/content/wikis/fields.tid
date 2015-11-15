@@ -1,0 +1,13 @@
+follow: yes
+summary: explorations as to imporoving working with tiddler fields
+tags: [[Tobias Beer]] Fields
+title: fields
+url: http://tobibeer.github.io/tw/fields
+created: 20150201195001262
+modified: 20150209084520349
+creator: Tobias Beer
+modifier: Tobias Beer
+
+!!! Topics
+; [[FieldsPopup|http://tobibeer.github.io/tw/fields/#FieldsPopup]]
+: <<git5 issues/1448>> — field editing popups

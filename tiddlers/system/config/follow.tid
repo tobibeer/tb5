@@ -1,0 +1,26 @@
+created: 20150108112519669
+creator: Tobias Beer
+modified: 20150108115216791
+modifier: Tobias Beer
+tags: 
+title: $:/follow
+type: text/vnd.tiddlywiki
+
+For references to my projects and wikis, when the `follow` field is set to `yes` you can go ahead and index for [[Community Search]], if interesting, when set to `no`, please don't.
+
+<$list filter="[!is[system]has[follow]each[follow]!sort[follow]]">
+
+<h1>{{!!follow}}</h1>
+
+<dl>
+<$list filter="[follow{!!follow}!is[system]!sort[modified]]">
+<dt><$link to=<<currentTiddler>>><$view field=title/></$link></dt>
+<dd>
+<$view field=modified format=date template="YYYY-0MM-0DD 0hh:0mm:0ss"/>
+— 
+<$transclude field=url>
+</dd>
+</$list>
+
+</dl>
+</$list>

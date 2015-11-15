@@ -1,0 +1,38 @@
+created: 20150206230110302
+creator: Tobias Beer
+modified: 20150206230117446
+modifier: Tobias Beer
+tags: 
+title: ximg
+type: text/vnd.tiddlywiki
+
+This solution inspired by [[PMario|https://groups.google.com/d/msg/tiddlywiki/ChRV6sjQpn4/bCm35_XhGmkJ]] defines a global folder path for external images. This is more powerful than using relative paths `[img[subfolder/file.JPG]]` as you can move that image folder anywhere and simply redefine the location using configuration. 
+
+!! Step 1 — create or import the ximg macro
+The following macro tiddler is tagged [[$:/tags/Macro]] so as to make it a global macro: <<source $:/macros/ximg>>
+
+!!Step 2 — environment configuration
+Create a tiddler [[$:/macros/ximg/path]] containing your base path.
+
+;network share
+:`file:\\\\\COMPUTER_NAME\Users\Mario\Pictures\2010-10\`
+;same computer absolute path
+:`file:\\\c:\Users\Mario\Pictures\2010-10\`
+;relative path as subdirectory of tw
+:`.\images\`
+
+The "backslash" at the end is important!!
+
+!!Step 3 — using the ximg macro
+;basic usage
+:`<<ximg "some image.gif">>`
+;custom tooltip
+:`<<ximg "some image.gif" tooltip:"my tooltip">> `
+;custom path
+:`<<ximg "some image.gif" pathConfig:"otherImagePathConfigTiddler">>`
+:path defaults to content of [[$:/macros/ximg/path]]
+
+!! Example
+`<<ximg toc.jpg class:pretty width:200px tooltip:"example toc">>`
+
+<<ximg toc.jpg class:pretty width:200px tooltip:"example toc">>

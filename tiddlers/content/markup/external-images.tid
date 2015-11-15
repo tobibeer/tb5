@@ -1,0 +1,15 @@
+tags: Markup
+title: external-images
+
+<dt>
+
+```
+[img[http://www.tiddlywiki.com/favicon.ico]]
+[img[path/image.jpg]]
+```
+</dt>
+
+<dd>
+
+[img[http://www.tiddlywiki.com/favicon.ico]]
+</dd>

@@ -1,0 +1,22 @@
+category: Solutions
+created: 20141124222515571
+creator: Tobias Beer
+modified: 20150206124923987
+modifier: Tobias Beer
+tags: Solutions Fields [[Stephan Hradek]] ToC
+title: A Hierarchy Without Tags
+type: text/vnd.tiddlywiki
+
+Based on a solution [[suggested by Stephan Hradek|https://groups.google.com/d/msg/tiddlywiki/XxLT8zJqHYM/Pl90y8Evn7AJ]], here's how you can list entries to categories without a need to use tagging, optionally sorted by a custom `order` field.
+
+<$macrocall $name=` text="""<<catlist "[list[Welcome]]">>"""/>
+
+The example calls the `catlist` macro, which takes two parameters....
+
+;filter
+:a filter defining your potential category items, required
+:use `[all[]]` to just catch all tiddlers having the following field defined...
+;field
+:the `field` used at tiddlers pointing to a category by naming it, default `category`
+
+<<source $:/.tb/macros/catlist>>

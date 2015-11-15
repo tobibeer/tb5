@@ -1,0 +1,11 @@
+created: 20150116191828149
+creator: Tobias Beer
+modified: 20150116192855511
+modifier: Tobias Beer
+tags: Solutions Hosting Server TiddlySpot Saving [[Rich Shumaker]] store.php
+title: Clone Wikis Via store.php
+type: text/vnd.tiddlywiki
+
+As [[Rich Shumaker]] points out [[here|https://groups.google.com/d/msg/tiddlywikidev/ECnV8SzB6qE/gsrAmUm1SWwJ]], you can use a single [[store.php]] instance on your server to write to a number of file locations.
+
+For example, you could have your own ''empty.html'' with customizations and plugins and then simply change the name of your wiki under [[ControlPanel|$:/ControlPanel]] / ''Saving'' and set ''Upload Filename'' accordingly. Then load that cloned wiki and continue to work there, saving changes to the new location.

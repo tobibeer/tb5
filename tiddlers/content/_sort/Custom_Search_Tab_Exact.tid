@@ -1,0 +1,34 @@
+created: 20150114173941480
+creator: Tobias Beer
+keywords: search, hidden
+modified: 20150117090637688
+modifier: Tobias Beer
+tags: Solutions Search Tabs RegExp
+title: Custom Search Tab Exact
+type: text/vnd.tiddlywiki
+
+Based on the instructions given at [[Customizing Search Results|http://tiddlywiki.com/#Customising%20search%20results]], you can add a custom search tab by...
+
+# creating your results tiddler
+#* e.g. see [[$:/.tb/ui/SearchResults/exact]] below
+# tagging it [[$:/tags/SearchResults]]
+# giving it a ''caption'' used for the tab
+# to make it default, set [[$:/config/SearchResults/Default]] to its name
+# to place it first, set...
+#* ''list-before'': `$:/core/ui/DefaultSearchResultList`
+
+The example below creates an ''Exact'' tab listing all tiddlers matching the exact term, including any spaces, albeit ignoring the case. To remove case insensitivity, modify [[$:/.tb/ui/SearchResults/exact/regexp]].
+
+!! Installation
+
+Drag both of these into your wiki...
+
+* [[$:/.tb/ui/SearchResults/exact]]
+* [[$:/.tb/ui/SearchResults/exact/regexp]]
+
+!! Demo
+
+Try searching  `this example`...
+
+!! Source
+<<source [[$:/.tb/ui/SearchResults/exact]]>>

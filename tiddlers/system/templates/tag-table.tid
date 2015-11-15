@@ -1,0 +1,6 @@
+title: $:/.tb/template/tag-table
+
+<tr>
+<td><$link to={{!!title}}><$view field="title"/></$link></td>
+<td><$list filter="[all[current]tags[]sort[title]]-[[Solutions]]" template="$:/core/ui/TagTemplate"/></td>
+</tr>

@@ -1,0 +1,20 @@
+{
+    "description": "tb5",
+    "plugins": [
+        "tiddlywiki/tiddlyweb",
+        "tiddlywiki/filesystem",
+        "tiddlywiki/highlight",
+        "tobibeer/dict"
+    ],
+    "themes": [
+        "tiddlywiki/vanilla",
+        "tiddlywiki/snowwhite"
+    ],
+    "build": {
+        "index": [
+            "--output","C:/GIT/tobibeer.github.io/tb5/",
+            "--rendertiddler","$:/plugins/tiddlywiki/tiddlyweb/save/offline","index.html","text/plain",
+            "--rendertiddler","feed.atom","feed.atom","text/plain"
+        ]
+    }
+}

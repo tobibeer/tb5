@@ -1,0 +1,4 @@
+tags: $:/template
+title: plain
+
+<$view field="title"/>

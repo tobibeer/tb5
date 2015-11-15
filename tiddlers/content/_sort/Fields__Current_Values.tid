@@ -1,0 +1,12 @@
+caption: field values
+created: 20141118205012066
+creator: Tobias Beer
+modified: 20150131124501248
+modifier: Tobias Beer
+tags: Fields Lists
+title: Fields: Current Values
+type: text/vnd.tiddlywiki
+
+all field values of this tiddler:
+
+<<via '{{||$:/core/ui/TiddlerFields}}'>>

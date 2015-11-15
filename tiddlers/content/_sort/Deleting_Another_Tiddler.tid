@@ -1,0 +1,21 @@
+created: 20141127135709534
+creator: Tobias Beer
+modified: 20150131124211551
+modifier: Tobias Beer
+tags: Solutions Buttons Lists
+title: Deleting Another Tiddler
+type: text/vnd.tiddlywiki
+
+You can transclude the  standard delete button to delete any tiddler like so...
+
+<<`
+'<$list filter="[[Delete Me]is[tiddler]]">
+Click the trash icon to delete <$link> <$view tiddler="Delete Me" field=title/></$link>:
+{{Delete Me||$:/core/ui/Buttons/delete}}
+</$list>'>>
+
+!!Source
+
+Here is the source of the standard delete button...
+
+<<source "$:/core/ui/Buttons/delete">>

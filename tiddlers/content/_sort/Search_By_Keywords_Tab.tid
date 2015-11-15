@@ -1,0 +1,20 @@
+created: 20150116165114001
+creator: Tobias Beer
+keywords: search, keywords, field
+modified: 20150116172218934
+modifier: Tobias Beer
+tags: Search Solutions Tabs Hide
+title: Search By Keywords Tab
+type: text/vnd.tiddlywiki
+
+Inspired by a [[discussion with Mat|https://groups.google.com/d/msg/tiddlywiki/iNVgY_NdVTQ/25xJhGoCPvUJ]] on search and tags — based on the method explained at [[Custom Search Tab Exact]] — you can create a new search tab to list tiddlers with a ''keywords'' field matching the search term: [[$:/.tb/ui/SearchResults/keywords]].
+
+It indexes both a custom `keywords` field as well as the core `tags` field. Try searching for `search` and switch to the ''Keywords'' tab in the results.
+
+The keywords at this tiddler are listed at the very bottom using a [[Conditional ViewTemplate Section]], in this case <<source [[$:/.tb/ui/ViewTemplate/keywords]]>>
+
+Notice how all tiddlers that are listed in the ''text'' of the tiddler [[$:/config/Hide/Keywords]] are excluded from showing the keywords, which are...
+
+`{{$:/config/Hide/Keywords}}`
+
+> {{$:/config/Hide/Keywords}}

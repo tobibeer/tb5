@@ -1,0 +1,23 @@
+created: 20141120010348642
+creator: Tobias Beer
+modified: 20150212160632000
+modifier: Tobias Beer
+tags: Solutions Embed Media
+title: Embed An External Page
+type: text/vnd.tiddlywiki
+
+In TiddlyWiki you can embed external sites via iframes using simple html markup:
+
+```
+<iframe src="http://url.com" style="width:100%;height:480px;scrolling:yes;border:0"/>
+```
+
+For example, [[Reopen Tiddlers On Startup]] displays a [[static page|http://tiddlywiki.com/#Generating%20Static%20Sites%20with%20TiddlyWiki]] on tiddlywiki.com:
+
+<hr>
+
+{{Reopen Tiddlers On Startup}}
+
+<br><hr>
+
+This is achieved using a macro which simplifies embedding static pages from tiddlywiki.com via iframes of user definable height: <<source $:/.tb/macros/static>>

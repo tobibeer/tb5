@@ -1,0 +1,18 @@
+created: 20141117160505514
+creator: Tobias Beer
+modified: 20151008090241912
+modifier: Tobias Beer
+summary: displays a link to a tiddler and its source in a codeblock
+tags: $:/tags/Macro
+title: $:/.tb/macros/source
+type: text/vnd.tiddlywiki
+
+\define source(source,version,language)
+[[$source$]]<$reveal type="match" text="$version$" default="yes"> (version: <<date-version "$source$">>)</$reveal>:
+
+<$reveal type="nomatch" default="$language$" text="">
+<$codeblock language="$highlight$" code={{$source$}}/>
+</$reveal><$reveal type="match" default="$language$" text="">
+<pre><$view tiddler="$source$"/></pre>
+</$reveal>
+\end

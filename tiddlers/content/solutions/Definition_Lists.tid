@@ -1,0 +1,48 @@
+created: 20151010151014041
+creator: Tobias Beer
+def: {{!!summary}}
+modified: 20151010152030569
+modifier: Tobias Beer
+summary: lists items with descriptions, e.g. terms or abbreviations
+tags: HTML Lists Markup Presentation Solutions
+title: Definition Lists
+type: text/vnd.tiddlywiki
+
+[[Definition lists|http://www.w3schools.com/tags/tag_dl.asp]] prove handy in [[many usecases|http://maxdesign.com.au/articles/definition]] for semantically correct markup.
+
+For example...
+<style>
+.info:before{
+content:"i";
+font-size:2em;
+float:left;
+margin:10px 10px 0 5px;
+padding:7px 14px;
+background: #ffa;
+border-radius: 30px;
+}
+.info {
+padding:3px 7px 7px 7px;
+border-radius: 15px;
+background:#f9f9f9;
+}
+.info dd:before {
+content:""
+}
+</style>
+
+<<` """@@.info
+; an info box
+: quick and dirty, some text worthy of consideration
+@@""">>
+
+Note that, as with [[tables|Tables]], to use definition lists with the <<tw ListWidget>> you need to use actual html elements, e.g. ''dl'' (the list), ''dt'' (a term) and ''dd'' (its definition):
+
+<<` """<dl>
+<$list filter="[has[def]]">
+<dt><$link><$view field="title"/></$link></dt>
+<dd>{{!!def}}</dd>
+</$list>
+</dl>""">>
+
+The list of my [[Latest]] [[Solutions]] also uses definition lists via the template $:/.tb/templates/tagged-recent to show tiddlers with summaries and tags.

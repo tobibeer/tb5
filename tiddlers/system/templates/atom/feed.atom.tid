@@ -1,0 +1,19 @@
+title: feed.atom
+
+\define tv-wikilink-template() #$uri_encoded$
+\define tv-config-toolbar-icons() no
+\define tv-config-toolbar-text() no
+\define tv-config-toolbar-class() tc-btn-invisible
+
+`<?xml version="1.0" encoding="utf-8"?>`<br>
+`<feed xmlns="http://www.w3.org/2005/Atom">`<br>
+&nbsp;&nbsp;`<id>`http://tobibeer.github.io/tb5/feed.atom`</id>`<br>
+&nbsp;&nbsp;`<title>`{{$:/SiteTitle}}`</title>`<br>
+&nbsp;&nbsp;`<subtitle>`{{$:/SiteSubtitle}}`</subtitle>`<br>
+&nbsp;&nbsp;`<link href="http://tobibeer.github.io/tb5/feed.atom" rel="self" type="application/atom+xml"/>`<br>
+&nbsp;&nbsp;`<author>`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;`<name>`<$list filter="[!is[system]!has[draft.of]!untagged[]!tag[static]!is[tag]!sort[modified]limit[1]]"><$link><$view field="creator" format="htmlencoded"/></$link></$list>`</name>`<br>
+&nbsp;&nbsp;`</author>`<br>
+&nbsp;&nbsp;`<updated>`<$list filter="[!is[system]!has[draft.of]!sort[modified]limit[1]]"><$link><$view field="modified" format="date" template="YYYY-0MM-0DDT0hh:0mm:0ss"/></$link></$list>+02:00`</updated>`<br>
+<<atom-entries filter:"$:/.tb/templates/atom/filter">><br>
+`</feed>`

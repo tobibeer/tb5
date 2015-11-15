@@ -1,0 +1,5 @@
+title: $:/.tb/templates/list-search-markup
+
+<dl class="tb5-markup">
+<$transclude field=text/>
+</dl>

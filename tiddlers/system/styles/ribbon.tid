@@ -1,0 +1,50 @@
+created: 20150211085313169
+creator: Tobias Beer
+modified: 20150211091220613
+modifier: Tobias Beer
+tags: $:/tags/Stylesheet
+title: $:/.tb/styles/ribbon
+type: text/css
+
+.tc-tagged-ribbon {
+overflow:hidden;
+padding-bottom: 28px;
+}
+
+.corner-ribbon.sticky{
+position: fixed;
+}
+
+.corner-ribbon.shadow{
+box-shadow: 0 0 3px rgba(0,0,0,.3);
+}
+
+.corner-ribbon.bottom-right{
+top: 20px;
+right: -480px;
+transform: rotate(-45deg);
+-webkit-transform: rotate(-45deg);
+position: relative;
+padding: 7px;
+text-align: center;
+width: 220px;
+}
+
+.corner-ribbon.blue{
+background: #39d;
+color:white;
+}
+
+@media (max-width: 960px) {
+.corner-ribbon.bottom-right {
+bottom: -20px;
+right: 0;
+transform: none;
+-webkit-transform: none;
+position: relative;
+padding: 10px 7px 15px 7px;
+text-align: center;
+width: auto;
+margin: -20px;
+}
+}

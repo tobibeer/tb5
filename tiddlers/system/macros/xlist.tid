@@ -1,0 +1,57 @@
+created: 20150113094421103
+modified: 20150114214518028
+tags: $:/tags/Macro
+title: $:/.tb/macros/xlist
+type: text/vnd.tiddlywiki
+
+\define xlist-filter()
+[list[$(field)$]]
+\end
+
+\define xlist-filter-tagged()
+[tag[$(currentTiddler)$]sort[title]]
+\end
+
+\define xlist-has-items()
+[tag[$(currentTiddler)$]]+[tag[$(category)$]]+[limit[1]]
+\end
+
+\define xlist-items()
+[tag[$(currentTiddler)$]]+[tag[$(category)$]]+$(sort)$
+\end
+
+\define xlist(filter, template, sort:"[sort[]]", categories, field:"!!list")
+<$set name=sort value="$sort$">
+<$set name=field value="$field$">
+<dl class="xlist">
+<$reveal type=match default="" text="$filter$">
+<$set name=categories value="$categories$">
+<$list filter=<<xlist-filter>> variable=category>
+<$list filter=<<xlist-has-items>> variable=none>
+<dt><$link to=<<category>>><$view tiddler=<<category>> field=title/></$link></dt>
+<$list filter=<<xlist-items>> template="$template$">
+<dd><$link><$view field=title/></$link></dd>
+</$list>
+</$list>
+</$list>
+</$set>
+</$reveal>
+<$reveal type=nomatch default="" text="$filter$">
+<$list filter="$filter$" variable=category>
+<$list filter=<<xlist-has-items>> variable=none>
+<dt><$link to=<<category>>><$view tiddler=<<category>> field=title/></$link></dt>
+<$list filter=<<xlist-items>> template="$template$">
+<dd><$link><$view field=title/></$link></dd>
+</$list>
+</$list>
+</$list>
+</$reveal>
+</dl>
+</$set>
+</$set><style>
+dl.xlist{margin:0;}
+dl.xlist dt{font-size:1.2em;}
+dl.xlist dd{margin-left:14px;}
+dl.xlist dd:before{content: "»";padding-right:7px;}
+</style>
+\end

@@ -1,0 +1,23 @@
+created: 20141117125245798
+creator: Tobias Beer
+modified: 20141125025525475
+modifier: Tobias Beer
+tags: Developer
+title: Macrocall vs. Macro
+type: text/vnd.tiddlywiki
+
+The [[$macrocall|http://tiddlywiki.com/#MacroCallWidget]] widget allows to use evaluated widget parameters and variables that are otherwise unavailable for use in a given [[<<macro>>|http://tiddlywiki.com/#Macros%20in%20WikiText]].
+
+!!Example
+;concatenate macro
+:`\def concatenate(s1:"", s2:"") $s1$$s2$`
+;failing markup:
+:`<<concatenate "my" {{!!text}}>>`
+;working markup:
+:`<$macrocall $name="concatenate" s1="my" s2={{!!title}}/>`
+
+!!Background
+;Jeremy Ruston on widgets
+:https://groups.google.com/d/msg/tiddlywiki/2_L_vTJ1Zbs/Xkw2ytbY76sJ
+
+> It's actually historical. The angle bracket syntax for macros was first implemented early on, before transcluded attributes. Then as the widget syntax evolved it was clear that it was more flexible and extensible. Internally, everything is a widget, even plain text. All the wikitext syntax beyond the widget syntax is really just a series of shortcuts for more easily typing widgets and HTML. My expectation is that more and more of the basic idioms that we discover as we explore the way that widgets fit together will end up being elevated to wiki syntax. For example, we could evolve a wikitext syntax for assigning variables that is terser than the current `<$set>` widget.

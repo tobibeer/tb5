@@ -1,0 +1,9 @@
+created: 20141206115848298
+creator: Tobias Beer
+modified: 20141206115950547
+modifier: Tobias Beer
+summary: override, see <<git5 issues/1199#issuecomment-65830444>>
+title: $:/config/SaveWikiButton/Template
+type: text/vnd.tiddlywiki
+
+$:/.tb/templates/tw-save

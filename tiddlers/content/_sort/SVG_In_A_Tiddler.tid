@@ -1,0 +1,13 @@
+created: 20141115103144916
+creator: Tobias Beer
+modified: 20150926092434085
+modifier: Tobias Beer
+tags: Solutions Images
+title: SVG In A Tiddler
+type: text/vnd.tiddlywiki
+
+You can insert svg directly as wikitext or use [[Typed Blocks]]...
+
+{{$:/.tb/demo/svg-circle}}
+
+via <<source "$:/.tb/demo/svg-circle">>

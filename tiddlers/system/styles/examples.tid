@@ -1,0 +1,15 @@
+created: 20150116175548155
+creator: Tobias Beer
+modified: 20150120001546966
+modifier: Tobias Beer
+tags: $:/tags/Stylesheet
+title: $:/.tb/styles/examples
+type: text/css
+
+.hidden-tags td{
+vertical-align:top;
+}
+
+.hidden-tags a{
+display:block;
+}

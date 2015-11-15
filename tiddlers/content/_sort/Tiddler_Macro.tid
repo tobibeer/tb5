@@ -1,0 +1,80 @@
+created: 20150918102956402
+creator: Tobias Beer
+modified: 20150919131844710
+modifier: Tobias Beer
+tags: Solutions Macros Transclusion [[Eric Shulman]]
+title: Tiddler Macro
+type: text/vnd.tiddlywiki
+
+\define me(vehicle, dwelling, kin)
+I drive a $vehicle$, live in $dwelling$, and have $kin$.
+\end
+
+[[Transclusion|http://tiddlywiki.com/static/Transclusion.html]] is an integral part of modern TiddlyWiki 5. As a consequence, the [[tiddler macro|http://tiddlywiki.org/#tiddler]] of a classic TiddlyWiki is no longer of need or present.
+
+Using templates and placeholders became a lot more flexible than in the old days where you were bound to cryptic, numbered placeholders from $1 to $9. Now, you are free to specify any placeholders you desire as macro parameters, e.g.
+
+```
+\define me(vehicle, dwelling, kin)
+I drive a $vehicle$, live in $dwelling$, and have $kin$.
+\end
+
+<<me "bicycle and I love it" "a flat" "great friends">>
+```
+
+> <<me "bicycle and I love it" "a flat" "great friends">>
+
+You can even be specific about your parameters in your desired order, e.g.:
+
+```
+<<me
+kin:"great friends"
+dwelling:"a flat"
+vehicle:"bicycle and I love it">>
+```
+
+> <<me
+kin:"great friends"
+dwelling:"a flat"
+vehicle:"bicycle and I love it">>
+
+In classic TiddlyWiki things would have looked like so...
+
+```
+title: me
+
+I drive a $1, live in $2, and have $3.
+```
+
+```
+title: test me
+
+<<tiddler me with: "bicycle and I love it" "a flat" "great friends">>
+```
+
+{{$:/.tb/msg/tid-file}}
+
+You can see how, while being concise, the classic template is far less readable than the modern macro.
+
+Nevertheless, if you truly desired a tiddler macro as you were used to, you can achieve something resembling the old functionality using a global macro like [[$:/.tb/macros/tiddler]].
+
+Note, however that you must adapt your old placeholders from being `$1` to `<<$1>>` as Eric Shulman explains [[here|https://groups.google.com/d/msg/tiddlywiki/XHvrJQVUqYs/lb7quEe2AgAJ]]. Plus, unless you wanted to introduce a superfluous dummy parameter to capture it, you also need to remove any old `with:`.
+
+The syntax to model the above example would be...
+
+```
+title: me
+
+I drive a <<$1>>, live in a <<$2>>, and have <<$3>>.
+```
+
+```
+title: test me
+
+<<tiddler me "bicycle and I love it" "flat" "great friends">>
+```
+
+To be honest, it's difficult to see a benefit in doing that.
+
+Here the source of the tiddler macro remake as per Eric Shulman:
+<<source [[$:/.tb/macros/tiddler]]>>

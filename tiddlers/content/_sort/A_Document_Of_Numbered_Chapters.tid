@@ -1,0 +1,24 @@
+created: 20150123000932045
+creator: Tobias Beer
+modified: 20150123001447774
+modifier: Tobias Beer
+tags: [[Stephan Hradek]] Presentation Batch Documentation
+title: A Document Of Numbered Chapters
+type: text/vnd.tiddlywiki
+
+[[Here|https://groups.google.com/d/msg/tiddlywiki/zbiwXL5orIk/qOWwb_UXjsoJ]], [[Stephan Hradek]] shows how to construct a document from numbered chapters:
+
+```
+\define chapter() Chapter $(num)$
+
+<$list filter="[removeprefix[Chapter ]nsort[title]]" variable="num">
+
+!<$link to=<<chapter>>><$text text=<<chapter>>/></$link>
+<$transclude tiddler=<<chapter>>/>
+</$list>
+```
+
+The above example first retrieves all tiddlers with a prefix "Chapter ", then removes it and later adds it back in via the chapter macro when processing the filter results.
+
+; compare to
+: [[Creating A Document Of Tiddlers]]

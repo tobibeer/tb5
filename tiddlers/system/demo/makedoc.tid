@@ -1,0 +1,15 @@
+created: 20150120000328612
+creator: Tobias Beer
+modified: 20150120003925687
+modifier: Tobias Beer
+tags: 
+title: $:/.tb/demo/makedoc
+type: text/vnd.tiddlywiki
+
+<h1 class="doc-h"><$link to=<<currentTiddler>>>~ <$view field=title/> ~</$link></h1>
+
+{{||$:/.tb/ui/ViewTemplate/url}}
+
+{{||$:/.tb/ui/ViewTemplate/summary}}
+
+{{!!text}}

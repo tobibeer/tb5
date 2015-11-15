@@ -1,0 +1,35 @@
+icon: $:/core/images/info-button
+summary: the documentation workflow for tw5
+tags: Main GitHub TiddlySpot
+title: Documentation
+url: via [[GitHub|http://tiddlywiki.com/#Improving%20TiddlyWiki%20Documentation]] or [[TiddlySpot|Documentation]]
+
+!!Via ~TiddlySpot
+
+# create a [[tiddlyspot|http://tiddlyspot.com]] for your documentation changes
+# go to [[tiddlywiki.com|http://tiddlywiki.com]] / [[ControlPanel|$:/ControlPanel]] / ''Saving'' tab
+# set ''Wiki Name'' and ''Password'' according to your tiddlyspot 
+# click save on tiddlywiki.com
+# open your tiddlyspot 
+# make edits ...done?
+# notify ...via [[new GitHub issue|https://github.com/Jermolene/TiddlyWiki5/issues]] or [[in the google groups|https://groups.google.com/forum/#!forum/tiddlywikidocs]]
+# WAIT
+# accepted and imported? ...verify changes to tiddlywiki.com
+#* back to #4, next topic
+#not accepted?
+#* improve... or ...back to #4, next topic
+
+Try not to overdo edits (i.e. number of tiddlers), unless you know what you're doing or have discussed major restructuring beforehand. Otherwise, expect the review to be tougher to manage for Jeremy & co, if not simply taking more time.
+
+@@color:#f66;
+''Note:'' [[As of yet|https://groups.google.com/d/msg/tiddlywiki/F0dnmWrOuxg/HcEvDyPI09oJ]], the scripts to automatically unpack a tiddlywiki file and put individual tiddler files in the correct locations don't exist. Any contributions provided as described below will need manual processing, i.e. Jeremy needs a list from you of all modified tiddlers. Alternatively, use the GitHub workflow described in the next section.
+@@
+
+!!Via GitHub
+From [[Improving TiddlyWiki Documentation|http://tiddlywiki.com/#Improving%20TiddlyWiki%20Documentation]]...
+
+<<static Improving%2520TiddlyWiki%2520Documentation.html 1690px no>>
+
+!!More Ideas
+
+* http://tw-doc-ideas.tiddlyspot.com from [[Erwan|https://groups.google.com/d/msg/tiddlywiki/73ctphmY84k/5xc2ru17LZ0J]]

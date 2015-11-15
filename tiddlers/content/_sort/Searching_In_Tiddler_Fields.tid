@@ -1,0 +1,23 @@
+created: 20141231101928137
+creator: Tobias Beer
+modified: 20141231103439793
+modifier: Tobias Beer
+tags: [[Stephan Hradek]] Solutions Search Fields
+title: Searching In Tiddler Fields
+type: text/vnd.tiddlywiki
+
+The below is a modification of a [[a solution|https://groups.google.com/d/msg/tiddlywiki/w03HpUdfSIk/ZJAaEwyscV4J]] by [[Stephan Hradek]] that adds an additional tab to [[Advanced Search|$:/AdvancedSearch]] {{$:/core/ui/Buttons/advanced-search}} allowing you to search in field contents.
+
+''Note:'' By default the `text` field, i.e. the tiddler body is excluded from search in fields. If you want to search only the `text` field you have to specifically select it.
+
+!!Installation
+Simply drag this tiddler into your TiddlyWiki:
+
+* [[$:/.tb/ui/AdvancedSearch/Field]]
+
+!!Preview
+Try searching for `cont`...
+
+<<<
+{{$:/.tb/ui/AdvancedSearch/Field}}
+<<<

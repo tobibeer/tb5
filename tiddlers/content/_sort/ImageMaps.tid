@@ -1,0 +1,16 @@
+created: 20150121224625392
+creator: Tobias Beer
+modified: 20150121231159678
+modifier: Tobias Beer
+summary: defining an image-map pointing to tiddlers
+tags: Images Links Presentation
+title: ImageMaps
+type: text/vnd.tiddlywiki
+
+''Note:'' As an alternative to this outdated technology, consider [[Interactive SVG Image Map]].
+
+Notice how — in the markup below — the ''href'' attribute points to the location hash for a tiddler that you get when using the {{$:/core/ui/Buttons/permalink}} ''permalink'' button from a tiddler's toolbar.
+
+{{$:/.tb/demo/image-map}}
+
+<<source "$:/.tb/demo/image-map">>

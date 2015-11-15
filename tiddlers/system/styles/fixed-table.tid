@@ -1,0 +1,22 @@
+created: 20141128172305347
+creator: Tobias Beer
+modified: 20141128172350710
+modifier: Tobias Beer
+summary: see [[Overflowing Tables — Help!]] for instructions.
+tags: [[Danielo Rodríguez]]
+title: $:/styles/fixed-table
+type: text/css
+
+.fixed td {
+    /* css-3 */
+    white-space: -o-pre-wrap; 
+    word-wrap: break-word;
+    white-space: pre-wrap; 
+    white-space: -moz-pre-wrap; 
+    white-space: -pre-wrap; 
+}
+
+.fixed { 
+  table-layout: fixed;
+  width: 100%
+}

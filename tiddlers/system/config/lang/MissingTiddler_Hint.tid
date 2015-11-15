@@ -1,0 +1,14 @@
+created: 20150106175724172
+creator: Tobias Beer
+modified: 20151014170218993
+modifier: Tobias Beer
+summary: displayed when a tiddler doesn't exist
+title: $:/language/MissingTiddler/Hint
+type: text/vnd.tiddlywiki
+
+<$reveal state="$:/.tb/config/redirected-tb5##$(currentTiddler)$" type="match" text="">This tiddler doesn't exist, back to
+<$button class="tc-btn-invisible tc-tiddlylink">
+<$action-sendmessage $message="tm-close-tiddler"/>
+<$action-navigate $to="Welcome"/>Welcome
+</$button>?
+</$reveal>

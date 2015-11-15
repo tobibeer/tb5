@@ -1,0 +1,5 @@
+title: $:/.tb/msg/core-overwrite
+
+@@.caution
+''Caution'': Modifying core tiddlers prevents future upgrades to this component in TiddlyWiki from taking effect since your [[core shadow|http://tiddlywiki.com/static/ShadowTiddlers.html]] is overwritten. To revert to the core version, simply delete your overwritten tab, then apply your desired settings anew.
+@@

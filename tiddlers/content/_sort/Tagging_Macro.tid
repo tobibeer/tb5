@@ -1,0 +1,36 @@
+created: 20141117153537550
+creator: Tobias Beer
+modified: 20150206130403311
+modifier: Tobias Beer
+tags: Macros Solutions
+title: Tagging Macro
+type: text/vnd.tiddlywiki
+
+[[$:/.tb/macros/tagging]] provides a global macro implementing the classic `<<tagging>>` macro, allowing you to both, get the tagging tiddlers for the current tiddler or another tiddler.
+
+!!Parameters
+
+These parameters can be specified for the tagging macro:
+
+|!#|!Parameter|!Description|!Default|
+|1|''title'' |a tiddler for which to list tagging tiddlers |`<<currentTiddler>>`|
+|2|''state'' |a text reference to store a state to enable list-search...<br>» requires [[list-search]]<br>» requires the title to be specifically declared!| |
+|3|''template'' |an item template used to render the tagging tiddlers |[[$:/core/ui/ListItemTemplate]]|
+
+!!Examples
+
+<$macrocall $name=` 
+text="""<<tagging>>"""/>
+
+<$macrocall $name=` 
+text="""<<tagging Welcome>>"""/>
+
+The tagging macro can be used in combination with [[list-search]] (install separately!):
+
+<$macrocall $name=` 
+text="""<<tagging Welcome"$:/temp/tagging-example">>"""/>
+
+<$macrocall $name=` 
+text="""<<tagging "Ton Gerner" template:"$:/.tb/templates/list-link-summary">>"""/>
+
+The macro source is <<source "$:/.tb/macros/tagging">>

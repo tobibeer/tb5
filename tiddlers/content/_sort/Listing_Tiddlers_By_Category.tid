@@ -1,0 +1,14 @@
+created: 20150113130428821
+creator: Tobias Beer
+modified: 20150114230957163
+modifier: Tobias Beer
+summary: {{xlist!!summary}}
+tags: Solutions Lists Macros
+title: Listing Tiddlers By Category
+type: text/vnd.tiddlywiki
+
+@@color:#f6f;
+''Note:'' There is a whole lot more on http://xlist.tiddlyspot.com.
+@@
+
+{{xlist}}

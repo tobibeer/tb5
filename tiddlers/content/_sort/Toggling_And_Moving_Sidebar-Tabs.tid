@@ -1,0 +1,31 @@
+created: 20150918044339124
+modified: 20150919093306469
+modifier: Tobias Beer
+tags: Tabs Sidebar Config Solutions Metabele
+title: Toggling And Moving Sidebar-Tabs
+type: text/vnd.tiddlywiki
+
+Inspired by [[this post|https://groups.google.com/d/msg/tiddlywiki/dQbt-JFdRR8/gzglQDdmAQAJ]] from [[Metabele]], the following table allows you to toggle all standard and also custom sidebar tabs...
+
+> {{$:/.tb/config/sidebar-tabs}}
+
+{{$:/.tb/msg/core-overwrite}}
+
+This method works according to [[these instructions|http://tiddlywiki.com/static/How%2520to%2520add%2520a%2520new%2520tab%2520to%2520the%2520sidebar.html]].
+
+The basic functionality is provided by [[$:/.tb/config/sidebar-tabs]] and allows you to toggle all core tabs in the sidebar and those under ''More''.
+
+In addition, ou can create a tiddler [[$:/.tb/config/sidebar-tabs/custom]] for customizations:
+
+; text
+: use the tiddler text to specify a namespace for custom tabs
+: in this wiki, the prefix being used is <code><$view tiddler="$:/.tb/config/sidebar-tabs/custom" field="text"/></code>
+; more
+: the title for an extra column
+: useful for a tab holding custom subtabs, equivalent to ''More''
+; more-tag
+: the tag-name to be toggled via check-boxes in the extra column
+
+!!Installation
+
+If you want the customization tiddler present as well, import [[$:/.tb/config/sidebar-tabs/custom]] as a skelleton, otherwise drag this over to your wiki and make accessible where you see fit: <<source [[$:/.tb/config/sidebar-tabs]]>>

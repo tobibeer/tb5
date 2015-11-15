@@ -1,0 +1,22 @@
+tags: Markup
+title: multiline-nested-html
+
+<dt>
+
+```
+*nest<div>
+
+;via
+:html
+</div>
+```
+</dt>
+
+<dd>
+
+*nest <div>
+
+;via
+:html
+</div>
+</dd>

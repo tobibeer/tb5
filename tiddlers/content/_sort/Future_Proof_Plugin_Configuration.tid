@@ -1,0 +1,17 @@
+created: 20141125182007728
+creator: Tobias Beer
+modified: 20141125201055592
+modifier: Tobias Beer
+tags: Plugins Developer Solutions
+title: Future Proof Plugin Configuration
+type: text/vnd.tiddlywiki
+
+Are you using a plugin in your tw5 or tw5 based application and need to make adjustments to the plugin? Are you including plugins into your edition on node.js, e.g. [[doing translations|Translate TW5]]?
+
+If you are, [[I suggest|https://groups.google.com/d/msg/tiddlywiki/ZRKmb-TwbkM/HAvwof9oZbEJ]] you do not overwrite plugin components directly, i.e. code tiddlers, but rather implement your own customization overwriting them.
+
+This way, you ensure that plugin updates are still delivered to your wiki later and are perhaps readily usable within your wiki.
+
+If a plugin is not sufficiently configurable it is advisable to suggest customization enhancements to the plugin author.
+
+For example, for `$:/plugins/tiddlywiki/tw2parser` you could create an override `$:/plugins/tiddlywiki/tw2parser/my-project-config` leaving the original untouched while overriding components provided by the plugin.

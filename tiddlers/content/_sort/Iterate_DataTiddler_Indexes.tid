@@ -1,0 +1,37 @@
+created: 20141122103607242
+creator: Tobias Beer
+modified: 20141125025529435
+modifier: Tobias Beer
+tags: Solutions Lists DataTiddlers Developer
+title: Iterate DataTiddler Indexes
+type: text/vnd.tiddlywiki
+
+Here's my approach to solving the mystery of iterating all indexes of a [[DataTiddler|http://tiddlywiki.com/#DataTiddlers]]...
+
+```
+<$set name="data" value="$:/data/core/widgets">
+<$list filter="[<data>indexes[]sort[title]]">
+
+;{{!!title}}
+:<$transclude tiddler=<<data>> index=<<currentTiddler>>/>
+</$list>
+</$set>
+```
+
+renders as (prettified with table markup for [[$:/data/core/widgets]]):
+
+<table>
+<tr>
+<th>index</th>
+<th>value</th>
+</tr>
+
+<$set name="data" value="$:/data/core/widgets">
+<$list filter="[<data>indexes[]sort[title]]">
+<tr>
+<td>{{!!title}}</td>
+<td><$transclude tiddler=<<data>> index=<<currentTiddler>>/></td>
+</tr>
+</$list>
+</$set>
+</table>

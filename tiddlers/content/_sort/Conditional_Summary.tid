@@ -1,0 +1,16 @@
+created: 20141113122245204
+creator: Tobias Beer
+modified: 20150217113232324
+modifier: Tobias Beer
+summary: this is an example summary
+tags: Examples
+title: Conditional Summary
+type: text/vnd.tiddlywiki
+
+Right above this text you should see the following example summary...
+
+* `this is an example summary`
+
+...rendered via <<source [[$:/.tb/ui/ViewTemplate/summary-link]]>>
+
+more at: [[Conditional ViewTemplate Section]]

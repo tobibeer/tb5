@@ -1,0 +1,28 @@
+created: 20150203231517882
+creator: Tobias Beer
+modified: 20150211104648681
+modifier: Tobias Beer
+tags: Filters CoreFix Solutions Lists
+title: filter: is missing
+type: text/vnd.tiddlywiki
+
+This wiki implements a different ''is[missing]'' filter than the TiddlyWiki core. This version, in fact, effectively overrides the core filter which returns whether or not the tiddlers in the input set exist or not.
+
+This does not correspond to the existing terminology — as in `all[missing]` or [[classic|http://classic.tiddlywiki.com]] — where a tiddler is "missing" when there are links to a tiddler that doesn't exist.
+
+!! Documentation
+
+; `is[missing]`
+: matches any title from the input to which links exist, however the tiddler doesn't
+
+!! Install
+
+Drag to your wiki: [[$:/core/modules/filters/is/missing.js]]
+
+!! Differences
+
+Compared to the core, `is[missing]` is __not__ synonymous with `!is[tiddler]`, or vice versa.
+
+[[DoesntExist]]
+
+<<` "{{{ [[DoesntExist]] [[Welcome]] +[is[missing]] }}}">>

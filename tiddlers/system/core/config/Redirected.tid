@@ -1,0 +1,12 @@
+created: 20141127144202048
+creator: Tobias Beer
+modified: 20141207221236819
+modifier: Tobias Beer
+tags: 
+title: $:/config/Redirected
+type: application/json
+
+{
+    "I don't exist!": "See [[Aliases And Redirecting Dead Links]]...",
+    "Aliases And Redirecting Dead Links": "Also see [[here|I don't exist!]]."
+}

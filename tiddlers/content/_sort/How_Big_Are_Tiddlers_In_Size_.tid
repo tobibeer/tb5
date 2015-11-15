@@ -1,0 +1,32 @@
+created: 20141203004643548
+creator: Tobias Beer
+modified: 20141203102826716
+modifier: Tobias Beer
+tags: Solutions Utilities Console Tiddlers Files [[Stephan Hradek]]
+title: How Big Are Tiddlers In Size?
+type: text/vnd.tiddlywiki
+
+In a [[reply to Rich|https://groups.google.com/d/msg/tiddlywiki/hr75FTeEL_g/Zq9c1OJz6KkJ]], [[Stephan Hradek]] posted two solutions about byte-sizes...
+
+# a [[length|https://groups.google.com/d/msg/tiddlywiki/hr75FTeEL_g/Zq9c1OJz6KkJ]] macro to determine the size of any text or tiddler
+# the [[lsort|https://groups.google.com/d/msg/tiddlywiki/hr75FTeEL_g/tFQ-ZIQoMLwJ]] filter that allows to sort tiddlers by size
+
+An example and install instructions are at [[length macro and lsort filter @ tbdemo|http://tbdemo.tiddlyspot.com/#length%20macro%20and%20lsort%20filter]].
+
+''Note:'' When you create both in your wiki, be sure to set the `title`, `type` and `module-type` fields accordingly.
+
+Here's how to use both to list tiddlers by size along with size information:
+
+```
+<$list filter="[!lsort[]]">
+
+<$macrocall $name="length" tiddler={{!!title}}/>
+<$link><$view field=title/></$link>
+</$list>
+```
+
+!!Alternative
+
+To get a quick output from your browser console, you can try this bit of code:
+
+> [[Console Log Of Tiddler Sizes @ tbdemo|http://tbdemo.tiddlyspot.com/#Console%20Log%20Of%20Tiddler%20Sizes]]

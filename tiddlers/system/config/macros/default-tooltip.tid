@@ -1,0 +1,12 @@
+created: 20141116230931118
+creator: Tobias Beer
+modified: 20141119005234397
+modifier: Tobias Beer
+summary: modifies the default tooltop for opening a link
+tags: $:/tags/Macro
+title: $:/macros/default-tooltip
+type: text/vnd.tiddlywiki
+
+\define tv-wikilink-tooltip()
+open tiddler "<$transclude field="tooltip"><$transclude field="title"/></$transclude>"
+\end

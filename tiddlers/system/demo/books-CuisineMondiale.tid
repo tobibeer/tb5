@@ -1,0 +1,13 @@
+courses: French English
+created: 20141121102432731
+creator: Tobias Beer
+levels: A2 B1 B2
+modified: 20141122121853686
+modifier: Tobias Beer
+title: $:/books/CuisineMondiale
+type: text/vnd.tiddlywiki
+
+;courses
+:<$view field="courses"/>
+;levels
+:<$view field="levels"/>

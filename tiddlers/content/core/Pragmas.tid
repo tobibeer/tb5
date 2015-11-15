@@ -1,0 +1,12 @@
+created: 20151005065401016
+creator: Tobias Beer
+modified: 20151005065908319
+tags: Core
+title: Pragmas
+type: text/vnd.tiddlywiki
+
+[[Documentation on TiddlyWiki.com|http://tiddlywiki.com/#Pragma]]
+
+* `\define` is used to declaring macros; multiline macros closing with `\end`
+* `\rules` constrain [[parser rules|Parser Rules]], e.g.: `\rules except inlinecode`
+* `\replace` is a pragma defined via a custom plugin: [[Replace Pragma]]

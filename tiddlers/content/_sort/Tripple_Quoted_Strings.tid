@@ -1,0 +1,13 @@
+created: 20141117235032678
+creator: Tobias Beer
+modified: 20150131125853287
+modifier: Tobias Beer
+tags: Parameters Variables Developer
+title: Tripple Quoted Strings
+type: text/vnd.tiddlywiki
+
+In widgets or macros, enclosing parameters in triple quotes is the safe choice, as quotes are allowed characters for tiddler titles: `<$set name="tid" value="""$title"""/>`
+
+From http://tiddlywiki.com/#Macros%20in%20WikiText...
+
+<<static Macros%2520in%2520WikiText 600px yes>>

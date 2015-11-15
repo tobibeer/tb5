@@ -1,0 +1,17 @@
+tags: Markup
+title: headings
+
+<dt>
+
+```
+!Heading 1
+!!Heading 2
+!!!Heading 3
+```
+</dt>
+<dd>
+
+!Heading 1
+!!Heading 2
+!!!Heading 3
+</dd>

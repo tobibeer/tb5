@@ -1,0 +1,16 @@
+icon: $:/core/images/globe
+tags: Developer
+title: Node.js
+
+; tw on node.js
+: <<tw Node.js>>
+: <<tw TiddlyWiki%20on%20Node.js "TiddlyWiki on Node.js">>
+; Why working with TiddlyWiki on node?
+: clean, tiddler-based version control, e.g. with GitHub
+: manage tiddlers in a folder structure independent of tiddler titles
+: bake wikis the way you want
+: batch update all your wikis to the latest version of TiddlyWiki
+: maintain template wikis with plugins and ui customizations, instantly applied throughout wiki instances
+: invent and leverage workflows that are impossible with a standalone TiddlyWiki
+; OS agnostic scripts for the rest of us
+: instructions by PMario on a commit: <<git5 pull/1003>>

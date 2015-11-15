@@ -1,0 +1,15 @@
+created: 20141130221500879
+creator: Tobias Beer
+modified: 20141213091352417
+modifier: Tobias Beer
+tags: Solutions History Lists
+title: Saving And Loading A History Snapshot
+type: text/vnd.tiddlywiki
+
+Based on [[a solution from Metabele|http://gwiz.tiddlyspot.com/#Stories]], here's how you can save the currently displayed tiddlers as a story and reload that story at any given point later.
+
+In the sidebar there's a non-standard tab called ''Stories''. There you can save the currently displayed tiddlers as a story, as well as select saved stories to either load or delete them, even create a note-tiddler corresponding to the title your snapshot.
+
+The ''Stories'' tab is populated by the below template tiddler tagged [[$:/tags/SideBar]]. If you want it to be under ''More'' in your sidebar, remove this tag and add the tag [[$:/tags/MoreSideBar]].
+
+To get this functionality, simply drag and drop the following link to your TiddlyWiki: <<source $:/.tb/ui/SideBar/Stories>>

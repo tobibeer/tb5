@@ -1,0 +1,18 @@
+tags: $:/tags/Stylesheet
+title: $:/.tb/macros/pop/styles
+type: text/css
+
+.pop-tiddler {
+  padding:0 10px;
+  background:white;
+}
+
+.pop-img {
+  line-height:0;
+}
+
+.pretty.pop-popup {
+  -webkit-box-shadow: 2px 2px 15px 1px rgba(119, 119, 119, 0.5);
+  -moz-box-shadow: 2px 2px 15px 1px rgba(119, 119, 119, 0.5);
+  box-shadow: 2px 2px 15px 1px rgba(119, 119, 119, 0.5);
+}

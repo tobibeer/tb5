@@ -1,0 +1,19 @@
+created: 20150206085715595
+creator: Tobias Beer
+modified: 20150206090756788
+modifier: Tobias Beer
+tags: Solutions Code Transclusion Utilities
+title: Original Shadow Text
+type: text/vnd.tiddlywiki
+
+<<tw ShadowTiddlers>> are tiddlers bundled in plugins, like the [[TiddlyWiki core|$:/core]] itself. They are restored to their original contents once you delete a version you edited.
+
+To display the original contents of <<tw ShadowTiddlers>>  that have been overwritten, use the <<tw TranscludeWidget>> along with the ''subtiddler'' attribute.
+
+The below example outputs the original ''limit'' filter in [[$:/core]] which has otherwise been [[overwritten in this wiki|$:/core/modules/filters/limit.js]] (see [[filter: limit]]):
+
+```
+<$transclude tiddler="$:/core" subtiddler="$:/core/modules/filters/limit.js">
+```
+
+> <$transclude tiddler="$:/core" subtiddler="$:/core/modules/filters/limit.js">

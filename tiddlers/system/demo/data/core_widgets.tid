@@ -1,0 +1,40 @@
+created: 20141122100259036
+creator: Tobias Beer
+modified: 20141122104011749
+modifier: Tobias Beer
+title: $:/data/core/widgets
+type: application/x-tiddler-dictionary
+
+action-navigate:ActionNavigateWidget
+action-sendmessage:ActionSendMessageWidget
+ActionWidgets:ActionWidgets
+browse:BrowseWidget
+button:ButtonWidget
+checkbox:CheckboxWidget
+count:CountWidget
+dropzone:DropzoneWidget
+edit-bitmap:EditBitmapWidget
+edit-text:EditTextWidget
+edit:EditWidget
+encrypt:EncryptWidget
+fieldmangler:FieldManglerWidget
+fields:FieldsWidget
+image:ImageWidget
+importvariables:ImportVariablesWidget
+keyboard:KeyboardWidget
+linkcatcher:LinkCatcherWidget
+link:LinkWidget
+list:ListWidget
+macrocall:MacroCallWidget
+navigator:NavigatorWidget
+password:PasswordWidget
+radio:RadioWidget
+reveal:RevealWidget
+scrollable:ScrollableWidget
+select:SelectWidget
+setvariable:SetVariableWidget
+set:SetWidget
+text:TextWidget
+tiddler:TiddlerWidget
+transclude:TranscludeWidget
+view:ViewWidget

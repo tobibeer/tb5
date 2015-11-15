@@ -1,0 +1,17 @@
+created: 20141120004601003
+creator: Tobias Beer
+modified: 20150131124701639
+modifier: Tobias Beer
+tags: Embed Education Solutions Media
+title: Embed A Slideshare Presentation
+type: text/vnd.tiddlywiki
+
+Embedding a presentation hosted on slideshare is easy:
+
+# go to the presentation
+# get the iframe embed code
+# paste into your tiddler
+# adjust params as desired and remove what you don't need beyond the ''iframe''
+
+<<`
+'<iframe src="//www.slideshare.net/slideshow/embed_code/2397564" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen style="width:100%;height:490px"></iframe>'>>

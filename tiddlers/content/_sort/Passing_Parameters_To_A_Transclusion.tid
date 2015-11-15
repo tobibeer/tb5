@@ -1,0 +1,33 @@
+created: 20141118101340002
+creator: Tobias Beer
+modified: 20141125025526681
+modifier: Tobias Beer
+tags: Widgets Transclusion Macros Templates Variables Solutions [[Stephan Hradek]] Developer
+title: Passing Parameters To A Transclusion
+type: text/vnd.tiddlywiki
+
+As [[Stephan Hradek]] pointed out [[here|https://groups.google.com/d/msg/tiddlywiki/WbaJ826cpfA/Y7PBrWArtA0J]], you can use the [[$set|http://tiddlywiki.com/#SetWidget]] widget to declare [[variables|http://tiddlywiki.com/#Variables%20in%20WikiText]] which thus available to any contained widget, e.g. a [[$transclude|http://tiddlywiki.com/#TranscludeWidget]] widget...
+
+```
+<$set name="var1" value="val1">
+<$set name="var2" value=<<currentTiddler>>>
+{{foo||$:/.tb/demo/template/example-variables}}
+</$set>
+</$set>
+```
+
+The variables `var1` and `var2` are now accessible in the ''template'' via `<<val1>>` and whatever the name of the tiddler embedding the set widget.
+
+The above markup along with <<source $:/.tb/demo/template/example-variables>>
+
+renders as:
+
+<blockquote>
+<$set name="var1" value="val1">
+<$set name="var2" value=<<currentTiddler>> >
+{{foo||$:/.tb/demo/template/example-variables}}
+</$set>
+</$set>
+</blockquote>
+
+also see: [[Variables In Nested Lists]]

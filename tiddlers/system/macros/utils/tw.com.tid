@@ -1,0 +1,12 @@
+created: 20141209095314198
+creator: Tobias Beer
+modified: 20150117145006725
+modifier: Tobias Beer
+summary: returns a link to a tiddler on tw.com
+tags: $:/tags/Macro
+title: $:/.tb/macros/tw.com
+type: text/vnd.tiddlywiki
+
+\define tw(tiddler,pretty)
+<$reveal type="match" text="" default="$pretty$">[ext[$tiddler$|http://tiddlywiki.com/#$tiddler$]]</$reveal><$reveal type="nomatch" text="" default="$pretty$">[ext[$pretty$|http://tiddlywiki.com/#$tiddler$]]</$reveal>
+\end

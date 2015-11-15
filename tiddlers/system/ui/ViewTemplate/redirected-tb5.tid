@@ -1,0 +1,17 @@
+created: 20141128135149557
+creator: Tobias Beer
+list-before: $:/core/ui/ViewTemplate/body
+modified: 20150118221357413
+modifier: Tobias Beer
+tags: $:/tags/ViewTemplate
+title: $:/.tb/ui/ViewTemplate/redirected-tb5
+type: text/vnd.tiddlywiki
+
+\define handleRedirects()
+<$reveal state="$:/.tb/config/redirected-tb5##$(currentTiddler)$" type="nomatch" text="">
+<div class="redirected">
+moved to {{$:/.tb/config/redirected-tb5##$(currentTiddler)$}}
+</div>
+</$reveal>
+\end
+<<handleRedirects>>

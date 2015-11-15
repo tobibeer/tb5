@@ -1,0 +1,10 @@
+icon: $:/core/images/plugin-generic-language
+title: Community
+
+<dl>
+<<list-search
+"[tag[Community]]+[sort[title]]"
+"search:summary"
+"$:/temp/tb/list-refernces"
+"$:/.tb/templates/list-link-summary">>
+</dl>

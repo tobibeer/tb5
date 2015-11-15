@@ -1,0 +1,31 @@
+caption: Exact
+created: 20150114171927229
+creator: Tobias Beer
+list-after: $:/core/ui/DefaultSearchResultList
+modified: 20150118220323838
+modifier: Tobias Beer
+tags: $:/tags/SearchResults
+title: $:/.tb/ui/SearchResults/exact
+type: text/vnd.tiddlywiki
+
+\define searchResultList()
+
+<$set name=term value={{$:/temp/search}}>
+<$set name=regexp value={{$:/.tb/ui/SearchResults/exact/regexp}}>
+{{$:/.tb/ui/SearchResults/exact/intro}}
+<$set name="resultCount" value="""<$count filter="[!is[system]regexp:title<regexp>][!is[system]regexp:text<regexp>]"/>""">
+{{$:/language/Search/Matches}}
+</$set>
+
+//<small>Exact title matches:</small>//
+
+<$list filter="[!is[system]regexp:title<regexp>sort[title]limit[250]]" template="$:/core/ui/ListItemTemplate"/>
+
+//<small>Exact text matches:</small>//
+
+<$list filter="[!is[system]regexp:text<regexp>sort[title]limit[250]]" template="$:/core/ui/ListItemTemplate"/>
+{{$:/.tb/ui/SearchResults/exact/outro}}
+</$set>
+</$set>
+\end
+<<searchResultList>>

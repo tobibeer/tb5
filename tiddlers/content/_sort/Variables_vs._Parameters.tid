@@ -1,0 +1,42 @@
+created: 20141119111133020
+creator: Tobias Beer
+modified: 20150123102151595
+modifier: Tobias Beer
+tags: Macros Variables
+title: Variables vs. Parameters
+type: text/vnd.tiddlywiki
+
+For more details and examples, see: http://pv5.tiddlyspot.com
+
+;general wiki text, including macros
+: `<<variable>>`
+: `{{transclusion}}`
+: @@.warn ~~`<variable>`, `"<variable>"`,  `[[<variable>]]`~~@@
+;general html element attributes, including widgets, e.g. `$macrocall`
+: `<$widget attribute=<<variable>>/>`
+: `<$widget attribute=<<callMacroToComputeValue>>/>`
+: `<$widget attribute={{transclusion}}/>`
+: @@.warn ~~`<$widget attribute="prefix-<<variable>>"/>`~~@@
+: @@.warn ~~`<$widget attribute=[[prefix-<<variable>>]]/>`~~@@
+: @@.warn ~~`<$widget attribute="prefix-{{transclusion}}"/>`~~@@
+;within macro body
+: `$macroParameter$`, `"$macroParameter$"`, `[[$macroParameter$]]`
+: `$(variable)$` (references a variable from the context of the calling macro)
+: `<$widget attribute="prefix-$macroParameter$"/>`
+: `<$widget attribute=$macroParameter$/>` (unsafe when having spaces)
+: @@.warn ~~`$variable$`, `"$variable$"`, `[[$variable$]]`~~@@
+;macro parameter
+: `<<macro param:"$macroParameter$">>` (only inside macro)
+: @@.warn ~~`<<macro <<variable>> >>`~~@@
+: @@.warn ~~`<<macro "<<variable>>" >>`~~@@
+: @@.warn ~~`<<macro param:<<variable>> >>`~~@@
+: @@.warn ~~`<<macro {{transclusion}}>>`~~@@
+: @@.warn ~~`<<macro param:{{transclusion}}>>`~~@@
+;in filters
+: `[$macroParameter$]` (only filters within macros)
+: `[tag<variable>]` (no inner square brackets!)
+: `[tag{transclusion}]` (only single curly brackets!)
+: @@.warn ~~`[tag[$(variable)$]]`~~@@
+: @@.warn ~~`[tag[$(variable)$]]`~~@@
+
+See [[discussion|https://groups.google.com/d/msg/tiddlywiki/_x9CDAFtwQc/Qlng28uWNKIJ]]...

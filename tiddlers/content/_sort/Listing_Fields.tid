@@ -1,0 +1,12 @@
+a.custom-field: oh, yes!
+created: 20141118184045378
+creator: Tobias Beer
+modified: 20150107203345626
+modifier: Tobias Beer
+tags: Lists Solutions Transclusion Core Fields Developer
+title: Listing Fields
+type: text/vnd.tiddlywiki
+
+The following wiki markup examples use filters to list implemented fields types and related information...
+
+<<tabs "[[Fields: Standard]] [[Fields: Core]] [[Fields: Non-Core]] [[Fields: Current Tiddler]] [[Fields: Current Values]]" default:"standard" "$:/state/tabs-fields">>

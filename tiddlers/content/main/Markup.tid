@@ -1,0 +1,29 @@
+caption: Markup
+created: 20151005070658821
+creator: Tobias Beer
+icon: $:/core/images/right-arrow
+list: bold italics bold-italics underline strikethrough superscript subscript dashes headings horizontal-rules code monospaced-codeblock hard-linebreaks paragraphs blockquotes unordered-lists ordered-lists definition-lists mixed-lists css-classes internal-links wiki-links external-links filesystem-links external-links-forced images external-images attribute-transclusion css-class-wrappers styled-wrappers combined-style-wrappers inline-styles tables html-elements html-element-attributes multiline-nested-html transclusion macros typed-blocks
+menu: main
+menu-icon: {{$:/core/images/right-arrow}}
+modified: 20151113085350748
+order: 2
+summary: a destillation of [[WikiText|http://tiddlywiki.com/#WikiText]] formatting in tw5
+title: Markup
+type: text/vnd.tiddlywiki
+
+See [[Markup Reference]] for a non-filterable version to easily import to your wiki.
+
+<div class="filter-markup">
+<<list-search
+filter:"[[Markup]list[]]"
+search:search
+state:"$:/temp/tb/markup-search"
+template:"$:/.tb/templates/list-search-markup"
+placeholder:"Filter markup examples...">>
+</div>
+<style>
+.filter-markup input{
+width:48%;
+margin-top:10px;
+}
+</style>

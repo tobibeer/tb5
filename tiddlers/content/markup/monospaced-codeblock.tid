@@ -1,0 +1,17 @@
+tags: Markup
+title: monospaced-codeblock
+
+<dt>
+<pre>&#96;&#96;&#96;
+monospaced
+codeblock
+&#96;&#96;&#96;</pre>
+</dt>
+
+<dd>
+
+```
+monospaced
+codeblock
+```
+</dd>

@@ -1,0 +1,12 @@
+created: 20141210080434506
+creator: Tobias Beer
+modified: 20141210172243243
+modifier: Tobias Beer
+summary: a macro serving as a shorthand to render any [[templates that are hidden|Hidden Templates]] under an otherwise lengthy system path
+tags: $:/tags/Macro
+title: $:/.tb/macros/generic-template
+type: text/vnd.tiddlywiki
+
+\define ||(template, content)
+{{$content$||$:/.tb/templates/$template$}}
+\end

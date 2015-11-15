@@ -1,0 +1,6 @@
+title: $:/.tb/templates/solution-tags
+
+<div class="tb-taglist-item">
+<small class="tc-menu-list-count"><$count filter="[all[current]tagging[]]"/></small>
+<$transclude tiddler="$:/core/ui/TagTemplate"/>
+</div>

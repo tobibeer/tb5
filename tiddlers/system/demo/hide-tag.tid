@@ -1,0 +1,17 @@
+created: 20150116175954884
+creator: Tobias Beer
+modified: 20150119165740856
+modifier: Tobias Beer
+summary: demonstrates a filter to remove tags to be hidden from the current tiddlers tags
+tags: Examples
+title: $:/.tb/demo/hide-tag
+type: text/vnd.tiddlywiki
+
+<table class="hidden-tags">
+<tr><th>hidden tags</th><th>current tags</th><th>current w/o hidden</th></tr>
+<tr>
+<td><$list filter="[list[$:/config/Hide/TagButtons!!text]sort[title]]"/></td>
+<td><$list filter="[all[current]tags[]sort[title]]"/></td>
+<td><$list filter="[all[current]tags[]]-[list[$:/config/Hide/TagButtons!!text]]+[sort[title]]"/></td>
+</tr>
+</table>

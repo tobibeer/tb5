@@ -1,0 +1,9 @@
+icon: $:/core/images/plugin-generic-language
+summary: exploring youtube annotations for hangouts, ras-pi, TiddlyWiki learning tutorials, name-plates and more
+title: Rich Shumaker
+url: http://www.richshumaker.com/tw5
+tags: Community
+
+; Hangouts TiddlyWiki
+: http://www.richshumaker.com/tw5/TiddlyWiki-Hangouts.html
+<<taggly>>

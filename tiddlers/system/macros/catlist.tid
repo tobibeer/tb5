@@ -1,0 +1,25 @@
+created: 20141124224440424
+creator: Tobias Beer
+modified: 20150114230922383
+modifier: Tobias Beer
+summary: renders a [[category listing|A Hierarchy Without Tags]] without requiring tags
+tags: $:/tags/Macro
+title: $:/.tb/macros/catlist
+type: text/vnd.tiddlywiki
+
+\define catlist(filter, field:category)
+<dl class="catlist catlist-$field$">
+<$list filter="$filter$+[nsort[order]]">
+    <$set name="cat" value=<<currentTiddler>>>
+        <$list filter="[field:$field${!!title}limit[1]]">
+            <dt><$link>
+                <$view tiddler=<<cat>> field="title"/>
+            </$link></dt>
+        </$list>
+    </$set>
+    <$list filter="[field:$field${!!title}nsort[order]]">
+        <dd><$link><$view field="title"/></$link></dd>
+    </$list>
+</$list>
+</dl>
+\end

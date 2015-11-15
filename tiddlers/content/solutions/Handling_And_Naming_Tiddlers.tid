@@ -1,0 +1,78 @@
+created: 20151007134913630
+creator: Tobias Beer
+modified: 20151007152434472
+summary: organizing and structuring your tidbits
+tags: Tiddlers Workflows Config Solutions
+title: Handling And Naming Tiddlers
+type: text/vnd.tiddlywiki
+
+One very fundamental aspect to TiddlyWiki is that it entirely runs on tiddlers itself. This makes for a very powerful concept where application and document merge into one and the same well structured framework.
+
+With all the freedom of non-linearity TiddlyWiki provides, consider the following for any information, data or functional bits you wish to store in it:
+
+!!@@color:#909; Is it content, plain and simple?@@
+
+
+@@color:#909;''yes''@@<br>
+
+Make it a general content tiddler.<br>
+ &nbsp; &raquo; e.g. "A Walk In The Park"<br>
+Do you already have a tiddler for it?<br>
+ &nbsp;  &raquo; Perhaps update that, unless it becomes unwieldy.<br>
+Does it have relations to other tiddlers?<br>
+ &nbsp; &raquo; Use internal links extensively.<br>
+What tags help categorize this tidbit?<br>
+ &nbsp; &raquo; Tags help you navigate around and find related information quickly.<br>
+Will it be a tag, i.e have "subitems"?<br>
+ &nbsp; &raquo; For tags being part of a tag category, consider prefixes:<br>
+ &nbsp;  &nbsp; &nbsp; &raquo; ''category:'' Action / ''tags:'' #future, #next, #active, #waiting, #done<br>
+ &nbsp;  &nbsp; &nbsp; &raquo; ''category:'' Context / ''tags:'' @call, @read, @buy, @fix<br>
+&nbsp; &raquo; Use these tags for actual tiddlers thus becoming grand-children to a category tiddler.<br>
+Does it require certain fields for categorization or to trigger advanced functions?<br>
+&nbsp; &raquo; like @@color:grey;//the summary at the top of this tiddler//@@<br>
+
+If you need to give your tiddler some <<tw SystemTags>>, chances are you want to...<br>
+
+@@color:#909;''no''@@<br>
+
+Make it a <<tw SystemTiddler>>, i.e. stored under the system namespace.<br>
+ &nbsp; &raquo; Meaning: it's name will start `$:/`.<br>
+
+!!@@color:#909; If it is a system tiddler, is it a functional component?@@
+
+@@color:#909;''yes''@@<br>
+
+''Tip:'' Starting the system path with a special character like `_` or `.` puts it up top under ''sidebar > system''.<br>
+
+Is it a ''macro''?<br>
+ &nbsp; &raquo; Place it under an appropriate namespace:<br>
+ &nbsp;  &nbsp;  &nbsp; &raquo; [[$:/_macros/my-macro|$:/.tb/macros/calc]] and tag it [[$:/tags/Macro]]<br>
+Is it a ''template''?<br>
+ &nbsp; &raquo; Again, place it under an appropriate namespace and tag it appropriately:<br>
+ &nbsp;  &nbsp;  &nbsp; &raquo; [[$:/_ui/ViewTemplate/summary|$:/.tb/ui/ViewTemplate/summary-link]]<br>
+ &nbsp; &raquo; I prefer to use a similar path to that of the core but starting from a different root.<br>
+&nbsp;  &nbsp;  &nbsp; &raquo; I use `$:/.tb/ui` instead of `$:/core/ui`<br>
+Is it a ''stylesheet''?<br>
+ &nbsp; &raquo; You guessed it:<br>
+ &nbsp;  &nbsp;  &nbsp; &raquo; [[$:/_styles/my-styles|$:/.tb/styles/markup]]<br>
+Is it for ''configuration''?<br>
+ &nbsp; &raquo; Use a config namespace:<br>
+ &nbsp;  &nbsp;  &nbsp; &raquo; [[$:/_config/my-config|$:/.tb/config/redirected-tb5]]<br>
+Does it hold ''data'' used to build a representation?<br>
+ &nbsp; &raquo; Perhaps use a data namespace:<br>
+ &nbsp;  &nbsp;  &nbsp; &raquo; [[$:/_data/my-special-items-list-as-json|$:/.tb/config/redirected-tb5]]<br>
+
+@@color:#909;''no''@@<br>
+
+Is it a <<tw StateMechanism state>>?<br>
+ &nbsp; &raquo; Widgets use them to remember the state of a component, e.g. a selected tab.<br>
+ &nbsp; &raquo; By default saved with TiddlyWiki and thus persisted accross sessions.<br>
+ &nbsp; &raquo; Place it under the states namespace with a __unique__ name.<br>
+ &nbsp;  &nbsp;  &nbsp; &raquo; `$:/state/my-path/the-state`<br>
+ &nbsp; &raquo; Don't want states to be saved?<br>
+ &nbsp;  &nbsp;  &nbsp; &raquo; Read: [[States And Temporary Tiddlers]]<br>
+
+Is it a ''temporary tiddler''?<br>
+ &nbsp; &raquo; These often handle states, too, but are __not saved__ with the wiki.<br>
+ &nbsp; &raquo; Place it under the temp namespace, again with a unique name.<br>
+ &nbsp;  &nbsp;  &nbsp; &raquo; `$:/temp/my-path/the-temporary-state`

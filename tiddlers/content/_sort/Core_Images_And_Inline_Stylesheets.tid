@@ -1,0 +1,22 @@
+category: Solutions
+created: 20141125024154095
+creator: Tobias Beer
+modified: 20150131123126723
+modifier: Tobias Beer
+tags: Images Styles Core Solutions
+title: Core Images And Inline Stylesheets
+type: text/vnd.tiddlywiki
+
+Did you know that you don't need to create a custom [[stylesheet tiddler|Custom Stylesheets]] if you just want to style something rather complex but only for the current tiddler? It's as simple as using a html `<style>` tag and defining your css.
+
+> ''Important:'' An empty line follow the opening `<style>` tag will break it!
+
+Here it's used to render all svg icon images that ship with the core tagged {{$:/tags/Image||$:/core/ui/TagTemplate}}
+
+<<`
+'<style>.my-gallery svg {width:3em; height:3em; margin:7px;}</style>
+<div class="thumbs">
+<$list filter="[all[tiddlers+shadows]tag[$:/tags/Image]prefix[$:/core]]">
+<$link><$transclude/></$link>
+</$list>
+</div>'>>

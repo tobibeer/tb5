@@ -1,0 +1,10 @@
+tags: Markup
+title: strikethrough
+
+<dt>
+
+```
+~~strikethrough~~
+```
+</dt>
+<dd>~~strikethrough~~</dd>

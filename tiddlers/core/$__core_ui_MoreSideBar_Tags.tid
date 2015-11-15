@@ -1,0 +1,19 @@
+caption: {{$:/language/SideBar/Tags/Caption}}
+created: 20141119013247870
+creator: Tobias Beer
+list-before: $:/core/ui/SideBar/More
+modified: 20141119015301771
+modifier: Tobias Beer
+tags: $:/tags/SideBar
+title: $:/core/ui/MoreSideBar/Tags
+type: text/vnd.tiddlywiki
+
+<$list filter="[tags[]!is[system]sort[title]]">
+
+<$transclude tiddler="$:/core/ui/TagTemplate"/> <small class="tc-menu-list-count"><$count filter="[all[current]tagging[]]"/></small>
+
+</$list>
+
+<hr class="tc-untagged-separator">
+
+{{$:/core/ui/UntaggedTemplate}} <small class="tc-menu-list-count"><$count filter="[untagged[]!is[system]] -[tags[]]"/></small>

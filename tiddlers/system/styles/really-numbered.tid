@@ -1,0 +1,25 @@
+created: 20141201201027548
+creator: Tobias Beer
+modified: 20141201202132078
+modifier: Tobias Beer
+tags: $:/tags/Stylesheet
+title: $:/.tb/styles/really-numbered
+type: text/css
+
+.ol,
+.ol ol {
+    counter-reset: item;
+}
+
+.ol li {
+    display: block;
+    position: relative;
+}
+
+.ol li:before {
+    content: counters(item, ".")".";
+    counter-increment: item;
+    position: absolute;
+    margin-right: 100%;
+    right: 10px; /* space between number and text */
+}

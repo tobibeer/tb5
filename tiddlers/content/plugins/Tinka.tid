@@ -1,0 +1,11 @@
+category: Plugins
+created: 20150927160818541
+icon: $:/core/images/plugin-generic-plugin
+modified: 20150927160829480
+creator: Tobias Beer
+summary: Tinka allos to package plugins right in the browser version of TiddlyWiki
+tags: Plugin Utilities Workflows [[Andreas Hahn]] Solutions
+title: Tinka
+type: text/vnd.tiddlywiki
+url: http://twguides.org/wiki/tinka.html
+

@@ -1,0 +1,41 @@
+created: 20141125232126073
+creator: Tobias Beer
+modified: 20141125232901241
+modifier: Tobias Beer
+tags: Solutions Presentation Macros
+title: Headings ToC In Tiddler
+type: text/vnd.tiddlywiki
+
+A toc of tiddler headings, based on the works of [[Danielo Rodríguez|http://braintest.tiddlyspot.com/]], Stephen Kimmel and [[EucalyJ|http://eucaly-tw5.tiddlyspot.com]] in [[this discussion|https://groups.google.com/forum/#!topic/tiddlywiki/6zBxrj4nV34]].
+
+{{||toc}}
+
+!Get ~MatchFilter
+
+Install [[MatchFilter from EucalyJ|http://eucaly-tw5.tiddlyspot.com/#MatchFilter]], e.g. [[$:/core/modules/filters/match.js]], providing a plugin to extract tiddler contents via regular expressions.
+
+!Create Template
+
+Create a template tiddler for your tiddler-toc, dragging [[toc]] to your wiki.
+
+!Use It
+Render the tiddler-toc by [[transcluding the template tiddler|http://tiddlywiki.com/#Transclusion%20in%20WikiText]] [[toc]] via either of...
+
+* `{{||toc}}`
+* `<$transclude tiddler="toc"/>`
+
+!Styles
+
+The default styles are provided using an [[inline <style/> tag|Core Images And Inline Stylesheets]] in [[toc]] tiddler. To override them, create a tidder tagged [[$:/tags/Stylesheet]] to define your desired toc styles.
+
+<br>
+
+Some more headings, just for fun...
+
+!!Level 2
+!!!Level 3
+!!!!Level 4
+!!!!!Level 5
+!!!!!!Level 6
+
+See TiddlyWiki for another example.

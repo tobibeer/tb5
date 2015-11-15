@@ -1,0 +1,97 @@
+summary: read more at [[Interactive SVG Image Map]]
+title: example-svg
+
+<svg xmlns="http://www.w3.org/2000/svg"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   version="1.2"
+   class="svg-example"
+   width="400"
+   height="400">
+  <g transform="translate(0,-652.36218)" style="opacity:0.86000001">
+    <a xlink:href="#Markup">
+    <g transform="translate(-5,3)" class="svg-example-btn">
+      <rect
+         width="250.21857"
+         height="133.14288"
+         x="19.571411"
+         y="677.64789"
+         class="svg-markup-bg"
+         style="fill:#ececec;" />
+      <text
+         x="58.293976"
+         y="758.45764"
+         class="svg-markup-text"
+         xml:space="preserve"><tspan
+           x="58.293976"
+           y="758.45764">MARKUP</tspan></text>
+    </g>
+    </a>
+    <a xlink:href="#Plugins">
+    <g transform="translate(-12,-9)" class="svg-example-btn">
+      <rect
+         width="256.00003"
+         height="137.5858"
+         x="63.999996"
+         y="785.49066"
+         class="svg-markup-bg"
+         style="fill:#cccccc;" />
+      <text
+         x="100.76955"
+         y="868.78552"
+         class="svg-markup-text"
+         xml:space="preserve"><tspan
+           x="100.76955"
+           y="868.78552">PLUGINS</tspan></text>
+    </g>
+    </a>
+    <a xlink:href="#Solutions">
+      <g transform="translate(0,-6)" class="svg-example-btn">
+        <rect
+           width="292.28033"
+           height="142.24585"
+           x="92.878159"
+           y="884.79077"
+           class="svg-markup-bg"
+           style="fill:#999999;" />
+        <text
+           x="118.51051"
+           y="970.45471"
+           class="svg-markup-text"
+           xml:space="preserve"><tspan
+             x="118.51051"
+             y="970.45471">SOLUTIONS</tspan></text>
+      </g>
+    </a>
+  </g>
+</svg>
+
+<style>
+.svg-example {
+margin:-1em 0 -2em;
+}
+
+.svg-example rect {
+transition: .6s fill; !important;
+}
+
+.svg-example a:hover rect {
+fill: #22aa22 !important;
+}
+
+/* below: styles that came from inkscape that I took out of the svg elements! */
+
+.svg-example rect {
+fill-opacity:1;stroke:0;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:0;stroke-dasharray:none;
+}
+
+.svg-example text {
+font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;
+}
+
+.svg-example tspan{
+font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;font-family:Verdana;
+}
+</style>

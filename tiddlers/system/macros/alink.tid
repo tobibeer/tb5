@@ -1,0 +1,20 @@
+created: 20150109152316114
+creator: Tobias Beer
+modified: 20150917115610728
+modifier: Tobias Beer
+summary: allows to render a pretty link based on an alias defined in the `alink` field
+tags: $:/tags/Macro
+title: $:/.tb/macros/alink
+type: text/vnd.tiddlywiki
+
+\define a:target()
+<$list filter="[regexp:alink<regexp>limit[1]]"><$link><<target>></$link></$list>
+\end
+
+\define a:(target)
+<$set name="regexp" value="\|$target$\|(?i)"><$set name="target" value="$target$"><<a:target>></$set></$set>
+\end
+
+\define alink(target) 
+<<a: "$target$">> 
+\end

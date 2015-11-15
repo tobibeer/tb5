@@ -1,0 +1,27 @@
+tags: Markup
+title: hard-linebreaks
+
+<dt>
+
+```
+"""
+force
+hard
+linebreaks
+like
+this...
+"""
+```
+</dt>
+
+
+<dd>
+
+"""
+force
+hard
+linebreaks
+like
+this...
+"""
+</dd>

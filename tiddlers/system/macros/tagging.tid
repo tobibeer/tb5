@@ -1,0 +1,26 @@
+created: 20141117121512079
+creator: Tobias Beer
+modified: 20150113093227073
+modifier: Tobias Beer
+summary: implements the classic tagging macro
+tags: $:/tags/Macro
+title: $:/.tb/macros/tagging
+type: text/vnd.tiddlywiki
+
+\define tagging(tiddler,state,template:"$:/core/ui/ListItemTemplate")
+<$reveal type="match" default="" text="$tiddler$">
+<$list filter="[all[current]tagging[]sort[title]]" template="$template$"/>
+</$reveal>
+<$reveal type="nomatch" default="" text="$tiddler$">
+<$reveal type="match" default="" text="$state$">
+<$list filter="[[$tiddler$]tagging[]sort[title]]" template="$template$"/>
+</$reveal>
+<$reveal type="nomatch" default="" text="$state$">
+<<list-search
+"[[$tiddler$]tagging[]sort[title]]"
+search
+"$state$"
+"$template$">>
+</$reveal>
+</$reveal>
+\end

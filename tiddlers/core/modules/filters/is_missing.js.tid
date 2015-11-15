@@ -1,0 +1,40 @@
+created: 20150203231543387
+creator: Tobias Beer
+modified: 20150203233919468
+modifier: Tobias Beer
+module-type: isfilteroperator
+title: $:/core/modules/filters/is/missing.js
+type: application/javascript
+
+/*\
+title: $:/core/modules/filters/is/missing.js
+type: application/javascript
+module-type: isfilteroperator
+
+Filter function for [is[missing]]
+
+\*/
+(function(){
+
+/*jslint node: true, browser: true */
+/*global $tw: false */
+"use strict";
+
+/*
+Export our filter function
+*/
+exports.missing = function(source,prefix,options) {
+	var results = [],
+		get = "!" !== prefix,
+		missing = options.wiki.getMissingTitles();
+	source(function(tiddler,title) {
+		var i = missing.indexOf(title);
+		console.log(title,i);
+		if(get && i >= 0 || !get && i < 0) {
+			results.push(title);
+		}
+	});
+	return results;
+};
+
+})();

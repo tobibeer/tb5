@@ -1,0 +1,83 @@
+created: 20150213200150156
+creator: Tobias Beer
+modified: 20150213201523736
+modifier: Tobias Beer
+summary: a wizard to search and replace an old tag name with a new one
+title: $:/.tb/wizards/replace-tag
+type: text/vnd.tiddlywiki
+
+\define lingo-base() $:/language/EditTemplate/
+
+<$fieldmangler>
+<$edit-text
+tiddler="$:/temp/replace-tag"
+field="replace"
+tag="input"
+default=""
+placeholder="replace tag"
+focusPopup=<<qualify "$:/state/popup/replace-tags">>
+class="tc-popup-handle"/>
+<$button
+popup=<<qualify "$:/state/popup/replace-tags">>
+class="tc-btn-invisible tc-btn-dropdown"
+tooltip={{$:/language/EditTemplate/Tags/Dropdown/Hint}}
+aria-label={{$:/language/EditTemplate/Tags/Dropdown/Caption}}>
+{{$:/core/images/down-arrow}}</$button>
+&nbsp;
+<$edit-text
+tiddler="$:/temp/replace-tag"
+field="with"
+tag="input"
+default=""
+placeholder="with tag"/>
+<$reveal state="$:/temp/replace-tag!!replace" type="nomatch" text="">
+<$button class="tc-btn-invisible tc-btn-dropdown">
+<$action-deletetiddler $tiddler="$:/temp/replace-tag"/>
+{{$:/core/images/close-button}}
+</$button>
+</$reveal>
+<div class="tc-block-dropdown-wrapper">
+<$reveal
+state=<<qualify "$:/state/popup/replace-tags">>
+type="nomatch"
+text=""
+default="">
+<div class="tc-block-dropdown">
+<$linkcatcher to="$:/temp/replace-tag!!replace">
+<$list filter="[tags[]search:title{$:/temp/replace-tag!!replace}sort[]]">
+{{||$:/core/ui/Components/tag-link}}
+</$list>
+</$linkcatcher>
+</div>
+</$reveal>
+</div>
+</$fieldmangler>
+
+<$list filter='[tag{$:/temp/replace-tag!!replace}]'>
+<$fieldmangler tiddler=<<currentTiddler>>>
+<$button tooltip="Click to replace tag">
+{{$:/core/images/done-button}}
+<$action-sendmessage $message="tm-remove-tag"
+$param={{$:/temp/replace-tag!!replace}}/>
+<$action-sendmessage $message='tm-add-tag'
+$param={{$:/temp/replace-tag!!with}}/>
+</$button>
+<$link><$view field=title/></$link><br>
+</$fieldmangler>
+</$list>
+
+<$reveal type="nomatch" state="$:/temp/replace-tag!!with" text="">
+<$list filter="[title{$:/temp/replace-tag!!replace}is[tiddler]]">
+<$button>
+rename tag "{{$:/temp/replace-tag!!replace}}" to "{{$:/temp/replace-tag!!with}}"
+<$action-setfield
+$tiddler={{$:/temp/replace-tag!!replace}}
+title={{$:/temp/replace-tag!!with}}/>
+<$action-deletetiddler
+$tiddler={{$:/temp/replace-tag!!replace}}/>
+<$action-sendmessage
+$message="tm-close-tiddler"
+$param={{$:/temp/replace-tag!!replace}}/>
+</$button>
+</$list>
+</$reveal>

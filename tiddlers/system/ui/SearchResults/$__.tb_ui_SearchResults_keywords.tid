@@ -1,0 +1,31 @@
+caption: Keywords
+created: 20150116164826157
+creator: Tobias Beer
+list-after: $:/.tb/ui/SearchResults/exact
+modified: 20150118220348983
+modifier: Tobias Beer
+tags: $:/tags/SearchResults
+title: $:/.tb/ui/SearchResults/keywords
+type: text/vnd.tiddlywiki
+
+\define searchResultList()
+
+<$set name=term value={{$:/temp/search}}>
+{{$:/.tb/ui/SearchResults/keywords/intro}}
+<$set name="resultCount" value="""<$count filter="[!is[system]search:keywords<term>][!is[system]search:tags<term>]"/>""">
+{{$:/language/Search/Matches}}
+</$set>
+
+<br>
+
+//<small>Keyword matches:</small>//
+
+<$list filter="[!is[system]search:keywords<term>sort[title]limit[250]]" template="$:/core/ui/ListItemTemplate"/>
+
+//<small>Tag matches:</small>//
+
+<$list filter="[!is[system]search:tags<term>sort[title]limit[250]]" template="$:/core/ui/ListItemTemplate"/>
+{{$:/.tb/ui/SearchResults/keywords/outro}}
+</$set>
+\end
+<<searchResultList>>

@@ -1,0 +1,35 @@
+created: 20141203154328252
+creator: Tobias Beer
+modified: 20150112163835431
+modifier: Tobias Beer
+tags: Solutions Console Code JavaScript Bookmarklets [[Stephan Hradek]]
+title: Creating Smart Bookmarklets
+type: text/vnd.tiddlywiki
+
+''Note:'' With <<git5 issues/1350>> — ''disallow javascript: urls'' — the bookmarking functionality will likely be affected or even become entirely disabled in the future.
+
+If you know nothing about JavaScript or how TiddlyWiki works internally? Then this is not for you, although the end-result just might be!
+
+Once you get to know your ways through the TiddlyWiki [[Core]] you can write big or small code snippets that are quite helpful but which you don't really feel like carrying around in your wiki. What better place to put them than your browsers bookmarks, you ask?
+
+!! A ~JavaScript Bookmark
+So, here's how you turn that javascript snippet of yours into a bookmarket:
+
+# wrap your code in a function call that is immediately executed
+#* `(function(){ ... })()`
+# [[minify|http://jscompress.com]]
+# [[encodeURIComponent()|http://pressbin.com/tools/urlencode_urldecode]]
+# create the bookmark link
+#* `<a href="javascript:void({minified-and-uriencoded-code})" title="Bookmark Me!">awesome foo</a>`
+# enjoy!
+
+!!Example
+
+With much appreciated [[help from Stephan Hradek|https://groups.google.com/d/msg/tiddlywiki/hr75FTeEL_g/Yuk_6gxpY_wJ]] for the above instructions and for helping me turn my code into a bookmark, here's one to output: <a href="javascript:void((function()%7Bvar%20e%3D%22%5B!is%5Bshadow%5D!is%5Bsystem%5D%5D%22%2Ct%3Dprompt(%22Please%20define%20a%20filter...%22%2Ce)%3Be%3Dt%7C%7Ce%3Bvar%20n%3D%5B%5D%3B%24tw.utils.each(%24tw.wiki.filterTiddlers(e)%2Cfunction(e)%7Bvar%20t%3D0%2Cr%3D%24tw.wiki.getTiddler(e)%3Bn.push(%7Btitle%3Ae%2Csize%3A%24tw.wiki.getTiddlerAsJson(e).length.toString()%2Cfields%3AObject.keys(r.fields).length%2Ctype%3Ar.fields%5B%22type%22%5D%7C%7C%22%22%7D)%7D)%3Bn.sort(function(e%2Ct)%7Breturn%20t.size-e.size%7D)%3Bvar%20r%3D%22%22%3B%24tw.utils.each(n%2Cfunction(e)%7Br%2B%3De.size%2B%22%20%5B%5B%22%2Be.title%2B%22%5D%5D%2C%20%22%2Be.fields%2B%22%20fields%22%2B(e.type%3F%22%2C%20%22%2Be.type%3A%22%22)%2B%22%5Cn%22%7D)%3Bvar%20i%3D%22%24%3A%2FStoryList%22%2Cs%3D%22%24%3A%2Ftemp%2Ftiddler-sizes%22%2Co%3D%24tw.wiki.getTiddlerList(i)%3B%24tw.wiki.addTiddler(new%20%24tw.Tiddler(%7Btitle%3As%2Ctext%3A'%22%22%22%5Cn'%2Br%2B'%22%22%22'%7D))%3Bif(o.indexOf(s)%3D%3D%3D-1)%7Bo.unshift(s)%7D%24tw.wiki.addTiddler(new%20%24tw.Tiddler(%7Btitle%3Ai%7D%2C%24tw.wiki.getTiddler(i)%2C%7Blist%3Ao%7D))%3Bconsole.log(r)%7D)())%3B" title="Bookmark me!">tiddler sizes</a>
+
+!!Ready to try?
+Then go look at [[this snippet|http://tbdemo.tiddlyspot.com/#Console%20Log%20Of%20Tiddler%20Sizes]], see if you can basically understand what it does and follow the steps to create the above bookmarklet from it.
+
+!! More
+
+Also have a look at [[TW5 Bookmarklets]] by [[Ton Gerner]].

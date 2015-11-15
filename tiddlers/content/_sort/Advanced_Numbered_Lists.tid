@@ -1,0 +1,65 @@
+created: 20141201201124579
+creator: Tobias Beer
+modified: 20150213193425686
+modifier: Tobias Beer
+tags: Lists Styles Solutions ToC CSS
+title: Advanced Numbered Lists
+type: text/vnd.tiddlywiki
+
+As [[Daniel Baird points out|https://groups.google.com/d/msg/tiddlywiki/GvyNfn9pASc/qdK2h9A7DZcJ]], you can add some custom css to your TiddlyWiki to get advanced [[numbered lists|ordered-lists]] with numbers that look like sub-chapters.
+
+A standard TiddlyWiki gives you:
+
+<table class="no-border">
+<tr>
+<td>
+
+```
+# level 1
+## level 2
+### level 3
+## level 2
+### level 3
+```
+</td>
+<td>
+
+# level 1
+## level 2
+### level 3
+## level 2
+### level 3
+</td>
+</tr>
+</table>
+
+Here's how you get a fully numbered list using a custom class named `ol`:
+
+<table class="no-border">
+<tr>
+<td>
+
+```
+@@.ol
+# level 1
+## level 2
+### level 3
+## level 2
+### level 3
+@@
+```
+</td>
+<td>
+
+@@.ol
+# level 1
+## level 2
+### level 3
+## level 2
+### level 3
+@@
+</td>
+</tr>
+</table>
+
+The class `ol` is defined in a [[custom stylesheet|Custom Stylesheets]] which you can simply drag to your wiki: <<source [[$:/.tb/styles/really-numbered]]>>

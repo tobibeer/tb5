@@ -1,0 +1,7 @@
+created: 20150929151300100
+creator: Tobias Beer
+modified: 20150929151309192
+title: $:/config/EmptyStoryMessage
+type: text/vnd.tiddlywiki
+
+{{Welcome||$:/core/ui/ViewTemplate}}

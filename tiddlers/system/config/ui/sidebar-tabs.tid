@@ -1,0 +1,32 @@
+created: 20150918044432450
+creator: Tobias Beer
+modified: 20150919090946799
+modifier: Tobias Beer
+summary: allows to toggle sidebar tabs
+title: $:/.tb/config/sidebar-tabs
+type: text/vnd.tiddlywiki
+
+<$set name="more" value={{$:/.tb/config/sidebar-tabs/custom!!more}}>
+<$set name="more-tag" value={{$:/.tb/config/sidebar-tabs/custom!!more-tag}}>
+<table>
+<tr>
+<th>Tab</th>
+<th>Sidebar</th>
+<th>More</th>
+<$reveal type="nomatch" text=<<more>> default="" tag="th">
+<<more>>
+</$reveal>
+</tr>
+<$list filter="[all[shadows+tiddlers]prefix[$:/c/ui/SideBar/]] [all[shadows+tiddlers]prefix[$:/core/ui/MoreSideBar/]] [all[shadows+tiddlers]prefix{$:/.tb/config/sidebar-tabs/custom}] +[sort[title]]">
+<tr>
+<td><$link to={{!!title}}><$view tiddler={{!!title}} field="title"/></$link></td>
+<td><span title="Toggle Sidebar"><$checkbox tiddler={{!!title}} tag="$:/tags/SideBar"/></span></td>
+<td><span title="Toggle Sidebar More"><$checkbox tiddler={{!!title}} tag="$:/tags/MoreSideBar"/></span></td>
+<$reveal type="nomatch" text=<<more>> default="" tag="td">
+<$checkbox tiddler={{!!title}} tag=<<more-tag>>/>
+</$reveal>
+</tr>
+</$list>
+</table>
+</$set>
+</$set>

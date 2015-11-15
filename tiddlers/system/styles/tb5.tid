@@ -1,0 +1,130 @@
+created: 20150118215408304
+creator: Tobias Beer
+list-after: $:/themes/tiddlywiki/vanilla/base
+modified: 20151005072245060
+modifier: Tobias Beer
+tags: $:/tags/Stylesheet
+title: $:/.tb/styles/tb5
+type: text/css
+
+.atom-link svg{
+height: 16px;
+fill: #acacac;
+margin-bottom:-1px;
+}
+
+.atom-link:hover svg{
+fill: #777;
+}
+
+.tb5-version{
+display:inline-block;
+color:#ddd;
+margin: 0 0 0 52px;
+}
+
+.tb5-home{
+margin-top:20px;
+}
+
+.tb5-home-title{
+float:left;
+clear:left;
+text-align:right;
+margin: 0 7px 7px 0;
+width:120px;
+font-size:1.5em;
+vertical-align:top;
+}
+
+.tb5-home-summary{
+width:450px;;
+height: 32px;
+float:left;
+}
+
+
+/* needed to have the topbar be behind and not on top of notifications */
+.tc-topbar{
+z-index:999;
+}
+
+/* reposition, full width and coloring */
+.tc-topbar-left{
+top:0;
+left:0;
+position:fixed;
+z-index:100;
+display:block;
+width:100%;
+padding:10px 0 10px 55px;
+color:#f6f6f6;
+background:#ececec;
+}
+
+/* reposition, icon size and position adjustments */
+.tc-topbar svg {
+width: 16px;
+margin-bottom: -8px;
+}
+
+/* link text properties */
+.tc-topbar a{
+padding: 3px 5px;
+margin-right:0;
+color:#999;
+font-size:1.2em;
+white-space: nowrap;
+}
+
+
+.tc-tagged-Dev{
+background-color:#fff6f6;
+}
+
+.tb5-fish{
+margin:0px -44px -62px -43px;
+}
+
+.tb5-fish img{
+width:100%;
+}
+
+.caution {
+background-color:#ffeeff;
+padding:7px;
+}
+
+
+@media (max-width: 960px){
+.tc-topbar{
+position:relative !important;
+}
+.tc-topbar-right{
+float:right;
+top:0;
+left:0;
+}
+.tc-topbar-left{
+width: 100%;
+padding: 10px;
+margin-right:100px;
+top:0;
+left:0;
+}
+
+.tb5-version{
+display:block;
+margin:5px 0 0 5px;
+}
+.tb5-fish{
+margin:0px -44px -22px -43px;
+}
+}
+
+
+@media (max-width: 620px){
+.tb5-home-title{
+text-align:left;
+}
+}

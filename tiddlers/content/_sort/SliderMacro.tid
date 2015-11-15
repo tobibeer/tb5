@@ -1,0 +1,62 @@
+created: 20150201173223292
+creator: Tobias Beer
+modified: 20150210184752081
+modifier: Tobias Beer
+tags: 
+title: SliderMacro
+type: text/vnd.tiddlywiki
+
+\define slider-label(prefix,suffix)
+$prefix$<$text text="$(currentTiddler)$"/>$suffix$
+\end
+
+@@color:purple;
+> ''Note:'' While working, there is a problem using anything complicated as the button text, e.g. a ~CamelCase tiddler title with an image. The button will either render it as an internal-link and open the tiddler as well as the slider or simply look like spaghetti html, see last example.
+@@
+
+The ''slider'' macro displays a button which when clicked reveals content and hides it upon a second click, thus toggling the slider contents.
+
+! Parameters
+
+|!# |!Name |!Description |!Default |
+|1 |label |the text label of the slider button| |
+|2 |content |the content to be shown as a TextReference | |
+|3 |state |a state tiddler storing the open/ close state of the slider | |
+|4 |tooltip |a tooltup for the slider button shown when hovering it with a mouse-pointer | |
+|5 |label-hide |a label shown when closing the tiddler, if none specified always shows the label| |
+|6 |animate |whether to animate opening and closing the contents|`yes` |
+|7 |class |a css class assigned to the slider contents| |
+|8 |btn-class |a css class assigned to the button, by default shows the slider button as if an internal link|`tc-btn-invisible tc-tiddlylink` |
+|9 |element |the html element type of the slider contents<br>use `span` to create an inline slider|`div` |
+|10 |plain |when specified, e.g. as `plain=true`, renders the content specified in ''content'' directly instead of fetching a text-reference| |
+
+! Examples
+
+The following example creates a slider for the [[Welcome]] tiddler...
+
+<$macrocall $name=` 
+text="""<<slider show Welcome "$:/state/slider/Welcome" label-hide:hide>>"""/>
+
+The next example shows custom content inline using an italics element...
+
+<$macrocall $name=` 
+text="""<<slider show "this text" "$:/state/slider/ItalicText" label-hide:hide element:i plain:true>>"""/>
+
+The next example implements custom arrows with a helper macro thus requiring to use the macrocall widget, wrapped using the TiddlerWidget to set a different context.
+
+```
+\define slider-label(prefix,suffix)
+$prefix$<$text text="$(currentTiddler)$"/>$suffix$
+\end
+```
+
+<$macrocall $name=` 
+text="""<$tiddler tiddler="GettingStarted">
+<$macrocall
+$name="slider"
+label=<<slider-label "" " {{$:/core/images/chevron-right}}">>
+content="!!text"
+state="$:/state/slider/GettingStartedPrefixes"
+label-hide=<<slider-label "" " {{$:/core/images/chevron-down}}">>
+/>
+</$tiddler>"""/>

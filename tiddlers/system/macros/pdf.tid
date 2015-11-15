@@ -1,0 +1,13 @@
+created: 20150312170110899
+creator: Tobias Beer
+modified: 20150312183757484
+modifier: Tobias Beer
+summary: a macro to render an external pdf as an iframe
+tags: $:/tags/Macro
+title: $:/.tb/macros/pdf
+type: text/vnd.tiddlywiki
+
+\define pdf(url)
+<iframe width="100%" height="900" src="$url$" frameborder="0" allowfullscreen/>
+[ext[link|$url$]]
+\end

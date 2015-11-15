@@ -1,0 +1,39 @@
+created: 20141119161118219
+creator: Tobias Beer
+modified: 20150131125350927
+modifier: Tobias Beer
+tags: Dates Calendars Sidebar UI Solutions Embed
+title: Google Calendar
+type: text/vnd.tiddlywiki
+
+To embed your google calendar in tw5...
+
+# go to your [[google calendar|https://www.google.com/calendar/]]
+# chose the dropdown next to the calendar you wish displayed and click on settings
+#* enable public sharing if you want others to see it as well
+# copy the embed code
+#* to adjust more options, click: //Customise the colour, size and other options//
+# paste the iframe code into a new tiddler
+#* use a [[url shortener|http://bit.ly]] with `src` to ensure all other parameters work
+# create a new tiddler and paste the `iframe` code for your calendar
+
+!!Example
+
+{{$:/.tb/template/sidebar-calendar}}
+
+via <<source $:/.tb/template/sidebar-calendar>>
+
+!!Sidebar Calendar
+To display [[your calendar|$:/.tb/template/sidebar-calendar]] in the sidebar...
+
+# tag it [[$:/tags/SideBar]]
+# give it a `caption` field to display an alternative tab title, e.g. ''Calendar''
+# define the field `list-before` to display it before any other tab
+#* ''list-before'': [[$:/core/ui/SideBar/More]]
+
+''Tip:'' Go and try tagging [[this calendar|$:/.tb/template/sidebar-calendar]] with [[$:/tags/SideBar]]!
+
+!! Full Page Calendar
+
+<<via
+'<iframe src="http://bit.ly/1xptZmi" style="border:0;width:100%;height:600px;" frameborder="0" scrolling="no"/>'>>

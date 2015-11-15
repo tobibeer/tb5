@@ -1,0 +1,13 @@
+follow: yes
+summary: @@color:red;experimental / under development@@ — allows to dynamically filter lists by tags of listed tiddlers
+tags: [[Tobias Beer]] Solutions Tags Filters
+title: tagfilter
+url: http://tagfilter.tiddlyspot.com
+created: 20150120101610475
+modified: 20150120101954083
+creator: Tobias Beer
+modifier: Tobias Beer
+
+; basic idea based on
+: http://tagfiltr.tiddlyspace.com
+: http://tagsplorermacro.tiddlyspace.com

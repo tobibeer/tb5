@@ -1,0 +1,15 @@
+created: 20150121224717470
+creator: Tobias Beer
+modified: 20150121230255379
+modifier: Tobias Beer
+tags: 
+title: $:/.tb/demo/image-map
+type: text/vnd.tiddlywiki
+
+<img src="http://www.w3schools.com/tags/planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap" class="pretty">
+
+<map name="planetmap">
+  <area shape="rect" coords="0,0,82,126" alt="Sun" title="Sun" href="#Solutions">
+  <area shape="circle" coords="90,58,3" alt="Mercury" title="Mercury" href="#Markup">
+  <area shape="circle" coords="124,58,8" alt="Venus" title="Venus" href="#Variables%20vs.%20Parameters">
+</map>

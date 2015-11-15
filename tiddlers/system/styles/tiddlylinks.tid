@@ -1,0 +1,16 @@
+created: 20141211163918160
+creator: Tobias Beer
+modified: 20141220174400119
+modifier: Tobias Beer
+tags: $:/tags/Stylesheet
+title: $:/.tb/styles/tiddlylinks
+type: text/css
+
+a.tc-tiddlylink-shadow {
+color:#2266aa;
+font-weight:normal;
+}
+
+a.tc-tiddlylink-resolves.tc-tiddlylink-shadow {
+font-weight:bold;
+}

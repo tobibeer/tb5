@@ -1,0 +1,13 @@
+title: $:/.tb/templates/tabbed-toc-example
+
+<h2><$link><$view field=title/></$link></h2>
+<$list filter="[all[current]has[summary]]">
+
+{{!!summary}}
+</$list>
+<$list filter="[all[current]has[url]]">
+
+{{!!url}}
+</$list>
+
+{{!!text}}

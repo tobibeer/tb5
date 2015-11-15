@@ -1,0 +1,22 @@
+created: 20151112120337215
+creator: Tobias Beer
+modified: 20151112123509185
+tags: Themes Presentation
+title: Responsive Theming
+type: text/vnd.tiddlywiki
+
+The startup module [[responsive.js|$:/.tb/modules/startup/responsive.js]] allows you to define in ascending order which theme to apply depending on the viewport width in the config tiddler <<source [[$:/theme/responsive]]>>
+
+Here, the vanilla theme is applied for resolutions below 960 px, the snowwhite theme applied beyond that.
+
+The indexes are expected as integers corresponding to the viewport width. The last index can be named freely and is applied by default when none of the previous rules applied.
+
+!! Installation
+
+drag to your wiki and reload:
+
+; module (version: <<date-version $:/.tb/modules/startup/responsive.js>>)
+: [[$:/.tb/modules/startup/responsive.js]]
+; settings
+: [[$:/theme/responsive]]
+: adjust to your preferences

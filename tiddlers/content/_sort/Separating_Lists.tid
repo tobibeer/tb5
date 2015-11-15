@@ -1,0 +1,60 @@
+created: 20150201133819161
+creator: Tobias Beer
+modified: 20150201195819938
+modifier: Tobias Beer
+tags: Solutions Lists Presentation
+title: Separating Lists
+type: text/vnd.tiddlywiki
+
+With TiddlyWiki, paragraphs and thus lists are treated differently from TiddlyWiki classic.
+
+''the problem''
+
+//Notice how those lists — seemingly split in two — are merged into one.//
+
+<<`
+'* foo
+* bar
+
+* baz'>>
+
+
+''perhaps the simplest solution''
+
+//An empty blockquote doesn't render anything visually and breaks the lists.//
+
+<<`
+'* foo
+* bar
+>
+* baz'>>
+
+''visually separated''
+
+//Using a horizontal rule, the lists are visually clearly separated.//
+
+<<`
+'* foo
+* bar
+<hr>
+
+* baz'>>
+
+//or...//
+
+<<`
+'* foo
+* bar
+----
+* baz'>>
+
+''some html''
+
+//Alternatively, use an empty html element, like `<i/>`, `<b/>`, etc... followed by a linebreak.//
+
+<<`
+'* foo
+* bar
+<b/>
+
+* baz'>>

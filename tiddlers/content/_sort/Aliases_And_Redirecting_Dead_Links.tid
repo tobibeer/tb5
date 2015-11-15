@@ -1,0 +1,39 @@
+created: 20141127144232500
+creator: Tobias Beer
+modified: 20150213201605318
+modifier: Tobias Beer
+tags: Solutions Renaming Alias
+title: Aliases And Redirecting Dead Links
+type: text/vnd.tiddlywiki
+
+Sparked from [[this issue|https://github.com/Jermolene/TiddlyWiki5/issues/948#issuecomment-64797341]], here's a way to ensure your visitors find their way to the new tiddler using old links, in case you ever decide renaming them...
+
+!! Installation
+
+You can simply drag these two to your wiki and start right away:
+
+* [[$:/config/Redirected]] — edit redirects here, see below
+* [[$:/.tb/template/redirected]]
+
+!! Step 1 — define redirects
+
+To define redirects, create a [[DataTiddler|http://tiddlywiki.com/#DataTiddlers]] of type `application/json` and feed it with proper JSON formating like <<source $:/config/Redirected>>
+
+Here the index to the left will be your old title and the index to the right contains either a link or full-blown wiki-text to inform the user of what's changed.
+
+!! Step 2 — conditional template
+
+As explained before, you can create [[a conditional view-template section|Conditional ViewTemplate Section]] which displays information when certain conditions are met.
+
+Here's one that displays a redirect message at the top of a tiddler...
+
+<<source [[$:/.tb/template/redirected]]>>
+
+The template is displayed at the top of each indexed tiddler because...
+
+# it is tagged [[$:/tags/ViewTemplate]]
+# has the field `list-before` set to [[$:/core/ui/ViewTemplate/body]] which tells the renderer to place it before the tiddler body
+
+!! Step 3 — styles
+
+Using the `redirected` class as defined in the template above, you can either add styles directly to the template or use a [[custom stylesheet|Custom Stylesheets]].

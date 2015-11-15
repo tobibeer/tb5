@@ -1,0 +1,46 @@
+created: 20150128122813567
+creator: Tobias Beer
+modified: 20150131123423610
+modifier: Tobias Beer
+tags: [[Jed Carty]] Templates Buttons Editing
+title: Create Tiddler From Template
+type: text/vnd.tiddlywiki
+
+As [[Jed Carty]] explains [[here|https://groups.google.com/d/msg/tiddlywiki/9AryXdxVppU/pUyTacmvwE0J]], you can define your own buttons that allow you to quickly create tiddlers using template tiddlers.
+
+The tiddler defining the ''New Tiddler'' {{$:/core/ui/Buttons/new-tiddler}} button is [[$:/core/ui/Buttons/new-tiddler]].
+
+For a custom button using your custom template, simply...
+
+# Create Your Template<div>
+
+; chose a name
+: e.g. [[$:/.tb/demo/Template/new-recipe]] — Click to see!
+; contents
+: enter text, sections, as well as fields and tags for your new typed tiddlers
+</div>
+# create button<div>
+
+; clone
+: [[$:/core/ui/Buttons/new-tiddler]]
+; chose a name
+: e.g. [[$:/.tb/demo/Buttons/new-recipe]]
+; set template
+: add `param=$:/.tb/demo/Template/new-recipe` to the button widget
+; toolbar
+: keeping the tag [[$:/tags/PageControls]], your button will be listed at:
+:: ''Sidebar'' / (''More'' /) ''Tools'' — even in the page toolbar, if enabled
+</div>
+
+!! A Recipe Button
+
+<<`
+'<$set name="tv-config-toolbar-icons" value="yes">
+<$set name="tv-config-toolbar-text" value="yes">
+<$set name="tv-config-toolbar-class" value="">
+{{$:/.tb/demo/Buttons/new-recipe}}
+</$set>
+</$set>
+</$set>'>>
+
+<<source [[$:/.tb/demo/Buttons/new-recipe]]>>

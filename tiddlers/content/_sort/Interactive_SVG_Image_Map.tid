@@ -1,0 +1,43 @@
+created: 20150110164839801
+creator: Tobias Beer
+modified: 20150121124447665
+modifier: Tobias Beer
+tags: Images SVG Styles Navigation Menus
+title: Interactive SVG Image Map
+type: text/vnd.tiddlywiki
+
+Forget [[image-maps|http://www.w3schools.com/tags/tag_map.asp]], comes SVG. Setting up either one can be cumbersome, but the advantages in dynamically styling svg by far exceed those of binary imagery, not just in terms of scaling.
+
+The below example doesn't overly leverage the power of vector graphics but it's illustrating the general concept...
+
+{{example-svg}}
+
+!!How to achieve?
+
+# [[create your desired svg|SVG-Edit]] image or [[obtain it from somewhere|http://d-maps.com]]
+#* don't shy away because you see all this "code"
+#* it's what svg looks like
+#* you just need to find the right spots to do the below
+# assign classes to the [[elements you wish to style|http://style.tiddlyspot.com]], unless already defined
+#* you can also remove all the overhead you don't need, like id attributes
+#* use your browser's developer tools to find the right element, layer or group
+# apply css styles directly or on-hover
+#* as in the example below using [[inline-styles]] or [[Custom Stylesheets]]
+#* you will have to figure out the right css to interactively change styles
+#** perhaps use google, but don't be shy to ask in the groups
+# for clickable links, wrap the triggering svg elements like so...<div>
+
+```
+<a xlink:href="#InternalLink">
+...svg elements...
+</a>
+```
+</div>
+
+!! Limitations
+
+Unlike HTML elements, the stacking order of svg elements cannot be changed via the z-index. Custom javascript would have to actually rearrange the svg object... so as to render that [[Markup]] button above the [[Plugins]] button.
+
+!! Source
+
+Above all, see style section at the bottom of <<source example-svg>>

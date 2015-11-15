@@ -1,0 +1,17 @@
+created: 20150126155022392
+creator: Tobias Beer
+modified: 20150209210300408
+modifier: Tobias Beer
+tags: 
+title: $:/.tb/demo/reorder
+type: text/vnd.tiddlywiki
+
+<div class="tc-tiddler-controls" style="float:none;">
+<$list filter="[has[order]sort[order]]">
+<$button set="!!order" setTo=<<calc !!order 1>> class="tc-btn-invisible">{{$:/core/images/chevron-down}}</$button> 
+<$button set="!!order" setTo=<<calc !!order -1 0>> class="tc-btn-invisible">{{$:/core/images/chevron-up}}</$button>
+<$link><$view field=title/></$link>
+@@color:#ccc; {{!!order}}@@
+<br>
+</$list>
+</div>

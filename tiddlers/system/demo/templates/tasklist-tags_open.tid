@@ -1,0 +1,12 @@
+title: $:/.tb/template/tasklist-tags/open
+
+<tr>
+<td>
+<$checkbox tag="Done">
+<$link to={{!!title}}><$view field="title"/></$link>
+</$checkbox>
+</td>
+<td>
+<$list filter="[all[current]tags[]sort[title]]-[[Task]]" template="$:/core/ui/TagTemplate" storyview="pop"/>
+</td>
+</tr>

@@ -1,0 +1,32 @@
+created: 20141203134558759
+creator: Tobias Beer
+modified: 20141206175524116
+modifier: Tobias Beer
+tags: Images Solutions Presentation
+title: Text On A Vectorpath
+type: text/vnd.tiddlywiki
+
+Here's [[an experiment by BuggyJ|http://xlink.tiddlyspot.com/#Making%20curved%20text%20with%20inline%20SVG]] showing how to render text on a svg vector graphic.
+
+<div class="text-on-path">
+<$edit-text tiddler="$:/temp/tb/text-on-path" tag="input" placeholder="Enter some text..." default=""/>
+
+<$macrocall $name="textOnPath" text={{$:/temp/tb/text-on-path}}/>
+</div>
+rendered via:
+
+```
+<$edit-text tiddler="$:/.tb/example/text-on-path" tag="input" placeholder="Enter some text..." default=""/>
+
+<$macrocall $name="textOnPath" text={{$:/temp/tb/text-on-path}}/>
+```
+
+
+<style>
+.text-on-path input {
+width:100%;
+display:block;
+}
+</style>
+
+Here's the source of the tiddler defining the textOnPath macro which renders the svg with a path overlay <<source $:/.tb/macros/example-svg-text-on-path>>

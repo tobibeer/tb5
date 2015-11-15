@@ -1,0 +1,20 @@
+created: 20151010151306819
+creator: Tobias Beer
+modified: 20151010151327922
+title: $:/.tb/template/tagged-timeline
+type: text/vnd.tiddlywiki
+
+<div class="tb-timeline-item">
+<dt>
+<span class="tb-timeline-date">created <$view field="created" format="relativedate"/></span>
+<$link to={{!!title}}><$view field="title"/></$link>
+</dt>
+<dd class="tb-timeline-tags">
+<$list filter="[all[current]tags[]sort[title]]-[<remove>]" template="$:/core/ui/TagTemplate"/>
+</dd>
+<$list filter="[all[current]has[summary]]">
+<dd class="tb-timeline-summary">
+@@color:grey;//{{!!summary}}//@@
+</dd>
+</$list>
+</div>

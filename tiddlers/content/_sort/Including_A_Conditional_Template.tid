@@ -1,0 +1,52 @@
+created: 20150122005624489
+creator: Tobias Beer
+modified: 20150122011625972
+modifier: Tobias Beer
+summary: transcluding a conditional view-template in a tiddler or list
+tags: Templates Transclusion
+title: Including A Conditional Template
+type: text/vnd.tiddlywiki
+
+To reuse a [[Conditional ViewTemplate Section]] in something like a list template, you can always do...
+
+```
+{{||$:/.tb/ui/ViewTemplate/summary}}
+```
+
+> {{||$:/.tb/ui/ViewTemplate/summary}}
+
+A little helper macro like the following simplifies this process...
+
+<<source "$:/.tb/macros/inc">>
+
+I put my own templates under an equivalent namespace as the `core`, however replacing that bit of the namespace with my own prefix `.tb`.
+
+!! Example
+
+Notice how, in one case, the styling from the template is applied whereas in the other it isn't. Also, the template could be showing a lot more than just a single field.
+
+```
+<$tiddler tiddler="TiddlySpot">
+<<inc summary>>
+{{!!summary}}
+</$tiddler>
+```
+
+<<<
+<$tiddler tiddler="TiddlySpot">
+<<inc summary>>
+{{!!summary}}
+</$tiddler>
+<<<
+
+!! Core Template Example
+
+```
+<<inc tags core>>
+{{!!tags}}
+```
+
+<<<
+<<inc tags core>>
+{{!!tags}}
+<<<

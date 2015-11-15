@@ -1,0 +1,47 @@
+created: 20150918065252754
+creator: Tobias Beer
+modified: 20150918073727402
+modifier: Tobias Beer
+tags: $:/tags/Macro $:/tags/Stylesheet
+title: $:/.tb/macros/excerpt
+type: text/vnd.tiddlywiki
+
+\define excerpt(text)
+<span class="tc-excerpt">$text$</span>
+\end
+
+\define excerpts(filter:"[all[]]")
+<$list filter="$filter$" variable="tid">
+<$list filter="[title<tid>regexp:text[\<\<excerpt\s]]">
+<div class="tc-excerpts-title">
+<$link to=<<tid>>>
+<$view field="title"/>
+</$link>
+</div>
+<div class="tc-excerpts">
+{{!!text}}
+</div>
+</$list>
+</$list>
+\end
+
+.tc-excerpts {
+visibility:hidden;
+line-height:0;
+}
+
+.tc-excerpts * {
+display:none;
+}
+
+.tc-excerpts .tc-excerpt {
+visibility:visible;
+line-height:1.5em;
+display:block;
+}
+
+.tc-excerpts .tc-excerpt:before {
+content:"&raquo;";
+padding:0 7px;
+color:#ccc;
+}

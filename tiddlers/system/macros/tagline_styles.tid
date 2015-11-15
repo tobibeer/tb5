@@ -1,0 +1,12 @@
+created: 20150107184915402
+creator: Tobias Beer
+modified: 20150107184953100
+modifier: Tobias Beer
+tags: $:/tags/Stylesheet
+title: $:/.tb/macros/tagline/styles
+type: text/css
+
+.tagline-text:before,
+.tagline-text:after{
+content:"\"";
+}

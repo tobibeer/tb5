@@ -1,0 +1,25 @@
+created: 20141119171624882
+creator: Tobias Beer
+modified: 20141119181153342
+modifier: Tobias Beer
+title: $:/.tb/template/tasklist-simple
+type: text/vnd.tiddlywiki
+
+''Open''
+
+<$list filter="[!has[draft.of]tag[Task]!tag[Done]sort[due]]" mode="block">
+<$checkbox tag="Done">
+<$link to={{!!title}}><$view field="title"/></$link>
+<span style="margin-left:10px;color:#999;font-size:0.8em;">
+<$view field="due" class="due"/>
+</span>
+</$checkbox><br>
+</$list>
+
+''Done''
+
+<$list filter="[!has[draft.of]tag[Task]tag[Done]sort[due]]" mode="block">
+<$checkbox tag="Done">
+~~<$link to={{!!title}}><$view field="title"/></$link>~~
+</$checkbox>
+</$list>

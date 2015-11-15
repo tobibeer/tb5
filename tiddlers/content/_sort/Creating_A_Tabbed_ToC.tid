@@ -1,0 +1,33 @@
+created: 20141201111400337
+creator: Tobias Beer
+modified: 20150312164503473
+modifier: Tobias Beer
+tags: Solutions ToC Tabs Tables
+title: Creating A Tabbed ToC
+type: text/vnd.tiddlywiki
+
+With version 5.1.5 TiddlyWiki is now [[capable of rendering a vertically tabbed toc|http://tiddlywiki.com/#TableOfContentsMacro%20Tabbed%20Example]] which should come in very handy for documentation projects, control panels, etc...
+
+Here's an example markup:
+
+```
+<<toc-tabbed-internal-nav
+tag:Welcome
+selectedTiddler:"$:/temp/tb5-tabbed-toc-example"
+unselectedText:"Select a topic in the table of contents to the left.<br>Click the arrows to expand topics."
+template:"$:/.tb/templates/tabbed-toc-example">>
+```
+
+This renders a tabbed table of contents with the tiddlers tagging to [[Welcome]] being the main topics.
+
+The state of this example toc, i.e. the currently selected tab, is stored in the field ''state'' of a system tiddler called `$:/temp/tb5-tabbed-toc-example`.
+
+''Note:'' As of 5.1.5 the ability to define a custom template for the actual contents is missing yet. This is now fixed in [[5.1.6 prerelease|http://tiddlywiki.com/prerelease/#%24%3A%2Fcore%2Fmacros%2Ftoc]] ([[1|https://github.com/Jermolene/TiddlyWiki5/commit/b220c19fb7b789eb6d00c9d1a71414676d87130e]], [[2|https://github.com/Jermolene/TiddlyWiki5/commit/1e7d9bd3cd17be006b035ada8e45f83f154e61e9]]), which is why you can see it in use here since I already imported the updated macro. If you should import that into your wiki, as well, make sure to remove it again after upgrading to 5.1.6.
+
+Here's the above toc generated:
+
+<<toc-tabbed-internal-nav
+tag:Welcome
+selectedTiddler: "$:/temp/tb5-tabbed-toc-exampleX"
+unselectedText: "Select a topic in the table of contents to the left.<br>Click the arrows to expand topics. "
+template:"$:/.tb/templates/tabbed-toc-example">>

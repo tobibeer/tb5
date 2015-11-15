@@ -1,0 +1,27 @@
+created: 20150211162946250
+creator: Tobias Beer
+modified: 20150212122852386
+modifier: Tobias Beer
+tags: Tags Images SVG Buttons [[Jeremy Ruston]]
+title: Adding A Tag Icon
+type: text/vnd.tiddlywiki
+
+As [[Jeremy Ruston]] explains [[here|https://groups.google.com/d/msg/tiddlywiki/rmQ1xEujn-Y/wbiUEZWbGioJ]]...
+
+> You can force an image to appear in the [[tag manager dropdown|$:/TagManager]] by giving it the tag [[$:/tags/Image]]. That's how the core shadow images are made to appear, too.
+
+''Note:'' For your image to behave like a core image, give the svg...
+
+* the class `tc-image-button`
+* possibly the same ''width'' and ''height'' attributes
+* possibly the same ''viewBox'' settings, i.e. square proportions
+* remove custom fill attributes
+
+!! Example
+
+<<source "$:/.tb/demo/svg-circle">>
+> {{$:/.tb/demo/svg-circle}}
+
+!! ~TagManager
+
+{{$:/TagManager}}

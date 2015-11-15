@@ -1,0 +1,17 @@
+tags: Markup
+title: external-links
+
+<dt>
+
+```
+http://tiddlywiki.com
+[[pretty|http://pretty.com]]
+~http://not.alink.com
+```
+</dt>
+<dd>
+
+http://tiddlywiki.com<br>
+[[google|http://google.com]]<br>
+~http://not.alink.com
+</dd>

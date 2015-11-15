@@ -1,0 +1,37 @@
+created: 20141119175255586
+creator: Tobias Beer
+list-after: $:/core/ui/ViewTemplate/body
+modified: 20150116143430601
+modifier: Tobias Beer
+tags: $:/tags/ViewTemplate
+title: $:/.tb/template/gtd-project-tasks
+type: text/vnd.tiddlywiki
+
+\define taskTags()
+[[$(currentTiddler)$]] Task
+\end
+
+\define projectTasks()
+[all[current]tags[]sort[title]]-[[$(currentTiddler)$]]-[[Task]]
+\end
+
+<div class="gtd-project-tasks">
+<$list filter="[all[current]tag[Project]]">
+  <h2>Open Project Tasks</h2>
+    <$set name="pTasks" value=<<projectTasks>>>
+    <$list filter="[all[current]tagging[]tag[Task]!tag[Done]sort[created]]">
+      <$checkbox tag="Done">
+        <$link to={{!!title}}><$view field="title"/></$link>
+        <span class="gtd-project-tasks-tags">
+          <$list filter=<<pTasks>> template="$:/core/ui/TagTemplate"/>
+        </span>
+      </$checkbox><br>
+    </$list>
+    </$set>
+  <br>
+  <$button>
+    <$action-sendmessage $message="tm-new-tiddler" title="New task" tags=<<taskTags>>/>
+    New Task
+  </$button>
+</$list>
+</div>

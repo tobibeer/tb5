@@ -1,0 +1,27 @@
+created: 20141201195256606
+creator: Tobias Beer
+modified: 20141201200333382
+modifier: Tobias Beer
+tags: Solutions Errors Backup
+title: JavaScript Error On Startup — HELP!
+type: text/vnd.tiddlywiki
+
+Ok, it happens. We install some plugin, fiddle with a core component and then we reload and see that dreaded @@color:white;background:#f33;padding:3px 5px;border-radius:5px;~JavaScript Error@@.
+
+What to do now?
+
+!! 1. Testing Plugins And Modifications
+
+First things first. If you have your TiddlyWiki to update the URL whenever a tiddler opens, try opening a different tiddler first and see if the error is still around. It could be that you are testing a faulty plugin in a tiddler and that only your test tiddler throws the error. Go to the plugin, edit your modifications or delete it, save, reload.
+
+!! 2. Safe Mode
+
+If that does not allow you to remove the offending bits, try loading your TiddlyWiki in safe-mode by appending `#:safe` to the url of your wiki.
+
+<<tw SafeMode>> should disable all plugins amongst others and allows you to edit or delete whatever you suspect the offending tidbits to be. Save your changes and reaload without safe-mode enabled to see if the error is gone.
+
+!! 3. Import Into Empty
+
+If all else fails, try downloading an empty TiddlyWiki and drag-n-drop your broken file onto it so as to import all tiddlers while unchecking any of those you suspect to have broken your wiki.
+
+Save and reload. Is it finally back up now?

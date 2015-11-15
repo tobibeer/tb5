@@ -1,0 +1,9 @@
+tags: $:/tags/Macro
+title: $:/.tb/macros/date-version
+
+\define date-version(tiddler)
+<$view tiddler="$tiddler$"
+field="modified"
+format="date"
+template="YYYY-0MM-0DD-0hh-0mm-0ss"/>
+\end

@@ -1,0 +1,64 @@
+created: 20150120004245274
+creator: Tobias Beer
+modified: 20150120010947270
+modifier: Tobias Beer
+title: makedoc
+
+The [[makedoc|$:/.tb/macros/makedoc]] macro joins chapters to a document using these parameters...
+
+|! # |!Name |!Description |
+| 1 |''filter''|a ''filter'' for the list of chapters|
+| 2 |''template''|render chapters with a custom template, e.g. [[$:/.tb/demo/makedoc]]|
+| 2 |''sub1''|when `true`, renders tiddlers tagging to chapters as subchapters|
+| 4 |''sub2''|when `true`, renders tiddlers tagging to subchapters|
+
+!! Installation
+
+Install [[$:/.tb/macros/makedoc]] » <$macrocall
+$name=slider
+label="show code"
+content=<<source "$:/.tb/macros/makedoc">>
+tooltip="show / hide code"
+state="$:/state/slide-makedoc"
+label-hide="hide code"
+/>
+
+!! Examples
+
+Custom css styles for the examples below are defined in [[$:/.tb/styles/makedoc]].
+
+!!! No Subchapters
+
+```
+<<makedoc filter:"
+[[Fonts]]
+[[Alias]]
+[[Files]]
+">>
+```
+
+<<<
+<<makedoc filter:"
+[[Fonts]]
+[[Alias]]
+[[Files]]
+">>
+<<<
+
+!!! With Subchapters And Template
+
+using template [[$:/.tb/demo/makedoc]]
+
+```
+<<makedoc filter:"
+[[Fonts]]
+[[Alias]]
+[[Files]]
+" sub1:true template:"$:/.tb/demo/makedoc">>
+```
+
+<<makedoc filter:"
+[[Fonts]]
+[[Alias]]
+[[Files]]
+" sub1:true template:"$:/.tb/demo/makedoc">>

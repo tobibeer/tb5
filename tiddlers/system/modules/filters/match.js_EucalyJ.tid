@@ -1,0 +1,87 @@
+created: 20140910160610492
+creator: EucalyJ
+module-type: filteroperator
+title: $:/core/modules/filters/match.js
+type: application/javascript
+
+/*\
+title: $:/core/modules/filters/match.js
+type: application/javascript
+module-type: filteroperator
+
+Filter operator returns matching text by regular expression
+
+\*/
+(function(){
+/*jslint node: true, browser: true */
+/*global $tw: false */
+"use strict";
+/*
+Export our filter function
+*/
+exports.match = function(source,operator,options) {
+var results = [],
+fieldname = (operator.suffix || "title").toLowerCase(),
+regexpString, regexp, flags = "", match,
+getFieldString = function(tiddler,title) {
+if(tiddler) {
+return tiddler.getFieldString(fieldname);
+} else if(fieldname === "title") {
+return title;
+} else {
+return null;
+}
+};
+// Process flags and construct regexp
+regexpString = operator.operand;
+match = /^\(\?([gim]+)\)/.exec(regexpString);
+if(match) {
+flags = match[1];
+regexpString = regexpString.substr(match[0].length);
+} else {
+match = /\(\?([gim]+)\)$/.exec(regexpString);
+if(match) {
+flags = match[1];
+regexpString = regexpString.substr(0,regexpString.length - match[0].length);
+}
+}
+regexp = new RegExp(regexpString,flags);
+// Process the incoming tiddlers
+if(operator.prefix === "!") {
+source(function(tiddler,title) {
+var text = getFieldString(tiddler,title);
+if(text !== null) {
+if(!regexp.exec(text)) {
+results.push(title);
+}
+}
+});
+} else {
+source(function(tiddler,title) {
+var text = getFieldString(tiddler,title);
+if(text !== null) {
+// // ==== start of modification 20140911
+var matches = [],
+	execresult = regexp.exec(text);
+while(execresult) {
+     if(execresult.length > 1) { // there were brackets
+          matches= matches.concat(execresult.slice(1));
+     }
+     else { // no brackets - take the full match
+          matches.push(execresult[0]);
+     }
+     if(regexp.lastIndex === 0) { // no g-switch
+          break;
+     }
+     execresult = regexp.exec(text);
+}					
+if(matches) {
+    $tw.utils.pushTop(results,matches);
+}
+// \\ ==== end of modification 20140911
+}
+});
+}
+return results;
+};
+})();

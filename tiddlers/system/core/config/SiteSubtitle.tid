@@ -1,0 +1,7 @@
+created: 20151003114500009
+creator: Tobias Beer
+modified: 20151003114533451
+title: $:/SiteSubtitle
+type: text/vnd.tiddlywiki
+
+a pocket full of tips <a href="http://tobibeer.github.io/tb5/feed.atom" target="_blank" title="subcribe to atom feed" class="atom-link">{{$:/.tb/images/feed}}</a>

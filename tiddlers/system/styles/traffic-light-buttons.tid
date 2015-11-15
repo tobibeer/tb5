@@ -1,0 +1,17 @@
+created: 20131103211900000
+creator: Tobias Beer
+modified: 20141119155342317
+modifier: Tobias Beer
+tags: $:/tags/Stylesheet
+title: $:/styles/traffic-light-buttons
+type: text/css
+
+.tc-tiddler-controls .tc-image-delete-button {
+fill:#ebb; /*#f22*/
+}
+.tc-tiddler-controls .tc-image-cancel-button {
+fill:#ed9; /*#fd5*/
+}
+.tc-tiddler-controls .tc-image-done-button {
+fill:#beb; /*#9e2*/
+}

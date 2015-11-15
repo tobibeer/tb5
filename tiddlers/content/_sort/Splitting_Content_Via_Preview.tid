@@ -1,0 +1,19 @@
+created: 20141115083039133
+creator: Tobias Beer
+modified: 20141119123937854
+modifier: Tobias Beer
+tags: Workflows Solutions Editing Content
+title: Splitting Content Via Preview
+type: text/vnd.tiddlywiki
+
+A worklflow [[proposed by Alex Hough|https://groups.google.com/forum/#!topic/tiddlywiki/Xz2lSXXy0iU]]...
+
+Here's how you can split long content while editing...
+
+# remove relevant textbits from the editor and put it in the new tiddler
+# enable the preview pane
+# create link
+# click link in preview to create new tiddler
+# paste textbits into new tiddler
+
+''Tip:'' turn comma separated lists in the text into bullet points.

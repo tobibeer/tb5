@@ -1,0 +1,12 @@
+list-after: $:/core/ui/ViewTemplate/body
+tags: $:/tags/ViewTemplate
+title: $:/.tb/template/view-template
+
+<$list filter="[all[current]tag[$:/tags/ShowSource]]
+[all[current]prefix[$:/.tb/]]
+[all[current]prefix[$:/.tb/template/]]
+[all[current]prefix[$:/styles/]]
+-[has[type]]
++[limit[1]]">
+<pre><$view tiddler=<<currentTiddler>> format="text"/></pre>
+</$list>

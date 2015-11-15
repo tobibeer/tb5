@@ -1,0 +1,56 @@
+created: 20141225144445767
+creator: Tobias Beer
+modified: 20150312182845985
+modifier: Tobias Beer
+tags: Solutions Files Links [[Jed Carty]]
+title: Open pdf at defined page
+type: text/vnd.tiddlywiki
+
+\define pdf-url() http://www.adobe.com/content/dam/Adobe/en/devnet/acrobat/pdfs/pdf_open_parameters.pdf
+
+Below a slightly modified version of a solution posted [[here|https://groups.google.com/d/msg/tiddlywiki/FiyuMOEyrms/n20VyykENLIJ]] allowing you to open a pdf document at a given page in your browser.
+
+!! Examples
+
+1) To set the pdf document that you want to link, define ''pdf-url'' as a macro either globally or at the beginning of the current tiddler like so...
+
+```
+\define pdf-url() http://link.to/my.pdf
+```
+
+Then use the page macro to link to that page.
+
+```
+<<page-link 5>>
+```
+<<<
+<<page-link 5>>
+<<<
+
+2) You can also specify the pdf ''url'' via the second macro parameter...
+
+<$macrocall $name=` text=
+"""<<page-link 2 "http://www.ohchr.org/EN/UDHR/Documents/UDHR_Translations/eng.pdf">>"""/>
+
+''Note:'' For the macro to correcly evaluate the url parameter it must be enclosed in quotes, otherwise TiddlyWiki interprets it as you specifying a ''http'' parameter!
+
+3) Last but not least, you can also use the $set widget, e.g.:
+
+```
+<$set name="pdf-url" value="http://www.gutenberg.org/files/11/11-pdf.pdf">
+<<page 2>>
+</$set>
+```
+<<<
+<$set name="pdf-url" value="http://www.gutenberg.org/files/11/11-pdf.pdf">
+<<page 2>>
+</$set>
+<<<
+
+The macro used for the above is <<source $:/.tb/macros/pdf-page>>
+
+!! More Examples
+
+;by [[Jed Carty]]
+:[[Make URL @ In My Socks|http://inmysocks.tiddlyspot.com/#Make%20url]]
+:[[Concatenating Text To Make Dynamic URLs @ InMySocks|http://inmysocks.tiddlyspot.com/#Concatenating%20text%20to%20make%20dynamic%20URLs]]

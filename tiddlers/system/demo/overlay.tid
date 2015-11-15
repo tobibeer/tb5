@@ -1,0 +1,21 @@
+created: 20150118164820924
+creator: Tobias Beer
+modified: 20150209210716777
+modifier: Tobias Beer
+tags: $:/tags/Stylesheet Examples
+title: $:/.tb/demo/overlay
+type: text/css
+what: Hover Me!
+with: Voilà, an overlay! — [[$:/.tb/demo/overlay]]
+
+.overlay-example .overlay-what{
+background-color:#fef;
+padding:10px;
+border-radius:10px;
+}
+
+.overlay-example .overlay-with{
+background-color:#efe;
+padding:10px;
+border-radius:10px;
+}

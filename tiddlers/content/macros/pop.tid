@@ -1,0 +1,61 @@
+created: 20150930072206029
+creator: Tobias Beer
+modified: 20151001072258024
+tags: 
+title: pop
+type: text/vnd.tiddlywiki
+
+The [[<<pop>>|$:/.tb/macros/pop]] macro implements a generic popup as based on the <<tw PopupMechanism>>.
+
+!! Example
+
+''simple''
+
+Opens the tiddler [[Jack.jpg]] in a popup styled with the [[classes|$:/.tb/macros/pop/styles]] ''pretty'' and ''pop-img'':
+
+<$macrocall $name="`" text="""<<pop Click! Jack.jpg "pretty pop-img">>"""/>
+
+''a tiddler''
+
+<$macrocall $name="`" text="""<<pop Click! "Style Tagged Tiddlers" "pretty pop-tiddler">>"""/>
+
+''complex'' — (as link, with some @@color:deeppink;pink@@)
+
+<$macrocall $name="`" text="""<<pop Pink! Jack.jpg pink-box btn-class:"tc-btn-invisible tc-tiddlylink" btn-selectedClass:"pop-btn-my-selected" state-id:"Jack2">>"""/>
+
+with these styles...
+
+<<` """<style>
+.pink-box{border: 3px solid pink;line-height:0;}
+.pop-btn-my-selected{color:deeppink !important;}
+</style>""">>
+
+!! Parameters
+
+Many of the available parameters correspond 1:1 to those coming from the <<tw ButtonWidget>> and <<tw RevealWidget>> used inside the ''pop'' macro, see their documentation.
+
+| !# | !Parameter | !Description | !Default | !Widget |
+|1|''label''|the popup button label, transcluded |||
+|2|''content''|the popup contents via <<tw TextReference>>, transcluded |||
+|3|''pop-class''|a custom popup class; always `pop-popup` ||<<tw RevealWidget $reveal>>|
+|4|''animate''|whether to animate the popup ||<<tw RevealWidget $reveal>>|
+|5|''position''|where to open the popup ||<<tw RevealWidget $reveal>>|
+|6|''tooltip''|the button tooltip ||<<tw ButtonWidget $button>>|
+|7|''btn-class''|a custom button class; always `pop-btn` ||<<tw ButtonWidget $button>>|
+|8|''btn-tag''|the html element tag for the button |`button`|<<tw ButtonWidget $button>>|
+|9|''btn-selectedClass''|the class for the button when the popup is shown; always `pop-btn-selected` ||<<tw ButtonWidget $button>>|
+|10|''state-id''|the state is always constructed as `$:/state/pop/<qualify>/<state-id>`<br><br>use different values for `state-id` when you want to show the same `content` twice in the same tiddler<br><br>implements the [[<<qualify>>|http://tiddlywiki.com#qualify%20Macro]]  macro|||
+
+!! Installation
+
+Drag the macro and styles into your wiki...
+
+<<source "$:/.tb/macros/pop" yes>>
+<<source [[$:/.tb/macros/pop/styles]] yes>>
+
+!! Styles
+
+| !class | !description |
+|''pretty''|adds a dropshadow to the popup |
+|''pop-img''|removes nasty bottom padding when displaying just an image|
+|''pop-tiddler''|removes awkward translucency and sets default padding|

@@ -1,0 +1,31 @@
+created: 20150116173515899
+creator: Tobias Beer
+modified: 20150119180746213
+modifier: Tobias Beer
+tags: Tags Buttons Hide [[hide this]] Solutions $:/tags/Tagging
+title: Hide Tag Buttons
+type: text/vnd.tiddlywiki
+
+Before we start, compare the actual tags of this tiddler to the ones you see above...
+
+`{{!!tags}}`
+
+> {{!!tags}}
+
+Using the filter explained at [[title list from tiddler text @ filter|http://filters.tiddlyspot.com/#title%20list%20from%20tiddler%20text]], adding the following text at [[$:/core/ui/ViewTemplate/tags]] will hide all tags and tiddler titles listed in [[$:/config/Hide/TagButtons]] from the tiddler tag buttons...
+
+```
+<div class="tc-tags-wrapper">
+<$list filter="[all[current]tags[]]-[list[$:/config/Hide/TagButtons!!text]]+[sort[title]]"
+template="$:/core/ui/TagTemplate"
+storyview="pop"/>
+</div>
+```
+
+The below example demonstrates the filter being used, subtracting all tiddlers listed in [[$:/config/Hide/TagButtons]] from the current tags as shown in the right column...
+
+<<<
+{{||$:/.tb/demo/hide-tag}}
+<<<
+
+The code for the above table <<source $:/.tb/demo/hide-tag>>

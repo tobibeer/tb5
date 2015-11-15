@@ -1,0 +1,15 @@
+category: Plugins
+icon: $:/core/images/plugin-generic-plugin
+summary: TiddlyMap — a powerful vis.js implementation by [[Felix Küppers]] visualising tiddler relations via nodes and edges
+tags: Graph Visualization Mindmaps References [[Felix Küppers]] Plugin Solutions
+title: TiddlyMap
+url: http:tiddlymap.org
+
+Links: [[GitHub|https://github.com/felixhayashi/TW5-TiddlyMap]] / [[help|http://felixhayashi.github.io/TW5-TiddlyMap/index.html#%24%3A%2Fplugins%2Ffelixhayashi%2Ftiddlymap%2Fdocs%2Fhelp]]
+/ [[readme|http://felixhayashi.github.io/TW5-TiddlyMap/index.html#%24%3A%2Fplugins%2Ffelixhayashi%2Ftiddlymap%2Fdocs%2Freadme]]
+/ [[The Big Picture|http://felixhayashi.github.io/TW5-TiddlyMap/index.html#TiddlyMap%20-%20The%20Big%20Picture]]
+
+<<ximg tiddlymap.gif TiddlyMap class:"pretty">>
+
+; Introductory Video
+: https://www.youtube.com/watch?v=dmeIxuN0L5w <iframe src="http://www.youtube.com/embed/dmeIxuN0L5w" frameborder="0" allowfullscreen style="width:100%;height:420px;"/>

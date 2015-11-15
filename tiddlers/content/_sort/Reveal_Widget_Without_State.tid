@@ -1,0 +1,36 @@
+created: 20141125001742228
+creator: Tobias Beer
+modified: 20141203165429485
+modifier: Tobias Beer
+tags: Widgets Solutions Presentation
+title: Reveal Widget Without State
+type: text/vnd.tiddlywiki
+
+With [[version 5.1.5|http://tiddlywiki.com/prerelease/]] conditionally rendering content will be much simplified as it is no longer required for the reveal widget to match against the value stored in a state tiddler, but rather to compare against a default value.
+
+This essentially allows to conditionally render contents by comparing evaluated parameters, variables or constants against one another.
+
+!!Example
+The below example will render the output when the day defined in the variable `day`, here examplarily set to `Saturday`, matches the current day...
+
+```
+<$set name="day" value="Wednesday">
+<$reveal type="match" default=<<day>> text=<<dateTime "DDD">>>
+Hooray, it's <<day>>!
+</$reveal>
+<$reveal type="nomatch" default=<<day>> text=<<dateTime "DDD">>>
+Nope, it's <<dateTime "DDD">>, so not <<day>> just yet.
+</$reveal>
+</$set>
+```
+
+<<<
+<$set name="day" value="Wednesday">
+<$reveal type="match" default=<<day>> text=<<dateTime "DDD">>>
+Hooray, it's <<day>>!
+</$reveal>
+<$reveal type="nomatch" default=<<day>> text=<<dateTime "DDD">>>
+Nope, it's <<dateTime "DDD">>, so not <<day>> just yet.
+</$reveal>
+</$set>
+<<<

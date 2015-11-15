@@ -1,0 +1,19 @@
+created: 20141209104005777
+creator: Tobias Beer
+modified: 20141211161015936
+modifier: Tobias Beer
+tags: 
+title: $:/.tb/templates/delete-filter
+type: text/vnd.tiddlywiki
+
+<$edit-text tiddler="$:/temp/delete-filter" tag="input" placeholder="enter a filter" default="" size=50/>
+<$reveal state="$:/temp/delete-filter" type="nomatch" text="">
+<$button class="tc-btn-invisible">
+<$action-setfield $tiddler="$:/temp/delete-filter" $field="text" $value=""/>
+{{$:/core/images/close-button}}
+</$button>
+</$reveal>
+
+<$list filter={{$:/temp/delete-filter}}>
+<$button message="tm-delete-tiddler" param={{!!title}}>{{$:/core/images/delete-button}}</$button> <$link to={{!!title}}><$view field=title/></$link><br>
+</$list>

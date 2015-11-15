@@ -1,0 +1,17 @@
+created: 20141124220451830
+creator: Tobias Beer
+modified: 20141124221124660
+modifier: Tobias Beer
+tags: Import Node.js Solutions
+title: Import Standalone TiddlyWiki Into Node.js
+type: text/vnd.tiddlywiki
+
+As per [[Jeremy's instructions|https://groups.google.com/d/msg/tiddlywiki/qxfH1fBqACA/tEx8T3bTngQJ]], you can import tiddlers from a standalone TiddlyWiki into your node.js instance using.
+
+; 1. Create Wiki Folder
+: `mkdir MyWiki`
+; 2. Import From Standalone TiddlyWiki
+: `tiddlywiki ./MyWiki --load path/to/my-tw5-wiki-file.html`
+; 3. Import From Encrypted TiddlyWiki
+: `tiddlywiki ./MyWiki --password pa55w0rd --load path/to/my-tw5.html`
+:Ü ''Note:'' the result will not be encrypted

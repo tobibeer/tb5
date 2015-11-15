@@ -1,0 +1,22 @@
+tags: Markup
+title: paragraphs
+
+<dt>
+
+```
+...since
+new paragraphs
+need two linebreaks
+
+in tw5
+```
+</dt>
+
+<dd>
+
+...since
+new paragraphs
+need two linebreaks
+
+in tw5
+</dd>

@@ -1,0 +1,35 @@
+created: 20150206160411005
+creator: Tobias Beer
+modified: 20150926091408027
+modifier: Tobias Beer
+selected-template: new-foo
+tags: Templates Buttons Select Solutions
+title: Create From Selected Template
+type: text/vnd.tiddlywiki
+
+Inspired by a [[post from Jimmy Armand|https://groups.google.com/d/msg/tiddlywiki/DvjoVESea2s/DG2-8LDuq4gJ]], here's a solution for creating a tiddler by selecting a template using the <<tw SelectWidget>>. The below example...
+
+# constructs a select box with all tiddlers under `$:/.tb/demo/Template/`
+#* e.g. [[$:/.tb/demo/Template/new-recipe]]
+# finds a corresponding caption in a field at [[$:/.tb/demo/Templates]]
+#* e.g. `{{$:/.tb/demo/Templates!!new-recipe}}` => ''{{$:/.tb/demo/Templates!!new-recipe}}''
+#* because we don't want that caption at our new tiddler
+# creates a button with the right caption, creating a tiddler with the chosen template
+#* using a ''template'' variable set by a <<tw SetWidget>> evaluated using a filter
+#* retrieving the right caption using the <<tw ListWidget>>
+
+!! Example
+
+<$macrocall $name="via" 
+text="""<$select field="selected-template" default="Recipe">
+<$list filter="[removeprefix[$:/.tb/demo/Template/]]">
+<$list filter="[[$:/.tb/demo/Templates]get<currentTiddler>]" variable="caption">
+<option value={{!!title}}><<caption>></option>
+</$list>
+</$list>
+</$select>
+<$set name="template" filter="[{!!selected-template}]+[addprefix[$:/.tb/demo/Template/]]">
+<$button message="tm-new-tiddler" param=<<template>>>
+Create
+<$list filter="[[$:/.tb/demo/Templates]get{!!selected-template}]">{{!!title}}</$list>
+</$button></$set>"""/>

@@ -1,0 +1,27 @@
+caption: Custom Title
+created: 20150927192947628
+creator: Tobias Beer
+modified: 20150929115733773
+tags: Config Browser Presentation Solutions [[Jeremy Ruston]]
+title: Custom Window Title
+type: text/vnd.tiddlywiki
+
+As Jeremy explains [[here|https://groups.google.com/d/msg/tiddlywiki/aPjljLW1yHE/TrnVY3N1BAAJ]], the last tiddler you navigated to is stored in the ''current-tiddler'' field of the tiddler holding the history, i.e. [[$:/HistoryList]].
+
+This allows us to show the last opened tiddler in the browser's window or tab title by modifying <<source $:/core/wiki/title>>
+
+> {{$:/core/wiki/title}}
+
+The original shadow content being:
+
+<pre><$view tiddler="$:/core" subtiddler="$:/core/wiki/title"/></pre>
+
+> <$transclude tiddler="$:/core" subtiddler="$:/core/wiki/title"/>
+
+Using the <<tw ViewWidget>> (and here the <<tw TiddlerWidget>> too), you can also show the caption, if defined, the title being the fallback:
+
+<<` """{{$:/SiteTitle}} — <$tiddler tiddler={{$:/HistoryList!!current-tiddler}}><$view field="caption">{{!!title}}</$view></$tiddler>""">>
+
+Verification:
+
+<<` """{{!!caption}}""">>

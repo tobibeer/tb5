@@ -1,0 +1,24 @@
+created: 20141203134758209
+creator: Tobias Beer
+modified: 20141209151914632
+modifier: Tobias Beer
+summary: an example macro to demonstrate [[dynamic svg|Text On A Vectorpath]]
+tags: $:/tags/Macro
+title: $:/.tb/macros/example-svg-text-on-path
+type: text/vnd.tiddlywiki
+
+\define textOnPath(text)
+
+<svg width="100%" height="100%" viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<path id="MyPath" d="M 100 200 C 200 100 300   0 400 100 C 500 200 600 300 700 200 C 800 100 900 100 900 100"/>
+</defs>
+<use xlink:href="#MyPath" fill="none" stroke="#7777ee"/>
+<text font-size="42.5">
+<textPath xlink:href="#MyPath">
+$text$
+</textPath>
+</text>
+</svg>
+
+\end

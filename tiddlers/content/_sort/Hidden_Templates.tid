@@ -1,0 +1,63 @@
+created: 20141210082025366
+creator: Tobias Beer
+modified: 20141220114630739
+modifier: Tobias Beer
+tags: Solutions Macros Templates
+title: Hidden Templates
+type: text/vnd.tiddlywiki
+
+[[There are situations|Preventing Wikification]] in which you want to use templates, but you want them to be hidden, e.g. not show in search results or lists like "recent". To achieve this, you basically need to put them under the `$:/` namespace, e.g.: [[$:/.tb/templates/plain]]. This, however, makes them [[inherently more difficult to use|https://github.com/Jermolene/TiddlyWiki5/issues/1210#issuecomment-66302859]], e.g.:
+
+;{{//foo/bar||$:/.tb/templates/plain}}
+:via either of...
+:: `{{//foo/bar||$:/.tb/templates/plain}}`
+:: `{{//foo/bar||plain}}`
+
+In order to simplify the first example, you can use a macro on top of your template to get that shorter name back. Here are two variants to do that.
+
+!! Specific Macro
+
+The following macro simplifies access to the above template <<source $:/.tb/macros/plain>>
+
+Use it like so...
+
+```
+<<plain //foo/bar>>
+```
+
+<<<
+<<plain //foo/bar>>
+<<<
+
+!! Generic Macro
+
+The following solution, [[proposed by Evolena|https://github.com/Jermolene/TiddlyWiki5/issues/1210#issuecomment-66337593]], provides a more generic approach using a //template//-macro like <<source $:/.tb/macros/generic-template>>
+
+This [[global macro|http://tiddlywiki.com/#Macros%20in%20WikiText]], actually called `||`, let's you render any template under the namespace `$:/.tb/templates/...` with your custom input.
+
+The example above thus turns into...
+
+```
+<<|| plain //foo/bar>>
+```
+
+<<<
+<<|| plain //foo/bar>>
+<<<
+
+While this doesn't look as pleasant to the eye, it does spare you from having to write a specific macro for every hidden template you want to simplify using. If `||` is too cryptic for you, define the macro with any name you want, e.g. `<<template>>`.
+
+!! Final Word
+
+Personally, I would like to see the ability to turn every tiddler I want into a hidden "system tiddler", e.g. by tagging it `$:/tags/System`. Besides other reasons, e.g. pretty titles for certain tiddlers, however hidden, that would allow me to make [[plain]] hidden and use it's short form...
+
+```
+{{//foo/bar||plain}}
+```
+
+<<<
+{{//foo/bar||plain}}
+<<<
+
+;join the discussion at
+:https://github.com/Jermolene/TiddlyWiki5/issues/1210

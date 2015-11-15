@@ -1,0 +1,31 @@
+created: 20151010122132172
+creator: Tobias Beer
+modified: 20151010193439903
+modifier: Tobias Beer
+summary: evaluating macros or text-references within macros
+tags: Macros Variables Buttons Solutions TextReference
+title: Dynamic Contents In Macros
+type: text/vnd.tiddlywiki
+
+[[This problem|https://groups.google.com/forum/m/#!topic/tiddlywiki/tdunp-Tadfc]] often pops up when trying to concatenate dynamic contents in macros.
+
+Macros simply are a means to dynamically replace placeholders with parameterized text. And so, TiddlyWiki does not evaluate any <<tw Macros macro>> or <<tw TextReference "text reference">> within a macro when the macro is "called" but rather inserts those as literal text.
+
+
+To use evaluated references within a macro...
+
+* wrap the content where you wish to use dynamic references in either the <<tw SetWidget>> to declare a single variable or the <<tw VarWidget>> for multiple variables
+* reference these variables in your macro via `$(my-variable)$`
+
+!! Example
+
+The below example (borrowing from [[Mark's example|https://groups.google.com/d/msg/tiddlywiki/tdunp-Tadfc/ocZHJxxODQAJ]])...
+
+* creates a tiddler whose title will be created from the user input ''and'' a time-stamp
+* gives the tiddler custom tags
+* references the tiddler where the new tiddler was created in a ''created-at'' field
+* clears the input upon hitting the button
+
+{{||$:/.tb/demo/new-with-dynamic-contents}}
+
+<<source $:/.tb/demo/new-with-dynamic-contents>>

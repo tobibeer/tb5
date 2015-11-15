@@ -1,0 +1,55 @@
+created: 20141118213719475
+creator: Tobias Beer
+modified: 20141125025527452
+modifier: Tobias Beer
+tags: Macros Widgets Lists Solutions Links Developer
+title: List Links Via Macro Or Widget
+type: text/vnd.tiddlywiki
+
+While the [[list-links macro|http://tiddlywiki.com/#ListMacro]] can be used to list links to tiddlers matching a [[filter|http://tiddlywiki.com/#Filters]]...
+
+```
+<<list-links filter:"[all[]tag[$:/tags/Macro]]">>
+```
+
+<<list-links filter:"[all[]tag[$:/tags/Macro]]">>
+
+Sometimes it can be more practical or necessary to use the [[list-widget|http://tiddlywiki.com/#ListWidget]] instead...
+
+```
+<ul>
+<$list filter="[all[]tag[$:/tags/Macro]]">
+<li>
+<$link><$view field="title"/></$link>
+</li>
+</$list>
+</ul>
+```
+
+<ul>
+<$list filter="[all[]tag[$:/tags/Macro]]">
+<li>
+<$link><$view field="title"/></$link>
+</li>
+</$list>
+</ul>
+
+Alternatively, you can use the [[link widget|http://tiddlywiki.com/#LinkWidget]] with parameter transclusion...
+
+```
+<ul>
+<$list filter="[all[]tag[$:/tags/Macro]]">
+<li>
+<$link to={{!!title}}>{{!!title}}</$link>
+</li>
+</$list>
+</ul>
+```
+
+<ul>
+<$list filter="[all[]tag[$:/tags/Macro]]">
+<li>
+<$link to={{!!title}}>{{!!title}}</$link>
+</li>
+</$list>
+</ul>
