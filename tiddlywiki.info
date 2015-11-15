@@ -12,7 +12,7 @@
     ],
     "build": {
         "index": [
-            "--output","C:/GIT/tobibeer.github.io/tb5/",
+            "--output","./",
             "--rendertiddler","$:/plugins/tiddlywiki/tiddlyweb/save/offline","index.html","text/plain",
             "--rendertiddler","feed.atom","feed.atom","text/plain"
         ]
