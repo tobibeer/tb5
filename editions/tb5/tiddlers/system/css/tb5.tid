@@ -20,7 +20,7 @@ fill: #777;
 .tb5-version{
 display:inline-block;
 color:#ddd;
-margin: 0 0 0 52px;
+margin: 0 0 0 85px;
 }
 
 .tb5-home{

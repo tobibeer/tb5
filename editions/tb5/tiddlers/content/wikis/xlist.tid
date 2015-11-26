@@ -1,11 +1,11 @@
 created: 20150113131225483
 creator: Tobias Beer
 example-groups: GTD ToC
-modified: 20151126112636163
+modified: 20151126223150207
 modifier: Tobias Beer
 removed: $:/.tb/macros/xlist
-summary: the ''xlist'' macro shows crosslists of tiddlers tagging to categories grouped by another category
-tags: [[Tobias Beer]] plugins
+summary: ''tobibeer/xlist'' provides a macro generating crosslists of filtered tiddlers grouped by category
+tags: [[Tobias Beer]] Plugin Solutions Lists Tags Filters
 title: xlist
 type: text/vnd.tiddlywiki
 url: https://tobibeer.github.io/tw5-xlist
