@@ -1,0 +1,31 @@
+created: 20150113131225483
+creator: Tobias Beer
+example-groups: GTD ToC
+modified: 20151126112636163
+modifier: Tobias Beer
+removed: $:/.tb/macros/xlist
+summary: the ''xlist'' macro shows crosslists of tiddlers tagging to categories grouped by another category
+tags: [[Tobias Beer]] plugins
+title: xlist
+type: text/vnd.tiddlywiki
+url: https://tobibeer.github.io/tw5-xlist
+
+\define x-url() http://tobibeer.github.io/tw5-xlist
+
+Initially developed as a [[reply to James|https://groups.google.com/d/msg/tiddlywiki/EzypDKdUOFE/ML_q1pSSvCIJ]], the plugin $:/plugins/tobibeer/xlist allows you to list items grouped by categories.
+
+!! Example
+
+<$macrocall $name="`" text="""''example groups:''
+{{{ [list[xlist!!example-groups]] }}}
+<$tiddler tiddler="Solutions">
+<<xlist groups:"[list[xlist!!example-groups]]">>
+</$tiddler>"""/>
+
+There is plenty more to work with:
+
+* <<x Parameters>> such as @@.tb-links <$list filter="filter groups template sort each link"><<x>> </$list>@@
+* different operational <<x Variants>> and plenty <<x Examples>>
+** also for using smart tabs or a [[Conditional ViewTemplate Section]]
+
+For more information on ''xlist'', see {{!!url}}.

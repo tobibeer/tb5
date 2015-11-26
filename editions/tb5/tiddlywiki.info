@@ -1,0 +1,25 @@
+{
+    "description": "tb5",
+    "plugins": [
+        "tiddlywiki/tiddlyweb",
+        "tiddlywiki/filesystem",
+        "tiddlywiki/highlight",
+        "felixhayashi/topstoryview",
+        "tobibeer/dict",
+        "tobibeer/xlist"
+    ],
+    "themes": [
+        "tiddlywiki/vanilla",
+        "tiddlywiki/snowwhite"
+    ],
+    "includeWikis": [
+        "../../../tw5-defaults/editions/defaults"
+    ],
+    "build": {
+        "index": [
+            "--output","../../",
+            "--rendertiddler","$:/plugins/tiddlywiki/tiddlyweb/save/offline","index.html","text/plain",
+            "--rendertiddler","feed.atom","feed.atom","text/plain"
+        ]
+    }
+}

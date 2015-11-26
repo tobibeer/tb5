@@ -2,4 +2,5 @@
 .c9/
 tmp/
 output/
-**/StoryList.tid
+**/StoryList.
+build.bat

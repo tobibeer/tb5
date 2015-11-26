@@ -1,0 +1,16 @@
+created: 20151126095839393
+creator: Tobias Beer
+list-before: $:/core/ui/ViewTemplate/body
+modified: 20151126100627063
+tags: $:/tags/ViewTemplate
+title: $:/.tb/ui/ViewTemplate/removed
+type: text/vnd.tiddlywiki
+
+<$list filter="[all[current]has[removed]]">
+
+@@.note
+
+''Note:'' <<lnk>> is now a plugin available at the above url. If you were previously using the tiddler based solution, please remove these tiddlers: <<list-links "[list[!!removed]]">>
+
+@@
+</$list>
