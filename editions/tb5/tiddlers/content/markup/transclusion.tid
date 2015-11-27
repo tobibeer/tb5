@@ -1,6 +1,10 @@
+created: 20151127113654535
+creator: Tobias Beer
+modified: 20151127113829176
 tags: Markup
 title: transclusion
-url: http://tiddlywiki.com/#Transclusion%20in%20WikiText
+type: text/vnd.tiddlywiki
+url: Also see: <<x "Transclusion in WikiText">>
 
 <dt>
 
