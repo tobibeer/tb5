@@ -1,6 +1,6 @@
 created: 20151127110400596
 creator: Tobias Beer
-modified: 20151127120834212
+modified: 20151127181931267
 summary: the very basics for working with filters
 tags: Filters Solutions
 title: Filters-101
@@ -32,14 +32,14 @@ You can combine multiple filter runs using different logic modes:
 
 ; OR logic
 : `[tag[foo]] [tag[bar]]`
-: meaning: any tiddler either tagged ''foo'' or tagged ''bar''
+: returns any tiddler either tagged ''`foo` OR'' tagged ''`bar`''
 ; AND logic
 : `[tag[foo]] +[tag[bar]]`
-: meaning: using `+` returns any tiddler either tagged ''foo'' ''AND'' tagged ''bar''
+: using `+` returns any tiddler tagged ''`foo` AND'' tagged ''`bar`''
 :: same as `[tag[foo]tag[bar]]` which is, however, a single ''filter run''
 ; NOT logic
 : `[tag[foo]] -[tag[bar]]`
-: meaning: using `-` returns any tiddler tagged ''foo'' but ''NOT'' tagged ''bar''
+: using `-` returns any tiddler tagged ''`foo`'' but ''NOT'' tagged ''`bar`''
 
 To learn more about all that, see:
 
