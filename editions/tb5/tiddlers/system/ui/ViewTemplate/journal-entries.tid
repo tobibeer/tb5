@@ -7,7 +7,7 @@ tags: $:/tags/ViewTemplate
 title: $:/.tb/ui/ViewTemplate/journal-entries
 type: text/vnd.tiddlywiki
 
-<$list filter="[all[current]tagging[]tag[Journal]sort[created]limit[1]]" variable="none">
+<$list filter="[all[current]tagging[]tag[Journal]sort[created]limit[1]]" variable="X">
 <h2>Journal Entries</h2>
 <$list filter="[all[current]tagging[]tag[Journal]sort[created]]">
 @@color:grey;
