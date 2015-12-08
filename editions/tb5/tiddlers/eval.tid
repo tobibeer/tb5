@@ -1,0 +1,19 @@
+created: 20151208233544561
+creator: Tobias Beer
+modified: 20151208235105239
+modifier: Tobias Beer
+summary: evaluate expressions, compute and compare
+tags: [[Tobias Beer]] Solutions JavaScript Filters Widgets
+title: eval
+type: text/vnd.tiddlywiki
+url: http://tobibeer.github.io/tw5-plugins/#eval
+
+The plugin [[tobibeer/eval|http://tobibeer.github.io/tw5-plugins/#eval]] allows you to evaluate mathematical or logical expressions and to compute and compare tiddler properties and data in either a filter or a widget. It supports [[math.js|http://tobibeer.github.io/tw5-plugins/#math.js]] as well as plain javascript eval (to be handled with caution).
+
+For example, it can calculate things like so:
+
+```
+{{{ [[]eval[{{!!some-field}} * <<some-var>> / 100 ]]}}}
+```
+
+Check out [[the documentation and examples|http://tobibeer.github.io/tw5-plugins/#eval]].
