@@ -10,7 +10,7 @@ type: text/vnd.tiddlywiki
 \define list-search(
 filter:"[tags[]]",
 search:"search:title",
-state:"$:/temp/list-search", 
+state:"$:/temp/list-search",
 template:"$:/core/ui/ListItemTemplate",
 placeholder:"Filter",
 limit:100000

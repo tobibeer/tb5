@@ -57,9 +57,12 @@ position:fixed;
 z-index:100;
 display:block;
 width:100%;
-padding:10px 0 10px 55px;
+padding:5px 0 0 55px;
 color:#f6f6f6;
 background:#ececec;
+-webkit-box-shadow: 0px 5px 7px 3px rgba(236,236,236,1);
+-moz-box-shadow: 0px 5px 7px 3px rgba(236,236,236,1);
+box-shadow: 0px 5px 7px 3px rgba(236,236,236,1);
 }
 
 /* reposition, icon size and position adjustments */

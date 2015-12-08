@@ -1,10 +1,8 @@
-created: 20150107163621767
-creator: Tobias Beer
-modified: 20150107193046091
-modifier: Tobias Beer
-tags: $:/tags/Macro
 title: $:/.tb/macros/tagline
-type: text/vnd.tiddlywiki
+tags: $:/tags/Macro
+modifier: Tobias Beer
+modified: 20150107193046091
+created: 20150107163621767
 
 \define tagline(index)
 <$tiddler tiddler="$:/.tb/macros/tagline/data"><$transclude field=prefix/><$reveal type=match default="" text="$index$"><$list filter="[<currentTiddler>indexes[]let:RANDOM[]]" variable=index><span class="tagline-text"><$transclude index=<<index>>/></span></$list></$reveal><$reveal type=nomatch default="" text="$index$"><span class="tagline-text"><$transclude index="$index$"/></span></$reveal><$transclude field=suffix/></$tiddler>
