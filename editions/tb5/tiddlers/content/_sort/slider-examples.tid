@@ -1,6 +1,6 @@
 created: 20150110175949706
 creator: Tobias Beer
-modified: 20151209015303457
+modified: 20151209163759880
 modifier: Tobias Beer
 title: slider-examples
 type: text/vnd.tiddlywiki
@@ -99,7 +99,6 @@ label-hide=<<slider-label "&lt; ">>
 
 <$list filter="[list[Welcome]]">
 
-<$set name=qualified value=<<qualify $(currentTiddler)$>>>
 <$macrocall
 $name=slide-tiddler
 label=<<slider-label "" " {{$:/core/images/chevron-right}}">>
@@ -108,5 +107,4 @@ tooltip=<<slide-tiddler-tooltip>>
 state=<<slide-tiddler-qualify SWI>>
 label-hide=<<slider-label "" " {{$:/core/images/chevron-down}}">>
 />
-</$set>
 </$list>

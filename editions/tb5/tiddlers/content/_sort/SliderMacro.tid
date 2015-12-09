@@ -1,6 +1,6 @@
 created: 20150201173223292
 creator: Tobias Beer
-modified: 20151209021249390
+modified: 20151209163946818
 modifier: Tobias Beer
 tags: 
 title: SliderMacro
@@ -15,30 +15,36 @@ The ''slider'' macro in $:/.tb/macros/slider displays a button which when clicke
 ! Parameters
 
 |!# |!Name |!Description |!Default |
-|1 |label |the text label of the slider button| |
-|2 |content |the content to be shown as a TextReference | |
-|3 |state |a state tiddler storing the open/ close state of the slider | |
-|4 |tooltip |a tooltup for the slider button shown when hovering it with a mouse-pointer | |
-|5 |label-hide |a label shown when closing the tiddler, if none specified always shows the label| |
-|6 |animate |whether to animate opening and closing the contents|`yes` |
-|7 |class |a css class assigned to the slider contents| |
-|8 |btn-class |a css class assigned to the button, by default shows the slider button as if an internal link|`tc-btn-invisible tc-tiddlylink` |
-|9 |element |the html element type of the slider contents<br>use `span` to create an inline slider|`div` |
-|10 |plain |when specified, e.g. as `plain=true`, renders the content specified in ''content'' directly instead of fetching a text-reference| |
+|1 |''label'' |the text label of the slider button| |
+|2 |''content'' |the content to be shown as a TextReference | |
+|3 |''state'' |a state tiddler storing the open/ close state of the slider | |
+|4 |''plain'' |when specified, e.g. as `plain:true`, renders the content specified in ''content'' directly instead of fetching a text-reference| |
+|5 |''mode'' |whether to render the output in block or inline mode |`block`|
+|6 |''label-hide'' |a label shown when closing the tiddler, if none specified always shows the label| |
+|7 |''class'' |a css class assigned to the slider contents| |
+|8 |''btn-class'' |a css class assigned to the button, by default shows the slider button as if an internal link|`tc-btn-invisible tc-tiddlylink` |
+|9 |''tooltip'' |a tooltip for the slider button shown when hovering it with a mouse-pointer | |
+|10 |''element'' |the html element type of the slider contents<br>use `span` to create an inline slider|`div` |
+|11 |''animate'' |whether to animate opening and closing the contents|`yes` |
 
 ! Examples
 
-The following example creates a slider for the [[Welcome]] tiddler...
+The following example creates a slider for the [[GettingStarted]] tiddler...
 
 <$macrocall $name=` 
-text="""<<slider show Welcome "$:/state/slider/Welcome" label-hide:hide>>"""/>
+text="""<<slider show GettingStarted "$:/state/slider/GettingStartedDemo" label-hide:hide>>"""/>
 
 The next example shows custom content inline using an italics element hiding the closing label entirely using the `&zwj;` entity, aka a "zero-width joiner"...
 
 <$macrocall $name=` 
 text="""<<slider show "this text" "$:/state/slider/ItalicTextDemo" mode:inline label-hide:"&zwj;" element:i plain:yes>>"""/>
 
-The next example implements custom arrows with a helper macro thus requiring to use the macrocall widget, wrapped using the TiddlerWidget to set a different context.
+Thanks to its way of transcluding, you can even output a filtered list or use templates:
+
+<$macrocall $name=` 
+text="""<<slider Plugins "{ [tag[Plugins]] }" "$:/state/slider/PluginsDemo">>"""/>
+
+The next example implements custom arrows with a helper macro thus requiring to use the macrocall widget, wrapped using the <<x TiddlerWidget>> to set a different context.
 
 ```
 \define slider-label(prefix,suffix)
@@ -51,7 +57,7 @@ text="""<$tiddler tiddler="GettingStarted">
 $name="slider"
 label=<<slider-label "" " {{$:/core/images/chevron-right}}">>
 content="!!text"
-state="$:/state/slider/GettingStartedDemo"
+state="$:/state/slider/GettingStartedDemo2"
 label-hide=<<slider-label "" " {{$:/core/images/chevron-down}}">>
 />
 </$tiddler>"""/>
@@ -65,3 +71,7 @@ height:12px !important;
 fill:grey;
 }
 </style>
+
+!! More examples
+
+See [[slider-examples]]..
