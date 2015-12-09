@@ -1,20 +1,16 @@
 created: 20150201173223292
 creator: Tobias Beer
-modified: 20150210184752081
+modified: 20151209021249390
 modifier: Tobias Beer
 tags: 
 title: SliderMacro
 type: text/vnd.tiddlywiki
 
 \define slider-label(prefix,suffix)
-$prefix$<$text text="$(currentTiddler)$"/>$suffix$
+<span class="grey-svg">$prefix$<$text text="$(currentTiddler)$"/>$suffix$</span>
 \end
 
-@@color:purple;
-> ''Note:'' While working, there is a problem using anything complicated as the button text, e.g. a ~CamelCase tiddler title with an image. The button will either render it as an internal-link and open the tiddler as well as the slider or simply look like spaghetti html, see last example.
-@@
-
-The ''slider'' macro displays a button which when clicked reveals content and hides it upon a second click, thus toggling the slider contents.
+The ''slider'' macro in $:/.tb/macros/slider displays a button which when clicked reveals content and hides it upon a second click, thus toggling the slider contents.
 
 ! Parameters
 
@@ -37,10 +33,10 @@ The following example creates a slider for the [[Welcome]] tiddler...
 <$macrocall $name=` 
 text="""<<slider show Welcome "$:/state/slider/Welcome" label-hide:hide>>"""/>
 
-The next example shows custom content inline using an italics element...
+The next example shows custom content inline using an italics element hiding the closing label entirely using the `&zwj;` entity, aka a "zero-width joiner"...
 
 <$macrocall $name=` 
-text="""<<slider show "this text" "$:/state/slider/ItalicText" label-hide:hide element:i plain:true>>"""/>
+text="""<<slider show "this text" "$:/state/slider/ItalicTextDemo" mode:inline label-hide:"&zwj;" element:i plain:yes>>"""/>
 
 The next example implements custom arrows with a helper macro thus requiring to use the macrocall widget, wrapped using the TiddlerWidget to set a different context.
 
@@ -49,14 +45,23 @@ The next example implements custom arrows with a helper macro thus requiring to 
 $prefix$<$text text="$(currentTiddler)$"/>$suffix$
 \end
 ```
-
 <$macrocall $name=` 
 text="""<$tiddler tiddler="GettingStarted">
 <$macrocall
 $name="slider"
 label=<<slider-label "" " {{$:/core/images/chevron-right}}">>
 content="!!text"
-state="$:/state/slider/GettingStartedPrefixes"
+state="$:/state/slider/GettingStartedDemo"
 label-hide=<<slider-label "" " {{$:/core/images/chevron-down}}">>
 />
 </$tiddler>"""/>
+
+<style>
+.grey-svg svg{
+fill:lightgrey;
+height:12px !important;
+}
+.grey-svg:hover svg{
+fill:grey;
+}
+</style>
