@@ -1,13 +1,16 @@
-title: Welcome
-modifier: Tobias Beer
+created: 20151221094549243
 creator: Tobias Beer
-summary: A collection of references and sandbox for testing concepts around TiddlyWiki:<br><<tagline>>
 icon: $:/core/images/home-button
 img: Jack.jpg
-list: Latest Solutions Plugins Developer Core References Markup [[Tobias Beer]]
+list: Latest [[My Plugins]] Solutions Plugins Developer Core References Markup [[Tobias Beer]]
 list-before: Solutions
 menu: main
 menu-icon: {{$:/core/images/home-button}}
+modified: 20151221094559179
+modifier: Tobias Beer
+summary: A collection of references and sandbox for testing concepts around TiddlyWiki:<br><<tagline>>
+title: Welcome
+type: text/vnd.tiddlywiki
 
 <div class="tb5-home">
 <$list filter="[list[]]">
