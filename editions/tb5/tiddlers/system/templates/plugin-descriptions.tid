@@ -1,0 +1,7 @@
+title: $:/.tb/templates/plugin-descriptions
+
+<dt><$setvars
+_current="[all[current]removeprefix[$:/plugins/tobibeer/]]"
+plugin="\[ext[\[current]\|http://tobibeer.github.io/tw5-plugins/#\[current]\]]\"
+><<plugin>></$setvars></dt>
+<dd>{{!!description}}</dd>
