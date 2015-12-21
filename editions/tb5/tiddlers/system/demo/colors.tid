@@ -1,0 +1,9 @@
+created: 20151221103626212
+creator: Tobias Beer
+modified: 20151221105321054
+title: $://colors
+type: application/x-tiddler-dictionary
+
+cornsilk: #FFF8DC
+crimson: #DC143C
+pale-crimson: hsla(348, 83%, 47%, 0.3)

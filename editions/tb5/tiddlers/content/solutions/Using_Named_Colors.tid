@@ -1,0 +1,28 @@
+created: 20151221102758131
+creator: Tobias Beer
+modified: 20151221105727075
+tags: Styles Templates Palette
+title: Using Named Colors
+type: text/vnd.tiddlywiki
+
+Follow these simple steps [[suggested by Matabele|http://bit.ly/1QBbFli]] to use named colors in your palettes or templates:
+
+
+# create a <<x SystemTiddlers "system tiddler"">> for your colors, e.g. $://colors
+# set its type to ''Data dictionary'' (`application/x-tiddler-dictionary`)
+# add entries with descriptive color names, specifying a [[valid color format|http://www.w3schools.com/cssref/css_colors_legal.asp]]
+# use them in your palette or stylesheets as `{{$://colors##<color-name>}}`
+
+Some example colors, two using [[standard html color names|http://www.w3schools.com/cssref/css_colornames.asp]] and one custom color defined in [[hsla()|http://www.w3.org/wiki/CSS3/Color/HSLA]], see <<source "$://colors">>
+
+Here's an example using those:
+
+<<` """@@.fancy {{!!title}} @@
+
+<style>.fancy{
+background:{{$://colors##cornsilk}};
+color:{{$://colors##crimson}};
+border: 2px solid {{$://colors##pale-crimson}};
+border-radius: 10px;
+padding:5px;
+}""">>
