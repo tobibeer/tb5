@@ -1,10 +1,16 @@
 caption: Plugins
+created: 20151221110718806
+creator: Tobias Beer
 icon: $:/core/images/plugin-generic-plugin
 menu: main
 menu-icon: {{$:/core/images/plugin-generic-plugin}}
+modified: 20151221111009028
 summary: interesting plugins for tw5
 tags: Welcome
 title: Plugins
+type: text/vnd.tiddlywiki
+
+For a list of plugins created by [[Tobias Beer]], see [[My Plugins|plugins]]...
 
 {{Plugin}}
 

@@ -2,11 +2,11 @@ created: 20151221094549243
 creator: Tobias Beer
 icon: $:/core/images/home-button
 img: Jack.jpg
-list: Latest [[My Plugins]] Solutions Plugins Developer Core References Markup [[Tobias Beer]]
+list: Latest plugins Solutions Plugins Developer Core References Markup [[Tobias Beer]]
 list-before: Solutions
 menu: main
 menu-icon: {{$:/core/images/home-button}}
-modified: 20151221094559179
+modified: 20151221111020027
 modifier: Tobias Beer
 summary: A collection of references and sandbox for testing concepts around TiddlyWiki:<br><<tagline>>
 title: Welcome
