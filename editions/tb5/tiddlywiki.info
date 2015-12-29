@@ -10,6 +10,7 @@
 		"tobibeer/dict",
 		"tobibeer/dom",
 		"tobibeer/eval",
+		"tobibeer/filter",
 		"tobibeer/inc",
 		"tobibeer/join",
 		"tobibeer/make",
