@@ -1,6 +1,7 @@
 created: 20151127110400596
 creator: Tobias Beer
-modified: 20151127181931267
+modified: 20151229111503987
+modifier: Tobias Beer
 summary: the very basics for working with filters
 tags: Filters Solutions
 title: Filters-101
@@ -24,7 +25,7 @@ When you work with filter operators, try to think in steps:
 Let's demystify the above example where 3 ''filter steps'' are joined into a single ''filter run'' altogether yielding the entire ''filter expression'' (or "filter string") used for the basic [[list transclusion|transclusion]].
 
 # `tags[]`<br>» ''input'': <<x "all Operator" "[all[]]">> — the default, assumed if nothing else is specified<br>» ''output'': all tags
-# `prefix[?!?]`<br>» ''input'': output of 1<br>» ''output'': all those tags with prefix `$`
+# `prefix[$]`<br>» ''input'': output of 1<br>» ''output'': all those tags with prefix `$`
 # `tagging[]`<br>» ''input'': output of 2<br>» ''output'': all those titles that have tags with prefix `$`
 
 The above example shows a filter being a single <<x "Filter Steps" "filter run">>.
