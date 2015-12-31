@@ -11,6 +11,7 @@
 		"tobibeer/dom",
 		"tobibeer/eval",
 		"tobibeer/filter",
+		"tobibeer/hash",
 		"tobibeer/inc",
 		"tobibeer/join",
 		"tobibeer/make",
