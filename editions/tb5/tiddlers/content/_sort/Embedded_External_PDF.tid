@@ -1,6 +1,6 @@
 created: 20150312165716885
 creator: Tobias Beer
-modified: 20150312183839538
+modified: 20160103160200126
 modifier: Tobias Beer
 tags: Files Solutions Embed
 title: Embedded External PDF
@@ -23,7 +23,7 @@ Here are two ways of embedding external pdf files as [[explained by Måns Mårte
 <$macrocall $name=` text=
 """<<pdf "http://bit.ly/18mukKq">>"""/>
 
-To reference a number of pdfs at the same location, you can modify the macro macro like this: `src="http://MyWebAddress/$url$.pdf"``. This reduces the macrocall to:
+To reference a number of pdfs at the same location, you can modify the macro like this: `src="http://MyWebAddress/$url$.pdf"`. This reduces the macrocall to:
 
 <$macrocall $name=` text=
 """<<iframe "filename">>"""/>
