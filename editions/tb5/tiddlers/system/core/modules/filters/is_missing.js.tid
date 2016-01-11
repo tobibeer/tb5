@@ -29,7 +29,6 @@ exports.missing = function(source,prefix,options) {
 		missing = options.wiki.getMissingTitles();
 	source(function(tiddler,title) {
 		var i = missing.indexOf(title);
-		console.log(title,i);
 		if(get && i >= 0 || !get && i < 0) {
 			results.push(title);
 		}
