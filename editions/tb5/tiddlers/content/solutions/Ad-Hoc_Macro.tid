@@ -1,7 +1,7 @@
 created: 20160112155832622
 creator: Tobias Beer
 how-it-is: cool
-modified: 20160112161248708
+modified: 20160112170104345
 modifier: Tobias Beer
 tags: Solutions Macros [[Felix Küppers]]
 title: Ad-Hoc Macro
@@ -33,3 +33,8 @@ You can spice things up even more by leveraging the evaluated attributes the <<x
 ; How is it?
 : {{!!how-it-is}}
 <<<
+
+To use double-quotes in any macro parameter you can:
+
+# use single quotes to enclose your macro parameters
+# use triple double-quotes for your parameters to allow single double-quotes within
