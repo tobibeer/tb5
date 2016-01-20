@@ -1,0 +1,17 @@
+created: 20160120102443208
+creator: Tobias Beer
+modified: 20160120104459713
+modifier: Tobias Beer
+tags: $:/tags/ViewTemplate
+title: $:/core/ui/ViewTemplate/tags
+type: text/vnd.tiddlywiki
+
+<$reveal type="nomatch" state=<<folded-state>> text="hide" tag="div" retain="yes" animate="yes">
+<$vars
+subFilter={{$:/config/Hide/TagButtons}}
+tagFilter="[all[current]tags[]] $(subFilter)$ +[sort[title]]">
+<div class="tc-tags-wrapper">
+<$list filter=<<tagFilter>> template="$:/core/ui/TagTemplate" storyview="pop"/>
+</div>
+</$vars>
+</$reveal>

@@ -1,12 +1,12 @@
 created: 20150116173854421
 creator: Tobias Beer
-modified: 20150206125100198
+modified: 20160120103558727
 modifier: Tobias Beer
 title: $:/config/Hide/TagButtons
 type: text/vnd.tiddlywiki
 
-[[hide this]]
-Main
-ribbon
-$:/tags/Tagging
-Welcome
++[!is[system]]
+-[[hide this]]
+-Main
+-ribbon
+-Welcome
