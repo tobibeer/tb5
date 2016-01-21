@@ -1,10 +1,13 @@
 created: 20150116173515899
 creator: Tobias Beer
-modified: 20160120105049763
+modified: 20160121152442831
 modifier: Tobias Beer
+summary: hiding tags freom the tags list
 tags: Tags Buttons Hide [[hide this]] Solutions $:/tags/Tagging
 title: Hide Tag Buttons
 type: text/vnd.tiddlywiki
+
+You don't like to see system tags in view-mode? You want to [[style a specific tiddler using tags|http://tiddlywiki.com/#How%20to%20apply%20custom%20styles%20by%20tag]] but don't want to see the tag that triggers the style?
 
 Before we start, compare the actual tags of this tiddler below to the ones you see above:
 
