@@ -1,10 +1,26 @@
 created: 20141117094800605
 creator: Tobias Beer
-modified: 20141123203952475
+modified: 20160125095023927
 modifier: Tobias Beer
 tags: Solutions Styles
 title: Custom Stylesheets
 type: text/vnd.tiddlywiki
+
+For a general introduction, read the core documentation below.
+
+!! Variants
+
+Tiddlers tagged $:/tags/Stylesheet are interpreted as css stylesheets. When of type:
+
+; `text/css`
+: their content will be interpreted as literal css
+; `text/vnd.tiddlywiki`
+: their contents are parsed as wikitext and things like macros and references replaced
+:: you may run into compatibility issues if your markup generates html
+:: therefore, constrain applicable parser rules using the pragma `\rules only`
+::: for an example see $:/themes/tiddlywiki/vanilla/base
+
+!! Core Documentation
 
 From http://tiddlywiki.com/#Using%20Stylesheets...
 
