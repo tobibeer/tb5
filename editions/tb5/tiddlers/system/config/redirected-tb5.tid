@@ -1,3 +1,7 @@
+created: 20160204214604794
+creator: Tobias Beer
+modified: 20160204214658468
+modifier: Tobias Beer
 title: $:/.tb/config/redirected-tb5
 type: application/json
 
@@ -8,6 +12,7 @@ type: application/json
 "$:/core/ui/MoreSideBar/Stories": "$:/.tb/ui/MoreSideBar/Stories",
 "$:/macros/linkimg":"$:/.tb/macros/linkimg",
 "$:/.tb/template/tb-redirected": "$:/.tb/ui/ViewTemplate/redirected-tb5",
+"Accordeon Menu":"[[Accordion Menu]]",
 "ColumnsAndPopups":"http://tbdemo.tiddlyspot.com/#ColumnsAndPopups",
 "fiddle":"[[enable-js]]",
 "Redirecting Dead Links": "[[Aliases And Redirecting Dead Links]]",

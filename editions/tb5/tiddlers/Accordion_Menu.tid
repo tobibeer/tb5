@@ -1,0 +1,17 @@
+created: 20150205113704718
+creator: Tobias Beer
+modified: 20160204214535723
+modifier: Tobias Beer
+tags: Solutions Sliders Presentation Menus [[Alberto Molina]]
+title: Accordion Menu
+type: text/vnd.tiddlywiki
+
+@@.note
+''Addendum:'' You can use the plugin [[tobibeer/appear|http://tobibeer.github.io/tw5-plugins#appear]] to create an accordion menu.
+@@
+
+As [[Alberto Molina]] [[announces here|https://groups.google.com/d/msg/tiddlywiki/TXk4XZpO6a8/snVBW5jW6q8J]], there are highly customizable [[slider and accordion macros|http://tw5.scholars.tiddlyspot.com/#%24%3A%2F_tw-scholars%2Fdoc%2Fmacros%2Fslider_accordion]] in [[TiddlyWiki For Scholars]].
+
+You can find a demo of the accordeon working at the bottom of the start page at
+
+* http://tw5.scholars.tiddlyspot.com
