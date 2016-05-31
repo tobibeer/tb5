@@ -1,0 +1,8 @@
+title: $:/plugins/tobibeer/external/template
+list-after: $:/core/ui/ViewTemplate/tags
+tags: $:/tags/ViewTemplate
+
+<$list variable="none"
+filter="[all[current]!is[system]!prefix[filter:]!prefix[FilterOperator:]!prefix[Fields]split[: ]limit[1]]">
+<<external-tiddler>>
+</$list>
