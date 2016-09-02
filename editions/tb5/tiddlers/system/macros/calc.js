@@ -38,17 +38,20 @@ exports.run = function(value, operation, until, beyond, decimals, tiddler, by) {
 	if("" === operation){
 		operation = "+";
 	}
-
 	var
-		curr,dec,op,opGiven,r,result,val,
+		curr,dec,init,initMatch,op,opGiven,r,result,val,
+		regInit = /^((?:[0-9]+)|(?:(?:[0-9]*)[\.,\,](?:[0-9]*))){1}[=][>](.*)/mg,
 		ops = ["+","-","*","/"];
-
+	initMatch = regInit.exec(value);
+	if(initMatch) {
+		init = initMatch[1].replace(/[\,]/,".");
+		value = initMatch[2];
+	}
 	curr = parseFloat(
-		0 > value.indexOf('!!') ?
-		value :
-		this.wiki.getTextReference(value, "NaN", tiddler || this.getVariable("currentTiddler"))
+		isNaN(parseFloat(value)) ?
+		this.wiki.getTextReference(value, init || "NaN", tiddler || this.getVariable("currentTiddler")) :
+		value
 	);
-
 	until = parseFloat(until);
 	decimals = parseInt(decimals);
 
@@ -57,10 +60,15 @@ exports.run = function(value, operation, until, beyond, decimals, tiddler, by) {
 	if(!opGiven) {
 		op = "+";
 	}
+	initMatch = regInit.exec(by);
+	if(initMatch) {
+		init = initMatch[1].replace(/[\,]/,".");
+		by = initMatch[2];
+	}
 	val = parseFloat(
-		0 > by.indexOf('!!') ?
-		by :
-		this.wiki.getTextReference(by, "NaN", tiddler || this.getVariable("currentTiddler"))
+		isNaN(parseFloat(by)) ?
+		this.wiki.getTextReference(by, init || "NaN", tiddler || this.getVariable("currentTiddler")) :
+		by
 	);
 	if(by === "") {
 		val = opGiven ?

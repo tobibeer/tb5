@@ -2,7 +2,7 @@ counter: 1
 created: 20150126150739422
 creator: Tobias Beer
 foo: foo value
-modified: 20151113090249926
+modified: 20160902170026242
 modifier: Tobias Beer
 order: 1
 tags: Macros Calculation Solutions
@@ -26,6 +26,8 @@ Calculated values can be used as widget attributes so as to assign them to tiddl
 
 !! Parameters
 
+//''Note'': For the parameters below that can be defined as text-references, you can initialize an otherwise undefined value using: `0=>!!missing`.//
+
 |!#|!Parameter|!Description|!Default|
 |1|''value'' |a numeric value as a basis for the calculation or a <<tw TextReference>> to a field from which to fetch the value<br>&raquo; returns `NaN` when undefined or ''~NaN''||
 |2|''operation'' |the operator (and optionally the operand) of the mathematical operation, e.g. `*2`, or `-1`, when no operator is defined, defaults to `+`, so `1` is the same as `+1`; use ''by'' to explicitly state an operand||
@@ -33,7 +35,7 @@ Calculated values can be used as widget attributes so as to assign them to tiddl
 |4|''beyond'' |instead of a calculated value returns `true` or `false` depending on whether or not we are beyond the boundaries defined in ''until''<br>&raquo; useful for <<tw RevealWidget>>||
 |5|''decimals''|the maximum number of decimals to output|`2`|
 |6|''tiddler''|the tiddler from which to retrieve the field value| ''currentTiddler''|
-|7|''by''|a value serving as the operand if the ''operation'' does not define any||
+|7|''by''|a numeric value or <<tw TextReference>> serving as the operand if the ''operation'' does not define any||
 
 !! Installation
 
@@ -59,9 +61,25 @@ Here's a rudimentary example to reorder lists using the ''calc'' macro...
 
 ><<calc !!order>>
 
+`<<calc 2 *2>>`
+
+><<calc 2 *2>>
+
 `{{!!foo}} = <<calc !!foo>>`
 
 >{{!!foo}} = <<calc !!foo>>
+
+`{{!!foo}} = <<calc 0=>!!foo>>`
+
+> {{!!foo}} = <<calc "0=>!!foo">>
+
+`{{!!undefined}} = <<calc 0=>!!undefined>>`
+
+> {{!!undefined}} = <<calc "0=>!!undefined">>
+
+`0 = <<calc "0=>initialize as 0 when##undefined">>`
+
+> 0 = <<calc "0=>initialize as 0 when##undefined">>
 
 `<<calc !!order 1>>`
 
@@ -82,6 +100,10 @@ Here's a rudimentary example to reorder lists using the ''calc'' macro...
 `<<calc !!order * by:!!order>>`
 
 ><<calc !!order * by:!!order>>
+
+`<<calc 10 - by:!!order>>`
+
+><<calc 10 - by:!!order>>
 
 `<<calc !!order -2>>`
 
@@ -153,6 +175,8 @@ Here's a rudimentary example to reorder lists using the ''calc'' macro...
 
 !! Release Notes
 
+; 2016-09-02
+: [[undefined field initialization|http://bit.ly/2ci8Chb]] via `0=>!!undefined`
 ; 2015-11-13
 : [[fixed minor bug|http://bit.ly/1Ldi79B]]
 ; 2015-10-27

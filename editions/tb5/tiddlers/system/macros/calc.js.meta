@@ -1,6 +1,7 @@
 created: 20150126131341956
 creator: Tobias Beer
-modified: 20151113083502594
 modifier: Tobias Beer
 module-type: macro
 summary: allows simple calculations based on tiddler fields
+title: $:/.tb/macros/calc
+type: application/javascript
