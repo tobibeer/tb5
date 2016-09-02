@@ -2,7 +2,7 @@ counter: 1
 created: 20150126150739422
 creator: Tobias Beer
 foo: foo value
-modified: 20160902170026242
+modified: 20160902174602200
 modifier: Tobias Beer
 order: 1
 tags: Macros Calculation Solutions
@@ -26,16 +26,16 @@ Calculated values can be used as widget attributes so as to assign them to tiddl
 
 !! Parameters
 
-//''Note'': For the parameters below that can be defined as text-references, you can initialize an otherwise undefined value using: `0=>!!missing`.//
+//''Note:'' For parameters that can be specified as a <<tw TextReference>> you can initialize an undefined value using: `0=>!!missing`.//
 
 |!#|!Parameter|!Description|!Default|
-|1|''value'' |a numeric value as a basis for the calculation or a <<tw TextReference>> to a field from which to fetch the value<br>&raquo; returns `NaN` when undefined or ''~NaN''||
+|1|''value'' |a numeric value as a basis for the calculation or a <<tw TextReference>> to a field from which to fetch the value<br>&raquo; returns `NaN` when undefined or ''~NaN'' ||
 |2|''operation'' |the operator (and optionally the operand) of the mathematical operation, e.g. `*2`, or `-1`, when no operator is defined, defaults to `+`, so `1` is the same as `+1`; use ''by'' to explicitly state an operand||
 |3|''until'' |defines a value until which to calculate<br>&raquo; an upper boundary for `+` and `*`<br>&raquo; a lower boundary for `-` and `/`<br>returns the boundary when surpassed||
 |4|''beyond'' |instead of a calculated value returns `true` or `false` depending on whether or not we are beyond the boundaries defined in ''until''<br>&raquo; useful for <<tw RevealWidget>>||
 |5|''decimals''|the maximum number of decimals to output|`2`|
 |6|''tiddler''|the tiddler from which to retrieve the field value| ''currentTiddler''|
-|7|''by''|a numeric value or <<tw TextReference>> serving as the operand if the ''operation'' does not define any||
+|7|''by''|a value or a <<tw TextReference>> serving as the operand if the ''operation'' does not define any||
 
 !! Installation
 
