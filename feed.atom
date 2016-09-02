@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://tobibeer.github.io/tb5/feed.atom</id>
+  <title>tb5</title>
+  <subtitle>a pocket full of tips 
+    
+        
+    
+</subtitle>
+  <link href="http://tobibeer.github.io/tb5/feed.atom" rel="self" type="application/atom+xml"/>
+  <author>
+    <name>Tobias Beer</name>
+  </author>
+  <updated>2016-09-02T19:46:02+02:00</updated>
+  <entry>    <title>calc</title>    <id>http://tobibeer.github.io/tb5#calc</id>    <link href='http://tobibeer.github.io/tb5#calc'/>    <updated>2016-09-02T19:46:02+02:00</updated>    <summary>Inspired by mathmacros @ tiddlyspot from Danielo Rodríguez, the calc macro allows you to do simple calculations based on tiddler fields.
+
+...</summary>  </entry>  <entry>    <title>Accordion Menu</title>    <id>http://tobibeer.github.io/tb5#Accordion%20Menu</id>    <link href='http://tobibeer.github.io/tb5#Accordion%20Menu'/>    <updated>2016-02-04T22:45:35+02:00</updated>    <summary>Addendum: You can use the plugin tobibeer/appear to create an accordion menu.
+
+
+As Alberto Molina announces here, there are highly customizable slider and accordion macros in TiddlyWiki For Scholars.
+...</summary>  </entry>  <entry>    <title>Custom Stylesheets</title>    <id>http://tobibeer.github.io/tb5#Custom%20Stylesheets</id>    <link href='http://tobibeer.github.io/tb5#Custom%20Stylesheets'/>    <updated>2016-01-25T10:50:23+02:00</updated>    <summary>For a general introduction, read the core documentation below.
+
+...</summary>  </entry>  <entry>    <title>Hide Tag Buttons</title>    <id>http://tobibeer.github.io/tb5#Hide%20Tag%20Buttons</id>    <link href='http://tobibeer.github.io/tb5#Hide%20Tag%20Buttons'/>    <updated>2016-01-21T16:24:42+02:00</updated>    <summary>hiding tags freom the tags list</summary>  </entry>  <entry>    <title>plugins</title>    <id>http://tobibeer.github.io/tb5#plugins</id>    <link href='http://tobibeer.github.io/tb5#plugins'/>    <updated>2016-01-14T03:25:46+02:00</updated>    <summary>all plugins created by Tobias Beer from tw5-plugins</summary>  </entry>  <entry>    <title>Ad-Hoc Macro</title>    <id>http://tobibeer.github.io/tb5#Ad-Hoc%20Macro</id>    <link href='http://tobibeer.github.io/tb5#Ad-Hoc%20Macro'/>    <updated>2016-01-12T18:01:04+02:00</updated>    <summary>Based on a solution by Felix, you can use a generic macro to evaluate any text as an ad-hoc macro even passing variables. Here's an example macro 
+
+Use the above macro like so:
+
+...</summary>  </entry>  <entry>    <title>Embedded External PDF</title>    <id>http://tobibeer.github.io/tb5#Embedded%20External%20PDF</id>    <link href='http://tobibeer.github.io/tb5#Embedded%20External%20PDF'/>    <updated>2016-01-03T17:02:00+02:00</updated>    <summary>Here are two ways of embedding external pdf files as explained by Måns Mårtensson:
+
+...</summary>  </entry>  <entry>    <title>Filters-101</title>    <id>http://tobibeer.github.io/tb5#Filters-101</id>    <link href='http://tobibeer.github.io/tb5#Filters-101'/>    <updated>2015-12-29T12:15:03+02:00</updated>    <summary>the very basics for working with filters</summary>  </entry>  <entry>    <title>Generic Popup</title>    <id>http://tobibeer.github.io/tb5#Generic%20Popup</id>    <link href='http://tobibeer.github.io/tb5#Generic%20Popup'/>    <updated>2015-12-21T12:02:38+02:00</updated>    <summary>provides a macro to render a popup</summary>  </entry>  <entry>    <title>eval</title>    <id>http://tobibeer.github.io/tb5#eval</id>    <link href='http://tobibeer.github.io/tb5#eval'/>    <updated>2015-12-09T00:51:05+02:00</updated>    <summary>evaluate expressions, compute and compare</summary>  </entry>  <entry>    <title>xlist</title>    <id>http://tobibeer.github.io/tb5#xlist</id>    <link href='http://tobibeer.github.io/tb5#xlist'/>    <updated>2015-11-26T23:31:50+02:00</updated>    <summary>tobibeer/xlist provides a macro generating crosslists of filtered tiddlers grouped by category</summary>  </entry>  <entry>    <title>TiddlyWiki</title>    <id>http://tobibeer.github.io/tb5#TiddlyWiki</id>    <link href='http://tobibeer.github.io/tb5#TiddlyWiki'/>    <updated>2015-11-26T18:06:37+02:00</updated>    <summary></summary>  </entry>  <entry>    <title>Responsive Theming</title>    <id>http://tobibeer.github.io/tb5#Responsive%20Theming</id>    <link href='http://tobibeer.github.io/tb5#Responsive%20Theming'/>    <updated>2015-11-12T13:35:09+02:00</updated>    <summary>The startup module responsive.js allows you to define in ascending order which theme to apply depending on the viewport width in the config tiddler 
+
+Here, the vanilla theme is applied for resolutions...</summary>  </entry>  <entry>    <title>Link Images</title>    <id>http://tobibeer.github.io/tb5#Link%20Images</id>    <link href='http://tobibeer.github.io/tb5#Link%20Images'/>    <updated>2015-10-15T12:00:26+02:00</updated>    <summary>The following macro lets you link an image to an internal tiddler or to an external site...
+
+...</summary>  </entry>  <entry>    <title>node</title>    <id>http://tobibeer.github.io/tb5#node</id>    <link href='http://tobibeer.github.io/tb5#node'/>    <updated>2015-10-14T19:09:03+02:00</updated>    <summary>provides an overview for using TiddlyWiki under node.js on the basis of related content from tiddlywiki.com.</summary>  </entry>  <entry>    <title>Better Missing</title>    <id>http://tobibeer.github.io/tb5#Better%20Missing</id>    <link href='http://tobibeer.github.io/tb5#Better%20Missing'/>    <updated>2015-10-14T19:03:13+02:00</updated>    <summary>Need a  quick-create dashboard displayed when a tiddler you just linked to doesn't yet exist? Here's how you do...</summary>  </entry>  <entry>    <title>Hosting Via node.js Or store.php?</title>    <id>http://tobibeer.github.io/tb5#Hosting%20Via%20node.js%20Or%20store.php%3F</id>    <link href='http://tobibeer.github.io/tb5#Hosting%20Via%20node.js%20Or%20store.php%3F'/>    <updated>2015-10-11T08:23:37+02:00</updated>    <summary>hosting options for TiddlyWiki</summary>  </entry>  <entry>    <title>Dynamic Contents In Macros</title>    <id>http://tobibeer.github.io/tb5#Dynamic%20Contents%20In%20Macros</id>    <link href='http://tobibeer.github.io/tb5#Dynamic%20Contents%20In%20Macros'/>    <updated>2015-10-10T21:34:39+02:00</updated>    <summary>evaluating macros or text-references within macros</summary>  </entry>  <entry>    <title>Invoking Macros As Widget Parameters</title>    <id>http://tobibeer.github.io/tb5#Invoking%20Macros%20As%20Widget%20Parameters</id>    <link href='http://tobibeer.github.io/tb5#Invoking%20Macros%20As%20Widget%20Parameters'/>    <updated>2015-10-10T18:00:27+02:00</updated>    <summary>using macros as attributes; for evaluated parameters see Dynamic Contents In Macros</summary>  </entry>  <entry>    <title>Transcluding Highlighted Code</title>    <id>http://tobibeer.github.io/tb5#Transcluding%20Highlighted%20Code</id>    <link href='http://tobibeer.github.io/tb5#Transcluding%20Highlighted%20Code'/>    <updated>2015-10-10T17:38:57+02:00</updated>    <summary>using the codeblock widget right</summary>  </entry>  <entry>    <title>Definition Lists</title>    <id>http://tobibeer.github.io/tb5#Definition%20Lists</id>    <link href='http://tobibeer.github.io/tb5#Definition%20Lists'/>    <updated>2015-10-10T17:20:30+02:00</updated>    <summary>lists items with descriptions, e.g. terms or abbreviations</summary>  </entry>  <entry>    <title>Hiding The Sidebar On Startup</title>    <id>http://tobibeer.github.io/tb5#Hiding%20The%20Sidebar%20On%20Startup</id>    <link href='http://tobibeer.github.io/tb5#Hiding%20The%20Sidebar%20On%20Startup'/>    <updated>2015-10-10T17:20:20+02:00</updated>    <summary>using a startup module to set a tiddler when TiddlyWiki opens</summary>  </entry>  <entry>    <title>Cycling Tags</title>    <id>http://tobibeer.github.io/tb5#Cycling%20Tags</id>    <link href='http://tobibeer.github.io/tb5#Cycling%20Tags'/>    <updated>2015-10-08T11:04:39+02:00</updated>    <summary>a javascript macro allowing to cycle through tags</summary>  </entry>  <entry>    <title>Handling And Naming Tiddlers</title>    <id>http://tobibeer.github.io/tb5#Handling%20And%20Naming%20Tiddlers</id>    <link href='http://tobibeer.github.io/tb5#Handling%20And%20Naming%20Tiddlers'/>    <updated>2015-10-07T17:24:34+02:00</updated>    <summary>organizing and structuring your tidbits</summary>  </entry>  <entry>    <title>Pragmas</title>    <id>http://tobibeer.github.io/tb5#Pragmas</id>    <link href='http://tobibeer.github.io/tb5#Pragmas'/>    <updated>2015-10-05T08:59:08+02:00</updated>    <summary>Documentation on TiddlyWiki.com
+
+* \define is used to declaring macros; multiline macros closing with \end
+* \rules constrain parser rules, e.g.: \rules except inlinecode
+* \replace is a pragma define...</summary>  </entry>  <entry>    <title>Tobias Beer</title>    <id>http://tobibeer.github.io/tb5#Tobias%20Beer</id>    <link href='http://tobibeer.github.io/tb5#Tobias%20Beer'/>    <updated>2015-10-03T15:32:28+02:00</updated>    <summary>wikis I created and maintain</summary>  </entry>  <entry>    <title>core</title>    <id>http://tobibeer.github.io/tb5#core</id>    <link href='http://tobibeer.github.io/tb5#core'/>    <updated>2015-10-03T13:09:22+02:00</updated>    <summary>a documentation aiming to provide a comprehensive summary of all concepts and components of the TiddlyWiki core</summary>  </entry>  <entry>    <title>Show Content For Empty Lists</title>    <id>http://tobibeer.github.io/tb5#Show%20Content%20For%20Empty%20Lists</id>    <link href='http://tobibeer.github.io/tb5#Show%20Content%20For%20Empty%20Lists'/>    <updated>2015-09-30T13:12:39+02:00</updated>    <summary>Ever so often it happens that a list returns no results. If you don't want to leave yourself or your visitors hanging, you can use the emptyValue of the  to declare content that is to be wikified when...</summary>  </entry>  <entry>    <title>Style Tagged Tiddlers</title>    <id>http://tobibeer.github.io/tb5#Style%20Tagged%20Tiddlers</id>    <link href='http://tobibeer.github.io/tb5#Style%20Tagged%20Tiddlers'/>    <updated>2015-09-29T17:59:20+02:00</updated>    <summary>To give tiddlers having a certain tag their very own looks, you can use this method.
+
+Also see How to apply custom styles by tag.
+
+...</summary>  </entry>  <entry>    <title>Custom Window Title</title>    <id>http://tobibeer.github.io/tb5#Custom%20Window%20Title</id>    <link href='http://tobibeer.github.io/tb5#Custom%20Window%20Title'/>    <updated>2015-09-29T13:57:33+02:00</updated>    <summary>As Jeremy explains here, the last tiddler you navigated to is stored in the current-tiddler field of the tiddler holding the history, i.e. $:/HistoryList.
+
+This allows us to show the last opened tiddl...</summary>  </entry>  <entry>    <title>Tinka</title>    <id>http://tobibeer.github.io/tb5#Tinka</id>    <link href='http://tobibeer.github.io/tb5#Tinka'/>    <updated>2015-09-27T18:08:29+02:00</updated>    <summary>Tinka allos to package plugins right in the browser version of TiddlyWiki</summary>  </entry>  <entry>    <title>AND Logic Using Nested Lists</title>    <id>http://tobibeer.github.io/tb5#AND%20Logic%20Using%20Nested%20Lists</id>    <link href='http://tobibeer.github.io/tb5#AND%20Logic%20Using%20Nested%20Lists'/>    <updated>2015-09-26T12:32:58+02:00</updated>    <summary>Update: A more versatile solution to the below approach is the xlist macro.
+
+As proposed by Stephan Hradek, the following example shows you how you can use nested lists to query for two different tag-...</summary>  </entry>  <entry>    <title>SVG In A Tiddler</title>    <id>http://tobibeer.github.io/tb5#SVG%20In%20A%20Tiddler</id>    <link href='http://tobibeer.github.io/tb5#SVG%20In%20A%20Tiddler'/>    <updated>2015-09-26T11:24:34+02:00</updated>    <summary>You can insert svg directly as wikitext or use Typed Blocks...
+
+
+  
+
+.my-image-circle {fill:deepskyblue;}
+
+via ...</summary>  </entry>  <entry>    <title>Create From Selected Template</title>    <id>http://tobibeer.github.io/tb5#Create%20From%20Selected%20Template</id>    <link href='http://tobibeer.github.io/tb5#Create%20From%20Selected%20Template'/>    <updated>2015-09-26T11:14:08+02:00</updated>    <summary>Inspired by a post from Jimmy Armand, here's a solution for creating a tiddler by selecting a template using the . The below example...
+
+# constructs a select box with all tiddlers under $:/.tb/demo/T...</summary>  </entry>  <entry>    <title>Related Journal Entries</title>    <id>http://tobibeer.github.io/tb5#Related%20Journal%20Entries</id>    <link href='http://tobibeer.github.io/tb5#Related%20Journal%20Entries'/>    <updated>2015-09-26T11:10:28+02:00</updated>    <summary>In a response to RickL, here's how you can show related journal entries to any tiddler using a Conditional ViewTemplate Section...
+
+...</summary>  </entry>  <entry>    <title>Literal Text</title>    <id>http://tobibeer.github.io/tb5#Literal%20Text</id>    <link href='http://tobibeer.github.io/tb5#Literal%20Text'/>    <updated>2015-09-23T08:13:32+02:00</updated>    <summary>As Eric Shulman explains here, you can use the  to output any chunk of text without wiki formating and without escaping characters like so:
+
+
+
+Compared to:
+
+...</summary>  </entry>  <entry>    <title>Tiddler Macro</title>    <id>http://tobibeer.github.io/tb5#Tiddler%20Macro</id>    <link href='http://tobibeer.github.io/tb5#Tiddler%20Macro'/>    <updated>2015-09-19T15:18:44+02:00</updated>    <summary>Transclusion is an integral part of modern TiddlyWiki 5. As a consequence, the tiddler macro of a classic TiddlyWiki is no longer of need or present.
+
+Using templates and placeholders became a lot mor...</summary>  </entry>  <entry>    <title>Toggling And Moving Sidebar-Tabs</title>    <id>http://tobibeer.github.io/tb5#Toggling%20And%20Moving%20Sidebar-Tabs</id>    <link href='http://tobibeer.github.io/tb5#Toggling%20And%20Moving%20Sidebar-Tabs'/>    <updated>2015-09-19T11:33:06+02:00</updated>    <summary>Inspired by this post from Metabele, the following table allows you to toggle all standard and also custom sidebar tabs...
+
+> 
+
+
+
+Tab
+Sidebar
+More
+
+
+
+
+$:/.tb/ui/SideBar/Created
+
+
+
+
+
+
+$:/.tb/ui/SideBar...</summary>  </entry>  <entry>    <title>Inline Renaming And Editing</title>    <id>http://tobibeer.github.io/tb5#Inline%20Renaming%20And%20Editing</id>    <link href='http://tobibeer.github.io/tb5#Inline%20Renaming%20And%20Editing'/>    <updated>2015-09-19T01:13:26+02:00</updated>    <summary>With a little help from Andreas Hahn, here's a prototype for a little wizard that allows to inline edit tiddler titles or other fields.
+
+Note: Unfortunately it is not possible to use the enter key to ...</summary>  </entry>  <entry>    <title>Conditional Variable Assignment</title>    <id>http://tobibeer.github.io/tb5#Conditional%20Variable%20Assignment</id>    <link href='http://tobibeer.github.io/tb5#Conditional%20Variable%20Assignment'/>    <updated>2015-09-18T17:02:38+02:00</updated>    <summary>As posted by Spangenheim in this post you can use the $set widget to conditionally assign content to a variable by evaluating a filter and then using the emptyValue parameter as a fallback when the fi...</summary>  </entry>  <entry>    <title>style</title>    <id>http://tobibeer.github.io/tb5#style</id>    <link href='http://tobibeer.github.io/tb5#style'/>    <updated>2015-09-18T14:45:27+02:00</updated>    <summary>showing how to change TiddlyWiki css styles, simple</summary>  </entry>  <entry>    <title>Text Excerpts</title>    <id>http://tobibeer.github.io/tb5#Text%20Excerpts</id>    <link href='http://tobibeer.github.io/tb5#Text%20Excerpts'/>    <updated>2015-09-18T09:51:09+02:00</updated>    <summary>As  how to do simple text excerpts,  this post by Mat and was inspired to create the following macros.
+
+...</summary>  </entry>  <entry>    <title>Tab For Recently Created Tiddlers</title>    <id>http://tobibeer.github.io/tb5#Tab%20For%20Recently%20Created%20Tiddlers</id>    <link href='http://tobibeer.github.io/tb5#Tab%20For%20Recently%20Created%20Tiddlers'/>    <updated>2015-09-17T13:37:54+02:00</updated>    <summary>To display a tab for recently created tiddlers rather than recently modified tiddlers, create a system tiddler by cloning $:/core/ui/MoreSideBar/Recent, then declaring the dateField for the timeline m...</summary>  </entry>  <entry>    <title>GSD5 — Getting Stuff Done</title>    <id>http://tobibeer.github.io/tb5#GSD5%20%E2%80%94%20Getting%20Stuff%20Done</id>    <link href='http://tobibeer.github.io/tb5#GSD5%20%E2%80%94%20Getting%20Stuff%20Done'/>    <updated>2015-09-17T13:35:49+02:00</updated>    <summary>GSD5 is a plugin attempting to implement the workflow and philosophy of David Allen's Getting Things Done for tw5 and is is heavily influenced by mGSD for TiddlyWiki classic.
+
+...</summary>  </entry>  <entry>    <title>Adding a Date Picker</title>    <id>http://tobibeer.github.io/tb5#Adding%20a%20Date%20Picker</id>    <link href='http://tobibeer.github.io/tb5#Adding%20a%20Date%20Picker'/>    <updated>2015-09-17T13:35:22+02:00</updated>    <summary>As indicated in this discussion, GSD5 features a reusable date picker.
+
+To use it for modifying any of your fields, install the following plugin in your TiddlyWiki:
+
+* $:/plugins/gsd5/ticklers
+
+...</summary>  </entry>  <entry>    <title>Custom Brush for highlight.js</title>    <id>http://tobibeer.github.io/tb5#Custom%20Brush%20for%20highlight.js</id>    <link href='http://tobibeer.github.io/tb5#Custom%20Brush%20for%20highlight.js'/>    <updated>2015-09-15T15:13:14+02:00</updated>    <summary>As Jeremy explains here, you can hack support for a custom brush into Highlight Plugin.
+
+For this, you need to modify one of its shadow tiddlers, which can cause problems with future upgrades. If that...</summary>  </entry>  <entry>    <title>Hosting On Google Drive</title>    <id>http://tobibeer.github.io/tb5#Hosting%20On%20Google%20Drive</id>    <link href='http://tobibeer.github.io/tb5#Hosting%20On%20Google%20Drive'/>    <updated>2015-09-15T10:44:37+02:00</updated>    <summary>Hosting content on Google Drive is deprecated by August 31st, 2016...</summary>  </entry>  <entry>    <title>Community Search</title>    <id>http://tobibeer.github.io/tb5#Community%20Search</id>    <link href='http://tobibeer.github.io/tb5#Community%20Search'/>    <updated>2015-09-15T10:33:03+02:00</updated>    <summary>an aggregator allowing to search indexed TiddlyWiki community wikis</summary>  </entry>  <entry>    <title>Open pdf at defined page</title>    <id>http://tobibeer.github.io/tb5#Open%20pdf%20at%20defined%20page</id>    <link href='http://tobibeer.github.io/tb5#Open%20pdf%20at%20defined%20page'/>    <updated>2015-03-12T19:28:45+02:00</updated>    <summary>Below a slightly modified version of a solution posted here allowing you to open a pdf document at a given page in your browser.
+
+...</summary>  </entry>  <entry>    <title>Autocollapsing ToC</title>    <id>http://tobibeer.github.io/tb5#Autocollapsing%20ToC</id>    <link href='http://tobibeer.github.io/tb5#Autocollapsing%20ToC'/>    <updated>2015-03-12T17:53:28+02:00</updated>    <summary>The following solution proposed by Andreas Hahn provides additional toc macros that allow you to render an autocollapsing table of content.
+
+...</summary>  </entry>
+</feed>
