@@ -11,8 +11,12 @@
   <author>
     <name>Tobias Beer</name>
   </author>
-  <updated>2016-09-02T19:46:02+02:00</updated>
-  <entry>    <title>calc</title>    <id>http://tobibeer.github.io/tb5#calc</id>    <link href='http://tobibeer.github.io/tb5#calc'/>    <updated>2016-09-02T19:46:02+02:00</updated>    <summary>Inspired by mathmacros @ tiddlyspot from Danielo Rodríguez, the calc macro allows you to do simple calculations based on tiddler fields.
+  <updated>2016-09-15T21:26:53+02:00</updated>
+  <entry>    <title>convertable</title>    <id>http://tobibeer.github.io/tb5#convertable</id>    <link href='http://tobibeer.github.io/tb5#convertable'/>    <updated>2016-09-15T21:26:53+02:00</updated>    <summary>As a response to Steve, I created a little widget called tobibeer/convertable which basically transforms any pasted excel or csv to TiddlyWiki table markup.
+
+
+
+...</summary>  </entry>  <entry>    <title>calc</title>    <id>http://tobibeer.github.io/tb5#calc</id>    <link href='http://tobibeer.github.io/tb5#calc'/>    <updated>2016-09-02T19:46:02+02:00</updated>    <summary>Inspired by mathmacros @ tiddlyspot from Danielo Rodríguez, the calc macro allows you to do simple calculations based on tiddler fields.
 
 ...</summary>  </entry>  <entry>    <title>Accordion Menu</title>    <id>http://tobibeer.github.io/tb5#Accordion%20Menu</id>    <link href='http://tobibeer.github.io/tb5#Accordion%20Menu'/>    <updated>2016-02-04T22:45:35+02:00</updated>    <summary>Addendum: You can use the plugin tobibeer/appear to create an accordion menu.
 
@@ -96,8 +100,6 @@ To use it for modifying any of your fields, install the following plugin in your
 ...</summary>  </entry>  <entry>    <title>Custom Brush for highlight.js</title>    <id>http://tobibeer.github.io/tb5#Custom%20Brush%20for%20highlight.js</id>    <link href='http://tobibeer.github.io/tb5#Custom%20Brush%20for%20highlight.js'/>    <updated>2015-09-15T15:13:14+02:00</updated>    <summary>As Jeremy explains here, you can hack support for a custom brush into Highlight Plugin.
 
 For this, you need to modify one of its shadow tiddlers, which can cause problems with future upgrades. If that...</summary>  </entry>  <entry>    <title>Hosting On Google Drive</title>    <id>http://tobibeer.github.io/tb5#Hosting%20On%20Google%20Drive</id>    <link href='http://tobibeer.github.io/tb5#Hosting%20On%20Google%20Drive'/>    <updated>2015-09-15T10:44:37+02:00</updated>    <summary>Hosting content on Google Drive is deprecated by August 31st, 2016...</summary>  </entry>  <entry>    <title>Community Search</title>    <id>http://tobibeer.github.io/tb5#Community%20Search</id>    <link href='http://tobibeer.github.io/tb5#Community%20Search'/>    <updated>2015-09-15T10:33:03+02:00</updated>    <summary>an aggregator allowing to search indexed TiddlyWiki community wikis</summary>  </entry>  <entry>    <title>Open pdf at defined page</title>    <id>http://tobibeer.github.io/tb5#Open%20pdf%20at%20defined%20page</id>    <link href='http://tobibeer.github.io/tb5#Open%20pdf%20at%20defined%20page'/>    <updated>2015-03-12T19:28:45+02:00</updated>    <summary>Below a slightly modified version of a solution posted here allowing you to open a pdf document at a given page in your browser.
-
-...</summary>  </entry>  <entry>    <title>Autocollapsing ToC</title>    <id>http://tobibeer.github.io/tb5#Autocollapsing%20ToC</id>    <link href='http://tobibeer.github.io/tb5#Autocollapsing%20ToC'/>    <updated>2015-03-12T17:53:28+02:00</updated>    <summary>The following solution proposed by Andreas Hahn provides additional toc macros that allow you to render an autocollapsing table of content.
 
 ...</summary>  </entry>
 </feed>
