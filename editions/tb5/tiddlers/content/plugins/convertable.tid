@@ -1,0 +1,20 @@
+counter: 1
+created: 20160915191808435
+creator: Tobias Beer
+foo: foo value
+modified: 20160915192653065
+modifier: Tobias Beer
+order: 1
+tags: Solutions Tables Widgets
+title: convertable
+type: text/vnd.tiddlywiki
+
+As a response to [[Steve|https://groups.google.com/d/msg/tiddlywiki/61ypQA0VK80/Izur1_2NBAAJ]], I created a little widget called [[tobibeer/convertable|$:/plugins/tobibeer/convertable.js]] which basically transforms any pasted excel or csv to TiddlyWiki table markup.
+
+<<` """<$convertable/>""">>
+
+!! Installation
+
+Drag to your wiki, save, reload:
+
+> [[$:/plugins/tobibeer/convertable.js]] version: <<date-version "$:/plugins/tobibeer/convertable.js">>
