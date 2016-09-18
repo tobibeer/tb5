@@ -25,6 +25,7 @@
 		"tobibeer/setvars",
 		"tobibeer/split",
 		"tobibeer/sysinfo",
+		"tobibeer/value",
 		"tobibeer/xlist"
 	],
 	"themes": [

@@ -597,6 +597,8 @@ Error message and password prompt
 
 <li>$:/plugins/tobibeer/sysinfo</li>
 
+<li>$:/plugins/tobibeer/value</li>
+
 <li>$:/plugins/tobibeer/xlist</li>
 
 <li>$:/SiteSubtitle</li>
@@ -15594,7 +15596,7 @@ exports.convertable = ConvertableWidget;
         },
         &quot;$:/plugins/tobibeer/dict/readme&quot;: {
             &quot;title&quot;: &quot;$:/plugins/tobibeer/dict/readme&quot;,
-            &quot;text&quot;: &quot;; documentation / examples / demos...\r\n: http://tobibeer.github.io/tw5-plugins#dict\n\nDefinitions for terms such as acronyms can be...\n\n; defined inline\r\n: `&lt;&lt;? term definition&gt;&gt;` =&gt; &lt;&lt;? term definition&gt;&gt;\r\n; fetched from text-references\r\n: `&lt;&lt;? term at:\&quot;!!somefield\&quot;&gt;&gt;`\r\n; read from dictionary tiddlers\r\n: `&lt;&lt;? term&gt;&gt;` =&gt; &lt;&lt;? term&gt;&gt;\r\n: `&lt;&lt;? term dict:somedict&gt;&gt;`\r\n; displayed with alternative text\r\n: `&lt;&lt;? term as:Term&gt;&gt;`\r\n; displayed via custom template macros\r\n: `&lt;&lt;? term via:?dl&gt;&gt;`&quot;
+            &quot;text&quot;: &quot;; docs\r\n: http://tobibeer.github.io/tw5-dict\n\nDefinitions for terms such as acronyms can be...\n\n; defined inline\r\n: `&lt;&lt;? term definition&gt;&gt;` =&gt; &lt;&lt;? term definition&gt;&gt;\r\n; fetched from text-references\r\n: `&lt;&lt;? term at:\&quot;!!somefield\&quot;&gt;&gt;`\r\n; read from dictionary tiddlers\r\n: `&lt;&lt;? term&gt;&gt;` =&gt; &lt;&lt;? term&gt;&gt;\r\n: `&lt;&lt;? term dict:somedict&gt;&gt;`\r\n; displayed with alternative text\r\n: `&lt;&lt;? term as:Term&gt;&gt;`\r\n; displayed via custom template macros\r\n: `&lt;&lt;? term via:?dl&gt;&gt;`&quot;
         },
         &quot;$:/plugins/tobibeer/dict/templates&quot;: {
             &quot;title&quot;: &quot;$:/plugins/tobibeer/dict/templates&quot;,
@@ -16449,6 +16451,22 @@ exports.let = function(source,operator,options) {
             &quot;title&quot;: &quot;$:/plugins/tobibeer/sysinfo/sysinfo.js&quot;,
             &quot;type&quot;: &quot;application/javascript&quot;,
             &quot;module-type&quot;: &quot;macro&quot;
+        }
+    }
+}</pre>
+</div>
+<div author="Tobias Beer" core-version="&gt;=5.1.9" dependents="" description="A filter to test input titles for a given value" documentation="https://tobibeer.github.io/tw5-value" list="readme" plugin-type="plugin" requires="" source="https://github.com/tobibeer/tw5-value" title="$:/plugins/tobibeer/value" type="application/json" version="0.5.0" revision="0" bag="default">
+<pre>{
+    &quot;tiddlers&quot;: {
+        &quot;$:/plugins/tobibeer/value/filter.js&quot;: {
+            &quot;text&quot;: &quot;/*\\\ntitle: $:/plugins/tobibeer/value/filter.js\ntype: application/javascript\nmodule-type: filteroperator\n\nFilter operator for testing input titles for a fiven value\n\n@preserve\n\\*/\n(function(){\&quot;use strict\&quot;;exports.value=function(e,i,f){var n=[],s=i.operand;if(i.prefix===\&quot;!\&quot;){e(function(e,i){if(i!==s){n.push(i)}})}else{e(function(e,i){if(i===s){n.push(i)}})}console.log(\&quot;RESULTS: \&quot;+n);if(n.length){if(i.suffix===\&quot;is\&quot;){n=n.length?[\&quot;yes\&quot;]:[\&quot;no\&quot;]}}else{if(i.operand===\&quot;\&quot;){n=i.prefix===\&quot;!\&quot;?[\&quot;no\&quot;]:[\&quot;yes\&quot;]}else if(i.suffix===\&quot;is\&quot;){n=i.prefix===\&quot;!\&quot;?[\&quot;yes\&quot;]:[\&quot;no\&quot;]}}return n}})();&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tobibeer/value/filter.js&quot;,
+            &quot;type&quot;: &quot;application/javascript&quot;,
+            &quot;module-type&quot;: &quot;filteroperator&quot;
+        },
+        &quot;$:/plugins/tobibeer/value/readme&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/tobibeer/value/readme&quot;,
+            &quot;text&quot;: &quot;The plugin $:/plugins/tobibeer/value provides:\n\n; value[]\r\n: a filter operator to test input titles for a fiven value\n\n&lt;br&gt;\n\n!! Syntax\n\n; value:is[foo]\r\n: returns `yes` or `no` depending on whether any input title is `foo`\r\n; value[foo]\r\n: returns `foo` when `foo` is an input title\r\n; !value[foo]\r\n: returns all those input titles that are not `foo`\r\n; !value:is[foo]\r\n: returns `yes` or `no` depending on whether one input titles is not `foo`\n\n\r\n; documentation / examples / demos...\r\n: http://tobibeer.github.io/tw5-plugins#value&quot;
         }
     }
 }</pre>
