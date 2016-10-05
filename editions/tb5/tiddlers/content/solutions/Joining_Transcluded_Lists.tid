@@ -1,0 +1,43 @@
+created: 20161005034150738
+creator: Tobias Beer
+modified: 20161005043410958
+modifier: Tobias Beer
+tags: Lists Text Solutions Transclusion
+title: Joining Transcluded Lists
+type: text/vnd.tiddlywiki
+
+\define add()
+&nbsp;
+$(other)$
+\end
+
+As a [[resonse to Vladimir in the groups|https://groups.google.com/forum/#!topic/tiddlywiki/4LslEBHJxF8]], here is how you can join two transcluded lists into one. First you need this macro in which the line-breaks are important:
+
+```
+\define add()
+&nbsp;
+$(other)$
+\end
+```
+
+And then you can concatenate two tiddlers containing numbered list. Here, I simply appended [[some list|$:/.tb/demo/list]] to itself:
+
+<$macrocall $name="`" text="""<$vars other={{$:/.tb/demo/list}}>
+<$list filter="[[$:/.tb/demo/list]get[text]addsuffix<add>]">
+
+<<currentTiddler>>
+</$list>
+</$vars>
+"""/>
+
+Using <<tb setvars>> you can skip the helper macro and simplify the above to:
+
+<$macrocall $name="`" text="""<$setvars
+_t1={{$:/.tb/demo/list}}
+_t2={{$:/.tb/demo/list}}
+joined="t1 \
+\ t2">
+
+<<joined>>
+</$setvars>
+"""/>
