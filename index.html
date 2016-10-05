@@ -775,9 +775,9 @@ Error message and password prompt
 
 <li>convertable</li>
 
-<li>core</li>
-
 <li>Core</li>
+
+<li>core</li>
 
 <li>Core Distro Plugins</li>
 
@@ -927,13 +927,15 @@ Error message and password prompt
 
 <li>external-links-forced</li>
 
+<li>Extracting Introductions From Tiddlers</li>
+
 <li>feed.atom</li>
 
 <li>Felix Küppers</li>
 
-<li>fields</li>
-
 <li>Fields</li>
+
+<li>fields</li>
 
 <li>Fields: Core</li>
 
@@ -1051,9 +1053,9 @@ Error message and password prompt
 
 <li>ImageMaps</li>
 
-<li>images</li>
-
 <li>Images</li>
+
+<li>images</li>
 
 <li>Import</li>
 
@@ -1143,9 +1145,9 @@ Error message and password prompt
 
 <li>Macrocall vs. Macro</li>
 
-<li>macros</li>
-
 <li>Macros</li>
+
+<li>macros</li>
 
 <li>magictabs</li>
 
@@ -1259,9 +1261,9 @@ Error message and password prompt
 
 <li>Plugin Listing</li>
 
-<li>plugins</li>
-
 <li>Plugins</li>
+
+<li>plugins</li>
 
 <li>pop</li>
 
@@ -1455,9 +1457,9 @@ Error message and password prompt
 
 <li>Testing New Stuff</li>
 
-<li>text</li>
-
 <li>Text</li>
+
+<li>text</li>
 
 <li>Text Excerpts</li>
 
@@ -1499,9 +1501,9 @@ Error message and password prompt
 
 <li>Tobias Beer</li>
 
-<li>ToC</li>
-
 <li>toc</li>
+
+<li>ToC</li>
 
 <li>Toggle</li>
 
@@ -1521,9 +1523,9 @@ Error message and password prompt
 
 <li>Transcluding Highlighted Code</li>
 
-<li>Transclusion</li>
-
 <li>transclusion</li>
+
+<li>Transclusion</li>
 
 <li>Translate TW5</li>
 
@@ -17715,9 +17717,6 @@ Drag to your wiki, save, reload:
 
 &gt; [[$:/plugins/tobibeer/convertable.js]] version: &lt;&lt;date-version &quot;$:/plugins/tobibeer/convertable.js&quot;&gt;&gt;</pre>
 </div>
-<div created="20151003110757144" creator="Tobias Beer" follow="no" modified="20151003110922889" modifier="Tobias Beer" summary="a documentation aiming to provide a comprehensive summary of all concepts and components of the TiddlyWiki core" tags="[[Tobias Beer]]" title="core" url="http://tobibeer.github.io/tw/core" revision="0" bag="default">
-<pre></pre>
-</div>
 <div caption="Core" created="20150929113328405" creator="Tobias Beer" icon="$:/core/icon" menu="main" menu-icon="{{$:/core/icon}}" modified="20151005065353765" summary="functional elements and constructs of the tw5 core" tags="Welcome" title="Core" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>;[[WikiText|http://tiddlywiki.com/#WikiText]]
 :[[TW5 markup|Markup]], syntax, hypertext, formatting
@@ -17746,6 +17745,9 @@ Drag to your wiki, save, reload:
 :defined at the start of a tiddler, pragmas apply to the entire body, see [[Pragmas]]
 ;[[TextReferences|http://tiddlywiki.com/#TextReference]]
 :tiddler properties that can be retrieved or modified depending on the context</pre>
+</div>
+<div created="20151003110757144" creator="Tobias Beer" follow="no" modified="20151003110922889" modifier="Tobias Beer" summary="a documentation aiming to provide a comprehensive summary of all concepts and components of the TiddlyWiki core" tags="[[Tobias Beer]]" title="core" url="http://tobibeer.github.io/tw/core" revision="0" bag="default">
+<pre></pre>
 </div>
 <div created="20141120093416686" creator="Tobias Beer" modified="20141123203942199" modifier="Tobias Beer" title="Core Distro Plugins" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>Although not packaged into a default TiddlyWiki, the following plugins are [[contained in the core distribution repository|http://tiddlywiki.com/#Plugins]]...
@@ -18801,6 +18803,52 @@ http://tiddlywiki.com&lt;br&gt;
 [ext[relative/path]]
 &lt;/dd&gt;</pre>
 </div>
+<div created="20161005054316972" creator="Tobias Beer" modified="20161005060823352" modifier="Tobias Beer" summary="extracting introductory content from tiddlers using the [[split]] filter" tags="Solutions Filters Transclusion Macros Lists" title="Extracting Introductions From Tiddlers" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<pre>Here's how you can use the filter &lt;&lt;tb split&gt;&gt; to extract the introduction of a tiddler~~~~, assuming it is at the beginning and separated from the rest of the content using a separator like `~~~~`:
+
+&lt;$macrocall $name=&quot;`&quot; text=&quot;&quot;&quot;&lt;$list filter=&quot;[all[current]get[text]split:first[~~~~]addsuffix[...]]&quot;&gt;
+
+//&lt;&lt;currentTiddler&gt;&gt;//
+&lt;/$list&gt;&quot;&quot;&quot;/&gt;
+
+Take a look at the source of this tiddler to find the separator right where you expect it.
+
+!! Via HTML Comment
+
+Here's another method in those cases where you would not want an introduction or summary to actually / always be displayed in the tiddler where it is defined.
+
+Simply extract it from an html comment that otherwise does not get rendered unless you use the below.
+
+This is what the comment looks like:
+
+```
+&lt;!--INTRO:
+
+This is a very hidden multi-line introduction:
+
+* Open this tiddler, its actually in this very code block. ;-)
+* Crazy, right?
+--&gt;
+```
+
+And this is how you would display it:
+
+```
+&lt;$list filter=&quot;[all[current]get[text]
+split:!first[&lt;!--INTRO:]
+split:first[--&gt;]limit[1]]&quot;&gt;
+
+&lt;&lt;currentTiddler&gt;&gt;
+&lt;/$list&gt;
+```
+
+&lt;&lt;&lt;
+&lt;$list filter=&quot;[all[current]get[text]split:!first[&lt;!--INTRO:]split:first[--&gt;]limit[1]]&quot;&gt;
+
+&lt;&lt;currentTiddler&gt;&gt;
+&lt;/$list&gt;
+&lt;&lt;&lt;</pre>
+</div>
 <div title="feed.atom" revision="0" bag="default">
 <pre>\define tv-wikilink-template() #$uri_encoded$
 \define tv-config-toolbar-icons() no
@@ -18823,13 +18871,13 @@ http://tiddlywiki.com&lt;br&gt;
 <div icon="$:/core/images/plugin-generic-language" summary="inventor of TiddlyMap&lt;!--Felix Küppers, vis.js--&gt;" tags="Community" title="Felix Küppers" url="[[felixhayashi@GitHub|https://github.com/felixhayashi/TW5-TiddlyMap]]" revision="0" bag="default">
 <pre></pre>
 </div>
+<div icon="$:/core/images/permalink-button" title="Fields" revision="0" bag="default">
+<pre></pre>
+</div>
 <div created="20150201195001262" creator="Tobias Beer" follow="yes" modified="20150209084520349" modifier="Tobias Beer" summary="explorations as to imporoving working with tiddler fields" tags="[[Tobias Beer]] Fields" title="fields" url="http://tobibeer.github.io/tw/fields" revision="0" bag="default">
 <pre>!!! Topics
 ; [[FieldsPopup|http://tobibeer.github.io/tw/fields/#FieldsPopup]]
 : &lt;&lt;git5 issues/1448&gt;&gt; — field editing popups</pre>
-</div>
-<div icon="$:/core/images/permalink-button" title="Fields" revision="0" bag="default">
-<pre></pre>
 </div>
 <div caption="core" created="20141118195032028" creator="Tobias Beer" modified="20150107195102560" modifier="Tobias Beer" tags="Fields Lists Filters Core" title="Fields: Core" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>all [[core fields|Fields: Core]] except [[standard fields|Fields: Standard]] as documented in the TiddlyWiki core:
@@ -19833,6 +19881,9 @@ Notice how — in the markup below — the ''href'' attribute points to the loca
 
 &lt;&lt;source &quot;$:/.tb/demo/image-map&quot;&gt;&gt;</pre>
 </div>
+<div icon="$:/core/images/storyview-zoomin" title="Images" revision="0" bag="default">
+<pre></pre>
+</div>
 <div tags="Markup" title="images" revision="0" bag="default">
 <pre>&lt;dt&gt;
 
@@ -19851,9 +19902,6 @@ Notice how — in the markup below — the ''href'' attribute points to the loca
 [img width=16 [http://www.tiddlywiki.com/favicon.ico]]&lt;br&gt;
 [img class=&quot;tc-image&quot; [http://www.tiddlywiki.com/favicon.ico]]
 &lt;/dd&gt;</pre>
-</div>
-<div icon="$:/core/images/storyview-zoomin" title="Images" revision="0" bag="default">
-<pre></pre>
 </div>
 <div icon="$:/core/images/export-button" title="Import" revision="0" bag="default">
 <pre></pre>
@@ -20616,6 +20664,9 @@ To use, simply install &lt;&lt;source $:/.tb/macros/localfolder&gt;&gt;
 
 &gt; It's actually historical. The angle bracket syntax for macros was first implemented early on, before transcluded attributes. Then as the widget syntax evolved it was clear that it was more flexible and extensible. Internally, everything is a widget, even plain text. All the wikitext syntax beyond the widget syntax is really just a series of shortcuts for more easily typing widgets and HTML. My expectation is that more and more of the basic idioms that we discover as we explore the way that widgets fit together will end up being elevated to wiki syntax. For example, we could evolve a wikitext syntax for assigning variables that is terser than the current `&lt;$set&gt;` widget.</pre>
 </div>
+<div icon="$:/core/images/right-arrow" title="Macros" revision="0" bag="default">
+<pre></pre>
+</div>
 <div tags="Markup" title="macros" revision="0" bag="default">
 <pre>\define test(x, y, z:'0')
 $x$ $y$ $z$
@@ -20697,9 +20748,6 @@ $name=&quot;test&quot;
 x=&lt;&lt;version&gt;&gt;
 y={{!!title}}/&gt;&lt;/code&gt;
 &lt;/dd&gt;</pre>
-</div>
-<div icon="$:/core/images/right-arrow" title="Macros" revision="0" bag="default">
-<pre></pre>
 </div>
 <div summary="by [[Alberto Molina]], enhances TiddlyWiki with a tabsbar at the bottom of each tiddler to manage related tiddlers via lists, allowing to create related items via forms&lt;!--magictabs, bottomtabs--&gt;" tags="References Solutions Tabs Info Lists Relationships [[Alberto Molina]]" title="magictabs" url="http://magictabs.tiddlyspot.com" revision="0" bag="default">
 <pre>; discussion
@@ -22176,6 +22224,16 @@ template:&quot;$:/.tb/template/tagged-summary&quot;&gt;&gt;
 <div created="20150201152701535" creator="Tobias Beer" modified="20150201152912509" modifier="Tobias Beer" tags="[[Jed Carty]] Plugins Solutions" title="Plugin Listing" type="text/vnd.tiddlywiki" url="http://inmysocks.tiddlyspot.com/#Plugin%20TWcard" revision="0" bag="default">
 <pre>If you follow the above link, you get to an overview of currently available plugins for TiddlyWiki 5 as gathered by [[Jed Carty]] and [[introduced here|https://groups.google.com/d/msg/tiddlywiki/h1h4HSyAQzQ/veZNiELhUa4J]].</pre>
 </div>
+<div caption="Plugins" created="20151221110718806" creator="Tobias Beer" icon="$:/core/images/plugin-generic-plugin" menu="main" menu-icon="{{$:/core/images/plugin-generic-plugin}}" modified="20151221111009028" summary="interesting plugins for tw5" tags="Welcome" title="Plugins" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<pre>For a list of plugins created by [[Tobias Beer]], see [[My Plugins|plugins]]...
+
+{{Plugin}}
+
+&lt;br&gt;
+Some [[information on plugins|http://tiddlywiki.com/#Plugins]] not included in the core but contained in the TiddlyWiki repository...
+
+&lt;&lt;static Plugins 800px yes&gt;&gt;</pre>
+</div>
 <div caption="My Plugins" created="20151221094632476" creator="Tobias Beer" follow="yes" icon="$:/core/images/plugin-generic-plugin" modified="20160114022546193" modifier="Tobias Beer" summary="all plugins created by [[Tobias Beer]] from [[tw5-plugins|http://tobibeer.github.io/tw5-plugins]]" tags="Solutions Plugins [[Tobias Beer]] Plugin" title="plugins" type="text/vnd.tiddlywiki" url="http://tobibeer.github.io/tw5-plugins" revision="0" bag="default">
 <pre>For full documentation and details, click on the plugin title.
 
@@ -22186,16 +22244,6 @@ search:&quot;search:description&quot;
 state: &quot;$:/temp/list-search/my-plugins&quot;
 template:&quot;$:/.tb/templates/plugin-descriptions&quot;&gt;&gt;
 &lt;/dl&gt;</pre>
-</div>
-<div caption="Plugins" created="20151221110718806" creator="Tobias Beer" icon="$:/core/images/plugin-generic-plugin" menu="main" menu-icon="{{$:/core/images/plugin-generic-plugin}}" modified="20151221111009028" summary="interesting plugins for tw5" tags="Welcome" title="Plugins" type="text/vnd.tiddlywiki" revision="0" bag="default">
-<pre>For a list of plugins created by [[Tobias Beer]], see [[My Plugins|plugins]]...
-
-{{Plugin}}
-
-&lt;br&gt;
-Some [[information on plugins|http://tiddlywiki.com/#Plugins]] not included in the core but contained in the TiddlyWiki repository...
-
-&lt;&lt;static Plugins 800px yes&gt;&gt;</pre>
 </div>
 <div created="20150930072206029" creator="Tobias Beer" modified="20151001072258024" tags="" title="pop" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>The [[&lt;&lt;pop&gt;&gt;|$:/.tb/macros/pop]] macro implements a generic popup as based on the &lt;&lt;tw PopupMechanism&gt;&gt;.
@@ -23561,6 +23609,9 @@ When was the last time you visited a website that allowed you to do just that?!
 
 Find something to be off? Then check out this [[simple documentation workflow|Documentation]] on how easy it is to make things better for the rest of us.</pre>
 </div>
+<div icon="$:/core/images/edit-button" title="Text" revision="0" bag="default">
+<pre></pre>
+</div>
 <div created="20150109171138176" creator="Tobias Beer" modified="20150109180720115" modifier="Tobias Beer" title="text" revision="0" bag="default">
 <pre>The ''text'' macro provides a most simple macro to output colored text...
 
@@ -23588,9 +23639,6 @@ So, learning a bit of [[wikitext markup|Markup]] may be that better choice.
 !! Installation
 
 Drag to your wiki: &lt;&lt;source [[$:/.tb/macros/text]]&gt;&gt;</pre>
-</div>
-<div icon="$:/core/images/edit-button" title="Text" revision="0" bag="default">
-<pre></pre>
 </div>
 <div created="20150918064818701" creator="Tobias Beer" modified="20150918075109594" modifier="Tobias Beer" tags="Text Solutions [[Matias Goldman]]" title="Text Excerpts" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>As &lt;&lt;excerpt &quot;I was wondering&quot;&gt;&gt; how to do simple text excerpts, &lt;&lt;excerpt &quot;I stumbled upon&quot;&gt;&gt; [[this post|https://groups.google.com/d/msg/tiddlywiki/8rXt-qVqTb0/gbgWItz0CgAJ]] by [[Mat|Matias Goldman]] and was inspired to create the following macros.
@@ -23865,9 +23913,6 @@ If you neither have a TiddlyWiki or TiddlySpot yet, here's a simple process to d
 &quot;$:/.tb/templates/list-search-me&quot;&gt;&gt;
 &lt;/dl&gt;</pre>
 </div>
-<div icon="$:/core/images/menu-button" title="ToC" revision="0" bag="default">
-<pre></pre>
-</div>
 <div created="20141125232200140" creator="Tobias Beer" modified="20141125232258995" modifier="Tobias Beer" title="toc" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>\define regexp-headings() (^!+.*)(?gmi)
 &lt;div class=&quot;tidtoc tc-tiddler-frame&quot;&gt;
@@ -23924,6 +23969,9 @@ float:right;
 text-align:right;
 }
 &lt;/style&gt;</pre>
+</div>
+<div icon="$:/core/images/menu-button" title="ToC" revision="0" bag="default">
+<pre></pre>
 </div>
 <div icon="$:/core/images/storyview-pop" title="Toggle" revision="0" bag="default">
 <pre></pre>
@@ -24053,9 +24101,6 @@ The defined styles here...
 &lt;&lt;` &quot;&quot;&quot;&lt;$codeblock language=“javascript” code={{$:/.tb/demo/example.js}}/&gt;&quot;&quot;&quot;&gt;&gt;
 </pre>
 </div>
-<div icon="$:/core/images/storyview-pop" title="Transclusion" revision="0" bag="default">
-<pre></pre>
-</div>
 <div created="20151127113654535" creator="Tobias Beer" modified="20151127113829176" tags="Markup" title="transclusion" type="text/vnd.tiddlywiki" url="Also see: &lt;&lt;x &quot;Transclusion in WikiText&quot;&gt;&gt;" revision="0" bag="default">
 <pre>&lt;dt&gt;
 
@@ -24084,6 +24129,9 @@ The defined styles here...
 » list of tiddlers tagged `Foo`&lt;br&gt;
 » same using template `Bar`
 &lt;/dd&gt;</pre>
+</div>
+<div icon="$:/core/images/storyview-pop" title="Transclusion" revision="0" bag="default">
+<pre></pre>
 </div>
 <div created="20141114203626843" creator="Tobias Beer" modified="20141204134556861" modifier="Tobias Beer" tags="Developer" title="Translate TW5" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>;Interactive Tool
