@@ -139,6 +139,8 @@ Error message and password prompt
 
 <li>$:/.tb/demo/image-map</li>
 
+<li>$:/.tb/demo/list</li>
+
 <li>$:/.tb/demo/makedoc</li>
 
 <li>$:/.tb/demo/new-with-dynamic-contents</li>
@@ -735,9 +737,9 @@ Error message and password prompt
 
 <li>Clone Wikis Via store.php</li>
 
-<li>code</li>
-
 <li>Code</li>
+
+<li>code</li>
 
 <li>Code-101</li>
 
@@ -929,9 +931,9 @@ Error message and password prompt
 
 <li>Felix Küppers</li>
 
-<li>Fields</li>
-
 <li>fields</li>
+
+<li>Fields</li>
 
 <li>Fields: Core</li>
 
@@ -1090,6 +1092,8 @@ Error message and password prompt
 <li>Jed Carty</li>
 
 <li>Jeremy Ruston</li>
+
+<li>Joining Transcluded Lists</li>
 
 <li>Journal</li>
 
@@ -1451,9 +1455,9 @@ Error message and password prompt
 
 <li>Testing New Stuff</li>
 
-<li>Text</li>
-
 <li>text</li>
+
+<li>Text</li>
 
 <li>Text Excerpts</li>
 
@@ -3764,6 +3768,11 @@ exports.run = function(tid) {
   &lt;area shape=&quot;circle&quot; coords=&quot;124,58,8&quot; alt=&quot;Venus&quot; title=&quot;Venus&quot; href=&quot;#Variables%20vs.%20Parameters&quot;&gt;
 &lt;/map&gt;</pre>
 </div>
+<div title="$:/.tb/demo/list" revision="0" bag="default">
+<pre># a
+# b
+# c</pre>
+</div>
 <div created="20150120000328612" creator="Tobias Beer" modified="20150120003925687" modifier="Tobias Beer" tags="" title="$:/.tb/demo/makedoc" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>&lt;h1 class=&quot;doc-h&quot;&gt;&lt;$link to=&lt;&lt;currentTiddler&gt;&gt;&gt;~ &lt;$view field=title/&gt; ~&lt;/$link&gt;&lt;/h1&gt;
 
@@ -4394,7 +4403,7 @@ class=&quot;tc-tiddlylink-external&quot; target=&quot;_blank&quot;&gt;$page$&lt;
 </div>
 <div created="20151123080831360" creator="Tobias Beer" modified="20151206232815881" modifier="Tobias Beer" tags="$:/tags/Macro" title="$:/.tb/macros/plugin-docs" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>\define plugin-install(plugin)
-drag to your wiki, save, reload: $:/plugins/tobibeer/$plugin$
+get it from my [[Library]] or drag to your wiki, save, reload: $:/plugins/tobibeer/$plugin$
 
 ; source code
 : http://github.com/tobibeer/tw5-$plugin$
@@ -15596,7 +15605,7 @@ exports.convertable = ConvertableWidget;
         },
         &quot;$:/plugins/tobibeer/dict/readme&quot;: {
             &quot;title&quot;: &quot;$:/plugins/tobibeer/dict/readme&quot;,
-            &quot;text&quot;: &quot;; docs\r\n: http://tobibeer.github.io/tw5-dict\n\nDefinitions for terms such as acronyms can be...\n\n; defined inline\r\n: `&lt;&lt;? term definition&gt;&gt;` =&gt; &lt;&lt;? term definition&gt;&gt;\r\n; fetched from text-references\r\n: `&lt;&lt;? term at:\&quot;!!somefield\&quot;&gt;&gt;`\r\n; read from dictionary tiddlers\r\n: `&lt;&lt;? term&gt;&gt;` =&gt; &lt;&lt;? term&gt;&gt;\r\n: `&lt;&lt;? term dict:somedict&gt;&gt;`\r\n; displayed with alternative text\r\n: `&lt;&lt;? term as:Term&gt;&gt;`\r\n; displayed via custom template macros\r\n: `&lt;&lt;? term via:?dl&gt;&gt;`&quot;
+            &quot;text&quot;: &quot;; documentation / examples / demos...\r\n: http://tobibeer.github.io/tw5-plugins#dict\n\nDefinitions for terms such as acronyms can be...\n\n; defined inline\r\n: `&lt;&lt;? term definition&gt;&gt;` =&gt; &lt;&lt;? term definition&gt;&gt;\r\n; fetched from text-references\r\n: `&lt;&lt;? term at:\&quot;!!somefield\&quot;&gt;&gt;`\r\n; read from dictionary tiddlers\r\n: `&lt;&lt;? term&gt;&gt;` =&gt; &lt;&lt;? term&gt;&gt;\r\n: `&lt;&lt;? term dict:somedict&gt;&gt;`\r\n; displayed with alternative text\r\n: `&lt;&lt;? term as:Term&gt;&gt;`\r\n; displayed via custom template macros\r\n: `&lt;&lt;? term via:?dl&gt;&gt;`&quot;
         },
         &quot;$:/plugins/tobibeer/dict/templates&quot;: {
             &quot;title&quot;: &quot;$:/plugins/tobibeer/dict/templates&quot;,
@@ -17484,15 +17493,15 @@ Here's a rudimentary example to reorder lists using the ''calc'' macro...
 
 For example, you could have your own ''empty.html'' with customizations and plugins and then simply change the name of your wiki under [[ControlPanel|$:/ControlPanel]] / ''Saving'' and set ''Upload Filename'' accordingly. Then load that cloned wiki and continue to work there, saving changes to the new location.</pre>
 </div>
+<div icon="$:/core/images/permalink-button" title="Code" revision="0" bag="default">
+<pre></pre>
+</div>
 <div tags="Markup" title="code" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>&lt;dt&gt;&lt;pre&gt;&amp;#96;code&amp;#96;&lt;/pre&gt;&lt;/dt&gt;
 &lt;dd&gt;`code` ...via backticks&lt;/dd&gt;
 
 &lt;dt&gt;&lt;pre&gt;&amp;#96;&amp;#96;with &amp;#96;backticks&amp;#96; &amp;#96;&amp;#96;&lt;/pre&gt;&lt;/dt&gt;
 &lt;dd&gt;``with `backticks` ``&lt;/dd&gt;</pre>
-</div>
-<div icon="$:/core/images/permalink-button" title="Code" revision="0" bag="default">
-<pre></pre>
 </div>
 <div created="20150121121317298" creator="Tobias Beer" modified="20150122021331885" modifier="Tobias Beer" tags="Developer Code" title="Code-101" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>If you're new to TiddlyWiki, if not anything that looks like code, [[this discussion with Mat|https://groups.google.com/d/msg/tiddlywiki/l1Tu5uxSHSk/k8N9rvAm2OEJ]] may give you some pointers on how to approach all things programatic.
@@ -18814,13 +18823,13 @@ http://tiddlywiki.com&lt;br&gt;
 <div icon="$:/core/images/plugin-generic-language" summary="inventor of TiddlyMap&lt;!--Felix Küppers, vis.js--&gt;" tags="Community" title="Felix Küppers" url="[[felixhayashi@GitHub|https://github.com/felixhayashi/TW5-TiddlyMap]]" revision="0" bag="default">
 <pre></pre>
 </div>
-<div icon="$:/core/images/permalink-button" title="Fields" revision="0" bag="default">
-<pre></pre>
-</div>
 <div created="20150201195001262" creator="Tobias Beer" follow="yes" modified="20150209084520349" modifier="Tobias Beer" summary="explorations as to imporoving working with tiddler fields" tags="[[Tobias Beer]] Fields" title="fields" url="http://tobibeer.github.io/tw/fields" revision="0" bag="default">
 <pre>!!! Topics
 ; [[FieldsPopup|http://tobibeer.github.io/tw/fields/#FieldsPopup]]
 : &lt;&lt;git5 issues/1448&gt;&gt; — field editing popups</pre>
+</div>
+<div icon="$:/core/images/permalink-button" title="Fields" revision="0" bag="default">
+<pre></pre>
 </div>
 <div caption="core" created="20141118195032028" creator="Tobias Beer" modified="20150107195102560" modifier="Tobias Beer" tags="Fields Lists Filters Core" title="Fields: Core" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>all [[core fields|Fields: Core]] except [[standard fields|Fields: Standard]] as documented in the TiddlyWiki core:
@@ -20127,6 +20136,44 @@ Save and reload. Is it finally back up now?</pre>
 </div>
 <div icon="$:/core/images/globe" summary="the TiddlyWiki source of sources&lt;!--Jeremy Ruston, official--&gt;" tags="Community" title="Jeremy Ruston" url="https://github.com/Jermolene" revision="0" bag="default">
 <pre></pre>
+</div>
+<div created="20161005034150738" creator="Tobias Beer" modified="20161005043410958" modifier="Tobias Beer" tags="Lists Text Solutions Transclusion" title="Joining Transcluded Lists" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<pre>\define add()
+&amp;nbsp;
+$(other)$
+\end
+
+As a [[resonse to Vladimir in the groups|https://groups.google.com/forum/#!topic/tiddlywiki/4LslEBHJxF8]], here is how you can join two transcluded lists into one. First you need this macro in which the line-breaks are important:
+
+```
+\define add()
+&amp;nbsp;
+$(other)$
+\end
+```
+
+And then you can concatenate two tiddlers containing numbered list. Here, I simply appended [[some list|$:/.tb/demo/list]] to itself:
+
+&lt;$macrocall $name=&quot;`&quot; text=&quot;&quot;&quot;&lt;$vars other={{$:/.tb/demo/list}}&gt;
+&lt;$list filter=&quot;[[$:/.tb/demo/list]get[text]addsuffix&lt;add&gt;]&quot;&gt;
+
+&lt;&lt;currentTiddler&gt;&gt;
+&lt;/$list&gt;
+&lt;/$vars&gt;
+&quot;&quot;&quot;/&gt;
+
+Using &lt;&lt;tb setvars&gt;&gt; you can skip the helper macro and simplify the above to:
+
+&lt;$macrocall $name=&quot;`&quot; text=&quot;&quot;&quot;&lt;$setvars
+_t1={{$:/.tb/demo/list}}
+_t2={{$:/.tb/demo/list}}
+joined=&quot;t1 \
+\ t2&quot;&gt;
+
+&lt;&lt;joined&gt;&gt;
+&lt;/$setvars&gt;
+&quot;&quot;&quot;/&gt;
+</pre>
 </div>
 <div icon="$:/core/images/new-journal-button" title="Journal" revision="0" bag="default">
 <pre></pre>
@@ -23514,9 +23561,6 @@ When was the last time you visited a website that allowed you to do just that?!
 
 Find something to be off? Then check out this [[simple documentation workflow|Documentation]] on how easy it is to make things better for the rest of us.</pre>
 </div>
-<div icon="$:/core/images/edit-button" title="Text" revision="0" bag="default">
-<pre></pre>
-</div>
 <div created="20150109171138176" creator="Tobias Beer" modified="20150109180720115" modifier="Tobias Beer" title="text" revision="0" bag="default">
 <pre>The ''text'' macro provides a most simple macro to output colored text...
 
@@ -23544,6 +23588,9 @@ So, learning a bit of [[wikitext markup|Markup]] may be that better choice.
 !! Installation
 
 Drag to your wiki: &lt;&lt;source [[$:/.tb/macros/text]]&gt;&gt;</pre>
+</div>
+<div icon="$:/core/images/edit-button" title="Text" revision="0" bag="default">
+<pre></pre>
 </div>
 <div created="20150918064818701" creator="Tobias Beer" modified="20150918075109594" modifier="Tobias Beer" tags="Text Solutions [[Matias Goldman]]" title="Text Excerpts" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>As &lt;&lt;excerpt &quot;I was wondering&quot;&gt;&gt; how to do simple text excerpts, &lt;&lt;excerpt &quot;I stumbled upon&quot;&gt;&gt; [[this post|https://groups.google.com/d/msg/tiddlywiki/8rXt-qVqTb0/gbgWItz0CgAJ]] by [[Mat|Matias Goldman]] and was inspired to create the following macros.
