@@ -1,0 +1,27 @@
+created: 20150129230521957
+creator: Tobias Beer
+modified: 20170109112808523
+modifier: Tobias Beer
+summary: defining a custom journal button with date formatting characters in the title
+tags: Solutions Buttons Journal
+title: Custom New Journal Button
+type: text/vnd.tiddlywiki
+
+Starting from either [[$:/core/ui/Buttons/new-journal]] or [[$:/core/ui/Buttons/new-journal-here]], you can work your way to a custom ''new-journal'' button.
+
+<<` "{{$:/.tb/demo/Buttons/dream-journal}}">>
+
+There are a few things to notice in this example button code as rendered below.
+
+# A helper macro concatenates the tags from different sources. <div>
+
+Any new journal entry created with the above button will have the tags from the button template as well as a ''Journal'' tag, e.g.
+
+<$macrocall $name="`" text="""<<list-links "[[$:/.tb/demo/Buttons/dream-journal]tags[]]">>"""/>
+
+</div>
+
+# The <<tw VarsWidget>> is used to define a ''title'' variable to substitute a formatted ''date'' inside. This avoids the ''am'' in Dre''am'' be interpreted as <<tw DateFormat>> characters.<br><br>
+# The <<tw ButtonWidget>> actions are defined using the ''actions'' attribute and macro. This achieves that the title defined in it is only computed when the user hits the button, rather than at the time the button is rendered.
+
+<<source "$:/.tb/demo/Buttons/dream-journal">>
