@@ -1,6 +1,6 @@
 created: 20150129230521957
 creator: Tobias Beer
-modified: 20170109112808523
+modified: 20170109113412138
 modifier: Tobias Beer
 summary: defining a custom journal button with date formatting characters in the title
 tags: Solutions Buttons Journal
@@ -21,7 +21,7 @@ Any new journal entry created with the above button will have the tags from the 
 
 </div>
 
-# The <<tw VarsWidget>> is used to define a ''title'' variable to substitute a formatted ''date'' inside. This avoids the ''am'' in Dre''am'' be interpreted as <<tw DateFormat>> characters.<br><br>
+# The <<tw VarsWidget>> is used to define a ''title'' variable to substitute a formatted ''date'' inside. This avoids the ''am'' in Dre''am'' be [[misinterpreted|https://groups.google.com/d/msg/tiddlywiki/YpbwT-LkH4k/yp-kc4NbEQAJ]] as <<tw DateFormat>> characters.<br><br>
 # The <<tw ButtonWidget>> actions are defined using the ''actions'' attribute and macro. This achieves that the title defined in it is only computed when the user hits the button, rather than at the time the button is rendered.
 
 <<source "$:/.tb/demo/Buttons/dream-journal">>
