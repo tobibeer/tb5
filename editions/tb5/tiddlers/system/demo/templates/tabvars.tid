@@ -1,0 +1,21 @@
+created: 20170109105447567
+creator: Tobias Beer
+modified: 20170109105544544
+modifier: Tobias Beer
+summary: a template for [[Same Template Within Or Without Tabs]]
+tags: 
+title: $:/.tb/demo/Template/tabvars
+type: text/vnd.tiddlywiki
+
+<$vars tabsTiddler=<<currentTiddler>>>
+<$set name="currentTiddler" filter="[<currentTab>]" emptyValue=<<currentTiddler>>>
+
+; tabsTiddler
+: <<tabsTiddler>>
+; currentTiddler
+: <<currentTiddler>>
+; currentTab
+: <<currentTab>>
+
+</$set>
+</$vars>
