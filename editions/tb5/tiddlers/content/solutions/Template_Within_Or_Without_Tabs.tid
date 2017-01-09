@@ -1,0 +1,22 @@
+created: 20170109105045110
+creator: Tobias Beer
+modified: 20170109110344071
+modifier: Tobias Beer
+summary: adjustments you may need to make your [[Templates]] work both inside [[Tabs]] and outside
+tags: Tabs Variables Templates
+title: Template Within Or Without Tabs
+type: text/vnd.tiddlywiki
+
+[[Mike asked|https://groups.google.com/forum/?fromgroups=#!topic/tiddlywiki/2rt8B033dYk]] how he could manage to have a template work both via [[Transclusion]] as well as within [[Tabs]].
+
+The solution to his problem is to detect and redefine the necessary variables accordingly.
+
+In the context of the tab contents, the tiddler representing the current tab is not stored in the <<tw "currentTiddler Variable" currentTiddler>> <<tw Variables variable>> but rather in the <<tw "tabs Macro" currentTab>> variable, which makes templates behave differently, since the value of ''currentTiddler'' serves as the default for a lot of [[Widgets]] and <<tw WikiText>>.
+
+The trick is thus to redefine ''currentTiddler'' and perhaps to still not lose a reference to the tiddler in which some tabs are contained, e.g. <<source $:/.tb/demo/Template/tabvars>>
+
+Above, the <<tw SetWidget>> redefines the value of ''currentTiddler'' to that of ''currentTab'', should that be defined, otherwise stay as is.
+
+Try the tabs below to see how the variables behave:
+
+<$macrocall $name="`" text="""<<tabs "foo bar baz" "foo" "$:/state/tabs/some-tabs" template:"$:/.tb/demo/Template/tabvars">>"""/>

@@ -1,22 +1,26 @@
 created: 20150129230624083
 creator: Tobias Beer
-modified: 20150129231648407
+modified: 20170109112504798
 modifier: Tobias Beer
 tags: Special Examples
-title: $:/.tb/ui/Buttons/custom-journal
+title: $:/.tb/demo/Buttons/dream-journal
 type: text/vnd.tiddlywiki
 
 \define set-tags() $(tags)$ Journal
-
-<$set name="tags" value={{!!tags}}>
-<$button>
+\define actions()
 <$action-sendmessage
 $message="tm-new-tiddler"
-title=<<now "Custom Journal of YY-0MM-0DD">>
+title=<<title>>
 tags=<<set-tags>> />
+\end
+
+<$vars date=<<now "YY-0MM-0DD">> title="Dream Journal $(date)$">
+<$set name="tags" value={{!!tags}}>
+<$button actions=<<actions>>>
 <$list filter="[<tv-config-toolbar-icons>prefix[yes]]">
 {{$:/core/images/new-journal-button}}
 </$list>
-New Custom Journal
+New Dream Journal
 </$button>
 </$set>
+</$vars>
